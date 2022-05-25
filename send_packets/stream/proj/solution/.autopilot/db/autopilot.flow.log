@@ -1,0 +1,1522 @@
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution opened at Tue May 24 17:29:20 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 1.89 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.04 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.27 sec.
+Execute   set_part xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.16 sec.
+Execute   create_clock -period 2.7777 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'src/stream.cc' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling src/stream.cc as C++
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       is_encrypted src/stream.cc 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "src/stream.cc"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E src/stream.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc
+Command       clang done; 2.35 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.82 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc"  -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/useless.bc
+Command       clang done; 2.71 sec.
+INFO-FLOW: Done: GCC PP time: 5.9 seconds per iteration
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/.systemc_flag -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.74 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/all.directive.json -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.75 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.stream.pp.0.cc.diag.yml /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.stream.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.stream.pp.0.cc.err.log 
+Command       ap_eval done; 0.82 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc std=gnu++98 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/tidy-3.1.stream.pp.0.cc.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/tidy-3.1.stream.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/tidy-3.1.stream.pp.0.cc.err.log 
+Command         ap_eval done; 1.51 sec.
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/xilinx-legacy-rewriter.stream.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/xilinx-legacy-rewriter.stream.pp.0.cc.err.log 
+Command         ap_eval done; 0.84 sec.
+Command       tidy_31 done; 2.49 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 4.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pragma.1.cc std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pragma.1.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.42 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pragma.2.cc  -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pragma.2.cc"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.bc" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.pragma.2.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.bc
+Command       clang done; 2.99 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.g.bc -hls-opt -except-internalize stream -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g 
+Command       llvm-ld done; 1.25 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 992 ; free virtual = 5179
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 992 ; free virtual = 5179
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.pp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.pp.0.bc -disable-opt -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.19 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top stream -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.0.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 989 ; free virtual = 5177
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.2.prechk.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 989 ; free virtual = 5177
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.g.1.bc to /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'stream' (src/stream.cc:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/stream.cc:19) in function 'stream' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/stream.cc:24) in function 'stream' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/stream.cc:29) in function 'stream' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (src/stream.cc:34) in function 'stream' completely with a factor of 5.
+INFO: [XFORM 203-101] Partitioning array 'cands.V' (src/stream.cc:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'outcands.V' (src/stream.cc:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scands.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'hold.V'  in dimension 1 completely.
+Command         transform done; 2.92 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.1.tmp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/stream.cc:45:2) in function 'stream'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'stream' (src/stream.cc:3)...8 expression(s) balanced.
+Command         transform done; 0.57 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 955 ; free virtual = 5144
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.2.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 2.52 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 955 ; free virtual = 5144
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 7.42 sec.
+Command     elaborate done; 24.15 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'stream' ...
+Execute       ap_set_top_model stream 
+Execute       get_model_list stream -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model stream 
+Execute       get_model_list stream -filter all-wo-channel 
+INFO-FLOW: Model list for configure: stream
+INFO-FLOW: Configuring Module : stream ...
+Execute       set_default_model stream 
+Execute       apply_spec_resource_limit stream 
+INFO-FLOW: Model list for preprocess: stream
+INFO-FLOW: Preprocessing Module: stream ...
+Execute       set_default_model stream 
+Execute       cdfg_preprocess -model stream 
+Command       cdfg_preprocess done; 1.21 sec.
+Execute       rtl_gen_preprocess stream 
+INFO-FLOW: Model list for synthesis: stream
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model stream 
+Execute       schedule -model stream 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'stream'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.98 sec.
+INFO: [HLS 200-111]  Elapsed time: 30.07 seconds; current allocated memory: 116.326 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.verbose.sched.rpt 
+Command       syn_report done; 0.34 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.sched.adb -f 
+Command       db_write done; 0.45 sec.
+INFO-FLOW: Finish scheduling stream.
+Execute       set_default_model stream 
+Execute       bind -model stream 
+BIND OPTION: model=stream
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.28 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.08 seconds; current allocated memory: 120.392 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.verbose.bind.rpt 
+Command       syn_report done; 0.79 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.bind.adb -f 
+Command       db_write done; 0.62 sec.
+INFO-FLOW: Finish binding stream.
+Execute       get_model_list stream -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess stream 
+INFO-FLOW: Model list for RTL generation: stream
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model stream -vendor xilinx -mg_file /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_0_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_2_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_3_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_4_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_5_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_6_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_7_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_8_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_9_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_10_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_11_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_12_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_13_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_14_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_15_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_16_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_17_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_18_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_19_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_20_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_21_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_22_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_23_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_24_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_25_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_26_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_27_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_28_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_29_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_30_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_31_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_32_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_33_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_34_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_35_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_36_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_37_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_38_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_39_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_40_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_41_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_42_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_43_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_44_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_45_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_46_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_47_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_48_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_49_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_50_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_51_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_52_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_53_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_54_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_55_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_56_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_57_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_58_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_59_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_60_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_61_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_62_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_63_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_64_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_65_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_66_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_67_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_68_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_69_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_70_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_71_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_72_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_73_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_74_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_75_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_76_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_77_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_78_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_79_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_80_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_81_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_82_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_83_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_84_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_85_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_86_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_87_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_88_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_89_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_90_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_91_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_92_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_93_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_94_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_95_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_96_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_97_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_98_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_99_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_100_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_101_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_102_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_103_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_104_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_105_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_106_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_107_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_108_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_109_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_110_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_111_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_112_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_113_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_114_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_115_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_116_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_117_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_118_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_119_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_120_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_121_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_122_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_123_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_124_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_125_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_126_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_127_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_128_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_129_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_130_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_131_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_132_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_133_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_134_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_135_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_136_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_137_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_138_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_139_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_140_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_141_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_142_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_143_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_144_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_145_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_146_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_147_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_148_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_149_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_150_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_151_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_152_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_153_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_154_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_155_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_156_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_157_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_158_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_159_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_160_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_161_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_162_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_163_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_164_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_165_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_166_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_167_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_168_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_169_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_170_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_171_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_172_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_173_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_174_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_175_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_176_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_177_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_178_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_179_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_180_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_181_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_182_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_183_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_184_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_185_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_186_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_187_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_188_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_189_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_190_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_191_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_192_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_193_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_194_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_195_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_196_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_197_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_198_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_199_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_200_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_201_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_202_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_203_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_204_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_205_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_206_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_207_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_208_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_209_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_210_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_211_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_212_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_213_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_214_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_215_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_216_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_217_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_218_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_219_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_220_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_221_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_222_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_223_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_224_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_225_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_226_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_227_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_228_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_229_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_230_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_231_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_232_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_233_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_234_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_235_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_236_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_237_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_238_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_239_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_240_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_241_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_242_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_243_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_244_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_245_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_246_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_247_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_248_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_249_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_250_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_251_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_252_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_253_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_254_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_255_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/eventstart' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/lastvalid' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'stream' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'scands_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_128' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_129' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_130' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_131' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_132' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_133' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_134' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_135' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_136' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_137' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_138' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_139' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_140' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_141' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_142' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_143' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_144' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_145' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_146' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_147' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_148' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_149' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_150' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_151' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_152' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_153' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_154' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_155' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_156' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_157' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_158' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_159' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_160' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_161' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_162' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_163' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_164' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_165' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_166' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_167' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_168' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_169' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_170' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_171' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_172' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_173' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_174' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_175' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_176' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_177' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_178' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_179' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_180' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_181' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_182' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_183' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_184' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_185' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_186' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_187' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_188' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_189' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_190' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_191' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_192' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_193' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_194' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_195' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_196' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_197' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_198' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_199' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_200' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_201' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_202' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_203' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_204' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_205' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_206' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_207' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_208' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_209' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_210' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_211' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_212' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_213' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_214' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_215' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_216' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_217' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_218' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_219' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_220' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_221' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_222' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_223' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_224' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_225' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_226' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_227' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_228' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_229' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_230' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_231' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_232' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_233' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_234' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'holdevtstart' is power-on initialization.
+INFO: [RTGEN 206-104] Estimated max fanout for 'stream' is 16065 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream'.
+Command       create_rtl_model done; 6.05 sec.
+INFO: [HLS 200-111]  Elapsed time: 7.49 seconds; current allocated memory: 125.994 MB.
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.rtl_wrap.cfg.tcl 
+Execute       gen_rtl stream -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/syn/systemc/stream -synmodules stream 
+Execute       gen_rtl stream -istop -style xilinx -f -lang vhdl -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/syn/vhdl/stream 
+Command       gen_rtl done; 0.33 sec.
+Execute       gen_rtl stream -istop -style xilinx -f -lang vlog -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/syn/verilog/stream 
+Command       gen_rtl done; 0.17 sec.
+Execute       syn_report -csynth -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/syn/report/stream_csynth.rpt 
+Command       syn_report done; 0.18 sec.
+Execute       syn_report -rtlxml -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/syn/report/stream_csynth.xml 
+Command       syn_report done; 0.16 sec.
+Execute       syn_report -verbosereport -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.verbose.rpt 
+Command       syn_report done; 0.99 sec.
+Execute       db_write -model stream -f -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.adb 
+Command       db_write done; 0.87 sec.
+Execute       gen_tb_info stream -p /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream 
+Execute       export_constraint_db -f -tool general -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.constraint.tcl 
+Execute       syn_report -designview -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.design.xml 
+Command       syn_report done; 0.31 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model stream -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks stream 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain stream 
+INFO-FLOW: Model list for RTL component generation: stream
+INFO-FLOW: Handling components in module [stream] ... 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+INFO-FLOW: Append model stream
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: stream
+INFO-FLOW: To file: write model stream
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model stream -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 842.46 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=2.778 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=stream xml_exists=0
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Command       ap_source done; 2.65 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.tcl 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.constraint.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=530
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=264
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=1 #gSsdmPorts=530
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.compgen.dataonly.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.constraint.tcl 
+Execute       sc_get_clocks stream 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/stream.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 873 ; free virtual = 5093
+INFO: [VHDL 208-304] Generating VHDL RTL for stream.
+INFO: [VLOG 209-307] Generating Verilog RTL for stream.
+Command     autosyn done; 25.8 sec.
+Command   csynth_design done; 49.96 sec.
+Command ap_source done; 52.41 sec.
+Execute cleanup_all 

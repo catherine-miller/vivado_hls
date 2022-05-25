@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="9" filename="src/addfunc.cc" linenumber="4" name="lhs_V" contextFuncName="adder" moduleName="adder" rtlName="lhs_V_fu_26_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd"><\/item>
+<item  id="10" filename="src/addfunc.cc" linenumber="4" name="rhs_V" contextFuncName="adder" moduleName="adder" rtlName="rhs_V_fu_30_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd"><\/item>
+<item  id="11" filename="src/addfunc.cc" linenumber="4" name="ret_V" contextFuncName="adder" moduleName="adder" rtlName="ap_return" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd"><\/item>
+</annotationInfo>

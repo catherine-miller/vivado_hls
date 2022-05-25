@@ -1,0 +1,1485 @@
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1 opened at Fri Mar 25 17:04:51 CET 2022
+Execute     config_clock -quiet -name default -period 2.5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcku115-flvf1924-2-i 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data single -quiet 
+Command       ap_part_info done; 2.03 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       add_library xilinx/kintexu/kintexu:xcku115:-flvf1924:-2-i 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.11 sec.
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 0.19 sec.
+Execute       add_library xilinx/kintexu/kintexu_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvf1924-2-i'
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.34 sec.
+Execute     ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.58 sec.
+Execute   set_part xcku115-flvf1924-2-i 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data single -quiet 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     add_library xilinx/kintexu/kintexu:xcku115:-flvf1924:-2-i 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       config_chip_info -quiet -speed medium 
+Command     add_library done; 0.19 sec.
+Execute     add_library xilinx/kintexu/kintexu_fpv7 
+Execute       get_default_platform 
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.33 sec.
+Execute   create_clock -period 2.5 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'src/algo.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling src/algo.cpp as C++
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       is_encrypted src/algo.cpp 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "src/algo.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E src/algo.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp
+WARNING: [HLS 200-40] src/algo.cpp:77:3: warning: '/*' within block comment [-Wcomment]
+        }/*
+         ^
+src/algo.cpp:78:1: warning: '/*' within block comment [-Wcomment]
+/*      for (unsigned int i = 0; i < 128; ++i) {
+^
+src/algo.cpp:115:2: warning: '/*' within block comment [-Wcomment]
+        /*for (unsigned int j = 0; j < 64; ++j) {
+        ^
+3 warnings generated.
+Command       clang done; 2.41 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.87 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp"  -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.78 sec.
+INFO-FLOW: Done: GCC PP time: 6.1 seconds per iteration
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.38 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.76 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.diag.yml /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.err.log 
+Command       ap_eval done; 0.83 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.err.log 
+Command         ap_eval done; 1.59 sec.
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/xilinx-legacy-rewriter.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/xilinx-legacy-rewriter.algo.pp.0.cpp.err.log 
+Command         ap_eval done; 0.96 sec.
+Command       tidy_31 done; 2.58 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 4.2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.97 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.bc" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.bc
+Command       clang done; 2.77 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/algo.g.bc -hls-opt -except-internalize lnzero -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.16 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2892 ; free virtual = 5400
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2892 ; free virtual = 5400
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.pp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.17 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top lnzero -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.0.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2891 ; free virtual = 5400
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.2.prechk.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2889 ; free virtual = 5398
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.g.1.bc to /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'lnzero' (src/algo.cpp:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/algo.cpp:9) in function 'lnzero' completely with a factor of 128.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/algo.cpp:14) in function 'lnzero' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/algo.cpp:19) in function 'lnzero' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (src/algo.cpp:24) in function 'lnzero' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (src/algo.cpp:29) in function 'lnzero' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-6' (src/algo.cpp:34) in function 'lnzero' completely with a factor of 2.
+INFO: [XFORM 203-102] Partitioning array 'a2' (src/algo.cpp:13) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a3' (src/algo.cpp:18) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a4' (src/algo.cpp:23) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a5' (src/algo.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a6' (src/algo.cpp:33) automatically.
+INFO: [XFORM 203-101] Partitioning array 'particles.pt.V' (src/algo.cpp:3) in dimension 1 completely.
+Command         transform done; 1.21 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.1.tmp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/algo.cpp:38:1) in function 'lnzero'... converting 127 basic blocks.
+Command         transform done; 0.45 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2854 ; free virtual = 5364
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.2.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 0.9 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2854 ; free virtual = 5364
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.92 sec.
+Command     elaborate done; 20.81 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'lnzero' ...
+Execute       ap_set_top_model lnzero 
+Execute       get_model_list lnzero -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model lnzero 
+Execute       get_model_list lnzero -filter all-wo-channel 
+INFO-FLOW: Model list for configure: lnzero
+INFO-FLOW: Configuring Module : lnzero ...
+Execute       set_default_model lnzero 
+Execute       apply_spec_resource_limit lnzero 
+INFO-FLOW: Model list for preprocess: lnzero
+INFO-FLOW: Preprocessing Module: lnzero ...
+Execute       set_default_model lnzero 
+Execute       cdfg_preprocess -model lnzero 
+Execute       rtl_gen_preprocess lnzero 
+INFO-FLOW: Model list for synthesis: lnzero
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lnzero' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lnzero 
+Execute       schedule -model lnzero 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'lnzero'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.4 sec.
+INFO: [HLS 200-111]  Elapsed time: 24.53 seconds; current allocated memory: 112.225 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.verbose.sched.rpt 
+Command       syn_report done; 0.36 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.sched.adb -f 
+Command       db_write done; 0.32 sec.
+INFO-FLOW: Finish scheduling lnzero.
+Execute       set_default_model lnzero 
+Execute       bind -model lnzero 
+BIND OPTION: model=lnzero
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.27 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 115.530 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.verbose.bind.rpt 
+Command       syn_report done; 1.01 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.bind.adb -f 
+Command       db_write done; 0.37 sec.
+INFO-FLOW: Finish binding lnzero.
+Execute       get_model_list lnzero -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess lnzero 
+INFO-FLOW: Model list for RTL generation: lnzero
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lnzero' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model lnzero -vendor xilinx -mg_file /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_0_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_1_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_2_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_3_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_4_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_5_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_6_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_7_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_8_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_9_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_10_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_11_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_12_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_13_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_14_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_15_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_16_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_17_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_18_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_19_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_20_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_21_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_22_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_23_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_24_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_25_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_26_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_27_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_28_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_29_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_30_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_31_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_32_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_33_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_34_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_35_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_36_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_37_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_38_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_39_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_40_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_41_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_42_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_43_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_44_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_45_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_46_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_47_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_48_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_49_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_50_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_51_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_52_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_53_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_54_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_55_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_56_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_57_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_58_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_59_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_60_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_61_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_62_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_63_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_64_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_65_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_66_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_67_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_68_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_69_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_70_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_71_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_72_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_73_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_74_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_75_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_76_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_77_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_78_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_79_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_80_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_81_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_82_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_83_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_84_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_85_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_86_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_87_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_88_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_89_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_90_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_91_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_92_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_93_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_94_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_95_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_96_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_97_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_98_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_99_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_100_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_101_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_102_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_103_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_104_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_105_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_106_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_107_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_108_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_109_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_110_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_111_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_112_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_113_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_114_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_115_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_116_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_117_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_118_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_119_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_120_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_121_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_122_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_123_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_124_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_125_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_126_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_127_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_128_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_129_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_130_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_131_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_132_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_133_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_134_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_135_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_136_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_137_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_138_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_139_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_140_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_141_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_142_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_143_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_144_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_145_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_146_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_147_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_148_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_149_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_150_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_151_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_152_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_153_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_154_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_155_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_156_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_157_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_158_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_159_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_160_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_161_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_162_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_163_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_164_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_165_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_166_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_167_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_168_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_169_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_170_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_171_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_172_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_173_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_174_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_175_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_176_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_177_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_178_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_179_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_180_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_181_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_182_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_183_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_184_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_185_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_186_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_187_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_188_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_189_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_190_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_191_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_192_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_193_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_194_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_195_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_196_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_197_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_198_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_199_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_200_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_201_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_202_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_203_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_204_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_205_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_206_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_207_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_208_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_209_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_210_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_211_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_212_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_213_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_214_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_215_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_216_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_217_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_218_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_219_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_220_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_221_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_222_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_223_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_224_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_225_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_226_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_227_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_228_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_229_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_230_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_231_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_232_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_233_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_234_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_235_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_236_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_237_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_238_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_239_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_240_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_241_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_242_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_243_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_244_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_245_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_246_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_247_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_248_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_249_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_250_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_251_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_252_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_253_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_254_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_255_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_eta_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_phi_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_mass_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_charge_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lnzero' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_0_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_128_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_129_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_130_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_131_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_132_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_133_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_134_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_135_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_136_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_137_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_138_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_139_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_140_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_141_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_142_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_143_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_144_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_145_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_146_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_147_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_148_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_149_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_150_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_151_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_152_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_153_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_154_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_155_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_156_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_157_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_158_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_159_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_160_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_161_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_162_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_163_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_164_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_165_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_166_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_167_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_168_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_169_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_170_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_171_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_172_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_173_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_174_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_175_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_176_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_177_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_178_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_179_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_180_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_181_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_182_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_183_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_184_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_185_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_186_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_187_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_188_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_189_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_190_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_191_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_192_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_193_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_194_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_195_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_196_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_197_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_198_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_199_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_200_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_201_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_202_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_203_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_204_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_205_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_206_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_207_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_208_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_209_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_210_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_211_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_212_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_213_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_214_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_215_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_216_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_217_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_218_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_219_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_220_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_221_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_222_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_223_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_224_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_225_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_226_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_227_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_228_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_229_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_230_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_231_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_232_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_233_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_234_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_235_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_236_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_237_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_238_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_239_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_240_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_241_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_242_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_243_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_244_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_245_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_246_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_247_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_248_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_249_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_250_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_251_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_252_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_253_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_254_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_255_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lnzero'.
+Command       create_rtl_model done; 5.46 sec.
+INFO: [HLS 200-111]  Elapsed time: 6.85 seconds; current allocated memory: 120.479 MB.
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lnzero -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/syn/systemc/lnzero -synmodules lnzero 
+Execute       gen_rtl lnzero -istop -style xilinx -f -lang vhdl -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/syn/vhdl/lnzero 
+Command       gen_rtl done; 0.51 sec.
+Execute       gen_rtl lnzero -istop -style xilinx -f -lang vlog -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/syn/verilog/lnzero 
+Command       gen_rtl done; 0.25 sec.
+Execute       syn_report -csynth -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/syn/report/lnzero_csynth.rpt 
+Command       syn_report done; 0.26 sec.
+Execute       syn_report -rtlxml -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/syn/report/lnzero_csynth.xml 
+Command       syn_report done; 0.23 sec.
+Execute       syn_report -verbosereport -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.verbose.rpt 
+Command       syn_report done; 1.28 sec.
+Execute       db_write -model lnzero -f -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.adb 
+Command       db_write done; 1.1 sec.
+Execute       gen_tb_info lnzero -p /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero 
+Execute       export_constraint_db -f -tool general -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.constraint.tcl 
+Execute       syn_report -designview -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.design.xml 
+Command       syn_report done; 0.48 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model lnzero -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks lnzero 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain lnzero 
+INFO-FLOW: Model list for RTL component generation: lnzero
+INFO-FLOW: Handling components in module [lnzero] ... 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+INFO-FLOW: Append model lnzero
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: lnzero
+INFO-FLOW: To file: write model lnzero
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model lnzero -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 460.72 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=2.500 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=lnzero xml_exists=0
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Command       ap_source done; 1.55 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.constraint.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=258
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=261
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=1 #gSsdmPorts=258
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.compgen.dataonly.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.constraint.tcl 
+Execute       sc_get_clocks lnzero 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/lnzero.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2786 ; free virtual = 5318
+INFO: [VHDL 208-304] Generating VHDL RTL for lnzero.
+INFO: [VLOG 209-307] Generating Verilog RTL for lnzero.
+Command     autosyn done; 22.26 sec.
+Command   csynth_design done; 43.08 sec.
+Command ap_source done; 46.01 sec.
+Execute cleanup_all 

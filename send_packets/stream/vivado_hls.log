@@ -1,0 +1,581 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Tue May 24 17:29:20 CEST 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj'.
+INFO: [HLS 200-10] Adding design file 'src/stream.cc' to the project
+INFO: [HLS 200-10] Adding test bench file 'testbench.cc' to the project
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream/proj/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'src/stream.cc' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 992 ; free virtual = 5179
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 992 ; free virtual = 5179
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 989 ; free virtual = 5177
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 989 ; free virtual = 5177
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'stream' (src/stream.cc:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/stream.cc:19) in function 'stream' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/stream.cc:24) in function 'stream' completely with a factor of 256.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/stream.cc:29) in function 'stream' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (src/stream.cc:34) in function 'stream' completely with a factor of 5.
+INFO: [XFORM 203-101] Partitioning array 'cands.V' (src/stream.cc:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'outcands.V' (src/stream.cc:3) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'scands.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'hold.V'  in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/stream.cc:45:2) in function 'stream'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'stream' (src/stream.cc:3)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 955 ; free virtual = 5144
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 955 ; free virtual = 5144
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'stream' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'stream'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.07 seconds; current allocated memory: 116.326 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.08 seconds; current allocated memory: 120.392 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'stream' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_0_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_2_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_3_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_4_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_5_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_6_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_7_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_8_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_9_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_10_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_11_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_12_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_13_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_14_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_15_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_16_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_17_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_18_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_19_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_20_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_21_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_22_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_23_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_24_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_25_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_26_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_27_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_28_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_29_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_30_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_31_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_32_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_33_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_34_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_35_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_36_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_37_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_38_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_39_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_40_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_41_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_42_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_43_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_44_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_45_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_46_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_47_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_48_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_49_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_50_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_51_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_52_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_53_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_54_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_55_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_56_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_57_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_58_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_59_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_60_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_61_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_62_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_63_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_64_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_65_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_66_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_67_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_68_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_69_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_70_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_71_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_72_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_73_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_74_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_75_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_76_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_77_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_78_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_79_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_80_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_81_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_82_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_83_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_84_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_85_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_86_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_87_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_88_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_89_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_90_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_91_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_92_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_93_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_94_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_95_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_96_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_97_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_98_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_99_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_100_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_101_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_102_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_103_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_104_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_105_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_106_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_107_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_108_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_109_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_110_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_111_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_112_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_113_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_114_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_115_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_116_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_117_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_118_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_119_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_120_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_121_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_122_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_123_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_124_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_125_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_126_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_127_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_128_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_129_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_130_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_131_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_132_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_133_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_134_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_135_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_136_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_137_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_138_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_139_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_140_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_141_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_142_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_143_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_144_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_145_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_146_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_147_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_148_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_149_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_150_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_151_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_152_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_153_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_154_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_155_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_156_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_157_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_158_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_159_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_160_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_161_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_162_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_163_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_164_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_165_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_166_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_167_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_168_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_169_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_170_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_171_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_172_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_173_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_174_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_175_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_176_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_177_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_178_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_179_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_180_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_181_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_182_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_183_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_184_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_185_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_186_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_187_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_188_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_189_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_190_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_191_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_192_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_193_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_194_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_195_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_196_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_197_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_198_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_199_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_200_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_201_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_202_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_203_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_204_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_205_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_206_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_207_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_208_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_209_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_210_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_211_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_212_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_213_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_214_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_215_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_216_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_217_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_218_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_219_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_220_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_221_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_222_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_223_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_224_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_225_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_226_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_227_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_228_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_229_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_230_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_231_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_232_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_233_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_234_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_235_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_236_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_237_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_238_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_239_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_240_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_241_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_242_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_243_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_244_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_245_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_246_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_247_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_248_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_249_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_250_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_251_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_252_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_253_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_254_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/cands_255_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_0_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_1_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_2_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_3_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/outcands_4_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/eventstart' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'stream/lastvalid' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'stream' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'scands_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_16' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_17' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_18' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_19' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_20' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_21' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_22' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_23' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_24' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_25' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_26' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_27' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_28' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_29' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_30' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_31' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_32' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_33' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_34' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_35' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_36' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_37' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_38' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_39' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_40' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_41' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_42' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_43' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_44' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_45' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_46' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_47' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_48' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_49' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_50' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_51' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_52' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_53' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_54' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_55' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_56' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_57' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_58' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_59' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_60' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_61' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_62' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_63' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_64' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_65' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_66' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_67' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_68' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_69' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_70' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_71' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_72' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_73' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_74' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_75' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_76' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_77' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_78' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_79' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_80' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_81' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_82' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_83' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_84' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_85' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_86' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_87' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_88' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_89' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_90' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_91' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_92' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_93' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_94' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_95' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_96' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_97' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_98' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_99' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_100' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_101' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_102' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_103' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_104' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_105' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_106' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_107' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_108' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_109' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_110' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_111' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_112' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_113' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_114' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_115' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_116' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_117' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_118' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_119' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_120' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_121' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_122' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_123' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_124' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_125' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_126' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_127' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_128' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_129' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_130' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_131' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_132' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_133' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_134' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_135' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_136' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_137' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_138' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_139' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_140' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_141' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_142' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_143' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_144' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_145' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_146' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_147' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_148' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_149' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_150' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_151' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_152' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_153' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_154' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_155' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_156' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_157' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_158' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_159' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_160' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_161' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_162' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_163' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_164' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_165' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_166' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_167' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_168' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_169' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_170' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_171' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_172' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_173' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_174' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_175' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_176' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_177' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_178' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_179' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_180' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_181' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_182' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_183' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_184' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_185' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_186' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_187' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_188' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_189' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_190' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_191' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_192' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_193' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_194' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_195' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_196' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_197' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_198' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_199' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_200' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_201' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_202' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_203' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_204' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_205' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_206' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_207' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_208' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_209' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_210' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_211' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_212' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_213' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_214' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_215' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_216' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_217' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_218' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_219' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_220' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_221' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_222' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_223' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_224' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_225' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_226' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_227' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_228' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_229' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_230' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_231' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_232' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_233' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_234' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_235' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_236' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_237' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_238' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_239' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_240' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_241' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_242' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_243' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_244' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_245' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_246' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_247' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_248' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_249' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_250' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_251' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_252' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_253' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_254' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'scands_V_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_0' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'hold_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'holdevtstart' is power-on initialization.
+INFO: [RTGEN 206-104] Estimated max fanout for 'stream' is 16065 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (ap_start == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'stream'.
+INFO: [HLS 200-111]  Elapsed time: 7.49 seconds; current allocated memory: 125.994 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 842.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 873 ; free virtual = 5093
+INFO: [VHDL 208-304] Generating VHDL RTL for stream.
+INFO: [VLOG 209-307] Generating Verilog RTL for stream.
+INFO: [HLS 200-112] Total elapsed time: 52.7 seconds; peak allocated memory: 128.039 MB.

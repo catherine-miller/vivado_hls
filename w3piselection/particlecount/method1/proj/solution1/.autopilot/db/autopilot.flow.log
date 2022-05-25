@@ -1,0 +1,1354 @@
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1 opened at Fri Mar 25 13:08:57 CET 2022
+Execute     config_clock -quiet -name default -period 3.103 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.103ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcku115-flvf1924-2-i 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data single -quiet 
+Command       ap_part_info done; 1.89 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       add_library xilinx/kintexu/kintexu:xcku115:-flvf1924:-2-i 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/kintexu/kintexu_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvf1924-2-i'
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.04 sec.
+Execute     ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.24 sec.
+Execute   set_part xcku115-flvf1924-2-i 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data single -quiet 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     add_library xilinx/kintexu/kintexu:xcku115:-flvf1924:-2-i 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xcku115-flvf1924-2-i 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data resources 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       config_chip_info -quiet -resource {SLICE 82920} {LUT 663360} {FF 1326720} {DSP48E 5520} {BRAM 4320} {URAM 0} {SLR 2} 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/kintexu/kintexu_fpv7 
+Execute       get_default_platform 
+Execute     ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute     get_default_platform 
+Command   set_part done; 0.14 sec.
+Execute   create_clock -period 3.10303 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'src/algo.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling src/algo.cpp as C++
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+Execute       is_encrypted src/algo.cpp 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "src/algo.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E src/algo.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp
+Command       clang done; 2.35 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.84 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp"  -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.71 sec.
+INFO-FLOW: Done: GCC PP time: 5.9 seconds per iteration
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.22 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.72 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.diag.yml /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/xilinx-dataflow-lawyer.algo.pp.0.cpp.err.log 
+Command       ap_eval done; 0.9 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/tidy-3.1.algo.pp.0.cpp.err.log 
+Command         ap_eval done; 1.43 sec.
+Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/xilinx-legacy-rewriter.algo.pp.0.cpp.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/xilinx-legacy-rewriter.algo.pp.0.cpp.err.log 
+Command         ap_eval done; 0.7 sec.
+Command       tidy_31 done; 2.16 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.8 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.96 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.bc" 
+INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.bc
+Command       clang done; 2.81 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/algo.g.bc -hls-opt -except-internalize pcount -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.15 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1446 ; free virtual = 4979
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1446 ; free virtual = 4979
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.pp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.17 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top pcount -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.0.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1443 ; free virtual = 4977
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.2.prechk.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1441 ; free virtual = 4975
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.g.1.bc to /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pcount' (src/algo.cpp:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/algo.cpp:7) in function 'pcount' completely with a factor of 256.
+INFO: [XFORM 203-101] Partitioning array 'particles.pt.V' (src/algo.cpp:3) in dimension 1 completely.
+Command         transform done; 1.39 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.1.tmp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'pcount' (src/algo.cpp:3)...255 expression(s) balanced.
+Command         transform done; 0.56 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1412 ; free virtual = 4947
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.2.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.78 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1412 ; free virtual = 4947
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 5.07 sec.
+Command     elaborate done; 21.24 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'pcount' ...
+Execute       ap_set_top_model pcount 
+Execute       get_model_list pcount -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model pcount 
+Execute       get_model_list pcount -filter all-wo-channel 
+INFO-FLOW: Model list for configure: pcount
+INFO-FLOW: Configuring Module : pcount ...
+Execute       set_default_model pcount 
+Execute       apply_spec_resource_limit pcount 
+INFO-FLOW: Model list for preprocess: pcount
+INFO-FLOW: Preprocessing Module: pcount ...
+Execute       set_default_model pcount 
+Execute       cdfg_preprocess -model pcount 
+Command       cdfg_preprocess done; 0.4 sec.
+Execute       rtl_gen_preprocess pcount 
+INFO-FLOW: Model list for synthesis: pcount
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pcount' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model pcount 
+Execute       schedule -model pcount 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pcount'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.11 sec.
+INFO: [HLS 200-111]  Elapsed time: 25.42 seconds; current allocated memory: 118.790 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.verbose.sched.rpt 
+Command       syn_report done; 0.48 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.sched.adb -f 
+Command       db_write done; 0.52 sec.
+INFO-FLOW: Finish scheduling pcount.
+Execute       set_default_model pcount 
+Execute       bind -model pcount 
+BIND OPTION: model=pcount
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.55 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.55 seconds; current allocated memory: 123.028 MB.
+Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.verbose.bind.rpt 
+Command       syn_report done; 1.29 sec.
+Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.bind.adb -f 
+Command       db_write done; 0.55 sec.
+INFO-FLOW: Finish binding pcount.
+Execute       get_model_list pcount -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess pcount 
+INFO-FLOW: Model list for RTL generation: pcount
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pcount' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model pcount -vendor xilinx -mg_file /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_0_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_1_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_2_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_3_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_4_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_5_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_6_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_7_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_8_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_9_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_10_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_11_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_12_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_13_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_14_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_15_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_16_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_17_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_18_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_19_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_20_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_21_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_22_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_23_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_24_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_25_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_26_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_27_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_28_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_29_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_30_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_31_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_32_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_33_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_34_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_35_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_36_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_37_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_38_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_39_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_40_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_41_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_42_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_43_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_44_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_45_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_46_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_47_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_48_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_49_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_50_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_51_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_52_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_53_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_54_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_55_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_56_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_57_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_58_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_59_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_60_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_61_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_62_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_63_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_64_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_65_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_66_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_67_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_68_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_69_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_70_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_71_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_72_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_73_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_74_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_75_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_76_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_77_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_78_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_79_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_80_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_81_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_82_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_83_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_84_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_85_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_86_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_87_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_88_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_89_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_90_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_91_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_92_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_93_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_94_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_95_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_96_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_97_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_98_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_99_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_100_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_101_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_102_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_103_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_104_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_105_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_106_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_107_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_108_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_109_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_110_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_111_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_112_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_113_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_114_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_115_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_116_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_117_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_118_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_119_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_120_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_121_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_122_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_123_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_124_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_125_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_126_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_127_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_128_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_129_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_130_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_131_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_132_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_133_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_134_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_135_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_136_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_137_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_138_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_139_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_140_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_141_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_142_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_143_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_144_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_145_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_146_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_147_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_148_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_149_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_150_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_151_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_152_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_153_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_154_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_155_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_156_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_157_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_158_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_159_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_160_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_161_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_162_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_163_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_164_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_165_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_166_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_167_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_168_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_169_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_170_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_171_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_172_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_173_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_174_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_175_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_176_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_177_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_178_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_179_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_180_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_181_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_182_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_183_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_184_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_185_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_186_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_187_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_188_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_189_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_190_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_191_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_192_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_193_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_194_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_195_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_196_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_197_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_198_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_199_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_200_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_201_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_202_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_203_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_204_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_205_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_206_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_207_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_208_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_209_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_210_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_211_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_212_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_213_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_214_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_215_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_216_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_217_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_218_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_219_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_220_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_221_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_222_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_223_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_224_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_225_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_226_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_227_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_228_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_229_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_230_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_231_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_232_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_233_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_234_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_235_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_236_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_237_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_238_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_239_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_240_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_241_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_242_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_243_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_244_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_245_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_246_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_247_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_248_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_249_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_250_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_251_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_252_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_253_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_254_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_255_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_eta_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_phi_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_mass_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_charge_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pcount' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pcount'.
+Command       create_rtl_model done; 3.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 4.89 seconds; current allocated memory: 130.219 MB.
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.rtl_wrap.cfg.tcl 
+Execute       gen_rtl pcount -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/syn/systemc/pcount -synmodules pcount 
+Execute       gen_rtl pcount -istop -style xilinx -f -lang vhdl -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/syn/vhdl/pcount 
+Command       gen_rtl done; 0.59 sec.
+Execute       gen_rtl pcount -istop -style xilinx -f -lang vlog -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/syn/verilog/pcount 
+Command       gen_rtl done; 0.3 sec.
+Execute       syn_report -csynth -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/syn/report/pcount_csynth.rpt 
+Command       syn_report done; 0.31 sec.
+Execute       syn_report -rtlxml -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/syn/report/pcount_csynth.xml 
+Command       syn_report done; 0.28 sec.
+Execute       syn_report -verbosereport -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.verbose.rpt 
+Command       syn_report done; 1.65 sec.
+Execute       db_write -model pcount -f -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.adb 
+Command       db_write done; 1.51 sec.
+Execute       gen_tb_info pcount -p /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount 
+Execute       export_constraint_db -f -tool general -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.constraint.tcl 
+Execute       syn_report -designview -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.design.xml 
+Command       syn_report done; 0.6 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model pcount -o /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks pcount 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain pcount 
+INFO-FLOW: Model list for RTL component generation: pcount
+INFO-FLOW: Handling components in module [pcount] ... 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+INFO-FLOW: Append model pcount
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: pcount
+INFO-FLOW: To file: write model pcount
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       syn_report -model pcount -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 392.46 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=3.103 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.12 sec.
+Command       ap_source done; 0.12 sec.
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=pcount xml_exists=0
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute         ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Command       ap_source done; 2.7 sec.
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.constraint.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=516
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=261
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=1 #gSsdmPorts=516
+Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.rtl_wrap.cfg.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.compgen.dataonly.tcl 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.constraint.tcl 
+Execute       sc_get_clocks pcount 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data names -quiet 
+Execute       ap_part_info -name xcku115-flvf1924-2-i -data info -quiet 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/pcount.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1338 ; free virtual = 4892
+INFO: [VHDL 208-304] Generating VHDL RTL for pcount.
+INFO: [VLOG 209-307] Generating Verilog RTL for pcount.
+Command     autosyn done; 22.63 sec.
+Command   csynth_design done; 43.88 sec.
+Command ap_source done; 46.29 sec.
+Execute cleanup_all 

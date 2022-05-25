@@ -1,0 +1,704 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Fri Mar 25 17:04:50 CET 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj'.
+INFO: [HLS 200-10] Adding design file 'src/algo.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'algo_ref.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'algo_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvf1924-2-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'src/algo.cpp' ... 
+WARNING: [HLS 200-40] src/algo.cpp:77:3: warning: '/*' within block comment [-Wcomment]
+        }/*
+         ^
+src/algo.cpp:78:1: warning: '/*' within block comment [-Wcomment]
+/*      for (unsigned int i = 0; i < 128; ++i) {
+^
+src/algo.cpp:115:2: warning: '/*' within block comment [-Wcomment]
+        /*for (unsigned int j = 0; j < 64; ++j) {
+        ^
+3 warnings generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2892 ; free virtual = 5400
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2892 ; free virtual = 5400
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2891 ; free virtual = 5400
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2889 ; free virtual = 5398
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'lnzero' (src/algo.cpp:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/algo.cpp:9) in function 'lnzero' completely with a factor of 128.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/algo.cpp:14) in function 'lnzero' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/algo.cpp:19) in function 'lnzero' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4' (src/algo.cpp:24) in function 'lnzero' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-5' (src/algo.cpp:29) in function 'lnzero' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-6' (src/algo.cpp:34) in function 'lnzero' completely with a factor of 2.
+INFO: [XFORM 203-102] Partitioning array 'a2' (src/algo.cpp:13) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a3' (src/algo.cpp:18) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a4' (src/algo.cpp:23) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a5' (src/algo.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'a6' (src/algo.cpp:33) automatically.
+INFO: [XFORM 203-101] Partitioning array 'particles.pt.V' (src/algo.cpp:3) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/algo.cpp:38:1) in function 'lnzero'... converting 127 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2854 ; free virtual = 5364
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2854 ; free virtual = 5364
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lnzero' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lnzero' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'lnzero'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.53 seconds; current allocated memory: 112.225 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.95 seconds; current allocated memory: 115.530 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lnzero' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_0_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_1_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_2_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_3_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_4_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_5_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_6_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_7_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_8_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_9_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_10_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_11_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_12_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_13_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_14_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_15_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_16_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_17_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_18_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_19_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_20_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_21_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_22_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_23_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_24_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_25_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_26_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_27_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_28_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_29_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_30_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_31_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_32_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_33_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_34_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_35_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_36_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_37_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_38_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_39_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_40_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_41_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_42_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_43_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_44_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_45_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_46_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_47_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_48_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_49_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_50_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_51_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_52_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_53_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_54_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_55_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_56_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_57_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_58_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_59_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_60_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_61_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_62_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_63_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_64_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_65_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_66_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_67_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_68_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_69_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_70_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_71_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_72_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_73_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_74_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_75_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_76_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_77_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_78_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_79_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_80_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_81_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_82_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_83_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_84_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_85_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_86_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_87_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_88_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_89_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_90_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_91_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_92_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_93_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_94_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_95_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_96_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_97_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_98_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_99_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_100_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_101_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_102_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_103_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_104_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_105_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_106_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_107_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_108_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_109_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_110_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_111_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_112_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_113_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_114_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_115_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_116_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_117_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_118_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_119_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_120_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_121_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_122_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_123_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_124_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_125_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_126_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_127_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_128_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_129_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_130_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_131_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_132_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_133_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_134_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_135_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_136_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_137_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_138_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_139_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_140_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_141_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_142_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_143_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_144_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_145_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_146_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_147_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_148_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_149_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_150_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_151_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_152_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_153_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_154_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_155_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_156_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_157_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_158_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_159_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_160_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_161_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_162_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_163_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_164_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_165_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_166_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_167_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_168_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_169_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_170_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_171_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_172_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_173_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_174_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_175_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_176_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_177_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_178_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_179_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_180_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_181_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_182_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_183_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_184_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_185_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_186_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_187_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_188_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_189_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_190_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_191_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_192_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_193_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_194_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_195_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_196_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_197_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_198_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_199_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_200_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_201_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_202_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_203_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_204_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_205_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_206_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_207_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_208_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_209_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_210_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_211_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_212_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_213_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_214_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_215_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_216_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_217_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_218_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_219_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_220_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_221_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_222_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_223_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_224_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_225_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_226_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_227_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_228_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_229_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_230_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_231_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_232_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_233_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_234_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_235_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_236_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_237_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_238_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_239_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_240_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_241_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_242_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_243_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_244_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_245_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_246_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_247_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_248_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_249_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_250_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_251_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_252_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_253_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_254_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_255_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_eta_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_phi_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_mass_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lnzero/particles_charge_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lnzero' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_0_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_128_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_129_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_130_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_131_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_132_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_133_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_134_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_135_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_136_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_137_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_138_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_139_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_140_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_141_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_142_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_143_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_144_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_145_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_146_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_147_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_148_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_149_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_150_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_151_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_152_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_153_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_154_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_155_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_156_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_157_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_158_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_159_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_160_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_161_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_162_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_163_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_164_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_165_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_166_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_167_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_168_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_169_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_170_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_171_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_172_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_173_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_174_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_175_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_176_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_177_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_178_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_179_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_180_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_181_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_182_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_183_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_184_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_185_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_186_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_187_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_188_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_189_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_190_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_191_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_192_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_193_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_194_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_195_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_196_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_197_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_198_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_199_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_200_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_201_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_202_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_203_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_204_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_205_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_206_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_207_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_208_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_209_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_210_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_211_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_212_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_213_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_214_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_215_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_216_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_217_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_218_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_219_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_220_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_221_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_222_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_223_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_224_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_225_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_226_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_227_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_228_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_229_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_230_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_231_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_232_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_233_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_234_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_235_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_236_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_237_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_238_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_239_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_240_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_241_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_242_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_243_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_244_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_245_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_246_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_247_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_248_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_249_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_250_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_251_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_252_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_253_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_254_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_255_pt_V' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_eta_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_eta_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_phi_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_phi_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_mass_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_mass_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'lnzero/particles_charge_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'lnzero/particles_charge_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lnzero'.
+INFO: [HLS 200-111]  Elapsed time: 6.85 seconds; current allocated memory: 120.479 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 460.72 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 2786 ; free virtual = 5318
+INFO: [VHDL 208-304] Generating VHDL RTL for lnzero.
+INFO: [VLOG 209-307] Generating Verilog RTL for lnzero.
+INFO: [HLS 200-112] Total elapsed time: 46.35 seconds; peak allocated memory: 123.156 MB.

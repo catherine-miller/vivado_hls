@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="algo.cpp" path="/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/src/algo.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="algo_ref.cpp" path="/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/algo_ref.cpp"/>
+    <originFiles name="algo_test.cpp" path="/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/lastnonzero/algo_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

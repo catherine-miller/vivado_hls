@@ -1,0 +1,426 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Fri Mar 25 13:08:57 CET 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj'.
+INFO: [HLS 200-10] Adding design file 'src/algo.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'algo_ref.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'algo_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/particlecount/method1/proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.103ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvf1924-2-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'src/algo.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1446 ; free virtual = 4979
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1446 ; free virtual = 4979
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1443 ; free virtual = 4977
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1441 ; free virtual = 4975
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'pcount' (src/algo.cpp:3).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/algo.cpp:7) in function 'pcount' completely with a factor of 256.
+INFO: [XFORM 203-101] Partitioning array 'particles.pt.V' (src/algo.cpp:3) in dimension 1 completely.
+INFO: [XFORM 203-11] Balancing expressions in function 'pcount' (src/algo.cpp:3)...255 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1412 ; free virtual = 4947
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1412 ; free virtual = 4947
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'pcount' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pcount' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'pcount'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.42 seconds; current allocated memory: 118.790 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.55 seconds; current allocated memory: 123.028 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pcount' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_0_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_1_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_2_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_3_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_4_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_5_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_6_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_7_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_8_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_9_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_10_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_11_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_12_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_13_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_14_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_15_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_16_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_17_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_18_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_19_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_20_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_21_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_22_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_23_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_24_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_25_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_26_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_27_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_28_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_29_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_30_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_31_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_32_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_33_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_34_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_35_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_36_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_37_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_38_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_39_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_40_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_41_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_42_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_43_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_44_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_45_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_46_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_47_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_48_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_49_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_50_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_51_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_52_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_53_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_54_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_55_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_56_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_57_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_58_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_59_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_60_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_61_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_62_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_63_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_64_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_65_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_66_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_67_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_68_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_69_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_70_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_71_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_72_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_73_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_74_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_75_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_76_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_77_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_78_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_79_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_80_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_81_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_82_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_83_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_84_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_85_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_86_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_87_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_88_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_89_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_90_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_91_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_92_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_93_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_94_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_95_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_96_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_97_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_98_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_99_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_100_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_101_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_102_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_103_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_104_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_105_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_106_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_107_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_108_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_109_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_110_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_111_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_112_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_113_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_114_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_115_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_116_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_117_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_118_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_119_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_120_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_121_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_122_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_123_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_124_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_125_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_126_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_127_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_128_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_129_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_130_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_131_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_132_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_133_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_134_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_135_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_136_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_137_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_138_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_139_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_140_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_141_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_142_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_143_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_144_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_145_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_146_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_147_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_148_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_149_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_150_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_151_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_152_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_153_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_154_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_155_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_156_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_157_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_158_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_159_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_160_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_161_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_162_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_163_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_164_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_165_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_166_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_167_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_168_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_169_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_170_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_171_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_172_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_173_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_174_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_175_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_176_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_177_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_178_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_179_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_180_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_181_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_182_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_183_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_184_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_185_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_186_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_187_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_188_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_189_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_190_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_191_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_192_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_193_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_194_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_195_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_196_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_197_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_198_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_199_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_200_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_201_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_202_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_203_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_204_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_205_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_206_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_207_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_208_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_209_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_210_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_211_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_212_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_213_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_214_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_215_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_216_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_217_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_218_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_219_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_220_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_221_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_222_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_223_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_224_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_225_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_226_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_227_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_228_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_229_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_230_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_231_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_232_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_233_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_234_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_235_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_236_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_237_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_238_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_239_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_240_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_241_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_242_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_243_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_244_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_245_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_246_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_247_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_248_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_249_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_250_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_251_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_252_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_253_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_254_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_255_pt_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_eta_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_phi_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_mass_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'pcount/particles_charge_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'pcount' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_eta_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_eta_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_phi_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_phi_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_mass_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_mass_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pcount'.
+INFO: [HLS 200-111]  Elapsed time: 4.89 seconds; current allocated memory: 130.219 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 392.46 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 1338 ; free virtual = 4892
+INFO: [VHDL 208-304] Generating VHDL RTL for pcount.
+INFO: [VLOG 209-307] Generating Verilog RTL for pcount.
+INFO: [HLS 200-112] Total elapsed time: 46.56 seconds; peak allocated memory: 132.831 MB.

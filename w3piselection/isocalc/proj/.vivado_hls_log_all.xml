@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="proj" solutionName="solution1" date="2022-03-25T11:16:10.519+0100"/>
+      </csimLog>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'isocalc' consists of the following:&#xA;&#x9;wire read on port 'part_phi_V' (src/algo.cpp:4) [609]  (0 ns)&#xA;&#x9;'sub' operation of DSP[627] ('sub_ln1354_1', src/algo.cpp:14) [624]  (0 ns)&#xA;&#x9;'mul' operation of DSP[627] ('mul_ln15_1', src/algo.cpp:15) [627]  (3.75 ns)" projectName="proj" solutionName="solution1" date="2022-03-25T11:00:48.359+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (3.753ns) exceeds the target (target clock period: 4.167ns, clock uncertainty: 0.520875ns, effective delay budget: 3.64612ns)." projectName="proj" solutionName="solution1" date="2022-03-25T11:00:48.342+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

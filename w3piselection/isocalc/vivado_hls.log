@@ -1,0 +1,317 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Fri Mar 25 11:19:12 CET 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/isocalc'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/isocalc/proj/solution1/csim.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/isocalc/proj'.
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/w3piselection/isocalc/proj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4.167ns.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvf1924-2-i'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../algo_test.cpp in debug mode
+   Compiling ../../../../src/algo.cpp in debug mode
+   Generating csim.exe
+INFO from test 1
+ Algo result     : 1
+ Reference result: 1
+INFO from test 2
+ Algo result     : 0
+ Reference result: 0
+INFO from test 3
+ Algo result     : 0
+ Reference result: 0
+INFO from test 4
+ Algo result     : 1
+ Reference result: 1
+INFO from test 5
+ Algo result     : 1
+ Reference result: 1
+INFO from test 6
+ Algo result     : 1
+ Reference result: 1
+INFO from test 7
+ Algo result     : 1
+ Reference result: 1
+INFO from test 8
+ Algo result     : 1
+ Reference result: 1
+INFO from test 9
+ Algo result     : 1
+ Reference result: 1
+INFO from test 10
+ Algo result     : 1
+ Reference result: 1
+INFO from test 11
+ Algo result     : 1
+ Reference result: 1
+INFO from test 12
+ Algo result     : 1
+ Reference result: 1
+INFO from test 13
+ Algo result     : 1
+ Reference result: 1
+INFO from test 14
+ Algo result     : 1
+ Reference result: 1
+INFO from test 15
+ Algo result     : 0
+ Reference result: 0
+INFO from test 16
+ Algo result     : 0
+ Reference result: 0
+INFO from test 17
+ Algo result     : 1
+ Reference result: 1
+INFO from test 18
+ Algo result     : 1
+ Reference result: 1
+INFO from test 19
+ Algo result     : 1
+ Reference result: 1
+INFO from test 20
+ Algo result     : 1
+ Reference result: 1
+INFO from test 21
+ Algo result     : 1
+ Reference result: 1
+INFO from test 22
+ Algo result     : 1
+ Reference result: 1
+INFO from test 23
+ Algo result     : 1
+ Reference result: 1
+INFO from test 24
+ Algo result     : 1
+ Reference result: 1
+INFO from test 25
+ Algo result     : 1
+ Reference result: 1
+INFO from test 26
+ Algo result     : 0
+ Reference result: 0
+INFO from test 27
+ Algo result     : 1
+ Reference result: 1
+INFO from test 28
+ Algo result     : 1
+ Reference result: 1
+INFO from test 29
+ Algo result     : 1
+ Reference result: 1
+INFO from test 30
+ Algo result     : 1
+ Reference result: 1
+INFO from test 31
+ Algo result     : 1
+ Reference result: 1
+INFO from test 32
+ Algo result     : 1
+ Reference result: 1
+INFO from test 33
+ Algo result     : 1
+ Reference result: 1
+INFO from test 34
+ Algo result     : 1
+ Reference result: 1
+INFO from test 35
+ Algo result     : 0
+ Reference result: 0
+INFO from test 36
+ Algo result     : 1
+ Reference result: 1
+INFO from test 37
+ Algo result     : 0
+ Reference result: 0
+INFO from test 38
+ Algo result     : 1
+ Reference result: 1
+INFO from test 39
+ Algo result     : 1
+ Reference result: 1
+INFO from test 40
+ Algo result     : 1
+ Reference result: 1
+INFO from test 41
+ Algo result     : 1
+ Reference result: 1
+INFO from test 42
+ Algo result     : 0
+ Reference result: 0
+INFO from test 43
+ Algo result     : 1
+ Reference result: 1
+INFO from test 44
+ Algo result     : 1
+ Reference result: 1
+INFO from test 45
+ Algo result     : 1
+ Reference result: 1
+INFO from test 46
+ Algo result     : 1
+ Reference result: 1
+INFO from test 47
+ Algo result     : 0
+ Reference result: 0
+INFO from test 48
+ Algo result     : 1
+ Reference result: 1
+INFO from test 49
+ Algo result     : 1
+ Reference result: 1
+INFO from test 50
+ Algo result     : 1
+ Reference result: 1
+INFO from test 51
+ Algo result     : 1
+ Reference result: 1
+INFO from test 52
+ Algo result     : 0
+ Reference result: 0
+INFO from test 53
+ Algo result     : 0
+ Reference result: 0
+INFO from test 54
+ Algo result     : 1
+ Reference result: 1
+INFO from test 55
+ Algo result     : 1
+ Reference result: 1
+INFO from test 56
+ Algo result     : 1
+ Reference result: 1
+INFO from test 57
+ Algo result     : 1
+ Reference result: 1
+INFO from test 58
+ Algo result     : 1
+ Reference result: 1
+INFO from test 59
+ Algo result     : 0
+ Reference result: 0
+INFO from test 60
+ Algo result     : 1
+ Reference result: 1
+INFO from test 61
+ Algo result     : 1
+ Reference result: 1
+INFO from test 62
+ Algo result     : 1
+ Reference result: 1
+INFO from test 63
+ Algo result     : 1
+ Reference result: 1
+INFO from test 64
+ Algo result     : 0
+ Reference result: 0
+INFO from test 65
+ Algo result     : 1
+ Reference result: 1
+INFO from test 66
+ Algo result     : 1
+ Reference result: 1
+INFO from test 67
+ Algo result     : 1
+ Reference result: 1
+INFO from test 68
+ Algo result     : 1
+ Reference result: 1
+INFO from test 69
+ Algo result     : 1
+ Reference result: 1
+INFO from test 70
+ Algo result     : 1
+ Reference result: 1
+INFO from test 71
+ Algo result     : 1
+ Reference result: 1
+INFO from test 72
+ Algo result     : 1
+ Reference result: 1
+INFO from test 73
+ Algo result     : 1
+ Reference result: 1
+INFO from test 74
+ Algo result     : 1
+ Reference result: 1
+INFO from test 75
+ Algo result     : 1
+ Reference result: 1
+INFO from test 76
+ Algo result     : 0
+ Reference result: 0
+INFO from test 77
+ Algo result     : 1
+ Reference result: 1
+INFO from test 78
+ Algo result     : 1
+ Reference result: 1
+INFO from test 79
+ Algo result     : 1
+ Reference result: 1
+INFO from test 80
+ Algo result     : 1
+ Reference result: 1
+INFO from test 81
+ Algo result     : 1
+ Reference result: 1
+INFO from test 82
+ Algo result     : 1
+ Reference result: 1
+INFO from test 83
+ Algo result     : 1
+ Reference result: 1
+INFO from test 84
+ Algo result     : 1
+ Reference result: 1
+INFO from test 85
+ Algo result     : 1
+ Reference result: 1
+INFO from test 86
+ Algo result     : 0
+ Reference result: 0
+INFO from test 87
+ Algo result     : 1
+ Reference result: 1
+INFO from test 88
+ Algo result     : 0
+ Reference result: 0
+INFO from test 89
+ Algo result     : 1
+ Reference result: 1
+INFO from test 90
+ Algo result     : 1
+ Reference result: 1
+INFO from test 91
+ Algo result     : 1
+ Reference result: 1
+INFO from test 92
+ Algo result     : 0
+ Reference result: 0
+INFO from test 93
+ Algo result     : 1
+ Reference result: 1
+INFO from test 94
+ Algo result     : 1
+ Reference result: 1
+INFO from test 95
+ Algo result     : 0
+ Reference result: 0
+INFO from test 96
+ Algo result     : 1
+ Reference result: 1
+INFO from test 97
+ Algo result     : 1
+ Reference result: 1
+INFO from test 98
+ Algo result     : 1
+ Reference result: 1
+INFO from test 99
+ Algo result     : 1
+ Reference result: 1
+INFO from test 100
+ Algo result     : 1
+ Reference result: 1
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

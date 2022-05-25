@@ -1,0 +1,36 @@
+INFO: Applying HLS Y2K22 patch v1.2 for IP revision
+INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Mon Mar 21 12:57:25 CET 2022
+INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
+INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd/proj/solution/csim.tcl'
+INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd/proj'.
+INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/simpleadd/proj/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.125ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cc in debug mode
+   Generating csim.exe
+INFO: test 0: sum = 427, expected 427 -- OK
+INFO: test 1: sum = 330, expected 330 -- OK
+INFO: test 2: sum = 370, expected 370 -- OK
+INFO: test 3: sum = 427, expected 427 -- OK
+INFO: test 4: sum = 154, expected 154 -- OK
+INFO: test 5: sum = 346, expected 346 -- OK
+INFO: test 6: sum = 149, expected 149 -- OK
+INFO: test 7: sum = 163, expected 163 -- OK
+INFO: test 8: sum = 122, expected 122 -- OK
+INFO: test 9: sum = 152, expected 152 -- OK
+INFO: test 10: sum = 205, expected 205 -- OK
+INFO: test 11: sum = 121, expected 121 -- OK
+INFO: test 12: sum = 168, expected 168 -- OK
+INFO: test 13: sum = 291, expected 291 -- OK
+INFO: test 14: sum = 223, expected 223 -- OK
+INFO: test 15: sum = 154, expected 154 -- OK
+INFO: test 16: sum = 123, expected 123 -- OK
+INFO: test 17: sum = 430, expected 430 -- OK
+INFO: test 18: sum = 405, expected 405 -- OK
+INFO: test 19: sum = 222, expected 222 -- OK
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************

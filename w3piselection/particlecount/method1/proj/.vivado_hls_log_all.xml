@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.318+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_d1' to 0." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.251+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_d1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.238+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_we1' to 0." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.225+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_we1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.213+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_ce1' to 0." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.201+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_ce1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.190+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'pcount/particles_charge_V_address1' to 0." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.179+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_address1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.167+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'pcount/particles_charge_V_q0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="proj" solutionName="solution1" date="2022-03-25T13:09:29.155+0100" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

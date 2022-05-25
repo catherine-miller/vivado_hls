@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'readidx' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.725+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.713+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.689+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.681+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.672+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('candin_V_load', src/stream.cc:28) on array 'candin_V' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'candin_V'." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.208+0200" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-68] The II Violation in module 'stream' (Function: stream): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)&#xA;   between 'store' operation ('ptrsep_V_write_ln49', src/stream.cc:49) of variable 'ptrsep_V_new_2', src/stream.cc:58 on static variable 'ptrsep_V' and 'load' operation ('t.V', src/stream.cc:49) on static variable 'ptrsep_V'." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.198+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'stream/write' to 'stream/write_r' to avoid the conflict with HDL keywords or other object names." projectName="proj" solutionName="solution" date="2022-05-24T17:35:12.137+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

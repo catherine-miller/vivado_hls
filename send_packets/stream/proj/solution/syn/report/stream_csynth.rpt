@@ -1,0 +1,923 @@
+
+
+================================================================
+== Vivado HLS Report for 'stream'
+================================================================
+* Date:           Tue May 24 17:29:59 2022
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        proj
+* Solution:       solution
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 2.78 ns | 1.187 ns |   0.35 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        1|        1| 2.778 ns | 2.778 ns |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      -|        0|    16706|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|        -|        -|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|        -|    -|
+|Register             |        -|      -|    16708|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      0|    16708|    16706|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|      0|        2|        4|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|      0|    ~0   |        1|    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+-------+---+-----+------------+------------+
+    |       Variable Name       | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+-------+---+-----+------------+------------+
+    |ap_block_pp0_stage0_01001  |    and   |      0|  0|    2|           1|           1|
+    |lastvalid                  |    and   |      0|  0|    2|           1|           1|
+    |icmp_ln37_fu_7305_p2       |   icmp   |      0|  0|   29|          64|           1|
+    |icmp_ln44_fu_7325_p2       |   icmp   |      0|  0|   29|          64|           1|
+    |or_ln32_1_fu_7243_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln32_2_fu_7249_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln32_3_fu_7255_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln32_fu_7237_p2         |    or    |      0|  0|   64|          64|          64|
+    |or_ln37_1_fu_7290_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln37_2_fu_7294_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln37_3_fu_7299_p2       |    or    |      0|  0|   64|          64|          64|
+    |or_ln37_fu_7286_p2         |    or    |      0|  0|   64|          64|          64|
+    |or_ln43_fu_7320_p2         |    or    |      0|  0|    2|           1|           1|
+    |select_ln3_100_fu_4458_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_101_fu_4466_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_102_fu_4474_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_103_fu_4482_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_104_fu_4490_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_105_fu_4498_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_106_fu_4506_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_107_fu_4514_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_108_fu_4522_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_109_fu_4530_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_10_fu_3738_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_110_fu_4538_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_111_fu_4546_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_112_fu_4554_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_113_fu_4562_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_114_fu_4570_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_115_fu_4578_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_116_fu_4586_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_117_fu_4594_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_118_fu_4602_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_119_fu_4610_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_11_fu_3746_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_120_fu_4618_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_121_fu_4626_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_122_fu_4634_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_123_fu_4642_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_124_fu_4650_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_125_fu_4658_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_126_fu_4666_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_127_fu_4674_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_128_fu_4682_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_129_fu_4690_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_12_fu_3754_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_130_fu_4698_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_131_fu_4706_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_132_fu_4714_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_133_fu_4722_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_134_fu_4730_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_135_fu_4738_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_136_fu_4746_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_137_fu_4754_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_138_fu_4762_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_139_fu_4770_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_13_fu_3762_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_140_fu_4778_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_141_fu_4786_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_142_fu_4794_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_143_fu_4802_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_144_fu_4810_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_145_fu_4818_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_146_fu_4826_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_147_fu_4834_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_148_fu_4842_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_149_fu_4850_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_14_fu_3770_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_150_fu_4858_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_151_fu_4866_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_152_fu_4874_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_153_fu_4882_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_154_fu_4890_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_155_fu_4898_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_156_fu_4906_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_157_fu_4914_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_158_fu_4922_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_159_fu_4930_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_15_fu_3778_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_160_fu_4938_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_161_fu_4946_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_162_fu_4954_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_163_fu_4962_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_164_fu_4970_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_165_fu_4978_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_166_fu_4986_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_167_fu_4994_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_168_fu_5002_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_169_fu_5010_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_16_fu_3786_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_170_fu_5018_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_171_fu_5026_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_172_fu_5034_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_173_fu_5042_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_174_fu_5050_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_175_fu_5058_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_176_fu_5066_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_177_fu_5074_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_178_fu_5082_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_179_fu_5090_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_17_fu_3794_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_180_fu_5098_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_181_fu_5106_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_182_fu_5114_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_183_fu_5122_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_184_fu_5130_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_185_fu_5138_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_186_fu_5146_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_187_fu_5154_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_188_fu_5162_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_189_fu_5170_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_18_fu_3802_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_190_fu_5178_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_191_fu_5186_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_192_fu_5194_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_193_fu_5202_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_194_fu_5210_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_195_fu_5218_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_196_fu_5226_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_197_fu_5234_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_198_fu_5242_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_199_fu_5250_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_19_fu_3810_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_1_fu_3666_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_200_fu_5258_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_201_fu_5266_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_202_fu_5274_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_203_fu_5282_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_204_fu_5290_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_205_fu_5298_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_206_fu_5306_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_207_fu_5314_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_208_fu_5322_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_209_fu_5330_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_20_fu_3818_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_210_fu_5338_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_211_fu_5346_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_212_fu_5354_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_213_fu_5362_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_214_fu_5370_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_215_fu_5378_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_216_fu_5386_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_217_fu_5394_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_218_fu_5402_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_219_fu_5410_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_21_fu_3826_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_220_fu_5418_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_221_fu_5426_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_222_fu_5434_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_223_fu_5442_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_224_fu_5450_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_225_fu_5458_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_226_fu_5466_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_227_fu_5474_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_228_fu_5482_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_229_fu_5490_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_22_fu_3834_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_230_fu_5498_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_231_fu_5506_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_232_fu_5514_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_233_fu_5522_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_234_fu_5530_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_235_fu_5538_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_236_fu_5546_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_237_fu_5554_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_238_fu_5562_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_239_fu_5570_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_23_fu_3842_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_240_fu_5578_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_241_fu_5586_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_242_fu_5594_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_243_fu_5602_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_244_fu_5610_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_245_fu_5618_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_246_fu_5626_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_247_fu_5634_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_248_fu_5642_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_249_fu_5650_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_24_fu_3850_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_250_fu_5658_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_251_fu_5666_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_252_fu_5674_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_253_fu_5682_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_254_fu_5690_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_255_fu_5698_p3  |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_25_fu_3858_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_26_fu_3866_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_27_fu_3874_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_28_fu_3882_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_29_fu_3890_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_2_fu_3674_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_30_fu_3898_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_31_fu_3906_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_32_fu_3914_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_33_fu_3922_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_34_fu_3930_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_35_fu_3938_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_36_fu_3946_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_37_fu_3954_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_38_fu_3962_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_39_fu_3970_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_3_fu_3682_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_40_fu_3978_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_41_fu_3986_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_42_fu_3994_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_43_fu_4002_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_44_fu_4010_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_45_fu_4018_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_46_fu_4026_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_47_fu_4034_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_48_fu_4042_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_49_fu_4050_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_4_fu_3690_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_50_fu_4058_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_51_fu_4066_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_52_fu_4074_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_53_fu_4082_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_54_fu_4090_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_55_fu_4098_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_56_fu_4106_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_57_fu_4114_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_58_fu_4122_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_59_fu_4130_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_5_fu_3698_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_60_fu_4138_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_61_fu_4146_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_62_fu_4154_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_63_fu_4162_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_64_fu_4170_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_65_fu_4178_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_66_fu_4186_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_67_fu_4194_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_68_fu_4202_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_69_fu_4210_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_6_fu_3706_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_70_fu_4218_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_71_fu_4226_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_72_fu_4234_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_73_fu_4242_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_74_fu_4250_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_75_fu_4258_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_76_fu_4266_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_77_fu_4274_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_78_fu_4282_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_79_fu_4290_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_7_fu_3714_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_80_fu_4298_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_81_fu_4306_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_82_fu_4314_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_83_fu_4322_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_84_fu_4330_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_85_fu_4338_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_86_fu_4346_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_87_fu_4354_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_88_fu_4362_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_89_fu_4370_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_8_fu_3722_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_90_fu_4378_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_91_fu_4386_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_92_fu_4394_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_93_fu_4402_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_94_fu_4410_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_95_fu_4418_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_96_fu_4426_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_97_fu_4434_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_98_fu_4442_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_99_fu_4450_p3   |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_9_fu_3730_p3    |  select  |      0|  0|   63|           1|          64|
+    |select_ln3_fu_3658_p3      |  select  |      0|  0|   63|           1|          64|
+    |ap_enable_pp0              |    xor   |      0|  0|    2|           1|           2|
+    +---------------------------+----------+-------+---+-----+------------+------------+
+    |Total                      |          |      0|  0|16706|         900|       16903|
+    +---------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    +--------------------------+-----+----+-----+-----------+
+    |           Name           |  FF | LUT| Bits| Const Bits|
+    +--------------------------+-----+----+-----+-----------+
+    |ap_CS_fsm                 |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1   |    1|   0|    1|          0|
+    |eventstart_read_reg_7338  |    1|   0|    1|          0|
+    |hold_V_0                  |   64|   0|   64|          0|
+    |hold_V_1                  |   64|   0|   64|          0|
+    |hold_V_2                  |   64|   0|   64|          0|
+    |hold_V_3                  |   64|   0|   64|          0|
+    |hold_V_4                  |   64|   0|   64|          0|
+    |holdevtstart              |    1|   0|    1|          0|
+    |scands_V_10               |   64|   0|   64|          0|
+    |scands_V_100              |   64|   0|   64|          0|
+    |scands_V_101              |   64|   0|   64|          0|
+    |scands_V_102              |   64|   0|   64|          0|
+    |scands_V_103              |   64|   0|   64|          0|
+    |scands_V_104              |   64|   0|   64|          0|
+    |scands_V_105              |   64|   0|   64|          0|
+    |scands_V_106              |   64|   0|   64|          0|
+    |scands_V_107              |   64|   0|   64|          0|
+    |scands_V_108              |   64|   0|   64|          0|
+    |scands_V_109              |   64|   0|   64|          0|
+    |scands_V_11               |   64|   0|   64|          0|
+    |scands_V_110              |   64|   0|   64|          0|
+    |scands_V_111              |   64|   0|   64|          0|
+    |scands_V_112              |   64|   0|   64|          0|
+    |scands_V_113              |   64|   0|   64|          0|
+    |scands_V_114              |   64|   0|   64|          0|
+    |scands_V_115              |   64|   0|   64|          0|
+    |scands_V_116              |   64|   0|   64|          0|
+    |scands_V_117              |   64|   0|   64|          0|
+    |scands_V_118              |   64|   0|   64|          0|
+    |scands_V_119              |   64|   0|   64|          0|
+    |scands_V_12               |   64|   0|   64|          0|
+    |scands_V_120              |   64|   0|   64|          0|
+    |scands_V_121              |   64|   0|   64|          0|
+    |scands_V_122              |   64|   0|   64|          0|
+    |scands_V_123              |   64|   0|   64|          0|
+    |scands_V_124              |   64|   0|   64|          0|
+    |scands_V_125              |   64|   0|   64|          0|
+    |scands_V_126              |   64|   0|   64|          0|
+    |scands_V_127              |   64|   0|   64|          0|
+    |scands_V_128              |   64|   0|   64|          0|
+    |scands_V_129              |   64|   0|   64|          0|
+    |scands_V_13               |   64|   0|   64|          0|
+    |scands_V_130              |   64|   0|   64|          0|
+    |scands_V_131              |   64|   0|   64|          0|
+    |scands_V_132              |   64|   0|   64|          0|
+    |scands_V_133              |   64|   0|   64|          0|
+    |scands_V_134              |   64|   0|   64|          0|
+    |scands_V_135              |   64|   0|   64|          0|
+    |scands_V_136              |   64|   0|   64|          0|
+    |scands_V_137              |   64|   0|   64|          0|
+    |scands_V_138              |   64|   0|   64|          0|
+    |scands_V_139              |   64|   0|   64|          0|
+    |scands_V_14               |   64|   0|   64|          0|
+    |scands_V_140              |   64|   0|   64|          0|
+    |scands_V_141              |   64|   0|   64|          0|
+    |scands_V_142              |   64|   0|   64|          0|
+    |scands_V_143              |   64|   0|   64|          0|
+    |scands_V_144              |   64|   0|   64|          0|
+    |scands_V_145              |   64|   0|   64|          0|
+    |scands_V_146              |   64|   0|   64|          0|
+    |scands_V_147              |   64|   0|   64|          0|
+    |scands_V_148              |   64|   0|   64|          0|
+    |scands_V_149              |   64|   0|   64|          0|
+    |scands_V_15               |   64|   0|   64|          0|
+    |scands_V_150              |   64|   0|   64|          0|
+    |scands_V_151              |   64|   0|   64|          0|
+    |scands_V_152              |   64|   0|   64|          0|
+    |scands_V_153              |   64|   0|   64|          0|
+    |scands_V_154              |   64|   0|   64|          0|
+    |scands_V_155              |   64|   0|   64|          0|
+    |scands_V_156              |   64|   0|   64|          0|
+    |scands_V_157              |   64|   0|   64|          0|
+    |scands_V_158              |   64|   0|   64|          0|
+    |scands_V_159              |   64|   0|   64|          0|
+    |scands_V_16               |   64|   0|   64|          0|
+    |scands_V_160              |   64|   0|   64|          0|
+    |scands_V_161              |   64|   0|   64|          0|
+    |scands_V_162              |   64|   0|   64|          0|
+    |scands_V_163              |   64|   0|   64|          0|
+    |scands_V_164              |   64|   0|   64|          0|
+    |scands_V_165              |   64|   0|   64|          0|
+    |scands_V_166              |   64|   0|   64|          0|
+    |scands_V_167              |   64|   0|   64|          0|
+    |scands_V_168              |   64|   0|   64|          0|
+    |scands_V_169              |   64|   0|   64|          0|
+    |scands_V_17               |   64|   0|   64|          0|
+    |scands_V_170              |   64|   0|   64|          0|
+    |scands_V_171              |   64|   0|   64|          0|
+    |scands_V_172              |   64|   0|   64|          0|
+    |scands_V_173              |   64|   0|   64|          0|
+    |scands_V_174              |   64|   0|   64|          0|
+    |scands_V_175              |   64|   0|   64|          0|
+    |scands_V_176              |   64|   0|   64|          0|
+    |scands_V_177              |   64|   0|   64|          0|
+    |scands_V_178              |   64|   0|   64|          0|
+    |scands_V_179              |   64|   0|   64|          0|
+    |scands_V_18               |   64|   0|   64|          0|
+    |scands_V_180              |   64|   0|   64|          0|
+    |scands_V_181              |   64|   0|   64|          0|
+    |scands_V_182              |   64|   0|   64|          0|
+    |scands_V_183              |   64|   0|   64|          0|
+    |scands_V_184              |   64|   0|   64|          0|
+    |scands_V_185              |   64|   0|   64|          0|
+    |scands_V_186              |   64|   0|   64|          0|
+    |scands_V_187              |   64|   0|   64|          0|
+    |scands_V_188              |   64|   0|   64|          0|
+    |scands_V_189              |   64|   0|   64|          0|
+    |scands_V_19               |   64|   0|   64|          0|
+    |scands_V_190              |   64|   0|   64|          0|
+    |scands_V_191              |   64|   0|   64|          0|
+    |scands_V_192              |   64|   0|   64|          0|
+    |scands_V_193              |   64|   0|   64|          0|
+    |scands_V_194              |   64|   0|   64|          0|
+    |scands_V_195              |   64|   0|   64|          0|
+    |scands_V_196              |   64|   0|   64|          0|
+    |scands_V_197              |   64|   0|   64|          0|
+    |scands_V_198              |   64|   0|   64|          0|
+    |scands_V_199              |   64|   0|   64|          0|
+    |scands_V_20               |   64|   0|   64|          0|
+    |scands_V_200              |   64|   0|   64|          0|
+    |scands_V_201              |   64|   0|   64|          0|
+    |scands_V_202              |   64|   0|   64|          0|
+    |scands_V_203              |   64|   0|   64|          0|
+    |scands_V_204              |   64|   0|   64|          0|
+    |scands_V_205              |   64|   0|   64|          0|
+    |scands_V_206              |   64|   0|   64|          0|
+    |scands_V_207              |   64|   0|   64|          0|
+    |scands_V_208              |   64|   0|   64|          0|
+    |scands_V_209              |   64|   0|   64|          0|
+    |scands_V_21               |   64|   0|   64|          0|
+    |scands_V_210              |   64|   0|   64|          0|
+    |scands_V_211              |   64|   0|   64|          0|
+    |scands_V_212              |   64|   0|   64|          0|
+    |scands_V_213              |   64|   0|   64|          0|
+    |scands_V_214              |   64|   0|   64|          0|
+    |scands_V_215              |   64|   0|   64|          0|
+    |scands_V_216              |   64|   0|   64|          0|
+    |scands_V_217              |   64|   0|   64|          0|
+    |scands_V_218              |   64|   0|   64|          0|
+    |scands_V_219              |   64|   0|   64|          0|
+    |scands_V_22               |   64|   0|   64|          0|
+    |scands_V_220              |   64|   0|   64|          0|
+    |scands_V_221              |   64|   0|   64|          0|
+    |scands_V_222              |   64|   0|   64|          0|
+    |scands_V_223              |   64|   0|   64|          0|
+    |scands_V_224              |   64|   0|   64|          0|
+    |scands_V_225              |   64|   0|   64|          0|
+    |scands_V_226              |   64|   0|   64|          0|
+    |scands_V_227              |   64|   0|   64|          0|
+    |scands_V_228              |   64|   0|   64|          0|
+    |scands_V_229              |   64|   0|   64|          0|
+    |scands_V_23               |   64|   0|   64|          0|
+    |scands_V_230              |   64|   0|   64|          0|
+    |scands_V_231              |   64|   0|   64|          0|
+    |scands_V_232              |   64|   0|   64|          0|
+    |scands_V_233              |   64|   0|   64|          0|
+    |scands_V_234              |   64|   0|   64|          0|
+    |scands_V_235              |   64|   0|   64|          0|
+    |scands_V_236              |   64|   0|   64|          0|
+    |scands_V_237              |   64|   0|   64|          0|
+    |scands_V_238              |   64|   0|   64|          0|
+    |scands_V_239              |   64|   0|   64|          0|
+    |scands_V_24               |   64|   0|   64|          0|
+    |scands_V_240              |   64|   0|   64|          0|
+    |scands_V_241              |   64|   0|   64|          0|
+    |scands_V_242              |   64|   0|   64|          0|
+    |scands_V_243              |   64|   0|   64|          0|
+    |scands_V_244              |   64|   0|   64|          0|
+    |scands_V_245              |   64|   0|   64|          0|
+    |scands_V_246              |   64|   0|   64|          0|
+    |scands_V_247              |   64|   0|   64|          0|
+    |scands_V_248              |   64|   0|   64|          0|
+    |scands_V_249              |   64|   0|   64|          0|
+    |scands_V_25               |   64|   0|   64|          0|
+    |scands_V_250              |   64|   0|   64|          0|
+    |scands_V_251              |   64|   0|   64|          0|
+    |scands_V_252              |   64|   0|   64|          0|
+    |scands_V_253              |   64|   0|   64|          0|
+    |scands_V_254              |   64|   0|   64|          0|
+    |scands_V_255              |   64|   0|   64|          0|
+    |scands_V_26               |   64|   0|   64|          0|
+    |scands_V_27               |   64|   0|   64|          0|
+    |scands_V_28               |   64|   0|   64|          0|
+    |scands_V_29               |   64|   0|   64|          0|
+    |scands_V_30               |   64|   0|   64|          0|
+    |scands_V_31               |   64|   0|   64|          0|
+    |scands_V_32               |   64|   0|   64|          0|
+    |scands_V_33               |   64|   0|   64|          0|
+    |scands_V_34               |   64|   0|   64|          0|
+    |scands_V_35               |   64|   0|   64|          0|
+    |scands_V_36               |   64|   0|   64|          0|
+    |scands_V_37               |   64|   0|   64|          0|
+    |scands_V_38               |   64|   0|   64|          0|
+    |scands_V_39               |   64|   0|   64|          0|
+    |scands_V_40               |   64|   0|   64|          0|
+    |scands_V_41               |   64|   0|   64|          0|
+    |scands_V_42               |   64|   0|   64|          0|
+    |scands_V_43               |   64|   0|   64|          0|
+    |scands_V_44               |   64|   0|   64|          0|
+    |scands_V_45               |   64|   0|   64|          0|
+    |scands_V_46               |   64|   0|   64|          0|
+    |scands_V_47               |   64|   0|   64|          0|
+    |scands_V_48               |   64|   0|   64|          0|
+    |scands_V_49               |   64|   0|   64|          0|
+    |scands_V_5                |   64|   0|   64|          0|
+    |scands_V_50               |   64|   0|   64|          0|
+    |scands_V_51               |   64|   0|   64|          0|
+    |scands_V_52               |   64|   0|   64|          0|
+    |scands_V_53               |   64|   0|   64|          0|
+    |scands_V_54               |   64|   0|   64|          0|
+    |scands_V_55               |   64|   0|   64|          0|
+    |scands_V_56               |   64|   0|   64|          0|
+    |scands_V_57               |   64|   0|   64|          0|
+    |scands_V_58               |   64|   0|   64|          0|
+    |scands_V_59               |   64|   0|   64|          0|
+    |scands_V_6                |   64|   0|   64|          0|
+    |scands_V_60               |   64|   0|   64|          0|
+    |scands_V_61               |   64|   0|   64|          0|
+    |scands_V_62               |   64|   0|   64|          0|
+    |scands_V_63               |   64|   0|   64|          0|
+    |scands_V_64               |   64|   0|   64|          0|
+    |scands_V_65               |   64|   0|   64|          0|
+    |scands_V_66               |   64|   0|   64|          0|
+    |scands_V_67               |   64|   0|   64|          0|
+    |scands_V_68               |   64|   0|   64|          0|
+    |scands_V_69               |   64|   0|   64|          0|
+    |scands_V_7                |   64|   0|   64|          0|
+    |scands_V_70               |   64|   0|   64|          0|
+    |scands_V_71               |   64|   0|   64|          0|
+    |scands_V_72               |   64|   0|   64|          0|
+    |scands_V_73               |   64|   0|   64|          0|
+    |scands_V_74               |   64|   0|   64|          0|
+    |scands_V_75               |   64|   0|   64|          0|
+    |scands_V_76               |   64|   0|   64|          0|
+    |scands_V_77               |   64|   0|   64|          0|
+    |scands_V_78               |   64|   0|   64|          0|
+    |scands_V_79               |   64|   0|   64|          0|
+    |scands_V_8                |   64|   0|   64|          0|
+    |scands_V_80               |   64|   0|   64|          0|
+    |scands_V_81               |   64|   0|   64|          0|
+    |scands_V_82               |   64|   0|   64|          0|
+    |scands_V_83               |   64|   0|   64|          0|
+    |scands_V_84               |   64|   0|   64|          0|
+    |scands_V_85               |   64|   0|   64|          0|
+    |scands_V_86               |   64|   0|   64|          0|
+    |scands_V_87               |   64|   0|   64|          0|
+    |scands_V_88               |   64|   0|   64|          0|
+    |scands_V_89               |   64|   0|   64|          0|
+    |scands_V_9                |   64|   0|   64|          0|
+    |scands_V_90               |   64|   0|   64|          0|
+    |scands_V_91               |   64|   0|   64|          0|
+    |scands_V_92               |   64|   0|   64|          0|
+    |scands_V_93               |   64|   0|   64|          0|
+    |scands_V_94               |   64|   0|   64|          0|
+    |scands_V_95               |   64|   0|   64|          0|
+    |scands_V_96               |   64|   0|   64|          0|
+    |scands_V_97               |   64|   0|   64|          0|
+    |scands_V_98               |   64|   0|   64|          0|
+    |scands_V_99               |   64|   0|   64|          0|
+    |select_ln3_251_reg_7344   |   64|   0|   64|          0|
+    |select_ln3_252_reg_7350   |   64|   0|   64|          0|
+    |select_ln3_253_reg_7356   |   64|   0|   64|          0|
+    |select_ln3_254_reg_7362   |   64|   0|   64|          0|
+    |select_ln3_255_reg_7368   |   64|   0|   64|          0|
+    +--------------------------+-----+----+-----+-----------+
+    |Total                     |16708|   0|16708|          0|
+    +--------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++---------------------+-----+-----+------------+--------------+--------------+
+|ap_clk               |  in |    1| ap_ctrl_hs |    stream    | return value |
+|ap_rst               |  in |    1| ap_ctrl_hs |    stream    | return value |
+|ap_start             |  in |    1| ap_ctrl_hs |    stream    | return value |
+|ap_done              | out |    1| ap_ctrl_hs |    stream    | return value |
+|ap_idle              | out |    1| ap_ctrl_hs |    stream    | return value |
+|ap_ready             | out |    1| ap_ctrl_hs |    stream    | return value |
+|ap_return            | out |    1| ap_ctrl_hs |    stream    | return value |
+|cands_0_V            |  in |   64|   ap_none  |   cands_0_V  |    pointer   |
+|cands_1_V            |  in |   64|   ap_none  |   cands_1_V  |    pointer   |
+|cands_2_V            |  in |   64|   ap_none  |   cands_2_V  |    pointer   |
+|cands_3_V            |  in |   64|   ap_none  |   cands_3_V  |    pointer   |
+|cands_4_V            |  in |   64|   ap_none  |   cands_4_V  |    pointer   |
+|cands_5_V            |  in |   64|   ap_none  |   cands_5_V  |    pointer   |
+|cands_6_V            |  in |   64|   ap_none  |   cands_6_V  |    pointer   |
+|cands_7_V            |  in |   64|   ap_none  |   cands_7_V  |    pointer   |
+|cands_8_V            |  in |   64|   ap_none  |   cands_8_V  |    pointer   |
+|cands_9_V            |  in |   64|   ap_none  |   cands_9_V  |    pointer   |
+|cands_10_V           |  in |   64|   ap_none  |  cands_10_V  |    pointer   |
+|cands_11_V           |  in |   64|   ap_none  |  cands_11_V  |    pointer   |
+|cands_12_V           |  in |   64|   ap_none  |  cands_12_V  |    pointer   |
+|cands_13_V           |  in |   64|   ap_none  |  cands_13_V  |    pointer   |
+|cands_14_V           |  in |   64|   ap_none  |  cands_14_V  |    pointer   |
+|cands_15_V           |  in |   64|   ap_none  |  cands_15_V  |    pointer   |
+|cands_16_V           |  in |   64|   ap_none  |  cands_16_V  |    pointer   |
+|cands_17_V           |  in |   64|   ap_none  |  cands_17_V  |    pointer   |
+|cands_18_V           |  in |   64|   ap_none  |  cands_18_V  |    pointer   |
+|cands_19_V           |  in |   64|   ap_none  |  cands_19_V  |    pointer   |
+|cands_20_V           |  in |   64|   ap_none  |  cands_20_V  |    pointer   |
+|cands_21_V           |  in |   64|   ap_none  |  cands_21_V  |    pointer   |
+|cands_22_V           |  in |   64|   ap_none  |  cands_22_V  |    pointer   |
+|cands_23_V           |  in |   64|   ap_none  |  cands_23_V  |    pointer   |
+|cands_24_V           |  in |   64|   ap_none  |  cands_24_V  |    pointer   |
+|cands_25_V           |  in |   64|   ap_none  |  cands_25_V  |    pointer   |
+|cands_26_V           |  in |   64|   ap_none  |  cands_26_V  |    pointer   |
+|cands_27_V           |  in |   64|   ap_none  |  cands_27_V  |    pointer   |
+|cands_28_V           |  in |   64|   ap_none  |  cands_28_V  |    pointer   |
+|cands_29_V           |  in |   64|   ap_none  |  cands_29_V  |    pointer   |
+|cands_30_V           |  in |   64|   ap_none  |  cands_30_V  |    pointer   |
+|cands_31_V           |  in |   64|   ap_none  |  cands_31_V  |    pointer   |
+|cands_32_V           |  in |   64|   ap_none  |  cands_32_V  |    pointer   |
+|cands_33_V           |  in |   64|   ap_none  |  cands_33_V  |    pointer   |
+|cands_34_V           |  in |   64|   ap_none  |  cands_34_V  |    pointer   |
+|cands_35_V           |  in |   64|   ap_none  |  cands_35_V  |    pointer   |
+|cands_36_V           |  in |   64|   ap_none  |  cands_36_V  |    pointer   |
+|cands_37_V           |  in |   64|   ap_none  |  cands_37_V  |    pointer   |
+|cands_38_V           |  in |   64|   ap_none  |  cands_38_V  |    pointer   |
+|cands_39_V           |  in |   64|   ap_none  |  cands_39_V  |    pointer   |
+|cands_40_V           |  in |   64|   ap_none  |  cands_40_V  |    pointer   |
+|cands_41_V           |  in |   64|   ap_none  |  cands_41_V  |    pointer   |
+|cands_42_V           |  in |   64|   ap_none  |  cands_42_V  |    pointer   |
+|cands_43_V           |  in |   64|   ap_none  |  cands_43_V  |    pointer   |
+|cands_44_V           |  in |   64|   ap_none  |  cands_44_V  |    pointer   |
+|cands_45_V           |  in |   64|   ap_none  |  cands_45_V  |    pointer   |
+|cands_46_V           |  in |   64|   ap_none  |  cands_46_V  |    pointer   |
+|cands_47_V           |  in |   64|   ap_none  |  cands_47_V  |    pointer   |
+|cands_48_V           |  in |   64|   ap_none  |  cands_48_V  |    pointer   |
+|cands_49_V           |  in |   64|   ap_none  |  cands_49_V  |    pointer   |
+|cands_50_V           |  in |   64|   ap_none  |  cands_50_V  |    pointer   |
+|cands_51_V           |  in |   64|   ap_none  |  cands_51_V  |    pointer   |
+|cands_52_V           |  in |   64|   ap_none  |  cands_52_V  |    pointer   |
+|cands_53_V           |  in |   64|   ap_none  |  cands_53_V  |    pointer   |
+|cands_54_V           |  in |   64|   ap_none  |  cands_54_V  |    pointer   |
+|cands_55_V           |  in |   64|   ap_none  |  cands_55_V  |    pointer   |
+|cands_56_V           |  in |   64|   ap_none  |  cands_56_V  |    pointer   |
+|cands_57_V           |  in |   64|   ap_none  |  cands_57_V  |    pointer   |
+|cands_58_V           |  in |   64|   ap_none  |  cands_58_V  |    pointer   |
+|cands_59_V           |  in |   64|   ap_none  |  cands_59_V  |    pointer   |
+|cands_60_V           |  in |   64|   ap_none  |  cands_60_V  |    pointer   |
+|cands_61_V           |  in |   64|   ap_none  |  cands_61_V  |    pointer   |
+|cands_62_V           |  in |   64|   ap_none  |  cands_62_V  |    pointer   |
+|cands_63_V           |  in |   64|   ap_none  |  cands_63_V  |    pointer   |
+|cands_64_V           |  in |   64|   ap_none  |  cands_64_V  |    pointer   |
+|cands_65_V           |  in |   64|   ap_none  |  cands_65_V  |    pointer   |
+|cands_66_V           |  in |   64|   ap_none  |  cands_66_V  |    pointer   |
+|cands_67_V           |  in |   64|   ap_none  |  cands_67_V  |    pointer   |
+|cands_68_V           |  in |   64|   ap_none  |  cands_68_V  |    pointer   |
+|cands_69_V           |  in |   64|   ap_none  |  cands_69_V  |    pointer   |
+|cands_70_V           |  in |   64|   ap_none  |  cands_70_V  |    pointer   |
+|cands_71_V           |  in |   64|   ap_none  |  cands_71_V  |    pointer   |
+|cands_72_V           |  in |   64|   ap_none  |  cands_72_V  |    pointer   |
+|cands_73_V           |  in |   64|   ap_none  |  cands_73_V  |    pointer   |
+|cands_74_V           |  in |   64|   ap_none  |  cands_74_V  |    pointer   |
+|cands_75_V           |  in |   64|   ap_none  |  cands_75_V  |    pointer   |
+|cands_76_V           |  in |   64|   ap_none  |  cands_76_V  |    pointer   |
+|cands_77_V           |  in |   64|   ap_none  |  cands_77_V  |    pointer   |
+|cands_78_V           |  in |   64|   ap_none  |  cands_78_V  |    pointer   |
+|cands_79_V           |  in |   64|   ap_none  |  cands_79_V  |    pointer   |
+|cands_80_V           |  in |   64|   ap_none  |  cands_80_V  |    pointer   |
+|cands_81_V           |  in |   64|   ap_none  |  cands_81_V  |    pointer   |
+|cands_82_V           |  in |   64|   ap_none  |  cands_82_V  |    pointer   |
+|cands_83_V           |  in |   64|   ap_none  |  cands_83_V  |    pointer   |
+|cands_84_V           |  in |   64|   ap_none  |  cands_84_V  |    pointer   |
+|cands_85_V           |  in |   64|   ap_none  |  cands_85_V  |    pointer   |
+|cands_86_V           |  in |   64|   ap_none  |  cands_86_V  |    pointer   |
+|cands_87_V           |  in |   64|   ap_none  |  cands_87_V  |    pointer   |
+|cands_88_V           |  in |   64|   ap_none  |  cands_88_V  |    pointer   |
+|cands_89_V           |  in |   64|   ap_none  |  cands_89_V  |    pointer   |
+|cands_90_V           |  in |   64|   ap_none  |  cands_90_V  |    pointer   |
+|cands_91_V           |  in |   64|   ap_none  |  cands_91_V  |    pointer   |
+|cands_92_V           |  in |   64|   ap_none  |  cands_92_V  |    pointer   |
+|cands_93_V           |  in |   64|   ap_none  |  cands_93_V  |    pointer   |
+|cands_94_V           |  in |   64|   ap_none  |  cands_94_V  |    pointer   |
+|cands_95_V           |  in |   64|   ap_none  |  cands_95_V  |    pointer   |
+|cands_96_V           |  in |   64|   ap_none  |  cands_96_V  |    pointer   |
+|cands_97_V           |  in |   64|   ap_none  |  cands_97_V  |    pointer   |
+|cands_98_V           |  in |   64|   ap_none  |  cands_98_V  |    pointer   |
+|cands_99_V           |  in |   64|   ap_none  |  cands_99_V  |    pointer   |
+|cands_100_V          |  in |   64|   ap_none  |  cands_100_V |    pointer   |
+|cands_101_V          |  in |   64|   ap_none  |  cands_101_V |    pointer   |
+|cands_102_V          |  in |   64|   ap_none  |  cands_102_V |    pointer   |
+|cands_103_V          |  in |   64|   ap_none  |  cands_103_V |    pointer   |
+|cands_104_V          |  in |   64|   ap_none  |  cands_104_V |    pointer   |
+|cands_105_V          |  in |   64|   ap_none  |  cands_105_V |    pointer   |
+|cands_106_V          |  in |   64|   ap_none  |  cands_106_V |    pointer   |
+|cands_107_V          |  in |   64|   ap_none  |  cands_107_V |    pointer   |
+|cands_108_V          |  in |   64|   ap_none  |  cands_108_V |    pointer   |
+|cands_109_V          |  in |   64|   ap_none  |  cands_109_V |    pointer   |
+|cands_110_V          |  in |   64|   ap_none  |  cands_110_V |    pointer   |
+|cands_111_V          |  in |   64|   ap_none  |  cands_111_V |    pointer   |
+|cands_112_V          |  in |   64|   ap_none  |  cands_112_V |    pointer   |
+|cands_113_V          |  in |   64|   ap_none  |  cands_113_V |    pointer   |
+|cands_114_V          |  in |   64|   ap_none  |  cands_114_V |    pointer   |
+|cands_115_V          |  in |   64|   ap_none  |  cands_115_V |    pointer   |
+|cands_116_V          |  in |   64|   ap_none  |  cands_116_V |    pointer   |
+|cands_117_V          |  in |   64|   ap_none  |  cands_117_V |    pointer   |
+|cands_118_V          |  in |   64|   ap_none  |  cands_118_V |    pointer   |
+|cands_119_V          |  in |   64|   ap_none  |  cands_119_V |    pointer   |
+|cands_120_V          |  in |   64|   ap_none  |  cands_120_V |    pointer   |
+|cands_121_V          |  in |   64|   ap_none  |  cands_121_V |    pointer   |
+|cands_122_V          |  in |   64|   ap_none  |  cands_122_V |    pointer   |
+|cands_123_V          |  in |   64|   ap_none  |  cands_123_V |    pointer   |
+|cands_124_V          |  in |   64|   ap_none  |  cands_124_V |    pointer   |
+|cands_125_V          |  in |   64|   ap_none  |  cands_125_V |    pointer   |
+|cands_126_V          |  in |   64|   ap_none  |  cands_126_V |    pointer   |
+|cands_127_V          |  in |   64|   ap_none  |  cands_127_V |    pointer   |
+|cands_128_V          |  in |   64|   ap_none  |  cands_128_V |    pointer   |
+|cands_129_V          |  in |   64|   ap_none  |  cands_129_V |    pointer   |
+|cands_130_V          |  in |   64|   ap_none  |  cands_130_V |    pointer   |
+|cands_131_V          |  in |   64|   ap_none  |  cands_131_V |    pointer   |
+|cands_132_V          |  in |   64|   ap_none  |  cands_132_V |    pointer   |
+|cands_133_V          |  in |   64|   ap_none  |  cands_133_V |    pointer   |
+|cands_134_V          |  in |   64|   ap_none  |  cands_134_V |    pointer   |
+|cands_135_V          |  in |   64|   ap_none  |  cands_135_V |    pointer   |
+|cands_136_V          |  in |   64|   ap_none  |  cands_136_V |    pointer   |
+|cands_137_V          |  in |   64|   ap_none  |  cands_137_V |    pointer   |
+|cands_138_V          |  in |   64|   ap_none  |  cands_138_V |    pointer   |
+|cands_139_V          |  in |   64|   ap_none  |  cands_139_V |    pointer   |
+|cands_140_V          |  in |   64|   ap_none  |  cands_140_V |    pointer   |
+|cands_141_V          |  in |   64|   ap_none  |  cands_141_V |    pointer   |
+|cands_142_V          |  in |   64|   ap_none  |  cands_142_V |    pointer   |
+|cands_143_V          |  in |   64|   ap_none  |  cands_143_V |    pointer   |
+|cands_144_V          |  in |   64|   ap_none  |  cands_144_V |    pointer   |
+|cands_145_V          |  in |   64|   ap_none  |  cands_145_V |    pointer   |
+|cands_146_V          |  in |   64|   ap_none  |  cands_146_V |    pointer   |
+|cands_147_V          |  in |   64|   ap_none  |  cands_147_V |    pointer   |
+|cands_148_V          |  in |   64|   ap_none  |  cands_148_V |    pointer   |
+|cands_149_V          |  in |   64|   ap_none  |  cands_149_V |    pointer   |
+|cands_150_V          |  in |   64|   ap_none  |  cands_150_V |    pointer   |
+|cands_151_V          |  in |   64|   ap_none  |  cands_151_V |    pointer   |
+|cands_152_V          |  in |   64|   ap_none  |  cands_152_V |    pointer   |
+|cands_153_V          |  in |   64|   ap_none  |  cands_153_V |    pointer   |
+|cands_154_V          |  in |   64|   ap_none  |  cands_154_V |    pointer   |
+|cands_155_V          |  in |   64|   ap_none  |  cands_155_V |    pointer   |
+|cands_156_V          |  in |   64|   ap_none  |  cands_156_V |    pointer   |
+|cands_157_V          |  in |   64|   ap_none  |  cands_157_V |    pointer   |
+|cands_158_V          |  in |   64|   ap_none  |  cands_158_V |    pointer   |
+|cands_159_V          |  in |   64|   ap_none  |  cands_159_V |    pointer   |
+|cands_160_V          |  in |   64|   ap_none  |  cands_160_V |    pointer   |
+|cands_161_V          |  in |   64|   ap_none  |  cands_161_V |    pointer   |
+|cands_162_V          |  in |   64|   ap_none  |  cands_162_V |    pointer   |
+|cands_163_V          |  in |   64|   ap_none  |  cands_163_V |    pointer   |
+|cands_164_V          |  in |   64|   ap_none  |  cands_164_V |    pointer   |
+|cands_165_V          |  in |   64|   ap_none  |  cands_165_V |    pointer   |
+|cands_166_V          |  in |   64|   ap_none  |  cands_166_V |    pointer   |
+|cands_167_V          |  in |   64|   ap_none  |  cands_167_V |    pointer   |
+|cands_168_V          |  in |   64|   ap_none  |  cands_168_V |    pointer   |
+|cands_169_V          |  in |   64|   ap_none  |  cands_169_V |    pointer   |
+|cands_170_V          |  in |   64|   ap_none  |  cands_170_V |    pointer   |
+|cands_171_V          |  in |   64|   ap_none  |  cands_171_V |    pointer   |
+|cands_172_V          |  in |   64|   ap_none  |  cands_172_V |    pointer   |
+|cands_173_V          |  in |   64|   ap_none  |  cands_173_V |    pointer   |
+|cands_174_V          |  in |   64|   ap_none  |  cands_174_V |    pointer   |
+|cands_175_V          |  in |   64|   ap_none  |  cands_175_V |    pointer   |
+|cands_176_V          |  in |   64|   ap_none  |  cands_176_V |    pointer   |
+|cands_177_V          |  in |   64|   ap_none  |  cands_177_V |    pointer   |
+|cands_178_V          |  in |   64|   ap_none  |  cands_178_V |    pointer   |
+|cands_179_V          |  in |   64|   ap_none  |  cands_179_V |    pointer   |
+|cands_180_V          |  in |   64|   ap_none  |  cands_180_V |    pointer   |
+|cands_181_V          |  in |   64|   ap_none  |  cands_181_V |    pointer   |
+|cands_182_V          |  in |   64|   ap_none  |  cands_182_V |    pointer   |
+|cands_183_V          |  in |   64|   ap_none  |  cands_183_V |    pointer   |
+|cands_184_V          |  in |   64|   ap_none  |  cands_184_V |    pointer   |
+|cands_185_V          |  in |   64|   ap_none  |  cands_185_V |    pointer   |
+|cands_186_V          |  in |   64|   ap_none  |  cands_186_V |    pointer   |
+|cands_187_V          |  in |   64|   ap_none  |  cands_187_V |    pointer   |
+|cands_188_V          |  in |   64|   ap_none  |  cands_188_V |    pointer   |
+|cands_189_V          |  in |   64|   ap_none  |  cands_189_V |    pointer   |
+|cands_190_V          |  in |   64|   ap_none  |  cands_190_V |    pointer   |
+|cands_191_V          |  in |   64|   ap_none  |  cands_191_V |    pointer   |
+|cands_192_V          |  in |   64|   ap_none  |  cands_192_V |    pointer   |
+|cands_193_V          |  in |   64|   ap_none  |  cands_193_V |    pointer   |
+|cands_194_V          |  in |   64|   ap_none  |  cands_194_V |    pointer   |
+|cands_195_V          |  in |   64|   ap_none  |  cands_195_V |    pointer   |
+|cands_196_V          |  in |   64|   ap_none  |  cands_196_V |    pointer   |
+|cands_197_V          |  in |   64|   ap_none  |  cands_197_V |    pointer   |
+|cands_198_V          |  in |   64|   ap_none  |  cands_198_V |    pointer   |
+|cands_199_V          |  in |   64|   ap_none  |  cands_199_V |    pointer   |
+|cands_200_V          |  in |   64|   ap_none  |  cands_200_V |    pointer   |
+|cands_201_V          |  in |   64|   ap_none  |  cands_201_V |    pointer   |
+|cands_202_V          |  in |   64|   ap_none  |  cands_202_V |    pointer   |
+|cands_203_V          |  in |   64|   ap_none  |  cands_203_V |    pointer   |
+|cands_204_V          |  in |   64|   ap_none  |  cands_204_V |    pointer   |
+|cands_205_V          |  in |   64|   ap_none  |  cands_205_V |    pointer   |
+|cands_206_V          |  in |   64|   ap_none  |  cands_206_V |    pointer   |
+|cands_207_V          |  in |   64|   ap_none  |  cands_207_V |    pointer   |
+|cands_208_V          |  in |   64|   ap_none  |  cands_208_V |    pointer   |
+|cands_209_V          |  in |   64|   ap_none  |  cands_209_V |    pointer   |
+|cands_210_V          |  in |   64|   ap_none  |  cands_210_V |    pointer   |
+|cands_211_V          |  in |   64|   ap_none  |  cands_211_V |    pointer   |
+|cands_212_V          |  in |   64|   ap_none  |  cands_212_V |    pointer   |
+|cands_213_V          |  in |   64|   ap_none  |  cands_213_V |    pointer   |
+|cands_214_V          |  in |   64|   ap_none  |  cands_214_V |    pointer   |
+|cands_215_V          |  in |   64|   ap_none  |  cands_215_V |    pointer   |
+|cands_216_V          |  in |   64|   ap_none  |  cands_216_V |    pointer   |
+|cands_217_V          |  in |   64|   ap_none  |  cands_217_V |    pointer   |
+|cands_218_V          |  in |   64|   ap_none  |  cands_218_V |    pointer   |
+|cands_219_V          |  in |   64|   ap_none  |  cands_219_V |    pointer   |
+|cands_220_V          |  in |   64|   ap_none  |  cands_220_V |    pointer   |
+|cands_221_V          |  in |   64|   ap_none  |  cands_221_V |    pointer   |
+|cands_222_V          |  in |   64|   ap_none  |  cands_222_V |    pointer   |
+|cands_223_V          |  in |   64|   ap_none  |  cands_223_V |    pointer   |
+|cands_224_V          |  in |   64|   ap_none  |  cands_224_V |    pointer   |
+|cands_225_V          |  in |   64|   ap_none  |  cands_225_V |    pointer   |
+|cands_226_V          |  in |   64|   ap_none  |  cands_226_V |    pointer   |
+|cands_227_V          |  in |   64|   ap_none  |  cands_227_V |    pointer   |
+|cands_228_V          |  in |   64|   ap_none  |  cands_228_V |    pointer   |
+|cands_229_V          |  in |   64|   ap_none  |  cands_229_V |    pointer   |
+|cands_230_V          |  in |   64|   ap_none  |  cands_230_V |    pointer   |
+|cands_231_V          |  in |   64|   ap_none  |  cands_231_V |    pointer   |
+|cands_232_V          |  in |   64|   ap_none  |  cands_232_V |    pointer   |
+|cands_233_V          |  in |   64|   ap_none  |  cands_233_V |    pointer   |
+|cands_234_V          |  in |   64|   ap_none  |  cands_234_V |    pointer   |
+|cands_235_V          |  in |   64|   ap_none  |  cands_235_V |    pointer   |
+|cands_236_V          |  in |   64|   ap_none  |  cands_236_V |    pointer   |
+|cands_237_V          |  in |   64|   ap_none  |  cands_237_V |    pointer   |
+|cands_238_V          |  in |   64|   ap_none  |  cands_238_V |    pointer   |
+|cands_239_V          |  in |   64|   ap_none  |  cands_239_V |    pointer   |
+|cands_240_V          |  in |   64|   ap_none  |  cands_240_V |    pointer   |
+|cands_241_V          |  in |   64|   ap_none  |  cands_241_V |    pointer   |
+|cands_242_V          |  in |   64|   ap_none  |  cands_242_V |    pointer   |
+|cands_243_V          |  in |   64|   ap_none  |  cands_243_V |    pointer   |
+|cands_244_V          |  in |   64|   ap_none  |  cands_244_V |    pointer   |
+|cands_245_V          |  in |   64|   ap_none  |  cands_245_V |    pointer   |
+|cands_246_V          |  in |   64|   ap_none  |  cands_246_V |    pointer   |
+|cands_247_V          |  in |   64|   ap_none  |  cands_247_V |    pointer   |
+|cands_248_V          |  in |   64|   ap_none  |  cands_248_V |    pointer   |
+|cands_249_V          |  in |   64|   ap_none  |  cands_249_V |    pointer   |
+|cands_250_V          |  in |   64|   ap_none  |  cands_250_V |    pointer   |
+|cands_251_V          |  in |   64|   ap_none  |  cands_251_V |    pointer   |
+|cands_252_V          |  in |   64|   ap_none  |  cands_252_V |    pointer   |
+|cands_253_V          |  in |   64|   ap_none  |  cands_253_V |    pointer   |
+|cands_254_V          |  in |   64|   ap_none  |  cands_254_V |    pointer   |
+|cands_255_V          |  in |   64|   ap_none  |  cands_255_V |    pointer   |
+|outcands_0_V         | out |   64|   ap_vld   | outcands_0_V |    pointer   |
+|outcands_0_V_ap_vld  | out |    1|   ap_vld   | outcands_0_V |    pointer   |
+|outcands_1_V         | out |   64|   ap_vld   | outcands_1_V |    pointer   |
+|outcands_1_V_ap_vld  | out |    1|   ap_vld   | outcands_1_V |    pointer   |
+|outcands_2_V         | out |   64|   ap_vld   | outcands_2_V |    pointer   |
+|outcands_2_V_ap_vld  | out |    1|   ap_vld   | outcands_2_V |    pointer   |
+|outcands_3_V         | out |   64|   ap_vld   | outcands_3_V |    pointer   |
+|outcands_3_V_ap_vld  | out |    1|   ap_vld   | outcands_3_V |    pointer   |
+|outcands_4_V         | out |   64|   ap_vld   | outcands_4_V |    pointer   |
+|outcands_4_V_ap_vld  | out |    1|   ap_vld   | outcands_4_V |    pointer   |
+|eventstart           |  in |    1|   ap_none  |  eventstart  |    scalar    |
+|lastvalid            | out |    1|   ap_vld   |   lastvalid  |    pointer   |
+|lastvalid_ap_vld     | out |    1|   ap_vld   |   lastvalid  |    pointer   |
++---------------------+-----+-----+------------+--------------+--------------+
+

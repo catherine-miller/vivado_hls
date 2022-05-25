@@ -1,0 +1,33 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>a_V</name>
+<CType>
+<TypeName>ap_int 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>b_V</name>
+<CType>
+<TypeName>ap_int 10</TypeName>
+<TypeWidth>10</TypeWidth>
+<PhysicalWidth>10</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<CType>
+<TypeName>ap_int 11</TypeName>
+<TypeWidth>11</TypeWidth>
+<PhysicalWidth>11</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

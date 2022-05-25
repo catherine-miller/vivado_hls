@@ -1,0 +1,26 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cc in debug mode
+   Generating csim.exe
+INFO: test 0: sum = 427, expected 427 -- OK
+INFO: test 1: sum = 330, expected 330 -- OK
+INFO: test 2: sum = 370, expected 370 -- OK
+INFO: test 3: sum = 427, expected 427 -- OK
+INFO: test 4: sum = 154, expected 154 -- OK
+INFO: test 5: sum = 346, expected 346 -- OK
+INFO: test 6: sum = 149, expected 149 -- OK
+INFO: test 7: sum = 163, expected 163 -- OK
+INFO: test 8: sum = 122, expected 122 -- OK
+INFO: test 9: sum = 152, expected 152 -- OK
+INFO: test 10: sum = 205, expected 205 -- OK
+INFO: test 11: sum = 121, expected 121 -- OK
+INFO: test 12: sum = 168, expected 168 -- OK
+INFO: test 13: sum = 291, expected 291 -- OK
+INFO: test 14: sum = 223, expected 223 -- OK
+INFO: test 15: sum = 154, expected 154 -- OK
+INFO: test 16: sum = 123, expected 123 -- OK
+INFO: test 17: sum = 430, expected 430 -- OK
+INFO: test 18: sum = 405, expected 405 -- OK
+INFO: test 19: sum = 222, expected 222 -- OK
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
