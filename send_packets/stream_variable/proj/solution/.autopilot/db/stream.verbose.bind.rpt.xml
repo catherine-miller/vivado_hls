@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'stream'" level="0">
-<item name = "Date">Tue May 24 17:35:12 2022
+<item name = "Date">Wed May 25 15:13:29 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">proj</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">5, 5, 13.890 ns, 13.890 ns, 3, 3, function</column>
+<column name="">3, 3, 8.334 ns, 8.334 ns, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">

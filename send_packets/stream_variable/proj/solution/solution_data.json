@@ -21,14 +21,7 @@
       "type": {
         "kinds": ["array"],
         "dataType": "ap_uint",
-        "dataWidth": "64",
-        "arraySizes": ["4"],
-        "multiInterfaceRef": [
-          "candin_V_address0",
-          "candin_V_address1",
-          "candin_V_q0",
-          "candin_V_q1"
-        ]
+        "arraySizes": ["4"]
       }
     },
     "candout": {
@@ -81,8 +74,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "2.778",
     "IsCombLogic": "0",
-    "II": "3",
-    "Latency": "5",
+    "II": "1",
+    "Latency": "3",
     "Uncertainty": "0.34725"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.778 [get_ports ap_clk]"]},
@@ -156,29 +149,7 @@
       "bundle_name": "ap_rst",
       "bundle_role": "default"
     },
-    "candin_V_address0": {
-      "type": "data",
-      "dir": "out",
-      "width": "2",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "2"
-        }},
-      "bundle_name": "candin_V",
-      "bundle_role": "address0"
-    },
-    "candin_V_address1": {
-      "type": "data",
-      "dir": "out",
-      "width": "2",
-      "ctype": {"DATA": {
-          "Type": "null",
-          "Width": "2"
-        }},
-      "bundle_name": "candin_V",
-      "bundle_role": "address1"
-    },
-    "candin_V_q0": {
+    "candin_0_V": {
       "type": "data",
       "dir": "in",
       "width": "64",
@@ -186,10 +157,10 @@
           "Type": "integer unsigned",
           "Width": "64"
         }},
-      "bundle_name": "candin_V",
-      "bundle_role": "q0"
+      "bundle_name": "candin_0_V",
+      "bundle_role": "default"
     },
-    "candin_V_q1": {
+    "candin_1_V": {
       "type": "data",
       "dir": "in",
       "width": "64",
@@ -197,8 +168,30 @@
           "Type": "integer unsigned",
           "Width": "64"
         }},
-      "bundle_name": "candin_V",
-      "bundle_role": "q1"
+      "bundle_name": "candin_1_V",
+      "bundle_role": "default"
+    },
+    "candin_2_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        }},
+      "bundle_name": "candin_2_V",
+      "bundle_role": "default"
+    },
+    "candin_3_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        }},
+      "bundle_name": "candin_3_V",
+      "bundle_role": "default"
     },
     "candout_V": {
       "type": "data",
@@ -286,27 +279,19 @@
       "width": "1",
       "isVector": "true"
     },
-    "candin_V_address0": {
-      "dir": "out",
-      "width": "2"
-    },
-    "candin_V_ce0": {
-      "dir": "out",
-      "width": "1"
-    },
-    "candin_V_q0": {
+    "candin_0_V": {
       "dir": "in",
       "width": "64"
     },
-    "candin_V_address1": {
-      "dir": "out",
-      "width": "2"
+    "candin_1_V": {
+      "dir": "in",
+      "width": "64"
     },
-    "candin_V_ce1": {
-      "dir": "out",
-      "width": "1"
+    "candin_2_V": {
+      "dir": "in",
+      "width": "64"
     },
-    "candin_V_q1": {
+    "candin_3_V": {
       "dir": "in",
       "width": "64"
     },
@@ -354,11 +339,11 @@
       }},
     "Metrics": {"stream": {
         "Latency": {
-          "LatencyBest": "5",
-          "LatencyAvg": "5",
-          "LatencyWorst": "5",
-          "PipelineII": "3",
-          "PipelineDepth": "6",
+          "LatencyBest": "3",
+          "LatencyAvg": "3",
+          "LatencyWorst": "3",
+          "PipelineII": "1",
+          "PipelineDepth": "4",
           "PipelineType": "function"
         },
         "Timing": {
@@ -368,8 +353,8 @@
         },
         "Area": {
           "BRAM_18K": "8",
-          "FF": "368",
-          "LUT": "1569",
+          "FF": "345",
+          "LUT": "838",
           "URAM": "0",
           "DSP48E": "0"
         }
@@ -385,7 +370,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-05-24 17:35:16 CEST",
+    "Time": "2022-05-25 15:13:32 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }

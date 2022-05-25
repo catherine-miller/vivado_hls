@@ -6377,50 +6377,55 @@ bool stream(const ap_uint<64> candin[4], ap_uint<64> &candout, const bool events
 
 bool stream(const ap_uint<64> candin[4], ap_uint<64> &candout,
     const bool eventstart, const bool lastvalid, bool &first, bool &last) {_ssdm_SpecArrayDimSize(candin, 4);
-        static ap_uint<67> prep[4];
+        ap_uint<67> prep[4];
         static ap_uint<67> brams[4][512];
         static ap_uint<9> wrptr = 0;
         static ap_uint<9> rdptr = 0;
         static ap_uint<9> ptrsep = 0;
-        static unsigned int readidx = 0;
-        static bool write = false, valid;
-        static bool firstcall = true, marked;
+        static ap_uint<4> readidx = 0;
+        static bool write = false;
+        bool valid, marked;
 
 #pragma HLS pipeline II = 1
 #pragma HLS array_partition variable=&brams dim=1 complete
+#pragma HLS array_partition variable = &candin complete
+#pragma HLS array_partition variable = &prep complete
+
 
  if (eventstart) write = true;
+        if (write) for (unsigned int i = 0; i < 4; ++i) {
+#pragma HLS unroll
+ prep[i](66,3) = candin[i];
+            if (candin[i] == 0) prep[i][0] = 0;
+            else prep[i][0] = 1;
+            if (eventstart && i == 0 && (prep[i][0])) prep[0][1] = 1;
+            else prep[0][1] = 0;
+        }
+# 51 "src/stream.cc"
+        if (lastvalid) {
+
+                marked = false;
+                for (unsigned int i = 1; i <= 4; ++i) {
+                        if (marked == false && (prep[4 - i][0])) {
+                            prep[4 - i][2] = 1;
+                            marked = true;
+                        } else prep[4 - i][2] = 0;
+                    }
+            }
         if (write) {
             for (unsigned int i = 0; i < 4; ++i) {
 #pragma HLS unroll
- prep[i] = (ap_uint<67>)candin[i] << 3;
-                if (prep[i] != 0) prep[i] += 1;
-                if (eventstart && i == 0 && (prep[i] & 1)) {
-                    prep[i] += 2;
-                }
-            }
-            if (lastvalid) {
-
-                write = false;
-                for (unsigned int i = 1; i <= 4; ++i) {
-                        marked = false;
-                        if (marked == false && prep[4 - i] & 0x1) {
-                            prep[4 - i] += 0x4;
-                            marked = true;
-                        }
-                    }
-            }
-            for (unsigned int i = 0; i < 4; ++i) {
-                brams[i][wrptr] = prep[i];
+ brams[i][wrptr] = prep[i];
             }
             wrptr++;
             ptrsep++;
         }
+        if (lastvalid) write = false;
         if (ptrsep > 0) {
-            first = (brams[readidx][rdptr] & 0x2);
-            last = (brams[readidx][rdptr] & 0x4);
-            valid = (brams[readidx][rdptr] & 0x1);
-            candout = brams[readidx][rdptr] >> 3;
+            valid = brams[readidx][rdptr][0];
+            first = brams[readidx][rdptr][1];
+            last = brams[readidx][rdptr][2];
+            candout = brams[readidx][rdptr](66,3);
             if (readidx == 4 - 1) {
                 rdptr++;
                 ptrsep--;

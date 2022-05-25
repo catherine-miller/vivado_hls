@@ -90,7 +90,7 @@ set ID 3
 set hasByteEnable 0
 set MemName stream_brams_V_0
 set CoreName ap_simcore_mem
-set PortList { 2 3 }
+set PortList { 0 1 }
 set DataWd 67
 set AddrRange 512
 set AddrWd 9
@@ -179,29 +179,70 @@ if {${::AESL::PGuard_autoexp_gen}} {
 }
 
 set axilite_register_dict [dict create]
-# XIL_BRAM:
+# Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
-if {[info proc ::AESL_LIB_XILADAPTER::xil_bram_gen] == "::AESL_LIB_XILADAPTER::xil_bram_gen"} {
-eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
+eval "cg_default_interface_gen_dc { \
     id 4 \
-    name candin_V \
+    name candin_0_V \
+    type other \
+    dir I \
     reset_level 1 \
     sync_rst true \
-    dir I \
-    corename candin_V \
+    corename dc_candin_0_V \
     op interface \
-    ports { candin_V_address0 { O 2 vector } candin_V_ce0 { O 1 bit } candin_V_q0 { I 64 vector } candin_V_address1 { O 2 vector } candin_V_ce1 { O 1 bit } candin_V_q1 { I 64 vector } } \
+    ports { candin_0_V { I 64 vector } } \
 } "
-} else {
-puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'candin_V'"
 }
-}
-
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
     id 5 \
+    name candin_1_V \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_candin_1_V \
+    op interface \
+    ports { candin_1_V { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 6 \
+    name candin_2_V \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_candin_2_V \
+    op interface \
+    ports { candin_2_V { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 7 \
+    name candin_3_V \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_candin_3_V \
+    op interface \
+    ports { candin_3_V { I 64 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 8 \
     name candout_V \
     type other \
     dir O \
@@ -216,7 +257,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 6 \
+    id 9 \
     name eventstart \
     type other \
     dir I \
@@ -231,7 +272,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 7 \
+    id 10 \
     name lastvalid \
     type other \
     dir I \
@@ -246,7 +287,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 8 \
+    id 11 \
     name first \
     type other \
     dir O \
@@ -261,7 +302,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 9 \
+    id 12 \
     name last \
     type other \
     dir O \
