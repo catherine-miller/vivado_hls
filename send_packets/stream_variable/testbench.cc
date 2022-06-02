@@ -111,7 +111,7 @@ int main() {
             else {
                 eventstart = streamtoM(candsin, candsmiddle, false, lastvalid);
             }
-            validalgo = stream(candsmiddle, candoutalgo, eventstart, lastvalid, firstalgo, lastalgo);
+            validalgo = streamv(candsmiddle, candoutalgo, eventstart, lastvalid, firstalgo, lastalgo);
             //csim
             writetobuff(candsmiddle, write, eventstart, lastvalid, simwptr, buffer, ptrsep);
             validsim = readfrombuff(buffer, candoutsim, simrptr, simwptr, ptrsep, written);

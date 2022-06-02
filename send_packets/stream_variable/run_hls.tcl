@@ -1,5 +1,5 @@
 open_project -reset "proj"
-set_top stream
+set_top streamv
 add_files src/stream.cc
 add_files -tb testbench.cc
 open_solution -reset "solution"

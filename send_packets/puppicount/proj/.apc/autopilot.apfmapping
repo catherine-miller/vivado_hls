@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="count.cc" path="/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cc" path="/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

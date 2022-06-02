@@ -7,7 +7,7 @@
 //returns a bool indicating whether the Puppi candidate is valid
 #include "stream.h"
 
-bool stream(const ap_uint<64> candin[NIN], ap_uint<64> &candout, 
+bool streamv(const ap_uint<64> candin[NIN], ap_uint<64> &candout, 
     const bool eventstart, const bool lastvalid, bool &first, bool &last) {
         ap_uint<67> prep[NIN];
         static ap_uint<67> brams[NIN][512];
