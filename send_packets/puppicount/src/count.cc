@@ -12,6 +12,7 @@ void count(const ap_uint<64> candin, ap_uint<64> &candout,
         #pragma HLS array_partition variable=buffer complete
 
         if (firstin) {
+            npuppi = 0;
             write = true;
             headerloc = wrptr;
         }
@@ -25,12 +26,13 @@ void count(const ap_uint<64> candin, ap_uint<64> &candout,
             npuppi++;
             wrptr++;
         }
+        buffer[headerloc](13, 2) = npuppi - 1;
         if (lastin) {
-            buffer[headerloc](13, 2) = npuppi - 1;
-            npuppi = 0;
+            //buffer[headerloc](13, 2) = npuppi - 1;
+            //npuppi = 0;
             write = false;
             eventsready++;
-        } else buffer[headerloc](13, 2) = 0;
+        }
         if (eventsready > 0) {
             candout = buffer[rdptr](65,2);
             firstout = (buffer[rdptr][0]);

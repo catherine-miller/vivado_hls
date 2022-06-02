@@ -6377,9 +6377,10 @@ void count(const ap_uint<64> candin, ap_uint<64> &candout,
         ap_uint<66> prep;
 
 _ssdm_op_SpecPipeline(1, 1, 1, 0, "");
-_ssdm_SpecArrayPartition( &buffer, 1, "complete", 0, "");
+_ssdm_SpecArrayPartition( &buffer, 1, "COMPLETE", 0, "");
 
  if (firstin) {
+            npuppi = 0;
             write = true;
             headerloc = wrptr;
         }
@@ -6389,27 +6390,26 @@ _ssdm_SpecArrayPartition( &buffer, 1, "complete", 0, "");
             else prep[0] = 0;
             if (lastin) prep[1] = 1;
             else prep[1] = 0;
-            npuppi++;
-        }
-        if (write && valid) {
             buffer[wrptr] = prep;
+            npuppi++;
             wrptr++;
         }
+        buffer[headerloc](13, 2) = npuppi - 1;
         if (lastin) {
-            buffer[headerloc](13, 2) = npuppi - 1;
-            npuppi = 0;
+
+
             write = false;
             eventsready++;
-        } else buffer[headerloc](13, 2) = 0;
+        }
         if (eventsready > 0) {
             candout = buffer[rdptr](65,2);
-            firstout = buffer[rdptr][0];
-            lastout = buffer[rdptr][1];
+            firstout = (buffer[rdptr][0]);
+            lastout = (buffer[rdptr][1]);
             if (lastout) eventsready--;
             rdptr++;
         } else {
             candout = 0;
-            firstout = 0;
-            lastout = 0;
+            firstout = false;
+            lastout = false;
         }
 }

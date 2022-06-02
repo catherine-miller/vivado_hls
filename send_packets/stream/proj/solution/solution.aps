@@ -5,6 +5,9 @@
     <downStreamTool>
         <DownStreamTool name=""/>
     </downStreamTool>
+    <clockList>
+        <clock default="false" name="default" period="2.7777"/>
+    </clockList>
     <config>
         <schedule model="stream"/>
     </config>
@@ -67,8 +70,5 @@
         <library name="DefaultPlatform" value="xilinx/virtexuplus/virtexuplus"/>
         <library name="DefaultPlatform" value="xilinx/virtexuplus/virtexuplus_fpv7"/>
     </libraryList>
-    <clockList>
-        <clock name="default" default="false" period="2.7777"/>
-    </clockList>
 </solution>
 

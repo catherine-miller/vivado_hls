@@ -12,12 +12,12 @@
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'readidx_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.873+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.853+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.850+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.841+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.837+0200" type="Warning"/>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'stream/write' to 'stream/write_r' to avoid the conflict with HDL keywords or other object names." projectName="proj" solutionName="solution" date="2022-05-25T15:13:29.224+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'readidx_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.644+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.635+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.627+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.598+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.587+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'streamv/write' to 'streamv/write_r' to avoid the conflict with HDL keywords or other object names." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.028+0200" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

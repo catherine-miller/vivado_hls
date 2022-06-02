@@ -6372,10 +6372,10 @@ inline bool operator!=(
 
 
 
-bool stream(const ap_uint<64> candin[4], ap_uint<64> &candout, const bool eventstart, const bool lastvalid, bool &first, bool &last);
+bool streamv(const ap_uint<64> candin[4], ap_uint<64> &candout, const bool eventstart, const bool lastvalid, bool &first, bool &last);
 # 9 "src/stream.cc" 2
 
-bool stream(const ap_uint<64> candin[4], ap_uint<64> &candout,
+bool streamv(const ap_uint<64> candin[4], ap_uint<64> &candout,
     const bool eventstart, const bool lastvalid, bool &first, bool &last) {_ssdm_SpecArrayDimSize(candin, 4);
         ap_uint<67> prep[4];
         static ap_uint<67> brams[4][512];
@@ -6398,10 +6398,9 @@ bool stream(const ap_uint<64> candin[4], ap_uint<64> &candout,
  prep[i](66,3) = candin[i];
             if (candin[i] == 0) prep[i][0] = 0;
             else prep[i][0] = 1;
-            if (eventstart && i == 0 && (prep[i][0])) prep[0][1] = 1;
-            else prep[0][1] = 0;
+            if (eventstart && i == 0 && (prep[i][0])) prep[i][1] = 1;
+            else prep[i][1] = 0;
         }
-# 51 "src/stream.cc"
         if (lastvalid) {
 
                 marked = false;

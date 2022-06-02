@@ -177,6 +177,7 @@ int main() {
                 check = true;
                 checkidx = 0;
                 printf("received firstalgo \n");
+                if (lastalgo) printf("also received lastalgo \n");
             }
             if (check) {
                 while (candstest[testrdidx][checkidx] == 0) {

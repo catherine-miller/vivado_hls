@@ -1,5 +1,5 @@
 
-set TopModule "stream"
+set TopModule "streamv"
 set ClockPeriod 2.778
 set ClockList ap_clk
 set HasVivadoClockPeriod 0

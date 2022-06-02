@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project proj
-set_top stream
+set_top streamv
 add_files src/stream.cc
 add_files -tb testbench.cc -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution"

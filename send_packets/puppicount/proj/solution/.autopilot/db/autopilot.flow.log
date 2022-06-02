@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Wed Jun 01 13:33:32 CEST 2022
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:33:34 CEST 2022
 Execute     config_clock -quiet -name default -period 2.778 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
 Execute     open_platform DefaultPlatform 
@@ -42,8 +42,8 @@ Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/u
 Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.14 sec.
-Command     ap_source done; 0.14 sec.
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
 Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -58,7 +58,7 @@ Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexup
 Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xcvu9p-flga2104-2L-e 
 Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
-Command       ap_part_info done; 1.97 sec.
+Command       ap_part_info done; 1.89 sec.
 Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
 Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
 Execute         get_default_platform 
@@ -74,7 +74,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
 Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.12 sec.
+Command     set_part done; 2.05 sec.
 Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
 Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
 Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
@@ -82,7 +82,7 @@ Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info
 Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
 Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
 Execute     config_chip_info -quiet -speed medium 
-Command   open_solution done; 2.36 sec.
+Command   open_solution done; 2.28 sec.
 Execute   set_part xcvu9p-flga2104-2L-e 
 Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
 Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
@@ -127,14 +127,14 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "src/count.cc"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc" 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E src/count.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc
-Command       clang done; 2.45 sec.
+Command       clang done; 2.49 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc std=gnu++98 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.95 sec.
+Command       tidy_31 done; 0.84 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc  -fno-limit-debug-info -gcc-toolchain "/data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc"  -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/useless.bc
-Command       clang done; 2.78 sec.
+Command       clang done; 2.86 sec.
 INFO-FLOW: Done: GCC PP time: 6.2 seconds per iteration
 Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -142,73 +142,73 @@ Execute         source /data1/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/.systemc_flag -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.78 sec.
+Command       tidy_31 done; 0.76 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc std=gnu++98 -directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/all.directive.json -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.78 sec.
+Command       tidy_31 done; 0.77 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.count.pp.0.cc.diag.yml /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.count.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/xilinx-dataflow-lawyer.count.pp.0.cc.err.log 
-Command       ap_eval done; 0.85 sec.
+Command       ap_eval done; 0.88 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc std=gnu++98 
 Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/tidy-3.1.count.pp.0.cc.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/tidy-3.1.count.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/tidy-3.1.count.pp.0.cc.err.log 
-Command         ap_eval done; 0.94 sec.
+Command         ap_eval done; 1.09 sec.
 Execute         ap_eval exec -ignorestderr /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/xilinx-legacy-rewriter.count.pp.0.cc.out.log 2> /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/xilinx-legacy-rewriter.count.pp.0.cc.err.log 
-Command         ap_eval done; 0.78 sec.
-Command       tidy_31 done; 1.73 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.4 seconds per iteration
+Command         ap_eval done; 3.73 sec.
+Command       tidy_31 done; 4.84 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 6.5 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pragma.1.cc std=gnu++98 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pragma.1.cc -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1 sec.
+Command       tidy_31 done; 1.01 sec.
 Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pragma.2.cc  -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pragma.2.cc"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.bc" 
 INFO-FLOW: exec /data1/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /data1/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.pragma.2.cc -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot -I /data1/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.bc
-Command       clang done; 2.94 sec.
+Command       clang done; 2.7 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.g.bc -hls-opt -except-internalize count -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g 
-Command       llvm-ld done; 1.26 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 550 ; free virtual = 4984
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 550 ; free virtual = 4984
+Command       llvm-ld done; 1.17 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 719 ; free virtual = 5225
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 719 ; free virtual = 5225
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.pp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.pp.0.bc -f 
 Execute         llvm-ld /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.pp.0.bc -disable-opt -L/data1/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.21 sec.
+Command         llvm-ld done; 1.15 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top count -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.0.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 543 ; free virtual = 4979
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 713 ; free virtual = 5220
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.2.prechk.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 540 ; free virtual = 4976
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 710 ; free virtual = 5218
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.g.1.bc to /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.1.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.1.tmp.bc -f 
-WARNING: [XFORM 203-104] Completely partitioning array 'buffer.V'  accessed through non-constant indices on dimension 1 (src/count.cc:27:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
+WARNING: [XFORM 203-104] Completely partitioning array 'buffer.V'  accessed through non-constant indices on dimension 1 (src/count.cc:25:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
 INFO: [XFORM 203-101] Partitioning array 'buffer.V'  in dimension 1 completely.
-Command         transform done; 0.6 sec.
+Command         transform done; 0.41 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.1.tmp.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/count.cc:18:9) to (src/count.cc:26:9) in function 'count'... converting 9 basic blocks.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i66P.i8' into 'count' (src/count.cc:31).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i66P.i8' into 'count' (src/count.cc:35).
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/count.cc:20:13) to (src/count.cc:25:20) in function 'count'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/count.cc:34:13) in function 'count'... converting 3 basic blocks.
+INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i66P.i8' into 'count' (src/count.cc:29).
 INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i66P.i8' into 'count' (src/count.cc:37).
-Command         transform done; 1.15 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1050.223 ; gain = 530.191 ; free physical = 499 ; free virtual = 4937
+Command         transform done; 0.7 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 677 ; free virtual = 5186
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.2.bc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-Command         transform done; 8.16 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1066.227 ; gain = 546.195 ; free physical = 425 ; free virtual = 4863
+Command         transform done; 4.82 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 619 ; free virtual = 5128
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 11.37 sec.
-Command     elaborate done; 27.32 sec.
+Command       opt_and_import_c done; 7.33 sec.
+Command     elaborate done; 26.08 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -225,7 +225,7 @@ INFO-FLOW: Model list for preprocess: count
 INFO-FLOW: Preprocessing Module: count ...
 Execute       set_default_model count 
 Execute       cdfg_preprocess -model count 
-Command       cdfg_preprocess done; 2.3 sec.
+Command       cdfg_preprocess done; 1.16 sec.
 Execute       rtl_gen_preprocess count 
 WARNING: [SYN 201-107] Renaming port name 'count/write' to 'count/write_r' to avoid the conflict with HDL keywords or other object names.
 INFO-FLOW: Model list for synthesis: count
@@ -237,21 +237,21 @@ Execute       schedule -model count
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'count'.
 WARNING: [SCHED 204-68] The II Violation in module 'count' (Function: count): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'store' operation ('buffer_V_254_write_ln35', src/count.cc:35) of variable '__Result__', src/count.cc:35 on static variable 'buffer_V_254' and 'store' operation ('buffer_V_254_write_ln27', src/count.cc:27) of variable 'prep.V', src/count.cc:4 on static variable 'buffer_V_254'.
+   between 'store' operation ('buffer_V_254_write_ln29', src/count.cc:29) of variable '__Result__', src/count.cc:29 on static variable 'buffer_V_254' and 'store' operation ('buffer_V_254_write_ln25', src/count.cc:25) of variable 'prep.V', src/count.cc:4 on static variable 'buffer_V_254'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
-WARNING: [SCHED 204-21] Estimated clock period (2.89525ns) exceeds the target (target clock period: 2.778ns, clock uncertainty: 0.34725ns, effective delay budget: 2.43075ns).
+WARNING: [SCHED 204-21] Estimated clock period (2.881ns) exceeds the target (target clock period: 2.778ns, clock uncertainty: 0.34725ns, effective delay budget: 2.43075ns).
 WARNING: [SCHED 204-21] The critical path in module 'count' consists of the following:
-	'load' operation ('buffer_V_254_load_1', aesl_mux_load.256i66P.i8:509->src/count.cc:35) on static variable 'buffer_V_254' [1083]  (0 ns)
-	multiplexor before 'phi' operation ('__Val2__', aesl_mux_load.256i66P.i8:1->src/count.cc:35) with incoming values : ('buffer_V_254_load_1', aesl_mux_load.256i66P.i8:509->src/count.cc:35) ('buffer_V_253_load_1', aesl_mux_load.256i66P.i8:507->src/count.cc:35) ('buffer_V_252_load_1', aesl_mux_load.256i66P.i8:505->src/count.cc:35) ('buffer_V_251_load_1', aesl_mux_load.256i66P.i8:503->src/count.cc:35) ('buffer_V_250_load_1', aesl_mux_load.256i66P.i8:501->src/count.cc:35) ('buffer_V_249_load_1', aesl_mux_load.256i66P.i8:499->src/count.cc:35) ('buffer_V_248_load_1', aesl_mux_load.256i66P.i8:497->src/count.cc:35) ('buffer_V_247_load_1', aesl_mux_load.256i66P.i8:495->src/count.cc:35) ('buffer_V_246_load_1', aesl_mux_load.256i66P.i8:493->src/count.cc:35) ('buffer_V_245_load_1', aesl_mux_load.256i66P.i8:491->src/count.cc:35) ('buffer_V_244_load_1', aesl_mux_load.256i66P.i8:489->src/count.cc:35) ('buffer_V_243_load_1', aesl_mux_load.256i66P.i8:487->src/count.cc:35) ('buffer_V_242_load_1', aesl_mux_load.256i66P.i8:485->src/count.cc:35) ('buffer_V_241_load_1', aesl_mux_load.256i66P.i8:483->src/count.cc:35) ('buffer_V_240_load_1', aesl_mux_load.256i66P.i8:481->src/count.cc:35) ('buffer_V_239_load_1', aesl_mux_load.256i66P.i8:479->src/count.cc:35) ('buffer_V_238_load_1', aesl_mux_load.256i66P.i8:477->src/count.cc:35) ('buffer_V_237_load_1', aesl_mux_load.256i66P.i8:475->src/count.cc:35) ('buffer_V_236_load_1', aesl_mux_load.256i66P.i8:473->src/count.cc:35) ('buffer_V_235_load_1', aesl_mux_load.256i66P.i8:471->src/count.cc:35) ('buffer_V_234_load_1', aesl_mux_load.256i66P.i8:469->src/count.cc:35) ('buffer_V_233_load_1', aesl_mux_load.256i66P.i8:467->src/count.cc:35) ('buffer_V_232_load_1', aesl_mux_load.256i66P.i8:465->src/count.cc:35) ('buffer_V_231_load_1', aesl_mux_load.256i66P.i8:463->src/count.cc:35) ('buffer_V_230_load_1', aesl_mux_load.256i66P.i8:461->src/count.cc:35) ('buffer_V_229_load_1', aesl_mux_load.256i66P.i8:459->src/count.cc:35) ('buffer_V_228_load_1', aesl_mux_load.256i66P.i8:457->src/count.cc:35) ('buffer_V_227_load_1', aesl_mux_load.256i66P.i8:455->src/count.cc:35) ('buffer_V_226_load_1', aesl_mux_load.256i66P.i8:453->src/count.cc:35) ('buffer_V_225_load_1', aesl_mux_load.256i66P.i8:451->src/count.cc:35) ('buffer_V_224_load_1', aesl_mux_load.256i66P.i8:449->src/count.cc:35) ('buffer_V_223_load_1', aesl_mux_load.256i66P.i8:447->src/count.cc:35) ('buffer_V_222_load_1', aesl_mux_load.256i66P.i8:445->src/count.cc:35) ('buffer_V_221_load_1', aesl_mux_load.256i66P.i8:443->src/count.cc:35) ('buffer_V_220_load_1', aesl_mux_load.256i66P.i8:441->src/count.cc:35) ('buffer_V_219_load_1', aesl_mux_load.256i66P.i8:439->src/count.cc:35) ('buffer_V_218_load_1', aesl_mux_load.256i66P.i8:437->src/count.cc:35) ('buffer_V_217_load_1', aesl_mux_load.256i66P.i8:435->src/count.cc:35) ('buffer_V_216_load_1', aesl_mux_load.256i66P.i8:433->src/count.cc:35) ('buffer_V_215_load_1', aesl_mux_load.256i66P.i8:431->src/count.cc:35) ('buffer_V_214_load_1', aesl_mux_load.256i66P.i8:429->src/count.cc:35) ('buffer_V_213_load_1', aesl_mux_load.256i66P.i8:427->src/count.cc:35) ('buffer_V_212_load_1', aesl_mux_load.256i66P.i8:425->src/count.cc:35) ('buffer_V_211_load_1', aesl_mux_load.256i66P.i8:423->src/count.cc:35) ('buffer_V_210_load_1', aesl_mux_load.256i66P.i8:421->src/count.cc:35) ('buffer_V_209_load_1', aesl_mux_load.256i66P.i8:419->src/count.cc:35) ('buffer_V_208_load_1', aesl_mux_load.256i66P.i8:417->src/count.cc:35) ('buffer_V_207_load_1', aesl_mux_load.256i66P.i8:415->src/count.cc:35) ('buffer_V_206_load_1', aesl_mux_load.256i66P.i8:413->src/count.cc:35) ('buffer_V_205_load_1', aesl_mux_load.256i66P.i8:411->src/count.cc:35) ('buffer_V_204_load_1', aesl_mux_load.256i66P.i8:409->src/count.cc:35) ('buffer_V_203_load_1', aesl_mux_load.256i66P.i8:407->src/count.cc:35) ('buffer_V_202_load_1', aesl_mux_load.256i66P.i8:405->src/count.cc:35) ('buffer_V_201_load_1', aesl_mux_load.256i66P.i8:403->src/count.cc:35) ('buffer_V_200_load_1', aesl_mux_load.256i66P.i8:401->src/count.cc:35) ('buffer_V_199_load_1', aesl_mux_load.256i66P.i8:399->src/count.cc:35) ('buffer_V_198_load_1', aesl_mux_load.256i66P.i8:397->src/count.cc:35) ('buffer_V_197_load_1', aesl_mux_load.256i66P.i8:395->src/count.cc:35) ('buffer_V_196_load_1', aesl_mux_load.256i66P.i8:393->src/count.cc:35) ('buffer_V_195_load_1', aesl_mux_load.256i66P.i8:391->src/count.cc:35) ('buffer_V_194_load_1', aesl_mux_load.256i66P.i8:389->src/count.cc:35) ('buffer_V_193_load_1', aesl_mux_load.256i66P.i8:387->src/count.cc:35) ('buffer_V_192_load_1', aesl_mux_load.256i66P.i8:385->src/count.cc:35) ('buffer_V_191_load_1', aesl_mux_load.256i66P.i8:383->src/count.cc:35) ('buffer_V_190_load_1', aesl_mux_load.256i66P.i8:381->src/count.cc:35) ('buffer_V_189_load_1', aesl_mux_load.256i66P.i8:379->src/count.cc:35) ('buffer_V_188_load_1', aesl_mux_load.256i66P.i8:377->src/count.cc:35) ('buffer_V_187_load_1', aesl_mux_load.256i66P.i8:375->src/count.cc:35) ('buffer_V_186_load_1', aesl_mux_load.256i66P.i8:373->src/count.cc:35) ('buffer_V_185_load_1', aesl_mux_load.256i66P.i8:371->src/count.cc:35) ('buffer_V_184_load_1', aesl_mux_load.256i66P.i8:369->src/count.cc:35) ('buffer_V_183_load_1', aesl_mux_load.256i66P.i8:367->src/count.cc:35) ('buffer_V_182_load_1', aesl_mux_load.256i66P.i8:365->src/count.cc:35) ('buffer_V_181_load_1', aesl_mux_load.256i66P.i8:363->src/count.cc:35) ('buffer_V_180_load_1', aesl_mux_load.256i66P.i8:361->src/count.cc:35) ('buffer_V_179_load_1', aesl_mux_load.256i66P.i8:359->src/count.cc:35) ('buffer_V_178_load_1', aesl_mux_load.256i66P.i8:357->src/count.cc:35) ('buffer_V_177_load_1', aesl_mux_load.256i66P.i8:355->src/count.cc:35) ('buffer_V_176_load_1', aesl_mux_load.256i66P.i8:353->src/count.cc:35) ('buffer_V_175_load_1', aesl_mux_load.256i66P.i8:351->src/count.cc:35) ('buffer_V_174_load_1', aesl_mux_load.256i66P.i8:349->src/count.cc:35) ('buffer_V_173_load_1', aesl_mux_load.256i66P.i8:347->src/count.cc:35) ('buffer_V_172_load_1', aesl_mux_load.256i66P.i8:345->src/count.cc:35) ('buffer_V_171_load_1', aesl_mux_load.256i66P.i8:343->src/count.cc:35) ('buffer_V_170_load_1', aesl_mux_load.256i66P.i8:341->src/count.cc:35) ('buffer_V_169_load_1', aesl_mux_load.256i66P.i8:339->src/count.cc:35) ('buffer_V_168_load_1', aesl_mux_load.256i66P.i8:337->src/count.cc:35) ('buffer_V_167_load_1', aesl_mux_load.256i66P.i8:335->src/count.cc:35) ('buffer_V_166_load_1', aesl_mux_load.256i66P.i8:333->src/count.cc:35) ('buffer_V_165_load_1', aesl_mux_load.256i66P.i8:331->src/count.cc:35) ('buffer_V_164_load_1', aesl_mux_load.256i66P.i8:329->src/count.cc:35) ('buffer_V_163_load_1', aesl_mux_load.256i66P.i8:327->src/count.cc:35) ('buffer_V_162_load_1', aesl_mux_load.256i66P.i8:325->src/count.cc:35) ('buffer_V_161_load_1', aesl_mux_load.256i66P.i8:323->src/count.cc:35) ('buffer_V_160_load_1', aesl_mux_load.256i66P.i8:321->src/count.cc:35) ('buffer_V_159_load_1', aesl_mux_load.256i66P.i8:319->src/count.cc:35) ('buffer_V_158_load_1', aesl_mux_load.256i66P.i8:317->src/count.cc:35) ('buffer_V_157_load_1', aesl_mux_load.256i66P.i8:315->src/count.cc:35) ('buffer_V_156_load_1', aesl_mux_load.256i66P.i8:313->src/count.cc:35) ('buffer_V_155_load_1', aesl_mux_load.256i66P.i8:311->src/count.cc:35) ('buffer_V_154_load_1', aesl_mux_load.256i66P.i8:309->src/count.cc:35) ('buffer_V_153_load_1', aesl_mux_load.256i66P.i8:307->src/count.cc:35) ('buffer_V_152_load_1', aesl_mux_load.256i66P.i8:305->src/count.cc:35) ('buffer_V_151_load_1', aesl_mux_load.256i66P.i8:303->src/count.cc:35) ('buffer_V_150_load_1', aesl_mux_load.256i66P.i8:301->src/count.cc:35) ('buffer_V_149_load_1', aesl_mux_load.256i66P.i8:299->src/count.cc:35) ('buffer_V_148_load_1', aesl_mux_load.256i66P.i8:297->src/count.cc:35) ('buffer_V_147_load_1', aesl_mux_load.256i66P.i8:295->src/count.cc:35) ('buffer_V_146_load_1', aesl_mux_load.256i66P.i8:293->src/count.cc:35) ('buffer_V_145_load_1', aesl_mux_load.256i66P.i8:291->src/count.cc:35) ('buffer_V_144_load_1', aesl_mux_load.256i66P.i8:289->src/count.cc:35) ('buffer_V_143_load_1', aesl_mux_load.256i66P.i8:287->src/count.cc:35) ('buffer_V_142_load_1', aesl_mux_load.256i66P.i8:285->src/count.cc:35) ('buffer_V_141_load_1', aesl_mux_load.256i66P.i8:283->src/count.cc:35) ('buffer_V_140_load_1', aesl_mux_load.256i66P.i8:281->src/count.cc:35) ('buffer_V_139_load_1', aesl_mux_load.256i66P.i8:279->src/count.cc:35) ('buffer_V_138_load_1', aesl_mux_load.256i66P.i8:277->src/count.cc:35) ('buffer_V_137_load_1', aesl_mux_load.256i66P.i8:275->src/count.cc:35) ('buffer_V_136_load_1', aesl_mux_load.256i66P.i8:273->src/count.cc:35) ('buffer_V_135_load_1', aesl_mux_load.256i66P.i8:271->src/count.cc:35) ('buffer_V_134_load_1', aesl_mux_load.256i66P.i8:269->src/count.cc:35) ('buffer_V_133_load_1', aesl_mux_load.256i66P.i8:267->src/count.cc:35) ('buffer_V_132_load_1', aesl_mux_load.256i66P.i8:265->src/count.cc:35) ('buffer_V_131_load_1', aesl_mux_load.256i66P.i8:263->src/count.cc:35) ('buffer_V_130_load_1', aesl_mux_load.256i66P.i8:261->src/count.cc:35) ('buffer_V_129_load_1', aesl_mux_load.256i66P.i8:259->src/count.cc:35) ('buffer_V_128_load_1', aesl_mux_load.256i66P.i8:257->src/count.cc:35) ('buffer_V_127_load_1', aesl_mux_load.256i66P.i8:255->src/count.cc:35) ('buffer_V_126_load_1', aesl_mux_load.256i66P.i8:253->src/count.cc:35) ('buffer_V_125_load_1', aesl_mux_load.256i66P.i8:251->src/count.cc:35) ('buffer_V_124_load_1', aesl_mux_load.256i66P.i8:249->src/count.cc:35) ('buffer_V_123_load_1', aesl_mux_load.256i66P.i8:247->src/count.cc:35) ('buffer_V_122_load_1', aesl_mux_load.256i66P.i8:245->src/count.cc:35) ('buffer_V_121_load_1', aesl_mux_load.256i66P.i8:243->src/count.cc:35) ('buffer_V_120_load_1', aesl_mux_load.256i66P.i8:241->src/count.cc:35) ('buffer_V_119_load_1', aesl_mux_load.256i66P.i8:239->src/count.cc:35) ('buffer_V_118_load_1', aesl_mux_load.256i66P.i8:237->src/count.cc:35) ('buffer_V_117_load_1', aesl_mux_load.256i66P.i8:235->src/count.cc:35) ('buffer_V_116_load_1', aesl_mux_load.256i66P.i8:233->src/count.cc:35) ('buffer_V_115_load_1', aesl_mux_load.256i66P.i8:231->src/count.cc:35) ('buffer_V_114_load_1', aesl_mux_load.256i66P.i8:229->src/count.cc:35) ('buffer_V_113_load_1', aesl_mux_load.256i66P.i8:227->src/count.cc:35) ('buffer_V_112_load_1', aesl_mux_load.256i66P.i8:225->src/count.cc:35) ('buffer_V_111_load_1', aesl_mux_load.256i66P.i8:223->src/count.cc:35) ('buffer_V_110_load_1', aesl_mux_load.256i66P.i8:221->src/count.cc:35) ('buffer_V_109_load_1', aesl_mux_load.256i66P.i8:219->src/count.cc:35) ('buffer_V_108_load_1', aesl_mux_load.256i66P.i8:217->src/count.cc:35) ('buffer_V_107_load_1', aesl_mux_load.256i66P.i8:215->src/count.cc:35) ('buffer_V_106_load_1', aesl_mux_load.256i66P.i8:213->src/count.cc:35) ('buffer_V_105_load_1', aesl_mux_load.256i66P.i8:211->src/count.cc:35) ('buffer_V_104_load_1', aesl_mux_load.256i66P.i8:209->src/count.cc:35) ('buffer_V_103_load_1', aesl_mux_load.256i66P.i8:207->src/count.cc:35) ('buffer_V_102_load_1', aesl_mux_load.256i66P.i8:205->src/count.cc:35) ('buffer_V_101_load_1', aesl_mux_load.256i66P.i8:203->src/count.cc:35) ('buffer_V_100_load_1', aesl_mux_load.256i66P.i8:201->src/count.cc:35) ('buffer_V_99_load_1', aesl_mux_load.256i66P.i8:199->src/count.cc:35) ('buffer_V_98_load_1', aesl_mux_load.256i66P.i8:197->src/count.cc:35) ('buffer_V_97_load_1', aesl_mux_load.256i66P.i8:195->src/count.cc:35) ('buffer_V_96_load_1', aesl_mux_load.256i66P.i8:193->src/count.cc:35) ('buffer_V_95_load_1', aesl_mux_load.256i66P.i8:191->src/count.cc:35) ('buffer_V_94_load_1', aesl_mux_load.256i66P.i8:189->src/count.cc:35) ('buffer_V_93_load_1', aesl_mux_load.256i66P.i8:187->src/count.cc:35) ('buffer_V_92_load_1', aesl_mux_load.256i66P.i8:185->src/count.cc:35) ('buffer_V_91_load_1', aesl_mux_load.256i66P.i8:183->src/count.cc:35) ('buffer_V_90_load_1', aesl_mux_load.256i66P.i8:181->src/count.cc:35) ('buffer_V_89_load_1', aesl_mux_load.256i66P.i8:179->src/count.cc:35) ('buffer_V_88_load_1', aesl_mux_load.256i66P.i8:177->src/count.cc:35) ('buffer_V_87_load_1', aesl_mux_load.256i66P.i8:175->src/count.cc:35) ('buffer_V_86_load_1', aesl_mux_load.256i66P.i8:173->src/count.cc:35) ('buffer_V_85_load_1', aesl_mux_load.256i66P.i8:171->src/count.cc:35) ('buffer_V_84_load_1', aesl_mux_load.256i66P.i8:169->src/count.cc:35) ('buffer_V_83_load_1', aesl_mux_load.256i66P.i8:167->src/count.cc:35) ('buffer_V_82_load_1', aesl_mux_load.256i66P.i8:165->src/count.cc:35) ('buffer_V_81_load_1', aesl_mux_load.256i66P.i8:163->src/count.cc:35) ('buffer_V_80_load_1', aesl_mux_load.256i66P.i8:161->src/count.cc:35) ('buffer_V_79_load_1', aesl_mux_load.256i66P.i8:159->src/count.cc:35) ('buffer_V_78_load_1', aesl_mux_load.256i66P.i8:157->src/count.cc:35) ('buffer_V_77_load_1', aesl_mux_load.256i66P.i8:155->src/count.cc:35) ('buffer_V_76_load_1', aesl_mux_load.256i66P.i8:153->src/count.cc:35) ('buffer_V_75_load_1', aesl_mux_load.256i66P.i8:151->src/count.cc:35) ('buffer_V_74_load_1', aesl_mux_load.256i66P.i8:149->src/count.cc:35) ('buffer_V_73_load_1', aesl_mux_load.256i66P.i8:147->src/count.cc:35) ('buffer_V_72_load_1', aesl_mux_load.256i66P.i8:145->src/count.cc:35) ('buffer_V_71_load_1', aesl_mux_load.256i66P.i8:143->src/count.cc:35) ('buffer_V_70_load_1', aesl_mux_load.256i66P.i8:141->src/count.cc:35) ('buffer_V_69_load_1', aesl_mux_load.256i66P.i8:139->src/count.cc:35) ('buffer_V_68_load_1', aesl_mux_load.256i66P.i8:137->src/count.cc:35) ('buffer_V_67_load_1', aesl_mux_load.256i66P.i8:135->src/count.cc:35) ('buffer_V_66_load_1', aesl_mux_load.256i66P.i8:133->src/count.cc:35) ('buffer_V_65_load_1', aesl_mux_load.256i66P.i8:131->src/count.cc:35) ('buffer_V_64_load_1', aesl_mux_load.256i66P.i8:129->src/count.cc:35) ('buffer_V_63_load_1', aesl_mux_load.256i66P.i8:127->src/count.cc:35) ('buffer_V_62_load_1', aesl_mux_load.256i66P.i8:125->src/count.cc:35) ('buffer_V_61_load_1', aesl_mux_load.256i66P.i8:123->src/count.cc:35) ('buffer_V_60_load_1', aesl_mux_load.256i66P.i8:121->src/count.cc:35) ('buffer_V_59_load_1', aesl_mux_load.256i66P.i8:119->src/count.cc:35) ('buffer_V_58_load_1', aesl_mux_load.256i66P.i8:117->src/count.cc:35) ('buffer_V_57_load_1', aesl_mux_load.256i66P.i8:115->src/count.cc:35) ('buffer_V_56_load_1', aesl_mux_load.256i66P.i8:113->src/count.cc:35) ('buffer_V_55_load_1', aesl_mux_load.256i66P.i8:111->src/count.cc:35) ('buffer_V_54_load_1', aesl_mux_load.256i66P.i8:109->src/count.cc:35) ('buffer_V_53_load_1', aesl_mux_load.256i66P.i8:107->src/count.cc:35) ('buffer_V_52_load_1', aesl_mux_load.256i66P.i8:105->src/count.cc:35) ('buffer_V_51_load_1', aesl_mux_load.256i66P.i8:103->src/count.cc:35) ('buffer_V_50_load_1', aesl_mux_load.256i66P.i8:101->src/count.cc:35) ('buffer_V_49_load_1', aesl_mux_load.256i66P.i8:99->src/count.cc:35) ('buffer_V_48_load_1', aesl_mux_load.256i66P.i8:97->src/count.cc:35) ('buffer_V_47_load_1', aesl_mux_load.256i66P.i8:95->src/count.cc:35) ('buffer_V_46_load_1', aesl_mux_load.256i66P.i8:93->src/count.cc:35) ('buffer_V_45_load_1', aesl_mux_load.256i66P.i8:91->src/count.cc:35) ('buffer_V_44_load_1', aesl_mux_load.256i66P.i8:89->src/count.cc:35) ('buffer_V_43_load_1', aesl_mux_load.256i66P.i8:87->src/count.cc:35) ('buffer_V_42_load_1', aesl_mux_load.256i66P.i8:85->src/count.cc:35) ('buffer_V_41_load_1', aesl_mux_load.256i66P.i8:83->src/count.cc:35) ('buffer_V_40_load_1', aesl_mux_load.256i66P.i8:81->src/count.cc:35) ('buffer_V_39_load_1', aesl_mux_load.256i66P.i8:79->src/count.cc:35) ('buffer_V_38_load_1', aesl_mux_load.256i66P.i8:77->src/count.cc:35) ('buffer_V_37_load_1', aesl_mux_load.256i66P.i8:75->src/count.cc:35) ('buffer_V_36_load_1', aesl_mux_load.256i66P.i8:73->src/count.cc:35) ('buffer_V_35_load_1', aesl_mux_load.256i66P.i8:71->src/count.cc:35) ('buffer_V_34_load_1', aesl_mux_load.256i66P.i8:69->src/count.cc:35) ('buffer_V_33_load_1', aesl_mux_load.256i66P.i8:67->src/count.cc:35) ('buffer_V_32_load_1', aesl_mux_load.256i66P.i8:65->src/count.cc:35) ('buffer_V_31_load_1', aesl_mux_load.256i66P.i8:63->src/count.cc:35) ('buffer_V_30_load_1', aesl_mux_load.256i66P.i8:61->src/count.cc:35) ('buffer_V_29_load_1', aesl_mux_load.256i66P.i8:59->src/count.cc:35) ('buffer_V_28_load_1', aesl_mux_load.256i66P.i8:57->src/count.cc:35) ('buffer_V_27_load_1', aesl_mux_load.256i66P.i8:55->src/count.cc:35) ('buffer_V_26_load_1', aesl_mux_load.256i66P.i8:53->src/count.cc:35) ('buffer_V_25_load_1', aesl_mux_load.256i66P.i8:51->src/count.cc:35) ('buffer_V_24_load_1', aesl_mux_load.256i66P.i8:49->src/count.cc:35) ('buffer_V_23_load_1', aesl_mux_load.256i66P.i8:47->src/count.cc:35) ('buffer_V_22_load_1', aesl_mux_load.256i66P.i8:45->src/count.cc:35) ('buffer_V_21_load_1', aesl_mux_load.256i66P.i8:43->src/count.cc:35) ('buffer_V_20_load_1', aesl_mux_load.256i66P.i8:41->src/count.cc:35) ('buffer_V_19_load_1', aesl_mux_load.256i66P.i8:39->src/count.cc:35) ('buffer_V_18_load_1', aesl_mux_load.256i66P.i8:37->src/count.cc:35) ('buffer_V_17_load_1', aesl_mux_load.256i66P.i8:35->src/count.cc:35) ('buffer_V_16_load_1', aesl_mux_load.256i66P.i8:33->src/count.cc:35) ('buffer_V_15_load_1', aesl_mux_load.256i66P.i8:31->src/count.cc:35) ('buffer_V_14_load_1', aesl_mux_load.256i66P.i8:29->src/count.cc:35) ('buffer_V_13_load_1', aesl_mux_load.256i66P.i8:27->src/count.cc:35) ('buffer_V_12_load_1', aesl_mux_load.256i66P.i8:25->src/count.cc:35) ('buffer_V_11_load_1', aesl_mux_load.256i66P.i8:23->src/count.cc:35) ('buffer_V_10_load_1', aesl_mux_load.256i66P.i8:21->src/count.cc:35) ('buffer_V_9_load_1', aesl_mux_load.256i66P.i8:19->src/count.cc:35) ('buffer_V_8_load_1', aesl_mux_load.256i66P.i8:17->src/count.cc:35) ('buffer_V_7_load_1', aesl_mux_load.256i66P.i8:15->src/count.cc:35) ('buffer_V_6_load_1', aesl_mux_load.256i66P.i8:13->src/count.cc:35) ('buffer_V_5_load_1', aesl_mux_load.256i66P.i8:11->src/count.cc:35) ('buffer_V_4_load_1', aesl_mux_load.256i66P.i8:9->src/count.cc:35) ('buffer_V_3_load_1', aesl_mux_load.256i66P.i8:7->src/count.cc:35) ('buffer_V_2_load_1', aesl_mux_load.256i66P.i8:5->src/count.cc:35) ('buffer_V_1_load_1', aesl_mux_load.256i66P.i8:3->src/count.cc:35) ('buffer_V_0_load_1', aesl_mux_load.256i66P.i8:1->src/count.cc:35) ('buffer_V_255_load_1', aesl_mux_load.256i66P.i8:511->src/count.cc:35) [1851]  (2.28 ns)
-	'phi' operation ('__Val2__', aesl_mux_load.256i66P.i8:1->src/count.cc:35) with incoming values : ('buffer_V_254_load_1', aesl_mux_load.256i66P.i8:509->src/count.cc:35) ('buffer_V_253_load_1', aesl_mux_load.256i66P.i8:507->src/count.cc:35) ('buffer_V_252_load_1', aesl_mux_load.256i66P.i8:505->src/count.cc:35) ('buffer_V_251_load_1', aesl_mux_load.256i66P.i8:503->src/count.cc:35) ('buffer_V_250_load_1', aesl_mux_load.256i66P.i8:501->src/count.cc:35) ('buffer_V_249_load_1', aesl_mux_load.256i66P.i8:499->src/count.cc:35) ('buffer_V_248_load_1', aesl_mux_load.256i66P.i8:497->src/count.cc:35) ('buffer_V_247_load_1', aesl_mux_load.256i66P.i8:495->src/count.cc:35) ('buffer_V_246_load_1', aesl_mux_load.256i66P.i8:493->src/count.cc:35) ('buffer_V_245_load_1', aesl_mux_load.256i66P.i8:491->src/count.cc:35) ('buffer_V_244_load_1', aesl_mux_load.256i66P.i8:489->src/count.cc:35) ('buffer_V_243_load_1', aesl_mux_load.256i66P.i8:487->src/count.cc:35) ('buffer_V_242_load_1', aesl_mux_load.256i66P.i8:485->src/count.cc:35) ('buffer_V_241_load_1', aesl_mux_load.256i66P.i8:483->src/count.cc:35) ('buffer_V_240_load_1', aesl_mux_load.256i66P.i8:481->src/count.cc:35) ('buffer_V_239_load_1', aesl_mux_load.256i66P.i8:479->src/count.cc:35) ('buffer_V_238_load_1', aesl_mux_load.256i66P.i8:477->src/count.cc:35) ('buffer_V_237_load_1', aesl_mux_load.256i66P.i8:475->src/count.cc:35) ('buffer_V_236_load_1', aesl_mux_load.256i66P.i8:473->src/count.cc:35) ('buffer_V_235_load_1', aesl_mux_load.256i66P.i8:471->src/count.cc:35) ('buffer_V_234_load_1', aesl_mux_load.256i66P.i8:469->src/count.cc:35) ('buffer_V_233_load_1', aesl_mux_load.256i66P.i8:467->src/count.cc:35) ('buffer_V_232_load_1', aesl_mux_load.256i66P.i8:465->src/count.cc:35) ('buffer_V_231_load_1', aesl_mux_load.256i66P.i8:463->src/count.cc:35) ('buffer_V_230_load_1', aesl_mux_load.256i66P.i8:461->src/count.cc:35) ('buffer_V_229_load_1', aesl_mux_load.256i66P.i8:459->src/count.cc:35) ('buffer_V_228_load_1', aesl_mux_load.256i66P.i8:457->src/count.cc:35) ('buffer_V_227_load_1', aesl_mux_load.256i66P.i8:455->src/count.cc:35) ('buffer_V_226_load_1', aesl_mux_load.256i66P.i8:453->src/count.cc:35) ('buffer_V_225_load_1', aesl_mux_load.256i66P.i8:451->src/count.cc:35) ('buffer_V_224_load_1', aesl_mux_load.256i66P.i8:449->src/count.cc:35) ('buffer_V_223_load_1', aesl_mux_load.256i66P.i8:447->src/count.cc:35) ('buffer_V_222_load_1', aesl_mux_load.256i66P.i8:445->src/count.cc:35) ('buffer_V_221_load_1', aesl_mux_load.256i66P.i8:443->src/count.cc:35) ('buffer_V_220_load_1', aesl_mux_load.256i66P.i8:441->src/count.cc:35) ('buffer_V_219_load_1', aesl_mux_load.256i66P.i8:439->src/count.cc:35) ('buffer_V_218_load_1', aesl_mux_load.256i66P.i8:437->src/count.cc:35) ('buffer_V_217_load_1', aesl_mux_load.256i66P.i8:435->src/count.cc:35) ('buffer_V_216_load_1', aesl_mux_load.256i66P.i8:433->src/count.cc:35) ('buffer_V_215_load_1', aesl_mux_load.256i66P.i8:431->src/count.cc:35) ('buffer_V_214_load_1', aesl_mux_load.256i66P.i8:429->src/count.cc:35) ('buffer_V_213_load_1', aesl_mux_load.256i66P.i8:427->src/count.cc:35) ('buffer_V_212_load_1', aesl_mux_load.256i66P.i8:425->src/count.cc:35) ('buffer_V_211_load_1', aesl_mux_load.256i66P.i8:423->src/count.cc:35) ('buffer_V_210_load_1', aesl_mux_load.256i66P.i8:421->src/count.cc:35) ('buffer_V_209_load_1', aesl_mux_load.256i66P.i8:419->src/count.cc:35) ('buffer_V_208_load_1', aesl_mux_load.256i66P.i8:417->src/count.cc:35) ('buffer_V_207_load_1', aesl_mux_load.256i66P.i8:415->src/count.cc:35) ('buffer_V_206_load_1', aesl_mux_load.256i66P.i8:413->src/count.cc:35) ('buffer_V_205_load_1', aesl_mux_load.256i66P.i8:411->src/count.cc:35) ('buffer_V_204_load_1', aesl_mux_load.256i66P.i8:409->src/count.cc:35) ('buffer_V_203_load_1', aesl_mux_load.256i66P.i8:407->src/count.cc:35) ('buffer_V_202_load_1', aesl_mux_load.256i66P.i8:405->src/count.cc:35) ('buffer_V_201_load_1', aesl_mux_load.256i66P.i8:403->src/count.cc:35) ('buffer_V_200_load_1', aesl_mux_load.256i66P.i8:401->src/count.cc:35) ('buffer_V_199_load_1', aesl_mux_load.256i66P.i8:399->src/count.cc:35) ('buffer_V_198_load_1', aesl_mux_load.256i66P.i8:397->src/count.cc:35) ('buffer_V_197_load_1', aesl_mux_load.256i66P.i8:395->src/count.cc:35) ('buffer_V_196_load_1', aesl_mux_load.256i66P.i8:393->src/count.cc:35) ('buffer_V_195_load_1', aesl_mux_load.256i66P.i8:391->src/count.cc:35) ('buffer_V_194_load_1', aesl_mux_load.256i66P.i8:389->src/count.cc:35) ('buffer_V_193_load_1', aesl_mux_load.256i66P.i8:387->src/count.cc:35) ('buffer_V_192_load_1', aesl_mux_load.256i66P.i8:385->src/count.cc:35) ('buffer_V_191_load_1', aesl_mux_load.256i66P.i8:383->src/count.cc:35) ('buffer_V_190_load_1', aesl_mux_load.256i66P.i8:381->src/count.cc:35) ('buffer_V_189_load_1', aesl_mux_load.256i66P.i8:379->src/count.cc:35) ('buffer_V_188_load_1', aesl_mux_load.256i66P.i8:377->src/count.cc:35) ('buffer_V_187_load_1', aesl_mux_load.256i66P.i8:375->src/count.cc:35) ('buffer_V_186_load_1', aesl_mux_load.256i66P.i8:373->src/count.cc:35) ('buffer_V_185_load_1', aesl_mux_load.256i66P.i8:371->src/count.cc:35) ('buffer_V_184_load_1', aesl_mux_load.256i66P.i8:369->src/count.cc:35) ('buffer_V_183_load_1', aesl_mux_load.256i66P.i8:367->src/count.cc:35) ('buffer_V_182_load_1', aesl_mux_load.256i66P.i8:365->src/count.cc:35) ('buffer_V_181_load_1', aesl_mux_load.256i66P.i8:363->src/count.cc:35) ('buffer_V_180_load_1', aesl_mux_load.256i66P.i8:361->src/count.cc:35) ('buffer_V_179_load_1', aesl_mux_load.256i66P.i8:359->src/count.cc:35) ('buffer_V_178_load_1', aesl_mux_load.256i66P.i8:357->src/count.cc:35) ('buffer_V_177_load_1', aesl_mux_load.256i66P.i8:355->src/count.cc:35) ('buffer_V_176_load_1', aesl_mux_load.256i66P.i8:353->src/count.cc:35) ('buffer_V_175_load_1', aesl_mux_load.256i66P.i8:351->src/count.cc:35) ('buffer_V_174_load_1', aesl_mux_load.256i66P.i8:349->src/count.cc:35) ('buffer_V_173_load_1', aesl_mux_load.256i66P.i8:347->src/count.cc:35) ('buffer_V_172_load_1', aesl_mux_load.256i66P.i8:345->src/count.cc:35) ('buffer_V_171_load_1', aesl_mux_load.256i66P.i8:343->src/count.cc:35) ('buffer_V_170_load_1', aesl_mux_load.256i66P.i8:341->src/count.cc:35) ('buffer_V_169_load_1', aesl_mux_load.256i66P.i8:339->src/count.cc:35) ('buffer_V_168_load_1', aesl_mux_load.256i66P.i8:337->src/count.cc:35) ('buffer_V_167_load_1', aesl_mux_load.256i66P.i8:335->src/count.cc:35) ('buffer_V_166_load_1', aesl_mux_load.256i66P.i8:333->src/count.cc:35) ('buffer_V_165_load_1', aesl_mux_load.256i66P.i8:331->src/count.cc:35) ('buffer_V_164_load_1', aesl_mux_load.256i66P.i8:329->src/count.cc:35) ('buffer_V_163_load_1', aesl_mux_load.256i66P.i8:327->src/count.cc:35) ('buffer_V_162_load_1', aesl_mux_load.256i66P.i8:325->src/count.cc:35) ('buffer_V_161_load_1', aesl_mux_load.256i66P.i8:323->src/count.cc:35) ('buffer_V_160_load_1', aesl_mux_load.256i66P.i8:321->src/count.cc:35) ('buffer_V_159_load_1', aesl_mux_load.256i66P.i8:319->src/count.cc:35) ('buffer_V_158_load_1', aesl_mux_load.256i66P.i8:317->src/count.cc:35) ('buffer_V_157_load_1', aesl_mux_load.256i66P.i8:315->src/count.cc:35) ('buffer_V_156_load_1', aesl_mux_load.256i66P.i8:313->src/count.cc:35) ('buffer_V_155_load_1', aesl_mux_load.256i66P.i8:311->src/count.cc:35) ('buffer_V_154_load_1', aesl_mux_load.256i66P.i8:309->src/count.cc:35) ('buffer_V_153_load_1', aesl_mux_load.256i66P.i8:307->src/count.cc:35) ('buffer_V_152_load_1', aesl_mux_load.256i66P.i8:305->src/count.cc:35) ('buffer_V_151_load_1', aesl_mux_load.256i66P.i8:303->src/count.cc:35) ('buffer_V_150_load_1', aesl_mux_load.256i66P.i8:301->src/count.cc:35) ('buffer_V_149_load_1', aesl_mux_load.256i66P.i8:299->src/count.cc:35) ('buffer_V_148_load_1', aesl_mux_load.256i66P.i8:297->src/count.cc:35) ('buffer_V_147_load_1', aesl_mux_load.256i66P.i8:295->src/count.cc:35) ('buffer_V_146_load_1', aesl_mux_load.256i66P.i8:293->src/count.cc:35) ('buffer_V_145_load_1', aesl_mux_load.256i66P.i8:291->src/count.cc:35) ('buffer_V_144_load_1', aesl_mux_load.256i66P.i8:289->src/count.cc:35) ('buffer_V_143_load_1', aesl_mux_load.256i66P.i8:287->src/count.cc:35) ('buffer_V_142_load_1', aesl_mux_load.256i66P.i8:285->src/count.cc:35) ('buffer_V_141_load_1', aesl_mux_load.256i66P.i8:283->src/count.cc:35) ('buffer_V_140_load_1', aesl_mux_load.256i66P.i8:281->src/count.cc:35) ('buffer_V_139_load_1', aesl_mux_load.256i66P.i8:279->src/count.cc:35) ('buffer_V_138_load_1', aesl_mux_load.256i66P.i8:277->src/count.cc:35) ('buffer_V_137_load_1', aesl_mux_load.256i66P.i8:275->src/count.cc:35) ('buffer_V_136_load_1', aesl_mux_load.256i66P.i8:273->src/count.cc:35) ('buffer_V_135_load_1', aesl_mux_load.256i66P.i8:271->src/count.cc:35) ('buffer_V_134_load_1', aesl_mux_load.256i66P.i8:269->src/count.cc:35) ('buffer_V_133_load_1', aesl_mux_load.256i66P.i8:267->src/count.cc:35) ('buffer_V_132_load_1', aesl_mux_load.256i66P.i8:265->src/count.cc:35) ('buffer_V_131_load_1', aesl_mux_load.256i66P.i8:263->src/count.cc:35) ('buffer_V_130_load_1', aesl_mux_load.256i66P.i8:261->src/count.cc:35) ('buffer_V_129_load_1', aesl_mux_load.256i66P.i8:259->src/count.cc:35) ('buffer_V_128_load_1', aesl_mux_load.256i66P.i8:257->src/count.cc:35) ('buffer_V_127_load_1', aesl_mux_load.256i66P.i8:255->src/count.cc:35) ('buffer_V_126_load_1', aesl_mux_load.256i66P.i8:253->src/count.cc:35) ('buffer_V_125_load_1', aesl_mux_load.256i66P.i8:251->src/count.cc:35) ('buffer_V_124_load_1', aesl_mux_load.256i66P.i8:249->src/count.cc:35) ('buffer_V_123_load_1', aesl_mux_load.256i66P.i8:247->src/count.cc:35) ('buffer_V_122_load_1', aesl_mux_load.256i66P.i8:245->src/count.cc:35) ('buffer_V_121_load_1', aesl_mux_load.256i66P.i8:243->src/count.cc:35) ('buffer_V_120_load_1', aesl_mux_load.256i66P.i8:241->src/count.cc:35) ('buffer_V_119_load_1', aesl_mux_load.256i66P.i8:239->src/count.cc:35) ('buffer_V_118_load_1', aesl_mux_load.256i66P.i8:237->src/count.cc:35) ('buffer_V_117_load_1', aesl_mux_load.256i66P.i8:235->src/count.cc:35) ('buffer_V_116_load_1', aesl_mux_load.256i66P.i8:233->src/count.cc:35) ('buffer_V_115_load_1', aesl_mux_load.256i66P.i8:231->src/count.cc:35) ('buffer_V_114_load_1', aesl_mux_load.256i66P.i8:229->src/count.cc:35) ('buffer_V_113_load_1', aesl_mux_load.256i66P.i8:227->src/count.cc:35) ('buffer_V_112_load_1', aesl_mux_load.256i66P.i8:225->src/count.cc:35) ('buffer_V_111_load_1', aesl_mux_load.256i66P.i8:223->src/count.cc:35) ('buffer_V_110_load_1', aesl_mux_load.256i66P.i8:221->src/count.cc:35) ('buffer_V_109_load_1', aesl_mux_load.256i66P.i8:219->src/count.cc:35) ('buffer_V_108_load_1', aesl_mux_load.256i66P.i8:217->src/count.cc:35) ('buffer_V_107_load_1', aesl_mux_load.256i66P.i8:215->src/count.cc:35) ('buffer_V_106_load_1', aesl_mux_load.256i66P.i8:213->src/count.cc:35) ('buffer_V_105_load_1', aesl_mux_load.256i66P.i8:211->src/count.cc:35) ('buffer_V_104_load_1', aesl_mux_load.256i66P.i8:209->src/count.cc:35) ('buffer_V_103_load_1', aesl_mux_load.256i66P.i8:207->src/count.cc:35) ('buffer_V_102_load_1', aesl_mux_load.256i66P.i8:205->src/count.cc:35) ('buffer_V_101_load_1', aesl_mux_load.256i66P.i8:203->src/count.cc:35) ('buffer_V_100_load_1', aesl_mux_load.256i66P.i8:201->src/count.cc:35) ('buffer_V_99_load_1', aesl_mux_load.256i66P.i8:199->src/count.cc:35) ('buffer_V_98_load_1', aesl_mux_load.256i66P.i8:197->src/count.cc:35) ('buffer_V_97_load_1', aesl_mux_load.256i66P.i8:195->src/count.cc:35) ('buffer_V_96_load_1', aesl_mux_load.256i66P.i8:193->src/count.cc:35) ('buffer_V_95_load_1', aesl_mux_load.256i66P.i8:191->src/count.cc:35) ('buffer_V_94_load_1', aesl_mux_load.256i66P.i8:189->src/count.cc:35) ('buffer_V_93_load_1', aesl_mux_load.256i66P.i8:187->src/count.cc:35) ('buffer_V_92_load_1', aesl_mux_load.256i66P.i8:185->src/count.cc:35) ('buffer_V_91_load_1', aesl_mux_load.256i66P.i8:183->src/count.cc:35) ('buffer_V_90_load_1', aesl_mux_load.256i66P.i8:181->src/count.cc:35) ('buffer_V_89_load_1', aesl_mux_load.256i66P.i8:179->src/count.cc:35) ('buffer_V_88_load_1', aesl_mux_load.256i66P.i8:177->src/count.cc:35) ('buffer_V_87_load_1', aesl_mux_load.256i66P.i8:175->src/count.cc:35) ('buffer_V_86_load_1', aesl_mux_load.256i66P.i8:173->src/count.cc:35) ('buffer_V_85_load_1', aesl_mux_load.256i66P.i8:171->src/count.cc:35) ('buffer_V_84_load_1', aesl_mux_load.256i66P.i8:169->src/count.cc:35) ('buffer_V_83_load_1', aesl_mux_load.256i66P.i8:167->src/count.cc:35) ('buffer_V_82_load_1', aesl_mux_load.256i66P.i8:165->src/count.cc:35) ('buffer_V_81_load_1', aesl_mux_load.256i66P.i8:163->src/count.cc:35) ('buffer_V_80_load_1', aesl_mux_load.256i66P.i8:161->src/count.cc:35) ('buffer_V_79_load_1', aesl_mux_load.256i66P.i8:159->src/count.cc:35) ('buffer_V_78_load_1', aesl_mux_load.256i66P.i8:157->src/count.cc:35) ('buffer_V_77_load_1', aesl_mux_load.256i66P.i8:155->src/count.cc:35) ('buffer_V_76_load_1', aesl_mux_load.256i66P.i8:153->src/count.cc:35) ('buffer_V_75_load_1', aesl_mux_load.256i66P.i8:151->src/count.cc:35) ('buffer_V_74_load_1', aesl_mux_load.256i66P.i8:149->src/count.cc:35) ('buffer_V_73_load_1', aesl_mux_load.256i66P.i8:147->src/count.cc:35) ('buffer_V_72_load_1', aesl_mux_load.256i66P.i8:145->src/count.cc:35) ('buffer_V_71_load_1', aesl_mux_load.256i66P.i8:143->src/count.cc:35) ('buffer_V_70_load_1', aesl_mux_load.256i66P.i8:141->src/count.cc:35) ('buffer_V_69_load_1', aesl_mux_load.256i66P.i8:139->src/count.cc:35) ('buffer_V_68_load_1', aesl_mux_load.256i66P.i8:137->src/count.cc:35) ('buffer_V_67_load_1', aesl_mux_load.256i66P.i8:135->src/count.cc:35) ('buffer_V_66_load_1', aesl_mux_load.256i66P.i8:133->src/count.cc:35) ('buffer_V_65_load_1', aesl_mux_load.256i66P.i8:131->src/count.cc:35) ('buffer_V_64_load_1', aesl_mux_load.256i66P.i8:129->src/count.cc:35) ('buffer_V_63_load_1', aesl_mux_load.256i66P.i8:127->src/count.cc:35) ('buffer_V_62_load_1', aesl_mux_load.256i66P.i8:125->src/count.cc:35) ('buffer_V_61_load_1', aesl_mux_load.256i66P.i8:123->src/count.cc:35) ('buffer_V_60_load_1', aesl_mux_load.256i66P.i8:121->src/count.cc:35) ('buffer_V_59_load_1', aesl_mux_load.256i66P.i8:119->src/count.cc:35) ('buffer_V_58_load_1', aesl_mux_load.256i66P.i8:117->src/count.cc:35) ('buffer_V_57_load_1', aesl_mux_load.256i66P.i8:115->src/count.cc:35) ('buffer_V_56_load_1', aesl_mux_load.256i66P.i8:113->src/count.cc:35) ('buffer_V_55_load_1', aesl_mux_load.256i66P.i8:111->src/count.cc:35) ('buffer_V_54_load_1', aesl_mux_load.256i66P.i8:109->src/count.cc:35) ('buffer_V_53_load_1', aesl_mux_load.256i66P.i8:107->src/count.cc:35) ('buffer_V_52_load_1', aesl_mux_load.256i66P.i8:105->src/count.cc:35) ('buffer_V_51_load_1', aesl_mux_load.256i66P.i8:103->src/count.cc:35) ('buffer_V_50_load_1', aesl_mux_load.256i66P.i8:101->src/count.cc:35) ('buffer_V_49_load_1', aesl_mux_load.256i66P.i8:99->src/count.cc:35) ('buffer_V_48_load_1', aesl_mux_load.256i66P.i8:97->src/count.cc:35) ('buffer_V_47_load_1', aesl_mux_load.256i66P.i8:95->src/count.cc:35) ('buffer_V_46_load_1', aesl_mux_load.256i66P.i8:93->src/count.cc:35) ('buffer_V_45_load_1', aesl_mux_load.256i66P.i8:91->src/count.cc:35) ('buffer_V_44_load_1', aesl_mux_load.256i66P.i8:89->src/count.cc:35) ('buffer_V_43_load_1', aesl_mux_load.256i66P.i8:87->src/count.cc:35) ('buffer_V_42_load_1', aesl_mux_load.256i66P.i8:85->src/count.cc:35) ('buffer_V_41_load_1', aesl_mux_load.256i66P.i8:83->src/count.cc:35) ('buffer_V_40_load_1', aesl_mux_load.256i66P.i8:81->src/count.cc:35) ('buffer_V_39_load_1', aesl_mux_load.256i66P.i8:79->src/count.cc:35) ('buffer_V_38_load_1', aesl_mux_load.256i66P.i8:77->src/count.cc:35) ('buffer_V_37_load_1', aesl_mux_load.256i66P.i8:75->src/count.cc:35) ('buffer_V_36_load_1', aesl_mux_load.256i66P.i8:73->src/count.cc:35) ('buffer_V_35_load_1', aesl_mux_load.256i66P.i8:71->src/count.cc:35) ('buffer_V_34_load_1', aesl_mux_load.256i66P.i8:69->src/count.cc:35) ('buffer_V_33_load_1', aesl_mux_load.256i66P.i8:67->src/count.cc:35) ('buffer_V_32_load_1', aesl_mux_load.256i66P.i8:65->src/count.cc:35) ('buffer_V_31_load_1', aesl_mux_load.256i66P.i8:63->src/count.cc:35) ('buffer_V_30_load_1', aesl_mux_load.256i66P.i8:61->src/count.cc:35) ('buffer_V_29_load_1', aesl_mux_load.256i66P.i8:59->src/count.cc:35) ('buffer_V_28_load_1', aesl_mux_load.256i66P.i8:57->src/count.cc:35) ('buffer_V_27_load_1', aesl_mux_load.256i66P.i8:55->src/count.cc:35) ('buffer_V_26_load_1', aesl_mux_load.256i66P.i8:53->src/count.cc:35) ('buffer_V_25_load_1', aesl_mux_load.256i66P.i8:51->src/count.cc:35) ('buffer_V_24_load_1', aesl_mux_load.256i66P.i8:49->src/count.cc:35) ('buffer_V_23_load_1', aesl_mux_load.256i66P.i8:47->src/count.cc:35) ('buffer_V_22_load_1', aesl_mux_load.256i66P.i8:45->src/count.cc:35) ('buffer_V_21_load_1', aesl_mux_load.256i66P.i8:43->src/count.cc:35) ('buffer_V_20_load_1', aesl_mux_load.256i66P.i8:41->src/count.cc:35) ('buffer_V_19_load_1', aesl_mux_load.256i66P.i8:39->src/count.cc:35) ('buffer_V_18_load_1', aesl_mux_load.256i66P.i8:37->src/count.cc:35) ('buffer_V_17_load_1', aesl_mux_load.256i66P.i8:35->src/count.cc:35) ('buffer_V_16_load_1', aesl_mux_load.256i66P.i8:33->src/count.cc:35) ('buffer_V_15_load_1', aesl_mux_load.256i66P.i8:31->src/count.cc:35) ('buffer_V_14_load_1', aesl_mux_load.256i66P.i8:29->src/count.cc:35) ('buffer_V_13_load_1', aesl_mux_load.256i66P.i8:27->src/count.cc:35) ('buffer_V_12_load_1', aesl_mux_load.256i66P.i8:25->src/count.cc:35) ('buffer_V_11_load_1', aesl_mux_load.256i66P.i8:23->src/count.cc:35) ('buffer_V_10_load_1', aesl_mux_load.256i66P.i8:21->src/count.cc:35) ('buffer_V_9_load_1', aesl_mux_load.256i66P.i8:19->src/count.cc:35) ('buffer_V_8_load_1', aesl_mux_load.256i66P.i8:17->src/count.cc:35) ('buffer_V_7_load_1', aesl_mux_load.256i66P.i8:15->src/count.cc:35) ('buffer_V_6_load_1', aesl_mux_load.256i66P.i8:13->src/count.cc:35) ('buffer_V_5_load_1', aesl_mux_load.256i66P.i8:11->src/count.cc:35) ('buffer_V_4_load_1', aesl_mux_load.256i66P.i8:9->src/count.cc:35) ('buffer_V_3_load_1', aesl_mux_load.256i66P.i8:7->src/count.cc:35) ('buffer_V_2_load_1', aesl_mux_load.256i66P.i8:5->src/count.cc:35) ('buffer_V_1_load_1', aesl_mux_load.256i66P.i8:3->src/count.cc:35) ('buffer_V_0_load_1', aesl_mux_load.256i66P.i8:1->src/count.cc:35) ('buffer_V_255_load_1', aesl_mux_load.256i66P.i8:511->src/count.cc:35) [1851]  (0 ns)
-	'store' operation ('buffer_V_2_write_ln35', src/count.cc:35) of variable '__Result__', src/count.cc:35 on static variable 'buffer_V_2' [2611]  (0.617 ns)
+	'load' operation ('buffer_V_254_load', aesl_mux_load.256i66P.i8:509->src/count.cc:29) on static variable 'buffer_V_254' [1086]  (0 ns)
+	multiplexor before 'phi' operation ('__Val2__', aesl_mux_load.256i66P.i8:1->src/count.cc:29) with incoming values : ('buffer_V_254_load', aesl_mux_load.256i66P.i8:509->src/count.cc:29) ('buffer_V_253_load', aesl_mux_load.256i66P.i8:507->src/count.cc:29) ('buffer_V_252_load', aesl_mux_load.256i66P.i8:505->src/count.cc:29) ('buffer_V_251_load', aesl_mux_load.256i66P.i8:503->src/count.cc:29) ('buffer_V_250_load', aesl_mux_load.256i66P.i8:501->src/count.cc:29) ('buffer_V_249_load', aesl_mux_load.256i66P.i8:499->src/count.cc:29) ('buffer_V_248_load', aesl_mux_load.256i66P.i8:497->src/count.cc:29) ('buffer_V_247_load', aesl_mux_load.256i66P.i8:495->src/count.cc:29) ('buffer_V_246_load', aesl_mux_load.256i66P.i8:493->src/count.cc:29) ('buffer_V_245_load', aesl_mux_load.256i66P.i8:491->src/count.cc:29) ('buffer_V_244_load', aesl_mux_load.256i66P.i8:489->src/count.cc:29) ('buffer_V_243_load', aesl_mux_load.256i66P.i8:487->src/count.cc:29) ('buffer_V_242_load', aesl_mux_load.256i66P.i8:485->src/count.cc:29) ('buffer_V_241_load', aesl_mux_load.256i66P.i8:483->src/count.cc:29) ('buffer_V_240_load', aesl_mux_load.256i66P.i8:481->src/count.cc:29) ('buffer_V_239_load', aesl_mux_load.256i66P.i8:479->src/count.cc:29) ('buffer_V_238_load', aesl_mux_load.256i66P.i8:477->src/count.cc:29) ('buffer_V_237_load', aesl_mux_load.256i66P.i8:475->src/count.cc:29) ('buffer_V_236_load', aesl_mux_load.256i66P.i8:473->src/count.cc:29) ('buffer_V_235_load', aesl_mux_load.256i66P.i8:471->src/count.cc:29) ('buffer_V_234_load', aesl_mux_load.256i66P.i8:469->src/count.cc:29) ('buffer_V_233_load', aesl_mux_load.256i66P.i8:467->src/count.cc:29) ('buffer_V_232_load', aesl_mux_load.256i66P.i8:465->src/count.cc:29) ('buffer_V_231_load', aesl_mux_load.256i66P.i8:463->src/count.cc:29) ('buffer_V_230_load', aesl_mux_load.256i66P.i8:461->src/count.cc:29) ('buffer_V_229_load', aesl_mux_load.256i66P.i8:459->src/count.cc:29) ('buffer_V_228_load', aesl_mux_load.256i66P.i8:457->src/count.cc:29) ('buffer_V_227_load', aesl_mux_load.256i66P.i8:455->src/count.cc:29) ('buffer_V_226_load', aesl_mux_load.256i66P.i8:453->src/count.cc:29) ('buffer_V_225_load', aesl_mux_load.256i66P.i8:451->src/count.cc:29) ('buffer_V_224_load', aesl_mux_load.256i66P.i8:449->src/count.cc:29) ('buffer_V_223_load', aesl_mux_load.256i66P.i8:447->src/count.cc:29) ('buffer_V_222_load', aesl_mux_load.256i66P.i8:445->src/count.cc:29) ('buffer_V_221_load', aesl_mux_load.256i66P.i8:443->src/count.cc:29) ('buffer_V_220_load', aesl_mux_load.256i66P.i8:441->src/count.cc:29) ('buffer_V_219_load', aesl_mux_load.256i66P.i8:439->src/count.cc:29) ('buffer_V_218_load', aesl_mux_load.256i66P.i8:437->src/count.cc:29) ('buffer_V_217_load', aesl_mux_load.256i66P.i8:435->src/count.cc:29) ('buffer_V_216_load', aesl_mux_load.256i66P.i8:433->src/count.cc:29) ('buffer_V_215_load', aesl_mux_load.256i66P.i8:431->src/count.cc:29) ('buffer_V_214_load', aesl_mux_load.256i66P.i8:429->src/count.cc:29) ('buffer_V_213_load', aesl_mux_load.256i66P.i8:427->src/count.cc:29) ('buffer_V_212_load', aesl_mux_load.256i66P.i8:425->src/count.cc:29) ('buffer_V_211_load', aesl_mux_load.256i66P.i8:423->src/count.cc:29) ('buffer_V_210_load', aesl_mux_load.256i66P.i8:421->src/count.cc:29) ('buffer_V_209_load', aesl_mux_load.256i66P.i8:419->src/count.cc:29) ('buffer_V_208_load', aesl_mux_load.256i66P.i8:417->src/count.cc:29) ('buffer_V_207_load', aesl_mux_load.256i66P.i8:415->src/count.cc:29) ('buffer_V_206_load', aesl_mux_load.256i66P.i8:413->src/count.cc:29) ('buffer_V_205_load', aesl_mux_load.256i66P.i8:411->src/count.cc:29) ('buffer_V_204_load', aesl_mux_load.256i66P.i8:409->src/count.cc:29) ('buffer_V_203_load', aesl_mux_load.256i66P.i8:407->src/count.cc:29) ('buffer_V_202_load', aesl_mux_load.256i66P.i8:405->src/count.cc:29) ('buffer_V_201_load', aesl_mux_load.256i66P.i8:403->src/count.cc:29) ('buffer_V_200_load', aesl_mux_load.256i66P.i8:401->src/count.cc:29) ('buffer_V_199_load', aesl_mux_load.256i66P.i8:399->src/count.cc:29) ('buffer_V_198_load', aesl_mux_load.256i66P.i8:397->src/count.cc:29) ('buffer_V_197_load', aesl_mux_load.256i66P.i8:395->src/count.cc:29) ('buffer_V_196_load', aesl_mux_load.256i66P.i8:393->src/count.cc:29) ('buffer_V_195_load', aesl_mux_load.256i66P.i8:391->src/count.cc:29) ('buffer_V_194_load', aesl_mux_load.256i66P.i8:389->src/count.cc:29) ('buffer_V_193_load', aesl_mux_load.256i66P.i8:387->src/count.cc:29) ('buffer_V_192_load', aesl_mux_load.256i66P.i8:385->src/count.cc:29) ('buffer_V_191_load', aesl_mux_load.256i66P.i8:383->src/count.cc:29) ('buffer_V_190_load', aesl_mux_load.256i66P.i8:381->src/count.cc:29) ('buffer_V_189_load', aesl_mux_load.256i66P.i8:379->src/count.cc:29) ('buffer_V_188_load', aesl_mux_load.256i66P.i8:377->src/count.cc:29) ('buffer_V_187_load', aesl_mux_load.256i66P.i8:375->src/count.cc:29) ('buffer_V_186_load', aesl_mux_load.256i66P.i8:373->src/count.cc:29) ('buffer_V_185_load', aesl_mux_load.256i66P.i8:371->src/count.cc:29) ('buffer_V_184_load', aesl_mux_load.256i66P.i8:369->src/count.cc:29) ('buffer_V_183_load', aesl_mux_load.256i66P.i8:367->src/count.cc:29) ('buffer_V_182_load', aesl_mux_load.256i66P.i8:365->src/count.cc:29) ('buffer_V_181_load', aesl_mux_load.256i66P.i8:363->src/count.cc:29) ('buffer_V_180_load', aesl_mux_load.256i66P.i8:361->src/count.cc:29) ('buffer_V_179_load', aesl_mux_load.256i66P.i8:359->src/count.cc:29) ('buffer_V_178_load', aesl_mux_load.256i66P.i8:357->src/count.cc:29) ('buffer_V_177_load', aesl_mux_load.256i66P.i8:355->src/count.cc:29) ('buffer_V_176_load', aesl_mux_load.256i66P.i8:353->src/count.cc:29) ('buffer_V_175_load', aesl_mux_load.256i66P.i8:351->src/count.cc:29) ('buffer_V_174_load', aesl_mux_load.256i66P.i8:349->src/count.cc:29) ('buffer_V_173_load', aesl_mux_load.256i66P.i8:347->src/count.cc:29) ('buffer_V_172_load', aesl_mux_load.256i66P.i8:345->src/count.cc:29) ('buffer_V_171_load', aesl_mux_load.256i66P.i8:343->src/count.cc:29) ('buffer_V_170_load', aesl_mux_load.256i66P.i8:341->src/count.cc:29) ('buffer_V_169_load', aesl_mux_load.256i66P.i8:339->src/count.cc:29) ('buffer_V_168_load', aesl_mux_load.256i66P.i8:337->src/count.cc:29) ('buffer_V_167_load', aesl_mux_load.256i66P.i8:335->src/count.cc:29) ('buffer_V_166_load', aesl_mux_load.256i66P.i8:333->src/count.cc:29) ('buffer_V_165_load', aesl_mux_load.256i66P.i8:331->src/count.cc:29) ('buffer_V_164_load', aesl_mux_load.256i66P.i8:329->src/count.cc:29) ('buffer_V_163_load', aesl_mux_load.256i66P.i8:327->src/count.cc:29) ('buffer_V_162_load', aesl_mux_load.256i66P.i8:325->src/count.cc:29) ('buffer_V_161_load', aesl_mux_load.256i66P.i8:323->src/count.cc:29) ('buffer_V_160_load', aesl_mux_load.256i66P.i8:321->src/count.cc:29) ('buffer_V_159_load', aesl_mux_load.256i66P.i8:319->src/count.cc:29) ('buffer_V_158_load', aesl_mux_load.256i66P.i8:317->src/count.cc:29) ('buffer_V_157_load', aesl_mux_load.256i66P.i8:315->src/count.cc:29) ('buffer_V_156_load', aesl_mux_load.256i66P.i8:313->src/count.cc:29) ('buffer_V_155_load', aesl_mux_load.256i66P.i8:311->src/count.cc:29) ('buffer_V_154_load', aesl_mux_load.256i66P.i8:309->src/count.cc:29) ('buffer_V_153_load', aesl_mux_load.256i66P.i8:307->src/count.cc:29) ('buffer_V_152_load', aesl_mux_load.256i66P.i8:305->src/count.cc:29) ('buffer_V_151_load', aesl_mux_load.256i66P.i8:303->src/count.cc:29) ('buffer_V_150_load', aesl_mux_load.256i66P.i8:301->src/count.cc:29) ('buffer_V_149_load', aesl_mux_load.256i66P.i8:299->src/count.cc:29) ('buffer_V_148_load', aesl_mux_load.256i66P.i8:297->src/count.cc:29) ('buffer_V_147_load', aesl_mux_load.256i66P.i8:295->src/count.cc:29) ('buffer_V_146_load', aesl_mux_load.256i66P.i8:293->src/count.cc:29) ('buffer_V_145_load', aesl_mux_load.256i66P.i8:291->src/count.cc:29) ('buffer_V_144_load', aesl_mux_load.256i66P.i8:289->src/count.cc:29) ('buffer_V_143_load', aesl_mux_load.256i66P.i8:287->src/count.cc:29) ('buffer_V_142_load', aesl_mux_load.256i66P.i8:285->src/count.cc:29) ('buffer_V_141_load', aesl_mux_load.256i66P.i8:283->src/count.cc:29) ('buffer_V_140_load', aesl_mux_load.256i66P.i8:281->src/count.cc:29) ('buffer_V_139_load', aesl_mux_load.256i66P.i8:279->src/count.cc:29) ('buffer_V_138_load', aesl_mux_load.256i66P.i8:277->src/count.cc:29) ('buffer_V_137_load', aesl_mux_load.256i66P.i8:275->src/count.cc:29) ('buffer_V_136_load', aesl_mux_load.256i66P.i8:273->src/count.cc:29) ('buffer_V_135_load', aesl_mux_load.256i66P.i8:271->src/count.cc:29) ('buffer_V_134_load', aesl_mux_load.256i66P.i8:269->src/count.cc:29) ('buffer_V_133_load', aesl_mux_load.256i66P.i8:267->src/count.cc:29) ('buffer_V_132_load', aesl_mux_load.256i66P.i8:265->src/count.cc:29) ('buffer_V_131_load', aesl_mux_load.256i66P.i8:263->src/count.cc:29) ('buffer_V_130_load', aesl_mux_load.256i66P.i8:261->src/count.cc:29) ('buffer_V_129_load', aesl_mux_load.256i66P.i8:259->src/count.cc:29) ('buffer_V_128_load', aesl_mux_load.256i66P.i8:257->src/count.cc:29) ('buffer_V_127_load', aesl_mux_load.256i66P.i8:255->src/count.cc:29) ('buffer_V_126_load', aesl_mux_load.256i66P.i8:253->src/count.cc:29) ('buffer_V_125_load', aesl_mux_load.256i66P.i8:251->src/count.cc:29) ('buffer_V_124_load', aesl_mux_load.256i66P.i8:249->src/count.cc:29) ('buffer_V_123_load', aesl_mux_load.256i66P.i8:247->src/count.cc:29) ('buffer_V_122_load', aesl_mux_load.256i66P.i8:245->src/count.cc:29) ('buffer_V_121_load', aesl_mux_load.256i66P.i8:243->src/count.cc:29) ('buffer_V_120_load', aesl_mux_load.256i66P.i8:241->src/count.cc:29) ('buffer_V_119_load', aesl_mux_load.256i66P.i8:239->src/count.cc:29) ('buffer_V_118_load', aesl_mux_load.256i66P.i8:237->src/count.cc:29) ('buffer_V_117_load', aesl_mux_load.256i66P.i8:235->src/count.cc:29) ('buffer_V_116_load', aesl_mux_load.256i66P.i8:233->src/count.cc:29) ('buffer_V_115_load', aesl_mux_load.256i66P.i8:231->src/count.cc:29) ('buffer_V_114_load', aesl_mux_load.256i66P.i8:229->src/count.cc:29) ('buffer_V_113_load', aesl_mux_load.256i66P.i8:227->src/count.cc:29) ('buffer_V_112_load', aesl_mux_load.256i66P.i8:225->src/count.cc:29) ('buffer_V_111_load', aesl_mux_load.256i66P.i8:223->src/count.cc:29) ('buffer_V_110_load', aesl_mux_load.256i66P.i8:221->src/count.cc:29) ('buffer_V_109_load', aesl_mux_load.256i66P.i8:219->src/count.cc:29) ('buffer_V_108_load', aesl_mux_load.256i66P.i8:217->src/count.cc:29) ('buffer_V_107_load', aesl_mux_load.256i66P.i8:215->src/count.cc:29) ('buffer_V_106_load', aesl_mux_load.256i66P.i8:213->src/count.cc:29) ('buffer_V_105_load', aesl_mux_load.256i66P.i8:211->src/count.cc:29) ('buffer_V_104_load', aesl_mux_load.256i66P.i8:209->src/count.cc:29) ('buffer_V_103_load', aesl_mux_load.256i66P.i8:207->src/count.cc:29) ('buffer_V_102_load', aesl_mux_load.256i66P.i8:205->src/count.cc:29) ('buffer_V_101_load', aesl_mux_load.256i66P.i8:203->src/count.cc:29) ('buffer_V_100_load', aesl_mux_load.256i66P.i8:201->src/count.cc:29) ('buffer_V_99_load', aesl_mux_load.256i66P.i8:199->src/count.cc:29) ('buffer_V_98_load', aesl_mux_load.256i66P.i8:197->src/count.cc:29) ('buffer_V_97_load', aesl_mux_load.256i66P.i8:195->src/count.cc:29) ('buffer_V_96_load', aesl_mux_load.256i66P.i8:193->src/count.cc:29) ('buffer_V_95_load', aesl_mux_load.256i66P.i8:191->src/count.cc:29) ('buffer_V_94_load', aesl_mux_load.256i66P.i8:189->src/count.cc:29) ('buffer_V_93_load', aesl_mux_load.256i66P.i8:187->src/count.cc:29) ('buffer_V_92_load', aesl_mux_load.256i66P.i8:185->src/count.cc:29) ('buffer_V_91_load', aesl_mux_load.256i66P.i8:183->src/count.cc:29) ('buffer_V_90_load', aesl_mux_load.256i66P.i8:181->src/count.cc:29) ('buffer_V_89_load', aesl_mux_load.256i66P.i8:179->src/count.cc:29) ('buffer_V_88_load', aesl_mux_load.256i66P.i8:177->src/count.cc:29) ('buffer_V_87_load', aesl_mux_load.256i66P.i8:175->src/count.cc:29) ('buffer_V_86_load', aesl_mux_load.256i66P.i8:173->src/count.cc:29) ('buffer_V_85_load', aesl_mux_load.256i66P.i8:171->src/count.cc:29) ('buffer_V_84_load', aesl_mux_load.256i66P.i8:169->src/count.cc:29) ('buffer_V_83_load', aesl_mux_load.256i66P.i8:167->src/count.cc:29) ('buffer_V_82_load', aesl_mux_load.256i66P.i8:165->src/count.cc:29) ('buffer_V_81_load', aesl_mux_load.256i66P.i8:163->src/count.cc:29) ('buffer_V_80_load', aesl_mux_load.256i66P.i8:161->src/count.cc:29) ('buffer_V_79_load', aesl_mux_load.256i66P.i8:159->src/count.cc:29) ('buffer_V_78_load', aesl_mux_load.256i66P.i8:157->src/count.cc:29) ('buffer_V_77_load', aesl_mux_load.256i66P.i8:155->src/count.cc:29) ('buffer_V_76_load', aesl_mux_load.256i66P.i8:153->src/count.cc:29) ('buffer_V_75_load', aesl_mux_load.256i66P.i8:151->src/count.cc:29) ('buffer_V_74_load', aesl_mux_load.256i66P.i8:149->src/count.cc:29) ('buffer_V_73_load', aesl_mux_load.256i66P.i8:147->src/count.cc:29) ('buffer_V_72_load', aesl_mux_load.256i66P.i8:145->src/count.cc:29) ('buffer_V_71_load', aesl_mux_load.256i66P.i8:143->src/count.cc:29) ('buffer_V_70_load', aesl_mux_load.256i66P.i8:141->src/count.cc:29) ('buffer_V_69_load', aesl_mux_load.256i66P.i8:139->src/count.cc:29) ('buffer_V_68_load', aesl_mux_load.256i66P.i8:137->src/count.cc:29) ('buffer_V_67_load', aesl_mux_load.256i66P.i8:135->src/count.cc:29) ('buffer_V_66_load', aesl_mux_load.256i66P.i8:133->src/count.cc:29) ('buffer_V_65_load', aesl_mux_load.256i66P.i8:131->src/count.cc:29) ('buffer_V_64_load', aesl_mux_load.256i66P.i8:129->src/count.cc:29) ('buffer_V_63_load', aesl_mux_load.256i66P.i8:127->src/count.cc:29) ('buffer_V_62_load', aesl_mux_load.256i66P.i8:125->src/count.cc:29) ('buffer_V_61_load', aesl_mux_load.256i66P.i8:123->src/count.cc:29) ('buffer_V_60_load', aesl_mux_load.256i66P.i8:121->src/count.cc:29) ('buffer_V_59_load', aesl_mux_load.256i66P.i8:119->src/count.cc:29) ('buffer_V_58_load', aesl_mux_load.256i66P.i8:117->src/count.cc:29) ('buffer_V_57_load', aesl_mux_load.256i66P.i8:115->src/count.cc:29) ('buffer_V_56_load', aesl_mux_load.256i66P.i8:113->src/count.cc:29) ('buffer_V_55_load', aesl_mux_load.256i66P.i8:111->src/count.cc:29) ('buffer_V_54_load', aesl_mux_load.256i66P.i8:109->src/count.cc:29) ('buffer_V_53_load', aesl_mux_load.256i66P.i8:107->src/count.cc:29) ('buffer_V_52_load', aesl_mux_load.256i66P.i8:105->src/count.cc:29) ('buffer_V_51_load', aesl_mux_load.256i66P.i8:103->src/count.cc:29) ('buffer_V_50_load', aesl_mux_load.256i66P.i8:101->src/count.cc:29) ('buffer_V_49_load', aesl_mux_load.256i66P.i8:99->src/count.cc:29) ('buffer_V_48_load', aesl_mux_load.256i66P.i8:97->src/count.cc:29) ('buffer_V_47_load', aesl_mux_load.256i66P.i8:95->src/count.cc:29) ('buffer_V_46_load', aesl_mux_load.256i66P.i8:93->src/count.cc:29) ('buffer_V_45_load', aesl_mux_load.256i66P.i8:91->src/count.cc:29) ('buffer_V_44_load', aesl_mux_load.256i66P.i8:89->src/count.cc:29) ('buffer_V_43_load', aesl_mux_load.256i66P.i8:87->src/count.cc:29) ('buffer_V_42_load', aesl_mux_load.256i66P.i8:85->src/count.cc:29) ('buffer_V_41_load', aesl_mux_load.256i66P.i8:83->src/count.cc:29) ('buffer_V_40_load', aesl_mux_load.256i66P.i8:81->src/count.cc:29) ('buffer_V_39_load', aesl_mux_load.256i66P.i8:79->src/count.cc:29) ('buffer_V_38_load', aesl_mux_load.256i66P.i8:77->src/count.cc:29) ('buffer_V_37_load', aesl_mux_load.256i66P.i8:75->src/count.cc:29) ('buffer_V_36_load', aesl_mux_load.256i66P.i8:73->src/count.cc:29) ('buffer_V_35_load', aesl_mux_load.256i66P.i8:71->src/count.cc:29) ('buffer_V_34_load', aesl_mux_load.256i66P.i8:69->src/count.cc:29) ('buffer_V_33_load', aesl_mux_load.256i66P.i8:67->src/count.cc:29) ('buffer_V_32_load', aesl_mux_load.256i66P.i8:65->src/count.cc:29) ('buffer_V_31_load', aesl_mux_load.256i66P.i8:63->src/count.cc:29) ('buffer_V_30_load', aesl_mux_load.256i66P.i8:61->src/count.cc:29) ('buffer_V_29_load', aesl_mux_load.256i66P.i8:59->src/count.cc:29) ('buffer_V_28_load', aesl_mux_load.256i66P.i8:57->src/count.cc:29) ('buffer_V_27_load', aesl_mux_load.256i66P.i8:55->src/count.cc:29) ('buffer_V_26_load', aesl_mux_load.256i66P.i8:53->src/count.cc:29) ('buffer_V_25_load', aesl_mux_load.256i66P.i8:51->src/count.cc:29) ('buffer_V_24_load', aesl_mux_load.256i66P.i8:49->src/count.cc:29) ('buffer_V_23_load', aesl_mux_load.256i66P.i8:47->src/count.cc:29) ('buffer_V_22_load', aesl_mux_load.256i66P.i8:45->src/count.cc:29) ('buffer_V_21_load', aesl_mux_load.256i66P.i8:43->src/count.cc:29) ('buffer_V_20_load', aesl_mux_load.256i66P.i8:41->src/count.cc:29) ('buffer_V_19_load', aesl_mux_load.256i66P.i8:39->src/count.cc:29) ('buffer_V_18_load', aesl_mux_load.256i66P.i8:37->src/count.cc:29) ('buffer_V_17_load', aesl_mux_load.256i66P.i8:35->src/count.cc:29) ('buffer_V_16_load', aesl_mux_load.256i66P.i8:33->src/count.cc:29) ('buffer_V_15_load', aesl_mux_load.256i66P.i8:31->src/count.cc:29) ('buffer_V_14_load', aesl_mux_load.256i66P.i8:29->src/count.cc:29) ('buffer_V_13_load', aesl_mux_load.256i66P.i8:27->src/count.cc:29) ('buffer_V_12_load', aesl_mux_load.256i66P.i8:25->src/count.cc:29) ('buffer_V_11_load', aesl_mux_load.256i66P.i8:23->src/count.cc:29) ('buffer_V_10_load', aesl_mux_load.256i66P.i8:21->src/count.cc:29) ('buffer_V_9_load', aesl_mux_load.256i66P.i8:19->src/count.cc:29) ('buffer_V_8_load', aesl_mux_load.256i66P.i8:17->src/count.cc:29) ('buffer_V_7_load', aesl_mux_load.256i66P.i8:15->src/count.cc:29) ('buffer_V_6_load', aesl_mux_load.256i66P.i8:13->src/count.cc:29) ('buffer_V_5_load', aesl_mux_load.256i66P.i8:11->src/count.cc:29) ('buffer_V_4_load', aesl_mux_load.256i66P.i8:9->src/count.cc:29) ('buffer_V_3_load', aesl_mux_load.256i66P.i8:7->src/count.cc:29) ('buffer_V_2_load', aesl_mux_load.256i66P.i8:5->src/count.cc:29) ('buffer_V_1_load', aesl_mux_load.256i66P.i8:3->src/count.cc:29) ('buffer_V_0_load', aesl_mux_load.256i66P.i8:1->src/count.cc:29) ('buffer_V_255_load', aesl_mux_load.256i66P.i8:511->src/count.cc:29) [1854]  (2.28 ns)
+	'phi' operation ('__Val2__', aesl_mux_load.256i66P.i8:1->src/count.cc:29) with incoming values : ('buffer_V_254_load', aesl_mux_load.256i66P.i8:509->src/count.cc:29) ('buffer_V_253_load', aesl_mux_load.256i66P.i8:507->src/count.cc:29) ('buffer_V_252_load', aesl_mux_load.256i66P.i8:505->src/count.cc:29) ('buffer_V_251_load', aesl_mux_load.256i66P.i8:503->src/count.cc:29) ('buffer_V_250_load', aesl_mux_load.256i66P.i8:501->src/count.cc:29) ('buffer_V_249_load', aesl_mux_load.256i66P.i8:499->src/count.cc:29) ('buffer_V_248_load', aesl_mux_load.256i66P.i8:497->src/count.cc:29) ('buffer_V_247_load', aesl_mux_load.256i66P.i8:495->src/count.cc:29) ('buffer_V_246_load', aesl_mux_load.256i66P.i8:493->src/count.cc:29) ('buffer_V_245_load', aesl_mux_load.256i66P.i8:491->src/count.cc:29) ('buffer_V_244_load', aesl_mux_load.256i66P.i8:489->src/count.cc:29) ('buffer_V_243_load', aesl_mux_load.256i66P.i8:487->src/count.cc:29) ('buffer_V_242_load', aesl_mux_load.256i66P.i8:485->src/count.cc:29) ('buffer_V_241_load', aesl_mux_load.256i66P.i8:483->src/count.cc:29) ('buffer_V_240_load', aesl_mux_load.256i66P.i8:481->src/count.cc:29) ('buffer_V_239_load', aesl_mux_load.256i66P.i8:479->src/count.cc:29) ('buffer_V_238_load', aesl_mux_load.256i66P.i8:477->src/count.cc:29) ('buffer_V_237_load', aesl_mux_load.256i66P.i8:475->src/count.cc:29) ('buffer_V_236_load', aesl_mux_load.256i66P.i8:473->src/count.cc:29) ('buffer_V_235_load', aesl_mux_load.256i66P.i8:471->src/count.cc:29) ('buffer_V_234_load', aesl_mux_load.256i66P.i8:469->src/count.cc:29) ('buffer_V_233_load', aesl_mux_load.256i66P.i8:467->src/count.cc:29) ('buffer_V_232_load', aesl_mux_load.256i66P.i8:465->src/count.cc:29) ('buffer_V_231_load', aesl_mux_load.256i66P.i8:463->src/count.cc:29) ('buffer_V_230_load', aesl_mux_load.256i66P.i8:461->src/count.cc:29) ('buffer_V_229_load', aesl_mux_load.256i66P.i8:459->src/count.cc:29) ('buffer_V_228_load', aesl_mux_load.256i66P.i8:457->src/count.cc:29) ('buffer_V_227_load', aesl_mux_load.256i66P.i8:455->src/count.cc:29) ('buffer_V_226_load', aesl_mux_load.256i66P.i8:453->src/count.cc:29) ('buffer_V_225_load', aesl_mux_load.256i66P.i8:451->src/count.cc:29) ('buffer_V_224_load', aesl_mux_load.256i66P.i8:449->src/count.cc:29) ('buffer_V_223_load', aesl_mux_load.256i66P.i8:447->src/count.cc:29) ('buffer_V_222_load', aesl_mux_load.256i66P.i8:445->src/count.cc:29) ('buffer_V_221_load', aesl_mux_load.256i66P.i8:443->src/count.cc:29) ('buffer_V_220_load', aesl_mux_load.256i66P.i8:441->src/count.cc:29) ('buffer_V_219_load', aesl_mux_load.256i66P.i8:439->src/count.cc:29) ('buffer_V_218_load', aesl_mux_load.256i66P.i8:437->src/count.cc:29) ('buffer_V_217_load', aesl_mux_load.256i66P.i8:435->src/count.cc:29) ('buffer_V_216_load', aesl_mux_load.256i66P.i8:433->src/count.cc:29) ('buffer_V_215_load', aesl_mux_load.256i66P.i8:431->src/count.cc:29) ('buffer_V_214_load', aesl_mux_load.256i66P.i8:429->src/count.cc:29) ('buffer_V_213_load', aesl_mux_load.256i66P.i8:427->src/count.cc:29) ('buffer_V_212_load', aesl_mux_load.256i66P.i8:425->src/count.cc:29) ('buffer_V_211_load', aesl_mux_load.256i66P.i8:423->src/count.cc:29) ('buffer_V_210_load', aesl_mux_load.256i66P.i8:421->src/count.cc:29) ('buffer_V_209_load', aesl_mux_load.256i66P.i8:419->src/count.cc:29) ('buffer_V_208_load', aesl_mux_load.256i66P.i8:417->src/count.cc:29) ('buffer_V_207_load', aesl_mux_load.256i66P.i8:415->src/count.cc:29) ('buffer_V_206_load', aesl_mux_load.256i66P.i8:413->src/count.cc:29) ('buffer_V_205_load', aesl_mux_load.256i66P.i8:411->src/count.cc:29) ('buffer_V_204_load', aesl_mux_load.256i66P.i8:409->src/count.cc:29) ('buffer_V_203_load', aesl_mux_load.256i66P.i8:407->src/count.cc:29) ('buffer_V_202_load', aesl_mux_load.256i66P.i8:405->src/count.cc:29) ('buffer_V_201_load', aesl_mux_load.256i66P.i8:403->src/count.cc:29) ('buffer_V_200_load', aesl_mux_load.256i66P.i8:401->src/count.cc:29) ('buffer_V_199_load', aesl_mux_load.256i66P.i8:399->src/count.cc:29) ('buffer_V_198_load', aesl_mux_load.256i66P.i8:397->src/count.cc:29) ('buffer_V_197_load', aesl_mux_load.256i66P.i8:395->src/count.cc:29) ('buffer_V_196_load', aesl_mux_load.256i66P.i8:393->src/count.cc:29) ('buffer_V_195_load', aesl_mux_load.256i66P.i8:391->src/count.cc:29) ('buffer_V_194_load', aesl_mux_load.256i66P.i8:389->src/count.cc:29) ('buffer_V_193_load', aesl_mux_load.256i66P.i8:387->src/count.cc:29) ('buffer_V_192_load', aesl_mux_load.256i66P.i8:385->src/count.cc:29) ('buffer_V_191_load', aesl_mux_load.256i66P.i8:383->src/count.cc:29) ('buffer_V_190_load', aesl_mux_load.256i66P.i8:381->src/count.cc:29) ('buffer_V_189_load', aesl_mux_load.256i66P.i8:379->src/count.cc:29) ('buffer_V_188_load', aesl_mux_load.256i66P.i8:377->src/count.cc:29) ('buffer_V_187_load', aesl_mux_load.256i66P.i8:375->src/count.cc:29) ('buffer_V_186_load', aesl_mux_load.256i66P.i8:373->src/count.cc:29) ('buffer_V_185_load', aesl_mux_load.256i66P.i8:371->src/count.cc:29) ('buffer_V_184_load', aesl_mux_load.256i66P.i8:369->src/count.cc:29) ('buffer_V_183_load', aesl_mux_load.256i66P.i8:367->src/count.cc:29) ('buffer_V_182_load', aesl_mux_load.256i66P.i8:365->src/count.cc:29) ('buffer_V_181_load', aesl_mux_load.256i66P.i8:363->src/count.cc:29) ('buffer_V_180_load', aesl_mux_load.256i66P.i8:361->src/count.cc:29) ('buffer_V_179_load', aesl_mux_load.256i66P.i8:359->src/count.cc:29) ('buffer_V_178_load', aesl_mux_load.256i66P.i8:357->src/count.cc:29) ('buffer_V_177_load', aesl_mux_load.256i66P.i8:355->src/count.cc:29) ('buffer_V_176_load', aesl_mux_load.256i66P.i8:353->src/count.cc:29) ('buffer_V_175_load', aesl_mux_load.256i66P.i8:351->src/count.cc:29) ('buffer_V_174_load', aesl_mux_load.256i66P.i8:349->src/count.cc:29) ('buffer_V_173_load', aesl_mux_load.256i66P.i8:347->src/count.cc:29) ('buffer_V_172_load', aesl_mux_load.256i66P.i8:345->src/count.cc:29) ('buffer_V_171_load', aesl_mux_load.256i66P.i8:343->src/count.cc:29) ('buffer_V_170_load', aesl_mux_load.256i66P.i8:341->src/count.cc:29) ('buffer_V_169_load', aesl_mux_load.256i66P.i8:339->src/count.cc:29) ('buffer_V_168_load', aesl_mux_load.256i66P.i8:337->src/count.cc:29) ('buffer_V_167_load', aesl_mux_load.256i66P.i8:335->src/count.cc:29) ('buffer_V_166_load', aesl_mux_load.256i66P.i8:333->src/count.cc:29) ('buffer_V_165_load', aesl_mux_load.256i66P.i8:331->src/count.cc:29) ('buffer_V_164_load', aesl_mux_load.256i66P.i8:329->src/count.cc:29) ('buffer_V_163_load', aesl_mux_load.256i66P.i8:327->src/count.cc:29) ('buffer_V_162_load', aesl_mux_load.256i66P.i8:325->src/count.cc:29) ('buffer_V_161_load', aesl_mux_load.256i66P.i8:323->src/count.cc:29) ('buffer_V_160_load', aesl_mux_load.256i66P.i8:321->src/count.cc:29) ('buffer_V_159_load', aesl_mux_load.256i66P.i8:319->src/count.cc:29) ('buffer_V_158_load', aesl_mux_load.256i66P.i8:317->src/count.cc:29) ('buffer_V_157_load', aesl_mux_load.256i66P.i8:315->src/count.cc:29) ('buffer_V_156_load', aesl_mux_load.256i66P.i8:313->src/count.cc:29) ('buffer_V_155_load', aesl_mux_load.256i66P.i8:311->src/count.cc:29) ('buffer_V_154_load', aesl_mux_load.256i66P.i8:309->src/count.cc:29) ('buffer_V_153_load', aesl_mux_load.256i66P.i8:307->src/count.cc:29) ('buffer_V_152_load', aesl_mux_load.256i66P.i8:305->src/count.cc:29) ('buffer_V_151_load', aesl_mux_load.256i66P.i8:303->src/count.cc:29) ('buffer_V_150_load', aesl_mux_load.256i66P.i8:301->src/count.cc:29) ('buffer_V_149_load', aesl_mux_load.256i66P.i8:299->src/count.cc:29) ('buffer_V_148_load', aesl_mux_load.256i66P.i8:297->src/count.cc:29) ('buffer_V_147_load', aesl_mux_load.256i66P.i8:295->src/count.cc:29) ('buffer_V_146_load', aesl_mux_load.256i66P.i8:293->src/count.cc:29) ('buffer_V_145_load', aesl_mux_load.256i66P.i8:291->src/count.cc:29) ('buffer_V_144_load', aesl_mux_load.256i66P.i8:289->src/count.cc:29) ('buffer_V_143_load', aesl_mux_load.256i66P.i8:287->src/count.cc:29) ('buffer_V_142_load', aesl_mux_load.256i66P.i8:285->src/count.cc:29) ('buffer_V_141_load', aesl_mux_load.256i66P.i8:283->src/count.cc:29) ('buffer_V_140_load', aesl_mux_load.256i66P.i8:281->src/count.cc:29) ('buffer_V_139_load', aesl_mux_load.256i66P.i8:279->src/count.cc:29) ('buffer_V_138_load', aesl_mux_load.256i66P.i8:277->src/count.cc:29) ('buffer_V_137_load', aesl_mux_load.256i66P.i8:275->src/count.cc:29) ('buffer_V_136_load', aesl_mux_load.256i66P.i8:273->src/count.cc:29) ('buffer_V_135_load', aesl_mux_load.256i66P.i8:271->src/count.cc:29) ('buffer_V_134_load', aesl_mux_load.256i66P.i8:269->src/count.cc:29) ('buffer_V_133_load', aesl_mux_load.256i66P.i8:267->src/count.cc:29) ('buffer_V_132_load', aesl_mux_load.256i66P.i8:265->src/count.cc:29) ('buffer_V_131_load', aesl_mux_load.256i66P.i8:263->src/count.cc:29) ('buffer_V_130_load', aesl_mux_load.256i66P.i8:261->src/count.cc:29) ('buffer_V_129_load', aesl_mux_load.256i66P.i8:259->src/count.cc:29) ('buffer_V_128_load', aesl_mux_load.256i66P.i8:257->src/count.cc:29) ('buffer_V_127_load', aesl_mux_load.256i66P.i8:255->src/count.cc:29) ('buffer_V_126_load', aesl_mux_load.256i66P.i8:253->src/count.cc:29) ('buffer_V_125_load', aesl_mux_load.256i66P.i8:251->src/count.cc:29) ('buffer_V_124_load', aesl_mux_load.256i66P.i8:249->src/count.cc:29) ('buffer_V_123_load', aesl_mux_load.256i66P.i8:247->src/count.cc:29) ('buffer_V_122_load', aesl_mux_load.256i66P.i8:245->src/count.cc:29) ('buffer_V_121_load', aesl_mux_load.256i66P.i8:243->src/count.cc:29) ('buffer_V_120_load', aesl_mux_load.256i66P.i8:241->src/count.cc:29) ('buffer_V_119_load', aesl_mux_load.256i66P.i8:239->src/count.cc:29) ('buffer_V_118_load', aesl_mux_load.256i66P.i8:237->src/count.cc:29) ('buffer_V_117_load', aesl_mux_load.256i66P.i8:235->src/count.cc:29) ('buffer_V_116_load', aesl_mux_load.256i66P.i8:233->src/count.cc:29) ('buffer_V_115_load', aesl_mux_load.256i66P.i8:231->src/count.cc:29) ('buffer_V_114_load', aesl_mux_load.256i66P.i8:229->src/count.cc:29) ('buffer_V_113_load', aesl_mux_load.256i66P.i8:227->src/count.cc:29) ('buffer_V_112_load', aesl_mux_load.256i66P.i8:225->src/count.cc:29) ('buffer_V_111_load', aesl_mux_load.256i66P.i8:223->src/count.cc:29) ('buffer_V_110_load', aesl_mux_load.256i66P.i8:221->src/count.cc:29) ('buffer_V_109_load', aesl_mux_load.256i66P.i8:219->src/count.cc:29) ('buffer_V_108_load', aesl_mux_load.256i66P.i8:217->src/count.cc:29) ('buffer_V_107_load', aesl_mux_load.256i66P.i8:215->src/count.cc:29) ('buffer_V_106_load', aesl_mux_load.256i66P.i8:213->src/count.cc:29) ('buffer_V_105_load', aesl_mux_load.256i66P.i8:211->src/count.cc:29) ('buffer_V_104_load', aesl_mux_load.256i66P.i8:209->src/count.cc:29) ('buffer_V_103_load', aesl_mux_load.256i66P.i8:207->src/count.cc:29) ('buffer_V_102_load', aesl_mux_load.256i66P.i8:205->src/count.cc:29) ('buffer_V_101_load', aesl_mux_load.256i66P.i8:203->src/count.cc:29) ('buffer_V_100_load', aesl_mux_load.256i66P.i8:201->src/count.cc:29) ('buffer_V_99_load', aesl_mux_load.256i66P.i8:199->src/count.cc:29) ('buffer_V_98_load', aesl_mux_load.256i66P.i8:197->src/count.cc:29) ('buffer_V_97_load', aesl_mux_load.256i66P.i8:195->src/count.cc:29) ('buffer_V_96_load', aesl_mux_load.256i66P.i8:193->src/count.cc:29) ('buffer_V_95_load', aesl_mux_load.256i66P.i8:191->src/count.cc:29) ('buffer_V_94_load', aesl_mux_load.256i66P.i8:189->src/count.cc:29) ('buffer_V_93_load', aesl_mux_load.256i66P.i8:187->src/count.cc:29) ('buffer_V_92_load', aesl_mux_load.256i66P.i8:185->src/count.cc:29) ('buffer_V_91_load', aesl_mux_load.256i66P.i8:183->src/count.cc:29) ('buffer_V_90_load', aesl_mux_load.256i66P.i8:181->src/count.cc:29) ('buffer_V_89_load', aesl_mux_load.256i66P.i8:179->src/count.cc:29) ('buffer_V_88_load', aesl_mux_load.256i66P.i8:177->src/count.cc:29) ('buffer_V_87_load', aesl_mux_load.256i66P.i8:175->src/count.cc:29) ('buffer_V_86_load', aesl_mux_load.256i66P.i8:173->src/count.cc:29) ('buffer_V_85_load', aesl_mux_load.256i66P.i8:171->src/count.cc:29) ('buffer_V_84_load', aesl_mux_load.256i66P.i8:169->src/count.cc:29) ('buffer_V_83_load', aesl_mux_load.256i66P.i8:167->src/count.cc:29) ('buffer_V_82_load', aesl_mux_load.256i66P.i8:165->src/count.cc:29) ('buffer_V_81_load', aesl_mux_load.256i66P.i8:163->src/count.cc:29) ('buffer_V_80_load', aesl_mux_load.256i66P.i8:161->src/count.cc:29) ('buffer_V_79_load', aesl_mux_load.256i66P.i8:159->src/count.cc:29) ('buffer_V_78_load', aesl_mux_load.256i66P.i8:157->src/count.cc:29) ('buffer_V_77_load', aesl_mux_load.256i66P.i8:155->src/count.cc:29) ('buffer_V_76_load', aesl_mux_load.256i66P.i8:153->src/count.cc:29) ('buffer_V_75_load', aesl_mux_load.256i66P.i8:151->src/count.cc:29) ('buffer_V_74_load', aesl_mux_load.256i66P.i8:149->src/count.cc:29) ('buffer_V_73_load', aesl_mux_load.256i66P.i8:147->src/count.cc:29) ('buffer_V_72_load', aesl_mux_load.256i66P.i8:145->src/count.cc:29) ('buffer_V_71_load', aesl_mux_load.256i66P.i8:143->src/count.cc:29) ('buffer_V_70_load', aesl_mux_load.256i66P.i8:141->src/count.cc:29) ('buffer_V_69_load', aesl_mux_load.256i66P.i8:139->src/count.cc:29) ('buffer_V_68_load', aesl_mux_load.256i66P.i8:137->src/count.cc:29) ('buffer_V_67_load', aesl_mux_load.256i66P.i8:135->src/count.cc:29) ('buffer_V_66_load', aesl_mux_load.256i66P.i8:133->src/count.cc:29) ('buffer_V_65_load', aesl_mux_load.256i66P.i8:131->src/count.cc:29) ('buffer_V_64_load', aesl_mux_load.256i66P.i8:129->src/count.cc:29) ('buffer_V_63_load', aesl_mux_load.256i66P.i8:127->src/count.cc:29) ('buffer_V_62_load', aesl_mux_load.256i66P.i8:125->src/count.cc:29) ('buffer_V_61_load', aesl_mux_load.256i66P.i8:123->src/count.cc:29) ('buffer_V_60_load', aesl_mux_load.256i66P.i8:121->src/count.cc:29) ('buffer_V_59_load', aesl_mux_load.256i66P.i8:119->src/count.cc:29) ('buffer_V_58_load', aesl_mux_load.256i66P.i8:117->src/count.cc:29) ('buffer_V_57_load', aesl_mux_load.256i66P.i8:115->src/count.cc:29) ('buffer_V_56_load', aesl_mux_load.256i66P.i8:113->src/count.cc:29) ('buffer_V_55_load', aesl_mux_load.256i66P.i8:111->src/count.cc:29) ('buffer_V_54_load', aesl_mux_load.256i66P.i8:109->src/count.cc:29) ('buffer_V_53_load', aesl_mux_load.256i66P.i8:107->src/count.cc:29) ('buffer_V_52_load', aesl_mux_load.256i66P.i8:105->src/count.cc:29) ('buffer_V_51_load', aesl_mux_load.256i66P.i8:103->src/count.cc:29) ('buffer_V_50_load', aesl_mux_load.256i66P.i8:101->src/count.cc:29) ('buffer_V_49_load', aesl_mux_load.256i66P.i8:99->src/count.cc:29) ('buffer_V_48_load', aesl_mux_load.256i66P.i8:97->src/count.cc:29) ('buffer_V_47_load', aesl_mux_load.256i66P.i8:95->src/count.cc:29) ('buffer_V_46_load', aesl_mux_load.256i66P.i8:93->src/count.cc:29) ('buffer_V_45_load', aesl_mux_load.256i66P.i8:91->src/count.cc:29) ('buffer_V_44_load', aesl_mux_load.256i66P.i8:89->src/count.cc:29) ('buffer_V_43_load', aesl_mux_load.256i66P.i8:87->src/count.cc:29) ('buffer_V_42_load', aesl_mux_load.256i66P.i8:85->src/count.cc:29) ('buffer_V_41_load', aesl_mux_load.256i66P.i8:83->src/count.cc:29) ('buffer_V_40_load', aesl_mux_load.256i66P.i8:81->src/count.cc:29) ('buffer_V_39_load', aesl_mux_load.256i66P.i8:79->src/count.cc:29) ('buffer_V_38_load', aesl_mux_load.256i66P.i8:77->src/count.cc:29) ('buffer_V_37_load', aesl_mux_load.256i66P.i8:75->src/count.cc:29) ('buffer_V_36_load', aesl_mux_load.256i66P.i8:73->src/count.cc:29) ('buffer_V_35_load', aesl_mux_load.256i66P.i8:71->src/count.cc:29) ('buffer_V_34_load', aesl_mux_load.256i66P.i8:69->src/count.cc:29) ('buffer_V_33_load', aesl_mux_load.256i66P.i8:67->src/count.cc:29) ('buffer_V_32_load', aesl_mux_load.256i66P.i8:65->src/count.cc:29) ('buffer_V_31_load', aesl_mux_load.256i66P.i8:63->src/count.cc:29) ('buffer_V_30_load', aesl_mux_load.256i66P.i8:61->src/count.cc:29) ('buffer_V_29_load', aesl_mux_load.256i66P.i8:59->src/count.cc:29) ('buffer_V_28_load', aesl_mux_load.256i66P.i8:57->src/count.cc:29) ('buffer_V_27_load', aesl_mux_load.256i66P.i8:55->src/count.cc:29) ('buffer_V_26_load', aesl_mux_load.256i66P.i8:53->src/count.cc:29) ('buffer_V_25_load', aesl_mux_load.256i66P.i8:51->src/count.cc:29) ('buffer_V_24_load', aesl_mux_load.256i66P.i8:49->src/count.cc:29) ('buffer_V_23_load', aesl_mux_load.256i66P.i8:47->src/count.cc:29) ('buffer_V_22_load', aesl_mux_load.256i66P.i8:45->src/count.cc:29) ('buffer_V_21_load', aesl_mux_load.256i66P.i8:43->src/count.cc:29) ('buffer_V_20_load', aesl_mux_load.256i66P.i8:41->src/count.cc:29) ('buffer_V_19_load', aesl_mux_load.256i66P.i8:39->src/count.cc:29) ('buffer_V_18_load', aesl_mux_load.256i66P.i8:37->src/count.cc:29) ('buffer_V_17_load', aesl_mux_load.256i66P.i8:35->src/count.cc:29) ('buffer_V_16_load', aesl_mux_load.256i66P.i8:33->src/count.cc:29) ('buffer_V_15_load', aesl_mux_load.256i66P.i8:31->src/count.cc:29) ('buffer_V_14_load', aesl_mux_load.256i66P.i8:29->src/count.cc:29) ('buffer_V_13_load', aesl_mux_load.256i66P.i8:27->src/count.cc:29) ('buffer_V_12_load', aesl_mux_load.256i66P.i8:25->src/count.cc:29) ('buffer_V_11_load', aesl_mux_load.256i66P.i8:23->src/count.cc:29) ('buffer_V_10_load', aesl_mux_load.256i66P.i8:21->src/count.cc:29) ('buffer_V_9_load', aesl_mux_load.256i66P.i8:19->src/count.cc:29) ('buffer_V_8_load', aesl_mux_load.256i66P.i8:17->src/count.cc:29) ('buffer_V_7_load', aesl_mux_load.256i66P.i8:15->src/count.cc:29) ('buffer_V_6_load', aesl_mux_load.256i66P.i8:13->src/count.cc:29) ('buffer_V_5_load', aesl_mux_load.256i66P.i8:11->src/count.cc:29) ('buffer_V_4_load', aesl_mux_load.256i66P.i8:9->src/count.cc:29) ('buffer_V_3_load', aesl_mux_load.256i66P.i8:7->src/count.cc:29) ('buffer_V_2_load', aesl_mux_load.256i66P.i8:5->src/count.cc:29) ('buffer_V_1_load', aesl_mux_load.256i66P.i8:3->src/count.cc:29) ('buffer_V_0_load', aesl_mux_load.256i66P.i8:1->src/count.cc:29) ('buffer_V_255_load', aesl_mux_load.256i66P.i8:511->src/count.cc:29) [1854]  (0 ns)
+	'store' operation ('buffer_V_35_write_ln29', src/count.cc:29) of variable '__Result__', src/count.cc:29 on static variable 'buffer_V_35' [2520]  (0.603 ns)
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 533.18 sec.
-INFO: [HLS 200-111]  Elapsed time: 565.6 seconds; current allocated memory: 195.327 MB.
+Command       schedule done; 111.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 141.18 seconds; current allocated memory: 170.600 MB.
 Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.verbose.sched.rpt 
-Command       syn_report done; 6.19 sec.
+Command       syn_report done; 3.56 sec.
 Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.sched.adb -f 
-Command       db_write done; 6.66 sec.
+Command       db_write done; 3.67 sec.
 INFO-FLOW: Finish scheduling count.
 Execute       set_default_model count 
 Execute       bind -model count 
@@ -261,12 +261,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 4.57 sec.
-INFO: [HLS 200-111]  Elapsed time: 17.42 seconds; current allocated memory: 220.868 MB.
+Command       bind done; 4.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 11.25 seconds; current allocated memory: 189.683 MB.
 Execute       syn_report -verbosereport -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.verbose.bind.rpt 
-Command       syn_report done; 5.98 sec.
+Command       syn_report done; 3.44 sec.
 Execute       db_write -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.bind.adb -f 
-Command       db_write done; 9.66 sec.
+Command       db_write done; 5.52 sec.
 INFO-FLOW: Finish binding count.
 Execute       get_model_list count -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -286,11 +286,10 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'count/valid' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'count/firstout' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'count/lastout' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'count' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'npuppi_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'headerloc_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npuppi_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'eventsready_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_0' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_2' is power-on initialization.
@@ -547,29 +546,30 @@ WARNING: [RTGEN 206-101] Register 'buffer_V_252' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_253' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_254' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'buffer_V_255' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'eventsready_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization.
 INFO: [RTGEN 206-104] Estimated max fanout for 'count' is 16896 from HDL expression: (ap_enable_reg_pp0_iter0 == 1'b1)
 INFO: [RTGEN 206-100] Finished creating RTL model for 'count'.
-Command       create_rtl_model done; 11.21 sec.
-INFO: [HLS 200-111]  Elapsed time: 26.88 seconds; current allocated memory: 234.700 MB.
+Command       create_rtl_model done; 8.62 sec.
+INFO: [HLS 200-111]  Elapsed time: 17.61 seconds; current allocated memory: 206.567 MB.
 Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.rtl_wrap.cfg.tcl 
 Execute       gen_rtl count -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/syn/systemc/count -synmodules count 
 Execute       gen_rtl count -istop -style xilinx -f -lang vhdl -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/syn/vhdl/count 
-Command       gen_rtl done; 1.19 sec.
+Command       gen_rtl done; 0.87 sec.
 Execute       gen_rtl count -istop -style xilinx -f -lang vlog -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/syn/verilog/count 
-Command       gen_rtl done; 0.63 sec.
+Command       gen_rtl done; 0.45 sec.
 Execute       syn_report -csynth -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/syn/report/count_csynth.rpt 
-Command       syn_report done; 0.59 sec.
+Command       syn_report done; 0.43 sec.
 Execute       syn_report -rtlxml -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/syn/report/count_csynth.xml 
-Command       syn_report done; 0.57 sec.
+Command       syn_report done; 0.4 sec.
 Execute       syn_report -verbosereport -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.verbose.rpt 
-Command       syn_report done; 6.23 sec.
+Command       syn_report done; 3.6 sec.
 Execute       db_write -model count -f -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.adb 
-Command       db_write done; 9.81 sec.
+Command       db_write done; 6.04 sec.
 Execute       gen_tb_info count -p /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count 
 Execute       export_constraint_db -f -tool general -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.constraint.tcl 
 Execute       syn_report -designview -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.design.xml 
-Command       syn_report done; 1.16 sec.
+Command       syn_report done; 0.8 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model count -o /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/count.protoinst 
@@ -591,7 +591,7 @@ INFO-FLOW: RTL Generation done.
 INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 Execute       syn_report -model count -printsummary 
-INFO: [HLS 200-789] **** Estimated Fmax: 345.39 MHz
+INFO: [HLS 200-789] **** Estimated Fmax: 347.10 MHz
 INFO-FLOW: DBG:CMD: auto_generate_csynth_design
 INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution
 Execute       source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
@@ -617,7 +617,7 @@ Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.13 sec.
+Command         ap_source done; 0.14 sec.
 Command       ap_source done; 0.14 sec.
 Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
 Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
@@ -653,8 +653,8 @@ Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.11 sec.
-Command       ap_source done; 0.11 sec.
+Command         ap_source done; 0.13 sec.
+Command       ap_source done; 0.13 sec.
 Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
 Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=count xml_exists=0
@@ -747,11 +747,927 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:10:20 ; elapsed = 00:10:34 . Memory (MB): peak = 1210.238 ; gain = 690.207 ; free physical = 267 ; free virtual = 4794
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:52 ; elapsed = 00:03:06 . Memory (MB): peak = 1135.176 ; gain = 615.145 ; free physical = 463 ; free virtual = 5039
 INFO: [VHDL 208-304] Generating VHDL RTL for count.
 INFO: [VLOG 209-307] Generating Verilog RTL for count.
-Command     autosyn done; 604.03 sec.
-Command   csynth_design done; 631.35 sec.
-Command ap_source done; 633.88 sec.
+Command     autosyn done; 157.24 sec.
+Command   csynth_design done; 183.33 sec.
+Command ap_source done; 185.76 sec.
 Execute cleanup_all 
-Command cleanup_all done; 0.11 sec.
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:48:09 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.17 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.35 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.59 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 1.82 sec.
+Command ap_source done; error code: 1; 4.42 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:49:11 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 1.93 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.07 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.28 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.3 sec.
+Command ap_source done; error code: 1; 4.58 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:52:57 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.08 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.24 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.47 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.44 sec.
+Command ap_source done; error code: 1; 4.91 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:57:15 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.12 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.26 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.47 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.5 sec.
+Command ap_source done; error code: 1; 4.98 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 13:59:25 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 1.96 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.19 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.4 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 3.31 sec.
+Command ap_source done; error code: 1; 5.72 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 14:03:55 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.11 sec.
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.17 sec.
+Command     ap_source done; 0.17 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.1 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.26 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.51 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 2.6 sec.
+Command ap_source done; error code: 1; 5.12 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 14:04:39 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.14 sec.
+Command     ap_source done; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 1.99 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.14 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.38 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.47 sec.
+Command ap_source done; error code: 1; 2.85 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 14:05:52 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.13 sec.
+Command     ap_source done; 0.13 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.05 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.19 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.41 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; error code: 1; 
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; error code: 2; 0.17 sec.
+Command ap_source done; error code: 1; 2.58 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution opened at Thu Jun 02 14:06:25 CEST 2022
+Execute     config_clock -quiet -name default -period 2.778 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute       source /data1/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xcvu9p-flga2104-2L-e 
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data single -quiet 
+Command       ap_part_info done; 2.05 sec.
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flga2104:-2L-e 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute         ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
+Execute       ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.21 sec.
+Execute     ap_part_info -data single -name xcvu9p-flga2104-2L-e 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data resources 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -resource {SLICE 147780} {LUT 1182240} {FF 2364480} {DSP48E 6840} {BRAM 4320} {URAM 960} {SLR 3} 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 2.45 sec.
+Execute   csim_design -quiet 
+Execute     source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.autopilot/db/global.setting.tcl 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute     source csim/.lst_opt.tcl 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/testbench.cc 
+Execute     is_encrypted /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     is_xip /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc 
+Execute     ap_part_info -name xcvu9p-flga2104-2L-e -data info 
+Execute     source run_sim.tcl 
+Command     ap_source done; 1.37 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command   csim_design done; 4.06 sec.
+Command ap_source done; 6.51 sec.
+Execute cleanup_all 

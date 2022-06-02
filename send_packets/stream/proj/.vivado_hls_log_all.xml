@@ -6,7 +6,11 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-06-02T14:23:22.169+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-06-02T14:23:22.121+0200"/>
+        <logs message="ERROR: test #4, clock #0, candidate #0: &#xA;lastvalid == true but not on last valid candidate " projectName="proj" solutionName="solution" date="2022-06-02T14:23:22.010+0200"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>

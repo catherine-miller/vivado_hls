@@ -1,6 +1,6 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Wed May 25 15:13:08 CEST 2022
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Thu Jun 02 14:30:17 CEST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
 INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream_variable'
 Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/stream_variable/proj/solution/csynth.tcl'
@@ -12,66 +12,66 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
 INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 INFO: [HLS 200-10] Analyzing design file 'src/stream.cc' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 413 ; free virtual = 4799
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 413 ; free virtual = 4799
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 609 ; free virtual = 5224
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 609 ; free virtual = 5224
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 404 ; free virtual = 4792
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 604 ; free virtual = 5222
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 400 ; free virtual = 4789
-INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'stream' (src/stream.cc:10).
-INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/stream.cc:28) in function 'stream' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/stream.cc:54) in function 'stream' completely with a factor of 4.
-INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/stream.cc:62) in function 'stream' completely with a factor of 4.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 600 ; free virtual = 5218
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'streamv' (src/stream.cc:10).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (src/stream.cc:28) in function 'streamv' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (src/stream.cc:39) in function 'streamv' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (src/stream.cc:47) in function 'streamv' completely with a factor of 4.
 INFO: [XFORM 203-101] Partitioning array 'brams.V'  in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'candin.V' (src/stream.cc:10) in dimension 1 completely.
 INFO: [XFORM 203-101] Partitioning array 'prep.V' (src/stream.cc:12) in dimension 1 completely.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/stream.cc:61:9) in function 'stream'... converting 34 basic blocks.
-INFO: [XFORM 203-11] Balancing expressions in function 'stream' (src/stream.cc:10)...3 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 378 ; free virtual = 4768
-INFO: [HLS 200-472] Inferring partial write operation for 'brams.V.0' (src/stream.cc:64:11)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 377 ; free virtual = 4767
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (src/stream.cc:46:9) in function 'streamv'... converting 34 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'streamv' (src/stream.cc:10)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 577 ; free virtual = 5196
+INFO: [HLS 200-472] Inferring partial write operation for 'brams.V.0' (src/stream.cc:49:11)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 575 ; free virtual = 5195
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'stream' ...
-WARNING: [SYN 201-107] Renaming port name 'stream/write' to 'stream/write_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] Synthesizing 'streamv' ...
+WARNING: [SYN 201-107] Renaming port name 'streamv/write' to 'streamv/write_r' to avoid the conflict with HDL keywords or other object names.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'stream' 
+INFO: [HLS 200-42] -- Implementing module 'streamv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'stream'.
+INFO: [SCHED 204-61] Pipelining function 'streamv'.
 INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 21.06 seconds; current allocated memory: 112.465 MB.
+INFO: [HLS 200-111]  Elapsed time: 22.41 seconds; current allocated memory: 111.757 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 112.976 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 112.277 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'stream' 
+INFO: [HLS 200-10] -- Generating RTL for module 'streamv' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/candin_0_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/candin_1_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/candin_2_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/candin_3_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/candout_V' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/eventstart' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/lastvalid' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/first' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'stream/last' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'stream' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/candin_0_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/candin_1_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/candin_2_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/candin_3_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/candout_V' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/eventstart' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/lastvalid' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/first' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'streamv/last' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'streamv' to 'ap_ctrl_hs'.
 WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'readidx_V' is power-on initialization.
-INFO: [SYN 201-210] Renamed object name 'stream_mux_42_67_1_1' to 'stream_mux_42_67_bkb' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'stream_mux_42_67_bkb': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'stream'.
-INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 113.990 MB.
+INFO: [SYN 201-210] Renamed object name 'streamv_mux_42_67_1_1' to 'streamv_mux_42_67bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'streamv_mux_42_67bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'streamv'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 113.274 MB.
 INFO: [HLS 200-789] **** Estimated Fmax: 464.25 MHz
-INFO: [RTMG 210-278] Implementing memory 'stream_brams_V_0_ram (RAM)' using block RAMs with power-on initialization.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1055.168 ; gain = 535.137 ; free physical = 367 ; free virtual = 4761
-INFO: [VHDL 208-304] Generating VHDL RTL for stream.
-INFO: [VLOG 209-307] Generating Verilog RTL for stream.
-INFO: [HLS 200-112] Total elapsed time: 25.79 seconds; peak allocated memory: 113.990 MB.
+INFO: [RTMG 210-278] Implementing memory 'streamv_brams_V_0_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 567 ; free virtual = 5190
+INFO: [VHDL 208-304] Generating VHDL RTL for streamv.
+INFO: [VLOG 209-307] Generating Verilog RTL for streamv.
+INFO: [HLS 200-112] Total elapsed time: 25.21 seconds; peak allocated memory: 113.274 MB.

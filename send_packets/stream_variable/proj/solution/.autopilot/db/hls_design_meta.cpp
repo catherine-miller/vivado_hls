@@ -20,4 +20,4 @@ const Port_Property HLS_Design_Meta::port_props[]={
 	Port_Property("last_ap_vld", 1, hls_out, 8, "ap_vld", "out_vld", 1),
 	Port_Property("ap_return", 1, hls_out, -1, "", "", 1),
 };
-const char* HLS_Design_Meta::dut_name = "stream";
+const char* HLS_Design_Meta::dut_name = "streamv";

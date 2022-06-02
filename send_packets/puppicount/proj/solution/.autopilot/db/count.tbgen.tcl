@@ -90,11 +90,10 @@ set RtlHierarchyInfo {[
 			{"Name" : "valid", "Type" : "None", "Direction" : "I"},
 			{"Name" : "firstout", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "lastout", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "npuppi_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "write_r", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "wrptr_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "headerloc_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "npuppi_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "eventsready_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_2", "Type" : "OVld", "Direction" : "IO"},
@@ -351,23 +350,23 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffer_V_253", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_254", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_255", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "eventsready_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "rdptr_V", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	count {
 		candin_V {Type I LastRead 0 FirstWrite -1}
-		candout_V {Type O LastRead -1 FirstWrite 3}
+		candout_V {Type O LastRead -1 FirstWrite 2}
 		firstin {Type I LastRead 0 FirstWrite -1}
 		lastin {Type I LastRead 0 FirstWrite -1}
 		valid {Type I LastRead 0 FirstWrite -1}
-		firstout {Type O LastRead -1 FirstWrite 3}
-		lastout {Type O LastRead -1 FirstWrite 3}
+		firstout {Type O LastRead -1 FirstWrite 2}
+		lastout {Type O LastRead -1 FirstWrite 2}
+		npuppi_V {Type IO LastRead -1 FirstWrite -1}
 		write_r {Type IO LastRead -1 FirstWrite -1}
 		wrptr_V {Type IO LastRead -1 FirstWrite -1}
 		headerloc_V {Type IO LastRead -1 FirstWrite -1}
-		npuppi_V {Type IO LastRead -1 FirstWrite -1}
-		eventsready_V {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_0 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_1 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_2 {Type IO LastRead -1 FirstWrite -1}
@@ -624,6 +623,7 @@ set ArgLastReadFirstWriteLatency {
 		buffer_V_253 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_254 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_255 {Type IO LastRead -1 FirstWrite -1}
+		eventsready_V {Type IO LastRead -1 FirstWrite -1}
 		rdptr_V {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0

@@ -30,8 +30,8 @@ bool streamv(const ap_uint<64> candin[NIN], ap_uint<64> &candout,
             prep[i](66,3) = candin[i];
             if (candin[i] == 0) prep[i][0] = 0; //turn off valid if 0
             else prep[i][0] = 1;
-            if (eventstart && i == 0 && (prep[i][0])) prep[0][1] = 1;
-            else prep[0][1] = 0;
+            if (eventstart && i == 0 && (prep[i][0])) prep[i][1] = 1;
+            else prep[i][1] = 0;
         }
         if (lastvalid) { //it may be nice eventually to make some assumptions to avoid this complicated searching for the last candidate
                 //cannot unroll this I think

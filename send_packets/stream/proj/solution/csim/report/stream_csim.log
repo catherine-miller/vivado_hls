@@ -3,5 +3,7 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../testbench.cc in debug mode
    Compiling ../../../../src/stream.cc in debug mode
    Generating csim.exe
-INFO: [SIM 1] CSim done with 0 errors.
+ERROR: test #4, clock #0, candidate #0: 
+lastvalid == true but not on last valid candidate 
+ERR: [SIM 100] 'csim_design' failed: nonzero return value.
 INFO: [SIM 3] *************** CSIM finish ***************

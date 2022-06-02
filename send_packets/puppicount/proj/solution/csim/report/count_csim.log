@@ -3,6 +3,7 @@ INFO: [SIM 4] CSIM will launch GCC as the compiler.
    Compiling ../../../../src/count.cc in debug mode
    Generating csim.exe
 received firstalgo 
+also received lastalgo 
 Test 0: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -44,9 +45,11 @@ Test 1, Puppi candidate 18 matching
 Sim candidate: 1394143068, algo candidate: 1394143068 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 2: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 3: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -625,9 +628,11 @@ Test 14, Puppi candidate 13 matching
 Sim candidate: 1802649587, algo candidate: 1802649587 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 14: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 14: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -922,6 +927,7 @@ Test 17, Puppi candidate 9 matching
 Sim candidate: 18446744073277584811, algo candidate: 18446744073277584811 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 17: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -1110,6 +1116,7 @@ Test 20, Puppi candidate 92 matching
 Sim candidate: 453234021, algo candidate: 453234021 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 20: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -1136,9 +1143,11 @@ Test 20, Puppi candidate 10 matching
 Sim candidate: 18446744072280907325, algo candidate: 18446744072280907325 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 20: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 21: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -1265,6 +1274,7 @@ Test 24, Puppi candidate 26 matching
 Sim candidate: 18446744071692876960, algo candidate: 18446744071692876960 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 25: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -2302,6 +2312,7 @@ Test 41, Puppi candidate 3 matching
 Sim candidate: 18446744072308711851, algo candidate: 18446744072308711851 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 41: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -2358,6 +2369,7 @@ Test 42, Puppi candidate 17 matching
 Sim candidate: 18446744073272164596, algo candidate: 18446744073272164596 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 42: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -2832,12 +2844,15 @@ Test 46, Puppi candidate 27 matching
 Sim candidate: 988463179, algo candidate: 988463179 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 46: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 46: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 46: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -3108,6 +3123,7 @@ Test 50, Puppi candidate 38 matching
 Sim candidate: 18446744072804044759, algo candidate: 18446744072804044759 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 50: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -4477,6 +4493,7 @@ Test 67, Puppi candidate 14 matching
 Sim candidate: 18446744073242869376, algo candidate: 18446744073242869376 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 67: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -4624,6 +4641,7 @@ Test 69, Puppi candidate 27 matching
 Sim candidate: 18446744073677740315, algo candidate: 18446744073677740315 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 69: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -4739,6 +4757,7 @@ Test 70, Puppi candidate 23 matching
 Sim candidate: 738054069, algo candidate: 738054069 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 70: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -5366,6 +5385,7 @@ Test 75, Puppi candidate 167 matching
 Sim candidate: 18446744072976773751, algo candidate: 18446744072976773751 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 75: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -5924,6 +5944,7 @@ Test 80, Puppi candidate 15 matching
 Sim candidate: 1516907271, algo candidate: 1516907271 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 80: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -6427,9 +6448,11 @@ Test 87, Puppi candidate 30 matching
 Sim candidate: 18446744073200964886, algo candidate: 18446744073200964886 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 87: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 87: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -6556,6 +6579,7 @@ Test 89, Puppi candidate 33 matching
 Sim candidate: 18446744072701359043, algo candidate: 18446744072701359043 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 89: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -6867,6 +6891,7 @@ Test 96, Puppi candidate 149 matching
 Sim candidate: 18446744072099097322, algo candidate: 18446744072099097322 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 96: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -7062,6 +7087,7 @@ Test 98, Puppi candidate 23 matching
 Sim candidate: 18446744072680400891, algo candidate: 18446744072680400891 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 98: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -7723,6 +7749,7 @@ Test 106, Puppi candidate 14 matching
 Sim candidate: 1748253719, algo candidate: 1748253719 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 106: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -8193,6 +8220,7 @@ Test 113, Puppi candidate 27 matching
 Sim candidate: 18446744073165986331, algo candidate: 18446744073165986331 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 113: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -8253,6 +8281,7 @@ Test 115, Puppi candidate 2 matching
 Sim candidate: 18446744071945970307, algo candidate: 18446744071945970307 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 116: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -8298,6 +8327,7 @@ Test 118, Puppi candidate 17 matching
 Sim candidate: 18446744072708493588, algo candidate: 18446744072708493588 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 119: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -8322,6 +8352,7 @@ Test 120, Puppi candidate 9 matching
 Sim candidate: 18446744072353110502, algo candidate: 18446744072353110502 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 121: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -8806,9 +8837,11 @@ Test 129, Puppi candidate 11 matching
 Sim candidate: 18446744072472139255, algo candidate: 18446744072472139255 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 129: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 129: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -9415,6 +9448,7 @@ Test 142, Puppi candidate 19 matching
 Sim candidate: 2005438450, algo candidate: 2005438450 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 142: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -10613,6 +10647,7 @@ Test 155, Puppi candidate 24 matching
 Sim candidate: 18446744072762480509, algo candidate: 18446744072762480509 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 155: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -10659,6 +10694,7 @@ Test 155, Puppi candidate 1 matching
 Sim candidate: 874309256, algo candidate: 874309256 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 155: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -10698,6 +10734,7 @@ Test 156, Puppi candidate 17 matching
 Sim candidate: 34033447, algo candidate: 34033447 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 157: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -11116,6 +11153,7 @@ Test 166, Puppi candidate 134 matching
 Sim candidate: 1161495883, algo candidate: 1161495883 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 166: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -12042,6 +12080,7 @@ Test 176, Puppi candidate 15 matching
 Sim candidate: 18446744071692105458, algo candidate: 18446744071692105458 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 176: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -12115,6 +12154,7 @@ Test 177, Puppi candidate 20 matching
 Sim candidate: 2000104244, algo candidate: 2000104244 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 177: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -13010,6 +13050,7 @@ Test 185, Puppi candidate 138 matching
 Sim candidate: 18446744072813650228, algo candidate: 18446744072813650228 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 185: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -13859,6 +13900,7 @@ Test 194, Puppi candidate 65 matching
 Sim candidate: 18446744073212837648, algo candidate: 18446744073212837648 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 194: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -14034,6 +14076,7 @@ Test 195, Puppi candidate 27 matching
 Sim candidate: 18446744071767276999, algo candidate: 18446744071767276999 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 195: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -14080,6 +14123,7 @@ Test 196, Puppi candidate 20 matching
 Sim candidate: 18446744072276651998, algo candidate: 18446744072276651998 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 196: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -14591,6 +14635,7 @@ Test 202, Puppi candidate 7 matching
 Sim candidate: 18446744071747420725, algo candidate: 18446744071747420725 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 202: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -14708,12 +14753,15 @@ Test 203, Puppi candidate 17 matching
 Sim candidate: 417569029, algo candidate: 417569029 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 203: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 203: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 204: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -15076,6 +15124,7 @@ Test 211, Puppi candidate 105 matching
 Sim candidate: 18446744072036236732, algo candidate: 18446744072036236732 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 211: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -15100,6 +15149,7 @@ Test 212, Puppi candidate 9 matching
 Sim candidate: 228555299, algo candidate: 228555299 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 212: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -15462,6 +15512,7 @@ Test 218, Puppi candidate 180 matching
 Sim candidate: 18446744073373927324, algo candidate: 18446744073373927324 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 218: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -15488,6 +15539,7 @@ Test 218, Puppi candidate 10 matching
 Sim candidate: 811111972, algo candidate: 811111972 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 218: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -15564,6 +15616,7 @@ Test 219, Puppi candidate 14 matching
 Sim candidate: 18446744073457546338, algo candidate: 18446744073457546338 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 219: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -16206,9 +16259,11 @@ Test 228, Puppi candidate 144 matching
 Sim candidate: 18446744072594544440, algo candidate: 18446744072594544440 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 228: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 228: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -16644,6 +16699,7 @@ Test 233, Puppi candidate 12 matching
 Sim candidate: 18446744073650349595, algo candidate: 18446744073650349595 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 233: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -17385,12 +17441,15 @@ Test 240, Puppi candidate 154 matching
 Sim candidate: 18446744072637898535, algo candidate: 18446744072637898535 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 240: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 240: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 240: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -17467,6 +17526,7 @@ Test 241, Puppi candidate 14 matching
 Sim candidate: 18446744071874779221, algo candidate: 18446744071874779221 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 241: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19068,6 +19128,7 @@ Test 256, Puppi candidate 24 matching
 Sim candidate: 1163512439, algo candidate: 1163512439 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 256: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19144,9 +19205,11 @@ Test 256, Puppi candidate 35 matching
 Sim candidate: 18446744072399416306, algo candidate: 18446744072399416306 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 256: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 256: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19644,6 +19707,7 @@ Test 262, Puppi candidate 9 matching
 Sim candidate: 1616197144, algo candidate: 1616197144 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 262: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19698,6 +19762,7 @@ Test 263, Puppi candidate 24 matching
 Sim candidate: 18446744072661832242, algo candidate: 18446744072661832242 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 263: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19716,6 +19781,7 @@ Test 263, Puppi candidate 6 matching
 Sim candidate: 18446744072469464441, algo candidate: 18446744072469464441 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 264: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19754,6 +19820,7 @@ Test 266, Puppi candidate 12 matching
 Sim candidate: 1827292315, algo candidate: 1827292315 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 267: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19872,6 +19939,7 @@ Test 270, Puppi candidate 9 matching
 Sim candidate: 18446744073121723226, algo candidate: 18446744073121723226 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 271: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19933,6 +20001,7 @@ Test 273, Puppi candidate 28 matching
 Sim candidate: 18446744072793808520, algo candidate: 18446744072793808520 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 273: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -19956,6 +20025,7 @@ Test 274, Puppi candidate 9 matching
 Sim candidate: 197898869, algo candidate: 197898869 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 275: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -20181,9 +20251,11 @@ Test 283, Puppi candidate 7 matching
 Sim candidate: 1928488898, algo candidate: 1928488898 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 284: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 285: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -20335,6 +20407,7 @@ Test 288, Puppi candidate 24 matching
 Sim candidate: 18446744071718546462, algo candidate: 18446744071718546462 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 289: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -20475,6 +20548,7 @@ Test 293, Puppi candidate 19 matching
 Sim candidate: 18446744073068595795, algo candidate: 18446744073068595795 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 294: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -20783,9 +20857,11 @@ Test 299, Puppi candidate 25 matching
 Sim candidate: 18446744072003134550, algo candidate: 18446744072003134550 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 299: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 300: npuppi matching; npuppi = 1 
 Test 300 successful 
 received lastalgo 
@@ -20960,6 +21036,7 @@ Test 303, Puppi candidate 26 matching
 Sim candidate: 18446744073279956985, algo candidate: 18446744073279956985 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 304: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -20968,6 +21045,7 @@ Test 305, Puppi candidate 1 matching
 Sim candidate: 2033323901, algo candidate: 2033323901 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 306: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -22739,6 +22817,7 @@ Test 334, Puppi candidate 132 matching
 Sim candidate: 18446744073534451685, algo candidate: 18446744073534451685 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 334: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -22799,6 +22878,7 @@ Test 335, Puppi candidate 27 matching
 Sim candidate: 18446744071677671950, algo candidate: 18446744071677671950 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 335: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -22854,12 +22934,15 @@ Test 335, Puppi candidate 25 matching
 Sim candidate: 18446744072046103297, algo candidate: 18446744072046103297 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 335: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 335: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 335: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -24249,9 +24332,11 @@ Test 349, Puppi candidate 213 matching
 Sim candidate: 18446744073581380714, algo candidate: 18446744073581380714 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 349: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 349: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -24601,6 +24686,7 @@ Test 353, Puppi candidate 8 matching
 Sim candidate: 18446744072033753895, algo candidate: 18446744072033753895 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 353: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -24986,6 +25072,7 @@ Test 360, Puppi candidate 1 matching
 Sim candidate: 18446744072384984558, algo candidate: 18446744072384984558 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 360: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -25658,6 +25745,7 @@ Test 372, Puppi candidate 164 matching
 Sim candidate: 18446744071936879696, algo candidate: 18446744071936879696 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 372: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -25735,6 +25823,7 @@ Test 373, Puppi candidate 22 matching
 Sim candidate: 1380099476, algo candidate: 1380099476 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 373: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -26355,6 +26444,7 @@ Test 379, Puppi candidate 20 matching
 Sim candidate: 1666899492, algo candidate: 1666899492 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 379: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -26374,6 +26464,7 @@ Sim candidate: 1066125223, algo candidate: 1066125223
 Test 380 successful 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 380: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -27288,6 +27379,7 @@ Test 392, Puppi candidate 28 matching
 Sim candidate: 18446744073255832137, algo candidate: 18446744073255832137 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 392: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 
@@ -27400,6 +27492,7 @@ Test 393, Puppi candidate 32 matching
 Sim candidate: 18446744072296812540, algo candidate: 18446744072296812540 
 received lastalgo 
 received firstalgo 
+also received lastalgo 
 Test 393: npuppi matching; npuppi = 1 
 received lastalgo 
 received firstalgo 

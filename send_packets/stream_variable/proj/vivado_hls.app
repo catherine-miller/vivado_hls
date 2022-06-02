@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" name="proj" top="stream">
+<project xmlns="com.autoesl.autopilot.project" name="proj" top="streamv">
     <includePaths/>
     <libraryPaths/>
     <libraryFlag/>
