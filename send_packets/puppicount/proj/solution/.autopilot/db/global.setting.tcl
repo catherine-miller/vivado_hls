@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xcvu9p:-flga2104:-2L-e
-set SourceFiles {sc {} c ../../src/count.cc}
+set SourceFiles {sc {} c ../../src/count3.cc}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/solution.directive
 set TBFiles {verilog ../../testbench.cc bc ../../testbench.cc vhdl ../../testbench.cc sc ../../testbench.cc cas ../../testbench.cc c {}}

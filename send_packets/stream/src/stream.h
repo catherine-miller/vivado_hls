@@ -6,6 +6,6 @@
 #define NPUPPI 256
 #define NOUT 4
 
-bool stream(const ap_uint<64> candin[NPUPPI], ap_uint<64> candout[NOUT], const bool eventstart, bool &lastvalid);
+bool stream(const ap_uint<64> header, const ap_uint<64> candin[NPUPPI], ap_uint<64> candout[NOUT], const bool eventstart, bool &lastvalid);
 
 #endif

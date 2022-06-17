@@ -1,6 +1,6 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../src/count.cc in debug mode
+   Compiling ../../../../src/count3.cc in debug mode
    Generating csim.exe
 received firstalgo 
 also received lastalgo 

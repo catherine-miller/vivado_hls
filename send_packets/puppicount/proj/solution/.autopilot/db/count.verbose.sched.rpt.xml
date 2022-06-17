@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'count'" level="0">
-<item name = "Date">Thu Jun  2 13:35:55 2022
+<item name = "Date">Thu Jun  2 17:07:37 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">proj</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">2.78 ns, 2.881 ns, 0.35 ns</column>
+<column name="ap_clk">2.78 ns, 2.278 ns, 0.35 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">3, 3, 8.643 ns, 8.643 ns, 2, 2, function</column>
+<column name="">2, 2, 5.556 ns, 5.556 ns, 1, 1, function</column>
 </table>
 </item>
 <item name = "Detail">

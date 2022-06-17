@@ -5,7 +5,7 @@
 ############################################################
 open_project proj
 set_top count
-add_files src/count.cc
+add_files src/count3.cc
 add_files -tb testbench.cc -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution"
 set_part {xcvu9p-flga2104-2L-e}

@@ -74,8 +74,8 @@ set RtlHierarchyInfo {[
 		"Protocol" : "ap_ctrl_hs",
 		"ControlExist" : "1", "ap_start" : "1", "ap_ready" : "1", "ap_done" : "1", "ap_continue" : "0", "ap_idle" : "1",
 		"Pipeline" : "Aligned", "UnalignedPipeline" : "0", "RewindPipeline" : "0", "ProcessNetwork" : "0",
-		"II" : "2",
-		"VariableLatency" : "0", "ExactLatency" : "3", "EstimateLatencyMin" : "3", "EstimateLatencyMax" : "3",
+		"II" : "1",
+		"VariableLatency" : "0", "ExactLatency" : "2", "EstimateLatencyMin" : "2", "EstimateLatencyMax" : "2",
 		"Combinational" : "0",
 		"Datapath" : "0",
 		"ClockEnable" : "0",
@@ -93,7 +93,8 @@ set RtlHierarchyInfo {[
 			{"Name" : "npuppi_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "write_r", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "wrptr_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "headerloc_V", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npptr_V", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "rdptr_V", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_2", "Type" : "OVld", "Direction" : "IO"},
@@ -350,8 +351,264 @@ set RtlHierarchyInfo {[
 			{"Name" : "buffer_V_253", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_254", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "buffer_V_255", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "eventsready_V", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "rdptr_V", "Type" : "OVld", "Direction" : "IO"}]}]}
+			{"Name" : "nprdptr_V", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_0", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_1", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_2", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_3", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_4", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_5", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_6", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_7", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_8", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_9", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_10", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_11", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_12", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_13", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_14", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_15", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_16", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_17", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_18", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_19", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_20", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_21", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_22", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_23", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_24", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_25", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_26", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_27", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_28", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_29", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_30", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_31", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_32", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_33", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_34", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_35", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_36", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_37", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_38", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_39", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_40", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_41", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_42", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_43", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_44", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_45", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_46", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_47", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_48", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_49", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_50", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_51", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_52", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_53", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_54", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_55", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_56", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_57", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_58", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_59", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_60", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_61", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_62", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_63", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_64", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_65", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_66", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_67", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_68", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_69", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_70", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_71", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_72", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_73", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_74", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_75", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_76", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_77", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_78", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_79", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_80", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_81", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_82", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_83", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_84", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_85", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_86", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_87", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_88", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_89", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_90", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_91", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_92", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_93", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_94", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_95", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_96", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_97", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_98", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_99", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_100", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_101", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_102", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_103", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_104", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_105", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_106", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_107", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_108", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_109", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_110", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_111", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_112", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_113", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_114", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_115", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_116", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_117", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_118", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_119", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_120", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_121", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_122", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_123", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_124", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_125", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_126", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_127", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_128", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_129", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_130", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_131", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_132", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_133", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_134", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_135", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_136", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_137", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_138", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_139", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_140", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_141", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_142", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_143", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_144", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_145", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_146", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_147", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_148", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_149", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_150", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_151", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_152", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_153", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_154", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_155", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_156", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_157", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_158", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_159", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_160", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_161", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_162", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_163", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_164", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_165", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_166", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_167", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_168", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_169", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_170", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_171", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_172", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_173", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_174", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_175", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_176", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_177", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_178", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_179", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_180", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_181", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_182", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_183", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_184", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_185", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_186", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_187", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_188", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_189", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_190", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_191", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_192", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_193", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_194", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_195", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_196", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_197", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_198", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_199", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_200", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_201", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_202", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_203", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_204", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_205", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_206", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_207", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_208", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_209", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_210", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_211", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_212", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_213", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_214", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_215", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_216", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_217", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_218", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_219", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_220", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_221", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_222", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_223", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_224", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_225", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_226", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_227", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_228", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_229", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_230", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_231", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_232", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_233", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_234", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_235", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_236", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_237", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_238", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_239", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_240", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_241", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_242", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_243", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_244", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_245", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_246", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_247", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_248", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_249", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_250", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_251", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_252", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_253", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_254", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "npbuffer_V_255", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "eventsready_V", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
@@ -366,7 +623,8 @@ set ArgLastReadFirstWriteLatency {
 		npuppi_V {Type IO LastRead -1 FirstWrite -1}
 		write_r {Type IO LastRead -1 FirstWrite -1}
 		wrptr_V {Type IO LastRead -1 FirstWrite -1}
-		headerloc_V {Type IO LastRead -1 FirstWrite -1}
+		npptr_V {Type IO LastRead -1 FirstWrite -1}
+		rdptr_V {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_0 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_1 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_2 {Type IO LastRead -1 FirstWrite -1}
@@ -623,14 +881,270 @@ set ArgLastReadFirstWriteLatency {
 		buffer_V_253 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_254 {Type IO LastRead -1 FirstWrite -1}
 		buffer_V_255 {Type IO LastRead -1 FirstWrite -1}
-		eventsready_V {Type IO LastRead -1 FirstWrite -1}
-		rdptr_V {Type IO LastRead -1 FirstWrite -1}}}
+		nprdptr_V {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_0 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_1 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_2 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_3 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_4 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_5 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_6 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_7 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_8 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_9 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_10 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_11 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_12 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_13 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_14 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_15 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_16 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_17 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_18 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_19 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_20 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_21 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_22 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_23 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_24 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_25 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_26 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_27 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_28 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_29 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_30 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_31 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_32 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_33 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_34 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_35 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_36 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_37 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_38 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_39 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_40 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_41 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_42 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_43 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_44 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_45 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_46 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_47 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_48 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_49 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_50 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_51 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_52 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_53 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_54 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_55 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_56 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_57 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_58 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_59 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_60 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_61 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_62 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_63 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_64 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_65 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_66 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_67 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_68 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_69 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_70 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_71 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_72 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_73 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_74 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_75 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_76 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_77 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_78 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_79 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_80 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_81 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_82 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_83 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_84 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_85 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_86 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_87 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_88 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_89 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_90 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_91 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_92 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_93 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_94 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_95 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_96 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_97 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_98 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_99 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_100 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_101 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_102 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_103 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_104 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_105 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_106 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_107 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_108 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_109 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_110 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_111 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_112 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_113 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_114 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_115 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_116 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_117 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_118 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_119 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_120 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_121 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_122 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_123 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_124 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_125 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_126 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_127 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_128 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_129 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_130 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_131 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_132 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_133 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_134 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_135 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_136 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_137 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_138 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_139 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_140 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_141 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_142 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_143 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_144 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_145 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_146 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_147 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_148 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_149 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_150 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_151 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_152 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_153 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_154 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_155 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_156 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_157 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_158 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_159 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_160 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_161 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_162 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_163 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_164 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_165 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_166 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_167 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_168 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_169 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_170 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_171 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_172 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_173 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_174 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_175 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_176 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_177 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_178 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_179 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_180 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_181 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_182 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_183 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_184 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_185 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_186 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_187 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_188 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_189 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_190 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_191 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_192 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_193 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_194 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_195 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_196 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_197 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_198 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_199 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_200 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_201 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_202 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_203 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_204 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_205 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_206 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_207 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_208 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_209 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_210 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_211 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_212 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_213 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_214 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_215 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_216 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_217 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_218 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_219 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_220 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_221 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_222 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_223 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_224 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_225 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_226 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_227 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_228 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_229 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_230 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_231 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_232 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_233 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_234 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_235 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_236 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_237 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_238 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_239 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_240 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_241 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_242 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_243 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_244 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_245 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_246 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_247 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_248 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_249 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_250 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_251 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_252 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_253 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_254 {Type IO LastRead -1 FirstWrite -1}
+		npbuffer_V_255 {Type IO LastRead -1 FirstWrite -1}
+		eventsready_V {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "3", "Max" : "3"}
-	, {"Name" : "Interval", "Min" : "2", "Max" : "2"}
+	{"Name" : "Latency", "Min" : "2", "Max" : "2"}
+	, {"Name" : "Interval", "Min" : "1", "Max" : "1"}
 ]}
 
 set PipelineEnableSignalInfo {[

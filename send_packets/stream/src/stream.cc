@@ -1,7 +1,7 @@
 #include "stream.h"
 
 bool stream(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const bool eventstart, bool &lastvalid) {
-	static ap_uint<64> scands[NPUPPI+NOUT] = {0};
+	static ap_uint<64> scands[NPUPPI+NOUT+1] = {0};
 	static ap_uint<64> hold[NOUT];
 	static bool nextzeros, holdevtstart = false, retevtstart = false;
 	static bool nonempty;
@@ -21,9 +21,10 @@ bool stream(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const b
 		scands[i] = scands[i + NOUT];
         }
 	if (eventstart) {
+		scands[0] = header;
 		for (unsigned int i = 0; i < NPUPPI; ++i) {
 			#pragma HLS unroll
-			scands[i] = cands[i];
+			scands[i + 1] = cands[i];
 		}
 	}
 	for (unsigned int i = 0; i < NOUT; ++i) {

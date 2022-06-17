@@ -80,8 +80,8 @@
     "ClockName": "ap_clk",
     "ClockPeriod": "2.778",
     "IsCombLogic": "0",
-    "II": "2",
-    "Latency": "3",
+    "II": "1",
+    "Latency": "2",
     "Uncertainty": "0.34725"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 2.778 [get_ports ap_clk]"]},
@@ -97,7 +97,7 @@
     "AutoFamilySupport": ""
   },
   "Files": {
-    "CSource": ["..\/..\/src\/count.cc"],
+    "CSource": ["..\/..\/src\/count3.cc"],
     "Vhdl": ["impl\/vhdl\/count.vhd"],
     "Verilog": ["impl\/verilog\/count.v"],
     "Misc": ["impl\/misc\/logo.png"],
@@ -290,21 +290,21 @@
       }},
     "Metrics": {"count": {
         "Latency": {
-          "LatencyBest": "3",
-          "LatencyAvg": "3",
-          "LatencyWorst": "3",
-          "PipelineII": "2",
-          "PipelineDepth": "4",
+          "LatencyBest": "2",
+          "LatencyAvg": "2",
+          "LatencyWorst": "2",
+          "PipelineII": "1",
+          "PipelineDepth": "3",
           "PipelineType": "function"
         },
         "Timing": {
           "Target": "2.78",
           "Uncertainty": "0.35",
-          "Estimate": "2.881"
+          "Estimate": "2.278"
         },
         "Area": {
-          "FF": "17054",
-          "LUT": "5952",
+          "FF": "20206",
+          "LUT": "2700",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -321,7 +321,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-06-02 13:36:39 CEST",
+    "Time": "2022-06-02 17:08:37 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }

@@ -2,10 +2,26 @@
 #define CLKPEREVT 54
 #define NTESTS 500
 
+ap_uint<64> writeheader(const ap_uint<12> bx, const ap_uint<30> orbit, const ap_uint<10> run, const bool write) {
+    ap_uint<64> header;
+    #pragma HLS pipeline II = 1
+    if (write) {
+        header(11,0) = 0; //npuppi 0 for now -- it will be modified later
+        header(23,12) = bx;
+        header(53,24) = orbit;
+        header(63,54) = run;
+        return header;
+    } else return 0;
+}
 void generateevent(ap_uint<64> v[NPUPPI], unsigned int &npuppi) {
+	unsigned long long bx, orbit, run;
+	bx = rand() & 0xFFF;
+    orbit = rand() & 0x3FFFFFFF;
+    run = rand() & 0x3FF;
+	v[0] = writeheader(bx, orbit, run, true);
 	npuppi = rand() % 256;
 	if (npuppi > 200) npuppi = 256; //just want to check the max case
-	for (uint i = 0; i < npuppi; ++i) {
+	for (uint i = 1; i < npuppi; ++i) {
 		v[i] = rand(); //(((uint64_t)(rand() & 0xFF) << 56) + ((uint64_t)rand() << 32) + rand()) & 0xFFFFFFFFFFFFFFFF; //this is a sloppy way of generating these but whatever
 	}
 	for (uint i = npuppi; i < NPUPPI; ++i) {

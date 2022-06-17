@@ -20,7 +20,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../testbench.cc ../../../../src/count.cc
+HLS_SOURCES = ../../../../testbench.cc ../../../../src/count3.cc
 
 TARGET := csim.exe
 
@@ -80,8 +80,8 @@ $(ObjDir)/testbench.o: ../../../../testbench.cc $(ObjDir)/.dir
 
 -include $(ObjDir)/testbench.d
 
-$(ObjDir)/count.o: ../../../../src/count.cc $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../src/count.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/count3.o: ../../../../src/count3.cc $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../src/count3.cc in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/count.d
+-include $(ObjDir)/count3.d

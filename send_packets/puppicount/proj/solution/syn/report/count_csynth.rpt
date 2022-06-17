@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'count'
 ================================================================
-* Date:           Thu Jun  2 13:36:25 2022
+* Date:           Thu Jun  2 17:08:20 2022
 
 * Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
 * Project:        proj
@@ -20,7 +20,7 @@
     +--------+---------+----------+------------+
     |  Clock |  Target | Estimated| Uncertainty|
     +--------+---------+----------+------------+
-    |ap_clk  | 2.78 ns | 2.881 ns |   0.35 ns  |
+    |ap_clk  | 2.78 ns | 2.278 ns |   0.35 ns  |
     +--------+---------+----------+------------+
 
 + Latency: 
@@ -29,7 +29,7 @@
     |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
     |   min   |   max   |    min   |    max   | min | max |   Type   |
     +---------+---------+----------+----------+-----+-----+----------+
-    |        3|        3| 8.643 ns | 8.643 ns |    2|    2| function |
+    |        2|        2| 5.556 ns | 5.556 ns |    1|    1| function |
     +---------+---------+----------+----------+-----+-----+----------+
 
     + Detail: 
@@ -49,18 +49,18 @@
 |         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
 +---------------------+---------+-------+---------+---------+-----+
 |DSP                  |        -|      -|        -|        -|    -|
-|Expression           |        -|      -|        0|     1110|    -|
+|Expression           |        -|      -|        0|      108|    -|
 |FIFO                 |        -|      -|        -|        -|    -|
 |Instance             |        -|      -|        -|        -|    -|
 |Memory               |        -|      -|        -|        -|    -|
-|Multiplexer          |        -|      -|        -|     4842|    -|
-|Register             |        -|      -|    17054|        -|    -|
+|Multiplexer          |        -|      -|        -|     2592|    -|
+|Register             |        -|      -|    20206|        -|    -|
 +---------------------+---------+-------+---------+---------+-----+
-|Total                |        0|      0|    17054|     5952|    0|
+|Total                |        0|      0|    20206|     2700|    0|
 +---------------------+---------+-------+---------+---------+-----+
 |Available SLR        |     1440|   2280|   788160|   394080|  320|
 +---------------------+---------+-------+---------+---------+-----+
-|Utilization SLR (%)  |        0|      0|        2|        1|    0|
+|Utilization SLR (%)  |        0|      0|        2|    ~0   |    0|
 +---------------------+---------+-------+---------+---------+-----+
 |Available            |     4320|   6840|  2364480|  1182240|  960|
 +---------------------+---------+-------+---------+---------+-----+
@@ -84,838 +84,71 @@
     +---------------------------+----------+-------+---+----+------------+------------+
     |       Variable Name       | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------------+----------+-------+---+----+------------+------------+
-    |add_ln215_fu_5145_p2       |     +    |      0|  0|   9|           9|           2|
-    |add_ln700_1_fu_5126_p2     |     +    |      0|  0|   8|           8|           1|
-    |add_ln700_2_fu_6713_p2     |     +    |      0|  0|   6|           5|           1|
-    |add_ln700_3_fu_6796_p2     |     +    |      0|  0|   8|           1|           8|
-    |add_ln700_fu_5119_p2       |     +    |      0|  0|   8|           8|           1|
-    |add_ln701_fu_6777_p2       |     +    |      0|  0|   6|           2|           5|
-    |and_ln19_fu_3567_p2        |    and   |      0|  0|   2|           1|           1|
+    |add_ln214_fu_4407_p2       |     +    |      0|  0|  12|          12|           2|
+    |add_ln700_1_fu_4384_p2     |     +    |      0|  0|   8|           8|           1|
+    |add_ln700_2_fu_4400_p2     |     +    |      0|  0|   6|           5|           1|
+    |add_ln700_3_fu_5949_p2     |     +    |      0|  0|   8|           8|           1|
+    |add_ln700_4_fu_8346_p2     |     +    |      0|  0|   8|           8|           1|
+    |add_ln700_5_fu_7000_p2     |     +    |      0|  0|   8|           8|           1|
+    |add_ln700_fu_4377_p2       |     +    |      0|  0|  12|          12|           1|
+    |add_ln701_fu_8358_p2       |     +    |      0|  0|   6|           5|           2|
+    |and_ln20_fu_2805_p2        |    and   |      0|  0|   2|           1|           1|
     |ap_block_pp0_stage0_01001  |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_1919          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_43            |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4676          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4679          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4682          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4685          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4688          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4691          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4694          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4697          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4700          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4703          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4706          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4709          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4712          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4715          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4718          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4721          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4724          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4727          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4730          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4733          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4736          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4739          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4742          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4745          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4748          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4751          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4754          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4757          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4760          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4763          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4766          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4769          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4772          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4775          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4778          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4781          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4784          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4787          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4790          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4793          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4796          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4799          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4802          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4805          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4808          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4811          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4814          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4817          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4820          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4823          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4826          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4829          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4832          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4835          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4838          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4841          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4844          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4847          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4850          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4853          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4856          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4859          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4862          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4865          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4868          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4871          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4874          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4877          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4880          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4883          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4886          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4889          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4892          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4895          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4898          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4901          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4904          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4907          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4910          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4913          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4916          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4919          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4922          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4925          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4928          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4931          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4934          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4937          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4940          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4943          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4946          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4949          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4952          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4955          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4958          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4961          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4964          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4967          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4970          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4973          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4976          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4979          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4982          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4985          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4988          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4991          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4994          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_4997          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5000          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5003          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5006          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5009          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5012          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5015          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5018          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5021          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5024          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5027          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5030          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5033          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5036          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5039          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5042          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5045          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5048          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5051          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5054          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5057          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5060          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5063          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5066          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5069          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5072          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5075          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5078          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5081          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5084          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5087          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5090          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5093          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5096          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5099          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5102          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5105          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5108          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5111          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5114          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5117          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5120          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5123          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5126          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5129          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5132          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5135          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5138          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5141          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5144          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5147          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5150          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5153          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5156          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5159          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5162          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5165          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5168          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5171          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5174          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5177          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5180          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5183          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5186          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5189          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5192          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5195          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5198          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5201          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5204          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5207          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5210          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5213          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5216          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5219          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5222          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5225          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5228          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5231          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5234          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5237          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5240          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5243          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5246          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5249          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5252          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5255          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5258          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5261          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5264          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5267          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5270          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5273          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5276          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5279          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5282          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5285          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5288          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5291          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5294          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5297          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5300          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5303          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5306          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5309          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5312          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5315          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5318          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5321          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5324          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5327          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5330          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5333          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5336          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5339          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5342          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5345          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5348          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5351          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5354          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5357          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5360          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5363          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5366          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5369          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5372          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5375          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5378          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5381          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5384          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5387          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5390          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5393          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5396          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5399          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5402          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5405          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5408          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5411          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5414          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5417          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5420          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5423          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5426          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5429          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5432          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5435          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5438          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5441          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5444          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5447          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5450          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5453          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5456          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5459          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5462          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5465          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5468          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5471          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5474          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5477          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5480          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5483          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5486          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5489          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5492          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5495          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5498          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5501          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5504          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5507          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5510          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5513          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5516          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5519          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5522          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5525          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5528          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5531          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5534          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5537          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5540          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5543          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5546          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5549          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5552          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5555          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5558          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5561          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5564          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5567          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5570          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5573          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5576          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5579          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5582          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5585          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5588          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5591          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5594          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5597          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5600          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5603          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5606          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5609          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5612          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5615          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5618          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5621          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5624          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5627          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5630          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5633          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5636          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5639          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5642          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5645          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5648          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5651          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5654          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5657          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5660          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5663          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5666          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5669          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5672          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5675          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5678          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5681          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5684          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5687          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5690          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5693          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5696          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5699          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5702          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5705          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5708          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5711          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5714          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5717          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5720          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5723          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5726          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5729          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5732          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5735          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5738          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5741          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5744          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5747          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5750          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5753          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5756          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5759          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5762          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5765          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5768          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5771          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5774          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5777          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5780          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5783          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5786          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5789          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5792          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5795          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5798          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5801          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5804          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5807          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5810          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5813          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5816          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5819          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5822          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5825          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5828          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5831          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5834          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5837          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5840          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5843          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5846          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5849          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5852          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5855          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5858          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5861          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5864          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5867          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5870          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5873          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5876          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5879          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5882          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5885          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5888          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5891          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5894          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5897          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5900          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5903          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5906          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5909          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5912          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5915          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5918          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5921          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5924          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5927          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5930          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5933          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5936          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5939          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5942          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5945          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5948          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5951          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5954          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5957          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5960          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5963          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5966          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5969          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5972          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5975          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5978          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5981          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5984          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5987          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5990          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5993          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5996          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_5999          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6002          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6005          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6008          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6011          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6014          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6017          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6020          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6023          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6026          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6029          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6032          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6035          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6038          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6041          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6044          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6047          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6050          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6053          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6056          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6059          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6062          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6065          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6068          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6071          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6074          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6077          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6080          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6083          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6086          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6089          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6092          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6095          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6098          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6101          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6104          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6107          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6110          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6113          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6116          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6119          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6122          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6125          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6128          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6131          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6134          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6137          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6140          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6143          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6146          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6149          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6152          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6155          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6158          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6161          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6164          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6167          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6170          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6173          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6176          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6179          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6182          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6185          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6188          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6191          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6194          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6197          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6200          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6203          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6206          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6209          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6213          |    and   |      0|  0|   2|           1|           1|
-    |ap_condition_6217          |    and   |      0|  0|   2|           1|           1|
-    |icmp_ln895_fu_6736_p2      |   icmp   |      0|  0|  11|           5|           1|
-    |or_ln40_fu_6782_p2         |    or    |      0|  0|   2|           1|           1|
-    |or_ln4_fu_6719_p2          |    or    |      0|  0|   2|           1|           1|
-    |select_ln40_fu_6788_p3     |  select  |      0|  0|   5|           1|           5|
-    |t_V_3_fu_6729_p3           |  select  |      0|  0|   5|           1|           5|
+    |ap_condition_2166          |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln895_fu_5960_p2      |   icmp   |      0|  0|  11|           5|           1|
+    |or_ln16_fu_2799_p2         |    or    |      0|  0|   2|           1|           1|
+    |or_ln44_fu_8364_p2         |    or    |      0|  0|   2|           1|           1|
+    |select_ln44_fu_8371_p3     |  select  |      0|  0|   5|           1|           5|
+    |t_V_fu_4369_p3             |  select  |      0|  0|  12|           1|           1|
     |ap_enable_pp0              |    xor   |      0|  0|   2|           1|           2|
-    |xor_ln4_fu_6724_p2         |    xor   |      0|  0|   2|           1|           2|
     +---------------------------+----------+-------+---+----+------------+------------+
-    |Total                      |          |      0|  0|1110|         562|         553|
+    |Total                      |          |      0|  0| 108|          79|          24|
     +---------------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
     +----------------------------------------------------+------+-----------+-----+-----------+
     |                        Name                        |  LUT | Input Size| Bits| Total Bits|
     +----------------------------------------------------+------+-----------+-----+-----------+
-    |ap_NS_fsm                                           |    15|          3|    1|          3|
-    |ap_enable_reg_pp0_iter0                             |     9|          2|    1|          2|
-    |ap_phi_mux_eventsready_V_flag_2_phi_fu_2251_p4      |     9|          2|    1|          2|
-    |ap_phi_mux_eventsready_V_new_2_phi_fu_2261_p4       |     9|          2|    5|         10|
-    |ap_phi_mux_npuppi_V_loc_1_phi_fu_1184_p4            |    15|          3|    8|         24|
-    |ap_phi_mux_p_Val2_s_phi_fu_1194_p512                |  1173|        257|   66|      16962|
-    |ap_phi_mux_write_loc_0_phi_fu_1149_p4               |    15|          3|    1|          3|
-    |ap_phi_reg_pp0_iter0_t_V_reg_1170                   |     9|          2|    8|         16|
-    |ap_phi_reg_pp0_iter1_eventsready_V_flag_2_reg_2248  |     9|          2|    1|          2|
-    |ap_phi_reg_pp0_iter1_eventsready_V_new_2_reg_2257   |     9|          2|    5|         10|
-    |ap_phi_reg_pp0_iter1_npuppi_V_flag_1_reg_1708       |    15|          3|    1|          3|
-    |ap_phi_reg_pp0_iter1_npuppi_V_new_1_reg_1720        |    15|          3|    8|         24|
-    |ap_phi_reg_pp0_iter1_p_Val2_1_reg_1731              |  1173|        257|   66|      16962|
-    |ap_sig_allocacmp_npuppi_V_load                      |     9|          2|    8|         16|
+    |ap_phi_mux_UnifiedRetVal_i257_phi_fu_2261_p512      |  1173|        257|   12|       3084|
+    |ap_phi_mux_eventsready_V_flag_2_phi_fu_2778_p4      |    15|          3|    1|          3|
+    |ap_phi_mux_eventsready_V_new_2_phi_fu_2788_p4       |    15|          3|    5|         15|
+    |ap_phi_mux_npuppi_V_loc_1_phi_fu_1669_p4            |    15|          3|   12|         36|
+    |ap_phi_mux_t_V_4_phi_fu_1699_p4                     |    15|          3|    5|         15|
+    |ap_phi_mux_write_flag_1_phi_fu_1678_p4              |    15|          3|    1|          3|
+    |ap_phi_mux_write_new_1_phi_fu_1688_p4               |    15|          3|    1|          3|
+    |ap_phi_reg_pp0_iter2_eventsready_V_flag_0_reg_1728  |    15|          3|    1|          3|
+    |ap_phi_reg_pp0_iter2_npuppi_V_flag_1_reg_1706       |    15|          3|    1|          3|
+    |ap_phi_reg_pp0_iter2_npuppi_V_new_1_reg_1717        |    15|          3|   12|         36|
+    |ap_phi_reg_pp0_iter2_p_Val2_s_reg_1741              |  1173|        257|   66|      16962|
+    |ap_sig_allocacmp_npuppi_V_load                      |     9|          2|   12|         24|
+    |ap_sig_allocacmp_t_V_1                              |     9|          2|    8|         16|
+    |ap_sig_allocacmp_t_V_2                              |     9|          2|    5|         10|
+    |ap_sig_allocacmp_t_V_3                              |     9|          2|    8|         16|
     |ap_sig_allocacmp_write_load                         |     9|          2|    1|          2|
-    |buffer_V_0                                          |     9|          2|   66|        132|
-    |buffer_V_1                                          |     9|          2|   66|        132|
-    |buffer_V_10                                         |     9|          2|   66|        132|
-    |buffer_V_100                                        |     9|          2|   66|        132|
-    |buffer_V_101                                        |     9|          2|   66|        132|
-    |buffer_V_102                                        |     9|          2|   66|        132|
-    |buffer_V_103                                        |     9|          2|   66|        132|
-    |buffer_V_104                                        |     9|          2|   66|        132|
-    |buffer_V_105                                        |     9|          2|   66|        132|
-    |buffer_V_106                                        |     9|          2|   66|        132|
-    |buffer_V_107                                        |     9|          2|   66|        132|
-    |buffer_V_108                                        |     9|          2|   66|        132|
-    |buffer_V_109                                        |     9|          2|   66|        132|
-    |buffer_V_11                                         |     9|          2|   66|        132|
-    |buffer_V_110                                        |     9|          2|   66|        132|
-    |buffer_V_111                                        |     9|          2|   66|        132|
-    |buffer_V_112                                        |     9|          2|   66|        132|
-    |buffer_V_113                                        |     9|          2|   66|        132|
-    |buffer_V_114                                        |     9|          2|   66|        132|
-    |buffer_V_115                                        |     9|          2|   66|        132|
-    |buffer_V_116                                        |     9|          2|   66|        132|
-    |buffer_V_117                                        |     9|          2|   66|        132|
-    |buffer_V_118                                        |     9|          2|   66|        132|
-    |buffer_V_119                                        |     9|          2|   66|        132|
-    |buffer_V_12                                         |     9|          2|   66|        132|
-    |buffer_V_120                                        |     9|          2|   66|        132|
-    |buffer_V_121                                        |     9|          2|   66|        132|
-    |buffer_V_122                                        |     9|          2|   66|        132|
-    |buffer_V_123                                        |     9|          2|   66|        132|
-    |buffer_V_124                                        |     9|          2|   66|        132|
-    |buffer_V_125                                        |     9|          2|   66|        132|
-    |buffer_V_126                                        |     9|          2|   66|        132|
-    |buffer_V_127                                        |     9|          2|   66|        132|
-    |buffer_V_128                                        |     9|          2|   66|        132|
-    |buffer_V_129                                        |     9|          2|   66|        132|
-    |buffer_V_13                                         |     9|          2|   66|        132|
-    |buffer_V_130                                        |     9|          2|   66|        132|
-    |buffer_V_131                                        |     9|          2|   66|        132|
-    |buffer_V_132                                        |     9|          2|   66|        132|
-    |buffer_V_133                                        |     9|          2|   66|        132|
-    |buffer_V_134                                        |     9|          2|   66|        132|
-    |buffer_V_135                                        |     9|          2|   66|        132|
-    |buffer_V_136                                        |     9|          2|   66|        132|
-    |buffer_V_137                                        |     9|          2|   66|        132|
-    |buffer_V_138                                        |     9|          2|   66|        132|
-    |buffer_V_139                                        |     9|          2|   66|        132|
-    |buffer_V_14                                         |     9|          2|   66|        132|
-    |buffer_V_140                                        |     9|          2|   66|        132|
-    |buffer_V_141                                        |     9|          2|   66|        132|
-    |buffer_V_142                                        |     9|          2|   66|        132|
-    |buffer_V_143                                        |     9|          2|   66|        132|
-    |buffer_V_144                                        |     9|          2|   66|        132|
-    |buffer_V_145                                        |     9|          2|   66|        132|
-    |buffer_V_146                                        |     9|          2|   66|        132|
-    |buffer_V_147                                        |     9|          2|   66|        132|
-    |buffer_V_148                                        |     9|          2|   66|        132|
-    |buffer_V_149                                        |     9|          2|   66|        132|
-    |buffer_V_15                                         |     9|          2|   66|        132|
-    |buffer_V_150                                        |     9|          2|   66|        132|
-    |buffer_V_151                                        |     9|          2|   66|        132|
-    |buffer_V_152                                        |     9|          2|   66|        132|
-    |buffer_V_153                                        |     9|          2|   66|        132|
-    |buffer_V_154                                        |     9|          2|   66|        132|
-    |buffer_V_155                                        |     9|          2|   66|        132|
-    |buffer_V_156                                        |     9|          2|   66|        132|
-    |buffer_V_157                                        |     9|          2|   66|        132|
-    |buffer_V_158                                        |     9|          2|   66|        132|
-    |buffer_V_159                                        |     9|          2|   66|        132|
-    |buffer_V_16                                         |     9|          2|   66|        132|
-    |buffer_V_160                                        |     9|          2|   66|        132|
-    |buffer_V_161                                        |     9|          2|   66|        132|
-    |buffer_V_162                                        |     9|          2|   66|        132|
-    |buffer_V_163                                        |     9|          2|   66|        132|
-    |buffer_V_164                                        |     9|          2|   66|        132|
-    |buffer_V_165                                        |     9|          2|   66|        132|
-    |buffer_V_166                                        |     9|          2|   66|        132|
-    |buffer_V_167                                        |     9|          2|   66|        132|
-    |buffer_V_168                                        |     9|          2|   66|        132|
-    |buffer_V_169                                        |     9|          2|   66|        132|
-    |buffer_V_17                                         |     9|          2|   66|        132|
-    |buffer_V_170                                        |     9|          2|   66|        132|
-    |buffer_V_171                                        |     9|          2|   66|        132|
-    |buffer_V_172                                        |     9|          2|   66|        132|
-    |buffer_V_173                                        |     9|          2|   66|        132|
-    |buffer_V_174                                        |     9|          2|   66|        132|
-    |buffer_V_175                                        |     9|          2|   66|        132|
-    |buffer_V_176                                        |     9|          2|   66|        132|
-    |buffer_V_177                                        |     9|          2|   66|        132|
-    |buffer_V_178                                        |     9|          2|   66|        132|
-    |buffer_V_179                                        |     9|          2|   66|        132|
-    |buffer_V_18                                         |     9|          2|   66|        132|
-    |buffer_V_180                                        |     9|          2|   66|        132|
-    |buffer_V_181                                        |     9|          2|   66|        132|
-    |buffer_V_182                                        |     9|          2|   66|        132|
-    |buffer_V_183                                        |     9|          2|   66|        132|
-    |buffer_V_184                                        |     9|          2|   66|        132|
-    |buffer_V_185                                        |     9|          2|   66|        132|
-    |buffer_V_186                                        |     9|          2|   66|        132|
-    |buffer_V_187                                        |     9|          2|   66|        132|
-    |buffer_V_188                                        |     9|          2|   66|        132|
-    |buffer_V_189                                        |     9|          2|   66|        132|
-    |buffer_V_19                                         |     9|          2|   66|        132|
-    |buffer_V_190                                        |     9|          2|   66|        132|
-    |buffer_V_191                                        |     9|          2|   66|        132|
-    |buffer_V_192                                        |     9|          2|   66|        132|
-    |buffer_V_193                                        |     9|          2|   66|        132|
-    |buffer_V_194                                        |     9|          2|   66|        132|
-    |buffer_V_195                                        |     9|          2|   66|        132|
-    |buffer_V_196                                        |     9|          2|   66|        132|
-    |buffer_V_197                                        |     9|          2|   66|        132|
-    |buffer_V_198                                        |     9|          2|   66|        132|
-    |buffer_V_199                                        |     9|          2|   66|        132|
-    |buffer_V_2                                          |     9|          2|   66|        132|
-    |buffer_V_20                                         |     9|          2|   66|        132|
-    |buffer_V_200                                        |     9|          2|   66|        132|
-    |buffer_V_201                                        |     9|          2|   66|        132|
-    |buffer_V_202                                        |     9|          2|   66|        132|
-    |buffer_V_203                                        |     9|          2|   66|        132|
-    |buffer_V_204                                        |     9|          2|   66|        132|
-    |buffer_V_205                                        |     9|          2|   66|        132|
-    |buffer_V_206                                        |     9|          2|   66|        132|
-    |buffer_V_207                                        |     9|          2|   66|        132|
-    |buffer_V_208                                        |     9|          2|   66|        132|
-    |buffer_V_209                                        |     9|          2|   66|        132|
-    |buffer_V_21                                         |     9|          2|   66|        132|
-    |buffer_V_210                                        |     9|          2|   66|        132|
-    |buffer_V_211                                        |     9|          2|   66|        132|
-    |buffer_V_212                                        |     9|          2|   66|        132|
-    |buffer_V_213                                        |     9|          2|   66|        132|
-    |buffer_V_214                                        |     9|          2|   66|        132|
-    |buffer_V_215                                        |     9|          2|   66|        132|
-    |buffer_V_216                                        |     9|          2|   66|        132|
-    |buffer_V_217                                        |     9|          2|   66|        132|
-    |buffer_V_218                                        |     9|          2|   66|        132|
-    |buffer_V_219                                        |     9|          2|   66|        132|
-    |buffer_V_22                                         |     9|          2|   66|        132|
-    |buffer_V_220                                        |     9|          2|   66|        132|
-    |buffer_V_221                                        |     9|          2|   66|        132|
-    |buffer_V_222                                        |     9|          2|   66|        132|
-    |buffer_V_223                                        |     9|          2|   66|        132|
-    |buffer_V_224                                        |     9|          2|   66|        132|
-    |buffer_V_225                                        |     9|          2|   66|        132|
-    |buffer_V_226                                        |     9|          2|   66|        132|
-    |buffer_V_227                                        |     9|          2|   66|        132|
-    |buffer_V_228                                        |     9|          2|   66|        132|
-    |buffer_V_229                                        |     9|          2|   66|        132|
-    |buffer_V_23                                         |     9|          2|   66|        132|
-    |buffer_V_230                                        |     9|          2|   66|        132|
-    |buffer_V_231                                        |     9|          2|   66|        132|
-    |buffer_V_232                                        |     9|          2|   66|        132|
-    |buffer_V_233                                        |     9|          2|   66|        132|
-    |buffer_V_234                                        |     9|          2|   66|        132|
-    |buffer_V_235                                        |     9|          2|   66|        132|
-    |buffer_V_236                                        |     9|          2|   66|        132|
-    |buffer_V_237                                        |     9|          2|   66|        132|
-    |buffer_V_238                                        |     9|          2|   66|        132|
-    |buffer_V_239                                        |     9|          2|   66|        132|
-    |buffer_V_24                                         |     9|          2|   66|        132|
-    |buffer_V_240                                        |     9|          2|   66|        132|
-    |buffer_V_241                                        |     9|          2|   66|        132|
-    |buffer_V_242                                        |     9|          2|   66|        132|
-    |buffer_V_243                                        |     9|          2|   66|        132|
-    |buffer_V_244                                        |     9|          2|   66|        132|
-    |buffer_V_245                                        |     9|          2|   66|        132|
-    |buffer_V_246                                        |     9|          2|   66|        132|
-    |buffer_V_247                                        |     9|          2|   66|        132|
-    |buffer_V_248                                        |     9|          2|   66|        132|
-    |buffer_V_249                                        |     9|          2|   66|        132|
-    |buffer_V_25                                         |     9|          2|   66|        132|
-    |buffer_V_250                                        |     9|          2|   66|        132|
-    |buffer_V_251                                        |     9|          2|   66|        132|
-    |buffer_V_252                                        |     9|          2|   66|        132|
-    |buffer_V_253                                        |     9|          2|   66|        132|
-    |buffer_V_254                                        |     9|          2|   66|        132|
-    |buffer_V_255                                        |     9|          2|   66|        132|
-    |buffer_V_26                                         |     9|          2|   66|        132|
-    |buffer_V_27                                         |     9|          2|   66|        132|
-    |buffer_V_28                                         |     9|          2|   66|        132|
-    |buffer_V_29                                         |     9|          2|   66|        132|
-    |buffer_V_3                                          |     9|          2|   66|        132|
-    |buffer_V_30                                         |     9|          2|   66|        132|
-    |buffer_V_31                                         |     9|          2|   66|        132|
-    |buffer_V_32                                         |     9|          2|   66|        132|
-    |buffer_V_33                                         |     9|          2|   66|        132|
-    |buffer_V_34                                         |     9|          2|   66|        132|
-    |buffer_V_35                                         |     9|          2|   66|        132|
-    |buffer_V_36                                         |     9|          2|   66|        132|
-    |buffer_V_37                                         |     9|          2|   66|        132|
-    |buffer_V_38                                         |     9|          2|   66|        132|
-    |buffer_V_39                                         |     9|          2|   66|        132|
-    |buffer_V_4                                          |     9|          2|   66|        132|
-    |buffer_V_40                                         |     9|          2|   66|        132|
-    |buffer_V_41                                         |     9|          2|   66|        132|
-    |buffer_V_42                                         |     9|          2|   66|        132|
-    |buffer_V_43                                         |     9|          2|   66|        132|
-    |buffer_V_44                                         |     9|          2|   66|        132|
-    |buffer_V_45                                         |     9|          2|   66|        132|
-    |buffer_V_46                                         |     9|          2|   66|        132|
-    |buffer_V_47                                         |     9|          2|   66|        132|
-    |buffer_V_48                                         |     9|          2|   66|        132|
-    |buffer_V_49                                         |     9|          2|   66|        132|
-    |buffer_V_5                                          |     9|          2|   66|        132|
-    |buffer_V_50                                         |     9|          2|   66|        132|
-    |buffer_V_51                                         |     9|          2|   66|        132|
-    |buffer_V_52                                         |     9|          2|   66|        132|
-    |buffer_V_53                                         |     9|          2|   66|        132|
-    |buffer_V_54                                         |     9|          2|   66|        132|
-    |buffer_V_55                                         |     9|          2|   66|        132|
-    |buffer_V_56                                         |     9|          2|   66|        132|
-    |buffer_V_57                                         |     9|          2|   66|        132|
-    |buffer_V_58                                         |     9|          2|   66|        132|
-    |buffer_V_59                                         |     9|          2|   66|        132|
-    |buffer_V_6                                          |     9|          2|   66|        132|
-    |buffer_V_60                                         |     9|          2|   66|        132|
-    |buffer_V_61                                         |     9|          2|   66|        132|
-    |buffer_V_62                                         |     9|          2|   66|        132|
-    |buffer_V_63                                         |     9|          2|   66|        132|
-    |buffer_V_64                                         |     9|          2|   66|        132|
-    |buffer_V_65                                         |     9|          2|   66|        132|
-    |buffer_V_66                                         |     9|          2|   66|        132|
-    |buffer_V_67                                         |     9|          2|   66|        132|
-    |buffer_V_68                                         |     9|          2|   66|        132|
-    |buffer_V_69                                         |     9|          2|   66|        132|
-    |buffer_V_7                                          |     9|          2|   66|        132|
-    |buffer_V_70                                         |     9|          2|   66|        132|
-    |buffer_V_71                                         |     9|          2|   66|        132|
-    |buffer_V_72                                         |     9|          2|   66|        132|
-    |buffer_V_73                                         |     9|          2|   66|        132|
-    |buffer_V_74                                         |     9|          2|   66|        132|
-    |buffer_V_75                                         |     9|          2|   66|        132|
-    |buffer_V_76                                         |     9|          2|   66|        132|
-    |buffer_V_77                                         |     9|          2|   66|        132|
-    |buffer_V_78                                         |     9|          2|   66|        132|
-    |buffer_V_79                                         |     9|          2|   66|        132|
-    |buffer_V_8                                          |     9|          2|   66|        132|
-    |buffer_V_80                                         |     9|          2|   66|        132|
-    |buffer_V_81                                         |     9|          2|   66|        132|
-    |buffer_V_82                                         |     9|          2|   66|        132|
-    |buffer_V_83                                         |     9|          2|   66|        132|
-    |buffer_V_84                                         |     9|          2|   66|        132|
-    |buffer_V_85                                         |     9|          2|   66|        132|
-    |buffer_V_86                                         |     9|          2|   66|        132|
-    |buffer_V_87                                         |     9|          2|   66|        132|
-    |buffer_V_88                                         |     9|          2|   66|        132|
-    |buffer_V_89                                         |     9|          2|   66|        132|
-    |buffer_V_9                                          |     9|          2|   66|        132|
-    |buffer_V_90                                         |     9|          2|   66|        132|
-    |buffer_V_91                                         |     9|          2|   66|        132|
-    |buffer_V_92                                         |     9|          2|   66|        132|
-    |buffer_V_93                                         |     9|          2|   66|        132|
-    |buffer_V_94                                         |     9|          2|   66|        132|
-    |buffer_V_95                                         |     9|          2|   66|        132|
-    |buffer_V_96                                         |     9|          2|   66|        132|
-    |buffer_V_97                                         |     9|          2|   66|        132|
-    |buffer_V_98                                         |     9|          2|   66|        132|
-    |buffer_V_99                                         |     9|          2|   66|        132|
-    |candout_V                                           |    15|          3|   64|        192|
+    |candout_V                                           |    21|          4|   64|        256|
     |firstout                                            |    15|          3|    1|          3|
     |lastout                                             |    15|          3|    1|          3|
+    |t_V_4_reg_1696                                      |    15|          3|    5|         15|
     +----------------------------------------------------+------+-----------+-----+-----------+
-    |Total                                               |  4842|       1066|17143|      68031|
+    |Total                                               |  2592|        564|  222|      20508|
     +----------------------------------------------------+------+-----------+-----+-----------+
 
     * Register: 
     +----------------------------------------------------+-----+----+-----+-----------+
     |                        Name                        |  FF | LUT| Bits| Const Bits|
     +----------------------------------------------------+-----+----+-----+-----------+
-    |and_ln19_reg_6835                                   |    1|   0|    1|          0|
-    |ap_CS_fsm                                           |    2|   0|    2|          0|
-    |ap_enable_reg_pp0_iter0_reg                         |    1|   0|    1|          0|
+    |and_ln20_reg_8397                                   |    1|   0|    1|          0|
+    |ap_CS_fsm                                           |    1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1                             |    1|   0|    1|          0|
-    |ap_phi_reg_pp0_iter0_npuppi_V_flag_0_reg_1156       |    1|   0|    1|          0|
-    |ap_phi_reg_pp0_iter0_t_V_reg_1170                   |    8|   0|    8|          0|
-    |ap_phi_reg_pp0_iter1_eventsready_V_flag_2_reg_2248  |    1|   0|    1|          0|
-    |ap_phi_reg_pp0_iter1_eventsready_V_new_2_reg_2257   |    5|   0|    5|          0|
-    |ap_phi_reg_pp0_iter1_npuppi_V_flag_1_reg_1708       |    1|   0|    1|          0|
-    |ap_phi_reg_pp0_iter1_npuppi_V_new_1_reg_1720        |    8|   0|    8|          0|
-    |ap_phi_reg_pp0_iter1_p_Val2_1_reg_1731              |   66|   0|   66|          0|
+    |ap_enable_reg_pp0_iter2                             |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_eventsready_V_flag_0_reg_1728  |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_npuppi_V_flag_1_reg_1706       |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter1_npuppi_V_new_1_reg_1717        |   12|   0|   12|          0|
+    |ap_phi_reg_pp0_iter1_p_Val2_s_reg_1741              |   66|   0|   66|          0|
+    |ap_phi_reg_pp0_iter2_eventsready_V_flag_0_reg_1728  |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter2_npuppi_V_flag_1_reg_1706       |    1|   0|    1|          0|
+    |ap_phi_reg_pp0_iter2_npuppi_V_new_1_reg_1717        |   12|   0|   12|          0|
+    |ap_phi_reg_pp0_iter2_p_Val2_s_reg_1741              |   66|   0|   66|          0|
     |buffer_V_0                                          |   66|   0|   66|          0|
     |buffer_V_1                                          |   66|   0|   66|          0|
     |buffer_V_10                                         |   66|   0|   66|          0|
@@ -1173,20 +406,276 @@
     |buffer_V_98                                         |   66|   0|   66|          0|
     |buffer_V_99                                         |   66|   0|   66|          0|
     |eventsready_V                                       |    5|   0|    5|          0|
-    |headerloc_V                                         |    8|   0|    8|          0|
-    |icmp_ln895_reg_6857                                 |    1|   0|    1|          0|
-    |lastin_read_reg_6813                                |    1|   0|    1|          0|
-    |lastin_read_reg_6813_pp0_iter1_reg                  |    1|   0|    1|          0|
-    |npuppi_V                                            |    8|   0|    8|          0|
-    |npuppi_V_flag_0_reg_1156                            |    1|   0|    1|          0|
+    |firstin_read_reg_8390                               |    1|   0|    1|          0|
+    |icmp_ln895_reg_8416                                 |    1|   0|    1|          0|
+    |lastin_read_reg_8386                                |    1|   0|    1|          0|
+    |npbuffer_V_0                                        |   12|   0|   12|          0|
+    |npbuffer_V_1                                        |   12|   0|   12|          0|
+    |npbuffer_V_10                                       |   12|   0|   12|          0|
+    |npbuffer_V_100                                      |   12|   0|   12|          0|
+    |npbuffer_V_101                                      |   12|   0|   12|          0|
+    |npbuffer_V_102                                      |   12|   0|   12|          0|
+    |npbuffer_V_103                                      |   12|   0|   12|          0|
+    |npbuffer_V_104                                      |   12|   0|   12|          0|
+    |npbuffer_V_105                                      |   12|   0|   12|          0|
+    |npbuffer_V_106                                      |   12|   0|   12|          0|
+    |npbuffer_V_107                                      |   12|   0|   12|          0|
+    |npbuffer_V_108                                      |   12|   0|   12|          0|
+    |npbuffer_V_109                                      |   12|   0|   12|          0|
+    |npbuffer_V_11                                       |   12|   0|   12|          0|
+    |npbuffer_V_110                                      |   12|   0|   12|          0|
+    |npbuffer_V_111                                      |   12|   0|   12|          0|
+    |npbuffer_V_112                                      |   12|   0|   12|          0|
+    |npbuffer_V_113                                      |   12|   0|   12|          0|
+    |npbuffer_V_114                                      |   12|   0|   12|          0|
+    |npbuffer_V_115                                      |   12|   0|   12|          0|
+    |npbuffer_V_116                                      |   12|   0|   12|          0|
+    |npbuffer_V_117                                      |   12|   0|   12|          0|
+    |npbuffer_V_118                                      |   12|   0|   12|          0|
+    |npbuffer_V_119                                      |   12|   0|   12|          0|
+    |npbuffer_V_12                                       |   12|   0|   12|          0|
+    |npbuffer_V_120                                      |   12|   0|   12|          0|
+    |npbuffer_V_121                                      |   12|   0|   12|          0|
+    |npbuffer_V_122                                      |   12|   0|   12|          0|
+    |npbuffer_V_123                                      |   12|   0|   12|          0|
+    |npbuffer_V_124                                      |   12|   0|   12|          0|
+    |npbuffer_V_125                                      |   12|   0|   12|          0|
+    |npbuffer_V_126                                      |   12|   0|   12|          0|
+    |npbuffer_V_127                                      |   12|   0|   12|          0|
+    |npbuffer_V_128                                      |   12|   0|   12|          0|
+    |npbuffer_V_129                                      |   12|   0|   12|          0|
+    |npbuffer_V_13                                       |   12|   0|   12|          0|
+    |npbuffer_V_130                                      |   12|   0|   12|          0|
+    |npbuffer_V_131                                      |   12|   0|   12|          0|
+    |npbuffer_V_132                                      |   12|   0|   12|          0|
+    |npbuffer_V_133                                      |   12|   0|   12|          0|
+    |npbuffer_V_134                                      |   12|   0|   12|          0|
+    |npbuffer_V_135                                      |   12|   0|   12|          0|
+    |npbuffer_V_136                                      |   12|   0|   12|          0|
+    |npbuffer_V_137                                      |   12|   0|   12|          0|
+    |npbuffer_V_138                                      |   12|   0|   12|          0|
+    |npbuffer_V_139                                      |   12|   0|   12|          0|
+    |npbuffer_V_14                                       |   12|   0|   12|          0|
+    |npbuffer_V_140                                      |   12|   0|   12|          0|
+    |npbuffer_V_141                                      |   12|   0|   12|          0|
+    |npbuffer_V_142                                      |   12|   0|   12|          0|
+    |npbuffer_V_143                                      |   12|   0|   12|          0|
+    |npbuffer_V_144                                      |   12|   0|   12|          0|
+    |npbuffer_V_145                                      |   12|   0|   12|          0|
+    |npbuffer_V_146                                      |   12|   0|   12|          0|
+    |npbuffer_V_147                                      |   12|   0|   12|          0|
+    |npbuffer_V_148                                      |   12|   0|   12|          0|
+    |npbuffer_V_149                                      |   12|   0|   12|          0|
+    |npbuffer_V_15                                       |   12|   0|   12|          0|
+    |npbuffer_V_150                                      |   12|   0|   12|          0|
+    |npbuffer_V_151                                      |   12|   0|   12|          0|
+    |npbuffer_V_152                                      |   12|   0|   12|          0|
+    |npbuffer_V_153                                      |   12|   0|   12|          0|
+    |npbuffer_V_154                                      |   12|   0|   12|          0|
+    |npbuffer_V_155                                      |   12|   0|   12|          0|
+    |npbuffer_V_156                                      |   12|   0|   12|          0|
+    |npbuffer_V_157                                      |   12|   0|   12|          0|
+    |npbuffer_V_158                                      |   12|   0|   12|          0|
+    |npbuffer_V_159                                      |   12|   0|   12|          0|
+    |npbuffer_V_16                                       |   12|   0|   12|          0|
+    |npbuffer_V_160                                      |   12|   0|   12|          0|
+    |npbuffer_V_161                                      |   12|   0|   12|          0|
+    |npbuffer_V_162                                      |   12|   0|   12|          0|
+    |npbuffer_V_163                                      |   12|   0|   12|          0|
+    |npbuffer_V_164                                      |   12|   0|   12|          0|
+    |npbuffer_V_165                                      |   12|   0|   12|          0|
+    |npbuffer_V_166                                      |   12|   0|   12|          0|
+    |npbuffer_V_167                                      |   12|   0|   12|          0|
+    |npbuffer_V_168                                      |   12|   0|   12|          0|
+    |npbuffer_V_169                                      |   12|   0|   12|          0|
+    |npbuffer_V_17                                       |   12|   0|   12|          0|
+    |npbuffer_V_170                                      |   12|   0|   12|          0|
+    |npbuffer_V_171                                      |   12|   0|   12|          0|
+    |npbuffer_V_172                                      |   12|   0|   12|          0|
+    |npbuffer_V_173                                      |   12|   0|   12|          0|
+    |npbuffer_V_174                                      |   12|   0|   12|          0|
+    |npbuffer_V_175                                      |   12|   0|   12|          0|
+    |npbuffer_V_176                                      |   12|   0|   12|          0|
+    |npbuffer_V_177                                      |   12|   0|   12|          0|
+    |npbuffer_V_178                                      |   12|   0|   12|          0|
+    |npbuffer_V_179                                      |   12|   0|   12|          0|
+    |npbuffer_V_18                                       |   12|   0|   12|          0|
+    |npbuffer_V_180                                      |   12|   0|   12|          0|
+    |npbuffer_V_181                                      |   12|   0|   12|          0|
+    |npbuffer_V_182                                      |   12|   0|   12|          0|
+    |npbuffer_V_183                                      |   12|   0|   12|          0|
+    |npbuffer_V_184                                      |   12|   0|   12|          0|
+    |npbuffer_V_185                                      |   12|   0|   12|          0|
+    |npbuffer_V_186                                      |   12|   0|   12|          0|
+    |npbuffer_V_187                                      |   12|   0|   12|          0|
+    |npbuffer_V_188                                      |   12|   0|   12|          0|
+    |npbuffer_V_189                                      |   12|   0|   12|          0|
+    |npbuffer_V_19                                       |   12|   0|   12|          0|
+    |npbuffer_V_190                                      |   12|   0|   12|          0|
+    |npbuffer_V_191                                      |   12|   0|   12|          0|
+    |npbuffer_V_192                                      |   12|   0|   12|          0|
+    |npbuffer_V_193                                      |   12|   0|   12|          0|
+    |npbuffer_V_194                                      |   12|   0|   12|          0|
+    |npbuffer_V_195                                      |   12|   0|   12|          0|
+    |npbuffer_V_196                                      |   12|   0|   12|          0|
+    |npbuffer_V_197                                      |   12|   0|   12|          0|
+    |npbuffer_V_198                                      |   12|   0|   12|          0|
+    |npbuffer_V_199                                      |   12|   0|   12|          0|
+    |npbuffer_V_2                                        |   12|   0|   12|          0|
+    |npbuffer_V_20                                       |   12|   0|   12|          0|
+    |npbuffer_V_200                                      |   12|   0|   12|          0|
+    |npbuffer_V_201                                      |   12|   0|   12|          0|
+    |npbuffer_V_202                                      |   12|   0|   12|          0|
+    |npbuffer_V_203                                      |   12|   0|   12|          0|
+    |npbuffer_V_204                                      |   12|   0|   12|          0|
+    |npbuffer_V_205                                      |   12|   0|   12|          0|
+    |npbuffer_V_206                                      |   12|   0|   12|          0|
+    |npbuffer_V_207                                      |   12|   0|   12|          0|
+    |npbuffer_V_208                                      |   12|   0|   12|          0|
+    |npbuffer_V_209                                      |   12|   0|   12|          0|
+    |npbuffer_V_21                                       |   12|   0|   12|          0|
+    |npbuffer_V_210                                      |   12|   0|   12|          0|
+    |npbuffer_V_211                                      |   12|   0|   12|          0|
+    |npbuffer_V_212                                      |   12|   0|   12|          0|
+    |npbuffer_V_213                                      |   12|   0|   12|          0|
+    |npbuffer_V_214                                      |   12|   0|   12|          0|
+    |npbuffer_V_215                                      |   12|   0|   12|          0|
+    |npbuffer_V_216                                      |   12|   0|   12|          0|
+    |npbuffer_V_217                                      |   12|   0|   12|          0|
+    |npbuffer_V_218                                      |   12|   0|   12|          0|
+    |npbuffer_V_219                                      |   12|   0|   12|          0|
+    |npbuffer_V_22                                       |   12|   0|   12|          0|
+    |npbuffer_V_220                                      |   12|   0|   12|          0|
+    |npbuffer_V_221                                      |   12|   0|   12|          0|
+    |npbuffer_V_222                                      |   12|   0|   12|          0|
+    |npbuffer_V_223                                      |   12|   0|   12|          0|
+    |npbuffer_V_224                                      |   12|   0|   12|          0|
+    |npbuffer_V_225                                      |   12|   0|   12|          0|
+    |npbuffer_V_226                                      |   12|   0|   12|          0|
+    |npbuffer_V_227                                      |   12|   0|   12|          0|
+    |npbuffer_V_228                                      |   12|   0|   12|          0|
+    |npbuffer_V_229                                      |   12|   0|   12|          0|
+    |npbuffer_V_23                                       |   12|   0|   12|          0|
+    |npbuffer_V_230                                      |   12|   0|   12|          0|
+    |npbuffer_V_231                                      |   12|   0|   12|          0|
+    |npbuffer_V_232                                      |   12|   0|   12|          0|
+    |npbuffer_V_233                                      |   12|   0|   12|          0|
+    |npbuffer_V_234                                      |   12|   0|   12|          0|
+    |npbuffer_V_235                                      |   12|   0|   12|          0|
+    |npbuffer_V_236                                      |   12|   0|   12|          0|
+    |npbuffer_V_237                                      |   12|   0|   12|          0|
+    |npbuffer_V_238                                      |   12|   0|   12|          0|
+    |npbuffer_V_239                                      |   12|   0|   12|          0|
+    |npbuffer_V_24                                       |   12|   0|   12|          0|
+    |npbuffer_V_240                                      |   12|   0|   12|          0|
+    |npbuffer_V_241                                      |   12|   0|   12|          0|
+    |npbuffer_V_242                                      |   12|   0|   12|          0|
+    |npbuffer_V_243                                      |   12|   0|   12|          0|
+    |npbuffer_V_244                                      |   12|   0|   12|          0|
+    |npbuffer_V_245                                      |   12|   0|   12|          0|
+    |npbuffer_V_246                                      |   12|   0|   12|          0|
+    |npbuffer_V_247                                      |   12|   0|   12|          0|
+    |npbuffer_V_248                                      |   12|   0|   12|          0|
+    |npbuffer_V_249                                      |   12|   0|   12|          0|
+    |npbuffer_V_25                                       |   12|   0|   12|          0|
+    |npbuffer_V_250                                      |   12|   0|   12|          0|
+    |npbuffer_V_251                                      |   12|   0|   12|          0|
+    |npbuffer_V_252                                      |   12|   0|   12|          0|
+    |npbuffer_V_253                                      |   12|   0|   12|          0|
+    |npbuffer_V_254                                      |   12|   0|   12|          0|
+    |npbuffer_V_255                                      |   12|   0|   12|          0|
+    |npbuffer_V_26                                       |   12|   0|   12|          0|
+    |npbuffer_V_27                                       |   12|   0|   12|          0|
+    |npbuffer_V_28                                       |   12|   0|   12|          0|
+    |npbuffer_V_29                                       |   12|   0|   12|          0|
+    |npbuffer_V_3                                        |   12|   0|   12|          0|
+    |npbuffer_V_30                                       |   12|   0|   12|          0|
+    |npbuffer_V_31                                       |   12|   0|   12|          0|
+    |npbuffer_V_32                                       |   12|   0|   12|          0|
+    |npbuffer_V_33                                       |   12|   0|   12|          0|
+    |npbuffer_V_34                                       |   12|   0|   12|          0|
+    |npbuffer_V_35                                       |   12|   0|   12|          0|
+    |npbuffer_V_36                                       |   12|   0|   12|          0|
+    |npbuffer_V_37                                       |   12|   0|   12|          0|
+    |npbuffer_V_38                                       |   12|   0|   12|          0|
+    |npbuffer_V_39                                       |   12|   0|   12|          0|
+    |npbuffer_V_4                                        |   12|   0|   12|          0|
+    |npbuffer_V_40                                       |   12|   0|   12|          0|
+    |npbuffer_V_41                                       |   12|   0|   12|          0|
+    |npbuffer_V_42                                       |   12|   0|   12|          0|
+    |npbuffer_V_43                                       |   12|   0|   12|          0|
+    |npbuffer_V_44                                       |   12|   0|   12|          0|
+    |npbuffer_V_45                                       |   12|   0|   12|          0|
+    |npbuffer_V_46                                       |   12|   0|   12|          0|
+    |npbuffer_V_47                                       |   12|   0|   12|          0|
+    |npbuffer_V_48                                       |   12|   0|   12|          0|
+    |npbuffer_V_49                                       |   12|   0|   12|          0|
+    |npbuffer_V_5                                        |   12|   0|   12|          0|
+    |npbuffer_V_50                                       |   12|   0|   12|          0|
+    |npbuffer_V_51                                       |   12|   0|   12|          0|
+    |npbuffer_V_52                                       |   12|   0|   12|          0|
+    |npbuffer_V_53                                       |   12|   0|   12|          0|
+    |npbuffer_V_54                                       |   12|   0|   12|          0|
+    |npbuffer_V_55                                       |   12|   0|   12|          0|
+    |npbuffer_V_56                                       |   12|   0|   12|          0|
+    |npbuffer_V_57                                       |   12|   0|   12|          0|
+    |npbuffer_V_58                                       |   12|   0|   12|          0|
+    |npbuffer_V_59                                       |   12|   0|   12|          0|
+    |npbuffer_V_6                                        |   12|   0|   12|          0|
+    |npbuffer_V_60                                       |   12|   0|   12|          0|
+    |npbuffer_V_61                                       |   12|   0|   12|          0|
+    |npbuffer_V_62                                       |   12|   0|   12|          0|
+    |npbuffer_V_63                                       |   12|   0|   12|          0|
+    |npbuffer_V_64                                       |   12|   0|   12|          0|
+    |npbuffer_V_65                                       |   12|   0|   12|          0|
+    |npbuffer_V_66                                       |   12|   0|   12|          0|
+    |npbuffer_V_67                                       |   12|   0|   12|          0|
+    |npbuffer_V_68                                       |   12|   0|   12|          0|
+    |npbuffer_V_69                                       |   12|   0|   12|          0|
+    |npbuffer_V_7                                        |   12|   0|   12|          0|
+    |npbuffer_V_70                                       |   12|   0|   12|          0|
+    |npbuffer_V_71                                       |   12|   0|   12|          0|
+    |npbuffer_V_72                                       |   12|   0|   12|          0|
+    |npbuffer_V_73                                       |   12|   0|   12|          0|
+    |npbuffer_V_74                                       |   12|   0|   12|          0|
+    |npbuffer_V_75                                       |   12|   0|   12|          0|
+    |npbuffer_V_76                                       |   12|   0|   12|          0|
+    |npbuffer_V_77                                       |   12|   0|   12|          0|
+    |npbuffer_V_78                                       |   12|   0|   12|          0|
+    |npbuffer_V_79                                       |   12|   0|   12|          0|
+    |npbuffer_V_8                                        |   12|   0|   12|          0|
+    |npbuffer_V_80                                       |   12|   0|   12|          0|
+    |npbuffer_V_81                                       |   12|   0|   12|          0|
+    |npbuffer_V_82                                       |   12|   0|   12|          0|
+    |npbuffer_V_83                                       |   12|   0|   12|          0|
+    |npbuffer_V_84                                       |   12|   0|   12|          0|
+    |npbuffer_V_85                                       |   12|   0|   12|          0|
+    |npbuffer_V_86                                       |   12|   0|   12|          0|
+    |npbuffer_V_87                                       |   12|   0|   12|          0|
+    |npbuffer_V_88                                       |   12|   0|   12|          0|
+    |npbuffer_V_89                                       |   12|   0|   12|          0|
+    |npbuffer_V_9                                        |   12|   0|   12|          0|
+    |npbuffer_V_90                                       |   12|   0|   12|          0|
+    |npbuffer_V_91                                       |   12|   0|   12|          0|
+    |npbuffer_V_92                                       |   12|   0|   12|          0|
+    |npbuffer_V_93                                       |   12|   0|   12|          0|
+    |npbuffer_V_94                                       |   12|   0|   12|          0|
+    |npbuffer_V_95                                       |   12|   0|   12|          0|
+    |npbuffer_V_96                                       |   12|   0|   12|          0|
+    |npbuffer_V_97                                       |   12|   0|   12|          0|
+    |npbuffer_V_98                                       |   12|   0|   12|          0|
+    |npbuffer_V_99                                       |   12|   0|   12|          0|
+    |npptr_V                                             |    8|   0|    8|          0|
+    |nprdptr_V                                           |    8|   0|    8|          0|
+    |npuppi_V                                            |   12|   0|   12|          0|
     |rdptr_V                                             |    8|   0|    8|          0|
-    |t_V_1_reg_6830                                      |    8|   0|    8|          0|
-    |t_V_3_reg_6851                                      |    5|   0|    5|          0|
-    |t_V_4_reg_6861                                      |    8|   0|    8|          0|
+    |t_V_1_reg_8401                                      |    8|   0|    8|          0|
+    |t_V_3_reg_8406                                      |    8|   0|    8|          0|
+    |t_V_4_reg_1696                                      |    5|   0|    5|          0|
     |write_r                                             |    1|   0|    1|          0|
     |wrptr_V                                             |    8|   0|    8|          0|
     +----------------------------------------------------+-----+----+-----+-----------+
-    |Total                                               |17054|   0|17054|          0|
+    |Total                                               |20206|   0|20206|          0|
     +----------------------------------------------------+-----+----+-----+-----------+
 
 
