@@ -80,11 +80,11 @@ bool streamv(const ap_uint<64> candin[NIN], ap_uint<64> &candout,
     const bool eventstart, const bool lastvalid, bool &first, bool &last) {
         ap_uint<67> prep[NIN];
         static ap_uint<67> brams[NIN][512];
-        static ap_uint<9> wrptr1 = 0; //writes into brams
-        static ap_uint<9> rdptr1 = 0; //reads out of brams
+        static ap_uint<9> wrptr = 0; //writes into brams
+        static ap_uint<9> rdptr = 0; //reads out of brams
         static ap_uint<9> ptrsep = 0;
         static ap_uint<4> readidx = 0;
-        static bool write1 = false;
+        static bool write = false;
         bool valid, marked;
 
         #pragma HLS pipeline II = 1
@@ -93,20 +93,14 @@ bool streamv(const ap_uint<64> candin[NIN], ap_uint<64> &candout,
         #pragma HLS array_partition variable = prep complete
 
         //I made these separate for loops b/c HLS wouldn't increase latency otherwise
-        if (eventstart) write1 = true;
-        if (write1) for (unsigned int i = 0; i < NIN; ++i) {
+        if (eventstart) write = true;
+        if (write) for (unsigned int i = 0; i < NIN; ++i) {
             #pragma HLS unroll
             prep[i](66,3) = candin[i];
             if (candin[i] == 0) prep[i][0] = 0; //turn off valid if 0
             else prep[i][0] = 1;
-            if (eventstart && i == 0 && (prep[0][0])) {
-            	prep[0][1] = 1;
-            }
+           /* */ if (eventstart && i == 0) prep[i][1] = 1; //does not require to be valid for eventstart
             else prep[i][1] = 0;
-            if (eventstart && !prep[0][0]) {
-                printf("error: first Puppi candidate invalid \n");
-                exit(1);
-            }
         }
         if (lastvalid) { //it may be nice eventually to make some assumptions to avoid this complicated searching for the last candidate
                 //cannot unroll this I think
@@ -118,22 +112,22 @@ bool streamv(const ap_uint<64> candin[NIN], ap_uint<64> &candout,
                         } else prep[NIN - i][2] = 0;
                     }
             }
-        if (write1) {
+        if (write) {
             for (unsigned int i = 0; i < NIN; ++i) {
                 #pragma HLS unroll
-                brams[i][wrptr1] = prep[i];
+                brams[i][wrptr] = prep[i];
             } 
-            wrptr1++;
+            wrptr++;
             ptrsep++;
         }
-        if (lastvalid) write1 = false;
+        if (lastvalid) write = false;
         if (ptrsep > 0) {
-            valid = brams[readidx][rdptr1][0];
-            first = brams[readidx][rdptr1][1];
-            last = brams[readidx][rdptr1][2];
-            candout = brams[readidx][rdptr1](66,3);
+            valid = brams[readidx][rdptr][0];
+            first = brams[readidx][rdptr][1];
+            last = brams[readidx][rdptr][2];
+            candout = brams[readidx][rdptr](66,3);
             if (readidx == NIN - 1) {
-                rdptr1++;
+                rdptr++;
                 ptrsep--;
             }
             readidx = (readidx + 1) % NIN;
@@ -150,8 +144,8 @@ int main() {
     ap_uint<64> candstest[NBUFFS][NPUPPI];
     unsigned int testwridx = 0, testrdidx = 0, checkidx, puppi[NBUFFS];
     unsigned int npuppi1;
-    bool first1, last1, first2, last2, firstalgo, lastalgo, valid, check = false;
-    srand(125);
+    bool first1, last1, first2, last2, firstalgo, lastalgo, valid, check = false, flip = true;
+    srand(102);
     int u1 = 0, u2 = 0;
     for (unsigned int n = 0; n < NTESTS; ++n) {
         for (unsigned int i = 0; i < 54; ++i) {
@@ -176,8 +170,8 @@ int main() {
             if (firstalgo) {
                 check = true;
                 checkidx = 0;
-                printf("received firstalgo \n");
-                if (lastalgo) printf("also received lastalgo \n");
+                //printf("received firstalgo \n");
+                //if (lastalgo) printf("also received lastalgo \n");
             }
             if (check) {
                 while (candstest[testrdidx][checkidx] == 0) {
@@ -214,7 +208,16 @@ int main() {
             if (lastalgo) {
                 check = false;
                 testrdidx = (testrdidx + 1) % NBUFFS;
-                printf("received lastalgo \n");
+            }
+            if (firstalgo) printf("received firstalgo \n"); fflush(stdout);
+            if (lastalgo) printf("received lastalgo \n"); fflush(stdout);
+            if (firstalgo xor lastalgo) flip = !flip;
+            if (((firstalgo && flip) || (lastalgo && !flip)) && (firstalgo != lastalgo)) {
+                printf("ERROR: number of firstalgo and lastalgo doesn't match \n");
+                printf("Last received %s \n", (flip ? "firstalgo" : "lastalgo"));
+                printf("Test #%u, clock #%u \n", n, i);
+                printf("firstalgo: %i, lastalgo: %i, flip: %i", firstalgo, lastalgo, flip);
+                return 1;
             }
         }
     }

@@ -6398,7 +6398,7 @@ _ssdm_Unroll(0,0,0, "");
  prep[i](66,3) = candin[i];
             if (candin[i] == 0) prep[i][0] = 0;
             else prep[i][0] = 1;
-            if (eventstart && i == 0 && (prep[i][0])) prep[i][1] = 1;
+            if (eventstart && i == 0) prep[i][1] = 1;
             else prep[i][1] = 0;
         }
         if (lastvalid) {

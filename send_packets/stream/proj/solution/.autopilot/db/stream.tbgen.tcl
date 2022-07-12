@@ -14,6 +14,7 @@ set isEnableWaveformDebug 1
 set C_modelName {stream}
 set C_modelType { int 1 }
 set C_modelArgList {
+	{ header_V int 64 regular  }
 	{ cands_0_V int 64 regular {pointer 0}  }
 	{ cands_1_V int 64 regular {pointer 0}  }
 	{ cands_2_V int 64 regular {pointer 0}  }
@@ -274,12 +275,12 @@ set C_modelArgList {
 	{ outcands_1_V int 64 regular {pointer 1}  }
 	{ outcands_2_V int 64 regular {pointer 1}  }
 	{ outcands_3_V int 64 regular {pointer 1}  }
-	{ outcands_4_V int 64 regular {pointer 1}  }
 	{ eventstart uint 1 regular  }
 	{ lastvalid int 1 regular {pointer 1}  }
 }
 set C_modelArgMapList {[ 
-	{ "Name" : "cands_0_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "cands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 2}]}]}]} , 
+	{ "Name" : "header_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "header.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
+ 	{ "Name" : "cands_0_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "cands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 0,"up" : 0,"step" : 2}]}]}]} , 
  	{ "Name" : "cands_1_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "cands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 1,"up" : 1,"step" : 2}]}]}]} , 
  	{ "Name" : "cands_2_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "cands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 2,"up" : 2,"step" : 2}]}]}]} , 
  	{ "Name" : "cands_3_V", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "cands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 3,"up" : 3,"step" : 2}]}]}]} , 
@@ -539,12 +540,11 @@ set C_modelArgMapList {[
  	{ "Name" : "outcands_1_V", "interface" : "wire", "bitwidth" : 64, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "outcands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 1,"up" : 1,"step" : 2}]}]}]} , 
  	{ "Name" : "outcands_2_V", "interface" : "wire", "bitwidth" : 64, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "outcands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 2,"up" : 2,"step" : 2}]}]}]} , 
  	{ "Name" : "outcands_3_V", "interface" : "wire", "bitwidth" : 64, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "outcands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 3,"up" : 3,"step" : 2}]}]}]} , 
- 	{ "Name" : "outcands_4_V", "interface" : "wire", "bitwidth" : 64, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":63,"cElement": [{"cName": "outcands.V","cData": "uint64","bit_use": { "low": 0,"up": 63},"cArray": [{"low" : 4,"up" : 4,"step" : 2}]}]}]} , 
  	{ "Name" : "eventstart", "interface" : "wire", "bitwidth" : 1, "direction" : "READONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "eventstart","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 0}]}]}]} , 
  	{ "Name" : "lastvalid", "interface" : "wire", "bitwidth" : 1, "direction" : "WRITEONLY", "bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "lastvalid","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 0,"step" : 1}]}]}]} , 
  	{ "Name" : "ap_return", "interface" : "wire", "bitwidth" : 1,"bitSlice":[{"low":0,"up":0,"cElement": [{"cName": "return","cData": "bool","bit_use": { "low": 0,"up": 0},"cArray": [{"low" : 0,"up" : 1,"step" : 0}]}]}]} ]}
 # RTL Port declarations: 
-set portNum 276
+set portNum 275
 set portList { 
 	{ ap_clk sc_in sc_logic 1 clock -1 } 
 	{ ap_rst sc_in sc_logic 1 reset -1 active_high_sync } 
@@ -552,272 +552,271 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ cands_0_V sc_in sc_lv 64 signal 0 } 
-	{ cands_1_V sc_in sc_lv 64 signal 1 } 
-	{ cands_2_V sc_in sc_lv 64 signal 2 } 
-	{ cands_3_V sc_in sc_lv 64 signal 3 } 
-	{ cands_4_V sc_in sc_lv 64 signal 4 } 
-	{ cands_5_V sc_in sc_lv 64 signal 5 } 
-	{ cands_6_V sc_in sc_lv 64 signal 6 } 
-	{ cands_7_V sc_in sc_lv 64 signal 7 } 
-	{ cands_8_V sc_in sc_lv 64 signal 8 } 
-	{ cands_9_V sc_in sc_lv 64 signal 9 } 
-	{ cands_10_V sc_in sc_lv 64 signal 10 } 
-	{ cands_11_V sc_in sc_lv 64 signal 11 } 
-	{ cands_12_V sc_in sc_lv 64 signal 12 } 
-	{ cands_13_V sc_in sc_lv 64 signal 13 } 
-	{ cands_14_V sc_in sc_lv 64 signal 14 } 
-	{ cands_15_V sc_in sc_lv 64 signal 15 } 
-	{ cands_16_V sc_in sc_lv 64 signal 16 } 
-	{ cands_17_V sc_in sc_lv 64 signal 17 } 
-	{ cands_18_V sc_in sc_lv 64 signal 18 } 
-	{ cands_19_V sc_in sc_lv 64 signal 19 } 
-	{ cands_20_V sc_in sc_lv 64 signal 20 } 
-	{ cands_21_V sc_in sc_lv 64 signal 21 } 
-	{ cands_22_V sc_in sc_lv 64 signal 22 } 
-	{ cands_23_V sc_in sc_lv 64 signal 23 } 
-	{ cands_24_V sc_in sc_lv 64 signal 24 } 
-	{ cands_25_V sc_in sc_lv 64 signal 25 } 
-	{ cands_26_V sc_in sc_lv 64 signal 26 } 
-	{ cands_27_V sc_in sc_lv 64 signal 27 } 
-	{ cands_28_V sc_in sc_lv 64 signal 28 } 
-	{ cands_29_V sc_in sc_lv 64 signal 29 } 
-	{ cands_30_V sc_in sc_lv 64 signal 30 } 
-	{ cands_31_V sc_in sc_lv 64 signal 31 } 
-	{ cands_32_V sc_in sc_lv 64 signal 32 } 
-	{ cands_33_V sc_in sc_lv 64 signal 33 } 
-	{ cands_34_V sc_in sc_lv 64 signal 34 } 
-	{ cands_35_V sc_in sc_lv 64 signal 35 } 
-	{ cands_36_V sc_in sc_lv 64 signal 36 } 
-	{ cands_37_V sc_in sc_lv 64 signal 37 } 
-	{ cands_38_V sc_in sc_lv 64 signal 38 } 
-	{ cands_39_V sc_in sc_lv 64 signal 39 } 
-	{ cands_40_V sc_in sc_lv 64 signal 40 } 
-	{ cands_41_V sc_in sc_lv 64 signal 41 } 
-	{ cands_42_V sc_in sc_lv 64 signal 42 } 
-	{ cands_43_V sc_in sc_lv 64 signal 43 } 
-	{ cands_44_V sc_in sc_lv 64 signal 44 } 
-	{ cands_45_V sc_in sc_lv 64 signal 45 } 
-	{ cands_46_V sc_in sc_lv 64 signal 46 } 
-	{ cands_47_V sc_in sc_lv 64 signal 47 } 
-	{ cands_48_V sc_in sc_lv 64 signal 48 } 
-	{ cands_49_V sc_in sc_lv 64 signal 49 } 
-	{ cands_50_V sc_in sc_lv 64 signal 50 } 
-	{ cands_51_V sc_in sc_lv 64 signal 51 } 
-	{ cands_52_V sc_in sc_lv 64 signal 52 } 
-	{ cands_53_V sc_in sc_lv 64 signal 53 } 
-	{ cands_54_V sc_in sc_lv 64 signal 54 } 
-	{ cands_55_V sc_in sc_lv 64 signal 55 } 
-	{ cands_56_V sc_in sc_lv 64 signal 56 } 
-	{ cands_57_V sc_in sc_lv 64 signal 57 } 
-	{ cands_58_V sc_in sc_lv 64 signal 58 } 
-	{ cands_59_V sc_in sc_lv 64 signal 59 } 
-	{ cands_60_V sc_in sc_lv 64 signal 60 } 
-	{ cands_61_V sc_in sc_lv 64 signal 61 } 
-	{ cands_62_V sc_in sc_lv 64 signal 62 } 
-	{ cands_63_V sc_in sc_lv 64 signal 63 } 
-	{ cands_64_V sc_in sc_lv 64 signal 64 } 
-	{ cands_65_V sc_in sc_lv 64 signal 65 } 
-	{ cands_66_V sc_in sc_lv 64 signal 66 } 
-	{ cands_67_V sc_in sc_lv 64 signal 67 } 
-	{ cands_68_V sc_in sc_lv 64 signal 68 } 
-	{ cands_69_V sc_in sc_lv 64 signal 69 } 
-	{ cands_70_V sc_in sc_lv 64 signal 70 } 
-	{ cands_71_V sc_in sc_lv 64 signal 71 } 
-	{ cands_72_V sc_in sc_lv 64 signal 72 } 
-	{ cands_73_V sc_in sc_lv 64 signal 73 } 
-	{ cands_74_V sc_in sc_lv 64 signal 74 } 
-	{ cands_75_V sc_in sc_lv 64 signal 75 } 
-	{ cands_76_V sc_in sc_lv 64 signal 76 } 
-	{ cands_77_V sc_in sc_lv 64 signal 77 } 
-	{ cands_78_V sc_in sc_lv 64 signal 78 } 
-	{ cands_79_V sc_in sc_lv 64 signal 79 } 
-	{ cands_80_V sc_in sc_lv 64 signal 80 } 
-	{ cands_81_V sc_in sc_lv 64 signal 81 } 
-	{ cands_82_V sc_in sc_lv 64 signal 82 } 
-	{ cands_83_V sc_in sc_lv 64 signal 83 } 
-	{ cands_84_V sc_in sc_lv 64 signal 84 } 
-	{ cands_85_V sc_in sc_lv 64 signal 85 } 
-	{ cands_86_V sc_in sc_lv 64 signal 86 } 
-	{ cands_87_V sc_in sc_lv 64 signal 87 } 
-	{ cands_88_V sc_in sc_lv 64 signal 88 } 
-	{ cands_89_V sc_in sc_lv 64 signal 89 } 
-	{ cands_90_V sc_in sc_lv 64 signal 90 } 
-	{ cands_91_V sc_in sc_lv 64 signal 91 } 
-	{ cands_92_V sc_in sc_lv 64 signal 92 } 
-	{ cands_93_V sc_in sc_lv 64 signal 93 } 
-	{ cands_94_V sc_in sc_lv 64 signal 94 } 
-	{ cands_95_V sc_in sc_lv 64 signal 95 } 
-	{ cands_96_V sc_in sc_lv 64 signal 96 } 
-	{ cands_97_V sc_in sc_lv 64 signal 97 } 
-	{ cands_98_V sc_in sc_lv 64 signal 98 } 
-	{ cands_99_V sc_in sc_lv 64 signal 99 } 
-	{ cands_100_V sc_in sc_lv 64 signal 100 } 
-	{ cands_101_V sc_in sc_lv 64 signal 101 } 
-	{ cands_102_V sc_in sc_lv 64 signal 102 } 
-	{ cands_103_V sc_in sc_lv 64 signal 103 } 
-	{ cands_104_V sc_in sc_lv 64 signal 104 } 
-	{ cands_105_V sc_in sc_lv 64 signal 105 } 
-	{ cands_106_V sc_in sc_lv 64 signal 106 } 
-	{ cands_107_V sc_in sc_lv 64 signal 107 } 
-	{ cands_108_V sc_in sc_lv 64 signal 108 } 
-	{ cands_109_V sc_in sc_lv 64 signal 109 } 
-	{ cands_110_V sc_in sc_lv 64 signal 110 } 
-	{ cands_111_V sc_in sc_lv 64 signal 111 } 
-	{ cands_112_V sc_in sc_lv 64 signal 112 } 
-	{ cands_113_V sc_in sc_lv 64 signal 113 } 
-	{ cands_114_V sc_in sc_lv 64 signal 114 } 
-	{ cands_115_V sc_in sc_lv 64 signal 115 } 
-	{ cands_116_V sc_in sc_lv 64 signal 116 } 
-	{ cands_117_V sc_in sc_lv 64 signal 117 } 
-	{ cands_118_V sc_in sc_lv 64 signal 118 } 
-	{ cands_119_V sc_in sc_lv 64 signal 119 } 
-	{ cands_120_V sc_in sc_lv 64 signal 120 } 
-	{ cands_121_V sc_in sc_lv 64 signal 121 } 
-	{ cands_122_V sc_in sc_lv 64 signal 122 } 
-	{ cands_123_V sc_in sc_lv 64 signal 123 } 
-	{ cands_124_V sc_in sc_lv 64 signal 124 } 
-	{ cands_125_V sc_in sc_lv 64 signal 125 } 
-	{ cands_126_V sc_in sc_lv 64 signal 126 } 
-	{ cands_127_V sc_in sc_lv 64 signal 127 } 
-	{ cands_128_V sc_in sc_lv 64 signal 128 } 
-	{ cands_129_V sc_in sc_lv 64 signal 129 } 
-	{ cands_130_V sc_in sc_lv 64 signal 130 } 
-	{ cands_131_V sc_in sc_lv 64 signal 131 } 
-	{ cands_132_V sc_in sc_lv 64 signal 132 } 
-	{ cands_133_V sc_in sc_lv 64 signal 133 } 
-	{ cands_134_V sc_in sc_lv 64 signal 134 } 
-	{ cands_135_V sc_in sc_lv 64 signal 135 } 
-	{ cands_136_V sc_in sc_lv 64 signal 136 } 
-	{ cands_137_V sc_in sc_lv 64 signal 137 } 
-	{ cands_138_V sc_in sc_lv 64 signal 138 } 
-	{ cands_139_V sc_in sc_lv 64 signal 139 } 
-	{ cands_140_V sc_in sc_lv 64 signal 140 } 
-	{ cands_141_V sc_in sc_lv 64 signal 141 } 
-	{ cands_142_V sc_in sc_lv 64 signal 142 } 
-	{ cands_143_V sc_in sc_lv 64 signal 143 } 
-	{ cands_144_V sc_in sc_lv 64 signal 144 } 
-	{ cands_145_V sc_in sc_lv 64 signal 145 } 
-	{ cands_146_V sc_in sc_lv 64 signal 146 } 
-	{ cands_147_V sc_in sc_lv 64 signal 147 } 
-	{ cands_148_V sc_in sc_lv 64 signal 148 } 
-	{ cands_149_V sc_in sc_lv 64 signal 149 } 
-	{ cands_150_V sc_in sc_lv 64 signal 150 } 
-	{ cands_151_V sc_in sc_lv 64 signal 151 } 
-	{ cands_152_V sc_in sc_lv 64 signal 152 } 
-	{ cands_153_V sc_in sc_lv 64 signal 153 } 
-	{ cands_154_V sc_in sc_lv 64 signal 154 } 
-	{ cands_155_V sc_in sc_lv 64 signal 155 } 
-	{ cands_156_V sc_in sc_lv 64 signal 156 } 
-	{ cands_157_V sc_in sc_lv 64 signal 157 } 
-	{ cands_158_V sc_in sc_lv 64 signal 158 } 
-	{ cands_159_V sc_in sc_lv 64 signal 159 } 
-	{ cands_160_V sc_in sc_lv 64 signal 160 } 
-	{ cands_161_V sc_in sc_lv 64 signal 161 } 
-	{ cands_162_V sc_in sc_lv 64 signal 162 } 
-	{ cands_163_V sc_in sc_lv 64 signal 163 } 
-	{ cands_164_V sc_in sc_lv 64 signal 164 } 
-	{ cands_165_V sc_in sc_lv 64 signal 165 } 
-	{ cands_166_V sc_in sc_lv 64 signal 166 } 
-	{ cands_167_V sc_in sc_lv 64 signal 167 } 
-	{ cands_168_V sc_in sc_lv 64 signal 168 } 
-	{ cands_169_V sc_in sc_lv 64 signal 169 } 
-	{ cands_170_V sc_in sc_lv 64 signal 170 } 
-	{ cands_171_V sc_in sc_lv 64 signal 171 } 
-	{ cands_172_V sc_in sc_lv 64 signal 172 } 
-	{ cands_173_V sc_in sc_lv 64 signal 173 } 
-	{ cands_174_V sc_in sc_lv 64 signal 174 } 
-	{ cands_175_V sc_in sc_lv 64 signal 175 } 
-	{ cands_176_V sc_in sc_lv 64 signal 176 } 
-	{ cands_177_V sc_in sc_lv 64 signal 177 } 
-	{ cands_178_V sc_in sc_lv 64 signal 178 } 
-	{ cands_179_V sc_in sc_lv 64 signal 179 } 
-	{ cands_180_V sc_in sc_lv 64 signal 180 } 
-	{ cands_181_V sc_in sc_lv 64 signal 181 } 
-	{ cands_182_V sc_in sc_lv 64 signal 182 } 
-	{ cands_183_V sc_in sc_lv 64 signal 183 } 
-	{ cands_184_V sc_in sc_lv 64 signal 184 } 
-	{ cands_185_V sc_in sc_lv 64 signal 185 } 
-	{ cands_186_V sc_in sc_lv 64 signal 186 } 
-	{ cands_187_V sc_in sc_lv 64 signal 187 } 
-	{ cands_188_V sc_in sc_lv 64 signal 188 } 
-	{ cands_189_V sc_in sc_lv 64 signal 189 } 
-	{ cands_190_V sc_in sc_lv 64 signal 190 } 
-	{ cands_191_V sc_in sc_lv 64 signal 191 } 
-	{ cands_192_V sc_in sc_lv 64 signal 192 } 
-	{ cands_193_V sc_in sc_lv 64 signal 193 } 
-	{ cands_194_V sc_in sc_lv 64 signal 194 } 
-	{ cands_195_V sc_in sc_lv 64 signal 195 } 
-	{ cands_196_V sc_in sc_lv 64 signal 196 } 
-	{ cands_197_V sc_in sc_lv 64 signal 197 } 
-	{ cands_198_V sc_in sc_lv 64 signal 198 } 
-	{ cands_199_V sc_in sc_lv 64 signal 199 } 
-	{ cands_200_V sc_in sc_lv 64 signal 200 } 
-	{ cands_201_V sc_in sc_lv 64 signal 201 } 
-	{ cands_202_V sc_in sc_lv 64 signal 202 } 
-	{ cands_203_V sc_in sc_lv 64 signal 203 } 
-	{ cands_204_V sc_in sc_lv 64 signal 204 } 
-	{ cands_205_V sc_in sc_lv 64 signal 205 } 
-	{ cands_206_V sc_in sc_lv 64 signal 206 } 
-	{ cands_207_V sc_in sc_lv 64 signal 207 } 
-	{ cands_208_V sc_in sc_lv 64 signal 208 } 
-	{ cands_209_V sc_in sc_lv 64 signal 209 } 
-	{ cands_210_V sc_in sc_lv 64 signal 210 } 
-	{ cands_211_V sc_in sc_lv 64 signal 211 } 
-	{ cands_212_V sc_in sc_lv 64 signal 212 } 
-	{ cands_213_V sc_in sc_lv 64 signal 213 } 
-	{ cands_214_V sc_in sc_lv 64 signal 214 } 
-	{ cands_215_V sc_in sc_lv 64 signal 215 } 
-	{ cands_216_V sc_in sc_lv 64 signal 216 } 
-	{ cands_217_V sc_in sc_lv 64 signal 217 } 
-	{ cands_218_V sc_in sc_lv 64 signal 218 } 
-	{ cands_219_V sc_in sc_lv 64 signal 219 } 
-	{ cands_220_V sc_in sc_lv 64 signal 220 } 
-	{ cands_221_V sc_in sc_lv 64 signal 221 } 
-	{ cands_222_V sc_in sc_lv 64 signal 222 } 
-	{ cands_223_V sc_in sc_lv 64 signal 223 } 
-	{ cands_224_V sc_in sc_lv 64 signal 224 } 
-	{ cands_225_V sc_in sc_lv 64 signal 225 } 
-	{ cands_226_V sc_in sc_lv 64 signal 226 } 
-	{ cands_227_V sc_in sc_lv 64 signal 227 } 
-	{ cands_228_V sc_in sc_lv 64 signal 228 } 
-	{ cands_229_V sc_in sc_lv 64 signal 229 } 
-	{ cands_230_V sc_in sc_lv 64 signal 230 } 
-	{ cands_231_V sc_in sc_lv 64 signal 231 } 
-	{ cands_232_V sc_in sc_lv 64 signal 232 } 
-	{ cands_233_V sc_in sc_lv 64 signal 233 } 
-	{ cands_234_V sc_in sc_lv 64 signal 234 } 
-	{ cands_235_V sc_in sc_lv 64 signal 235 } 
-	{ cands_236_V sc_in sc_lv 64 signal 236 } 
-	{ cands_237_V sc_in sc_lv 64 signal 237 } 
-	{ cands_238_V sc_in sc_lv 64 signal 238 } 
-	{ cands_239_V sc_in sc_lv 64 signal 239 } 
-	{ cands_240_V sc_in sc_lv 64 signal 240 } 
-	{ cands_241_V sc_in sc_lv 64 signal 241 } 
-	{ cands_242_V sc_in sc_lv 64 signal 242 } 
-	{ cands_243_V sc_in sc_lv 64 signal 243 } 
-	{ cands_244_V sc_in sc_lv 64 signal 244 } 
-	{ cands_245_V sc_in sc_lv 64 signal 245 } 
-	{ cands_246_V sc_in sc_lv 64 signal 246 } 
-	{ cands_247_V sc_in sc_lv 64 signal 247 } 
-	{ cands_248_V sc_in sc_lv 64 signal 248 } 
-	{ cands_249_V sc_in sc_lv 64 signal 249 } 
-	{ cands_250_V sc_in sc_lv 64 signal 250 } 
-	{ cands_251_V sc_in sc_lv 64 signal 251 } 
-	{ cands_252_V sc_in sc_lv 64 signal 252 } 
-	{ cands_253_V sc_in sc_lv 64 signal 253 } 
-	{ cands_254_V sc_in sc_lv 64 signal 254 } 
-	{ cands_255_V sc_in sc_lv 64 signal 255 } 
-	{ outcands_0_V sc_out sc_lv 64 signal 256 } 
-	{ outcands_0_V_ap_vld sc_out sc_logic 1 outvld 256 } 
-	{ outcands_1_V sc_out sc_lv 64 signal 257 } 
-	{ outcands_1_V_ap_vld sc_out sc_logic 1 outvld 257 } 
-	{ outcands_2_V sc_out sc_lv 64 signal 258 } 
-	{ outcands_2_V_ap_vld sc_out sc_logic 1 outvld 258 } 
-	{ outcands_3_V sc_out sc_lv 64 signal 259 } 
-	{ outcands_3_V_ap_vld sc_out sc_logic 1 outvld 259 } 
-	{ outcands_4_V sc_out sc_lv 64 signal 260 } 
-	{ outcands_4_V_ap_vld sc_out sc_logic 1 outvld 260 } 
+	{ header_V sc_in sc_lv 64 signal 0 } 
+	{ cands_0_V sc_in sc_lv 64 signal 1 } 
+	{ cands_1_V sc_in sc_lv 64 signal 2 } 
+	{ cands_2_V sc_in sc_lv 64 signal 3 } 
+	{ cands_3_V sc_in sc_lv 64 signal 4 } 
+	{ cands_4_V sc_in sc_lv 64 signal 5 } 
+	{ cands_5_V sc_in sc_lv 64 signal 6 } 
+	{ cands_6_V sc_in sc_lv 64 signal 7 } 
+	{ cands_7_V sc_in sc_lv 64 signal 8 } 
+	{ cands_8_V sc_in sc_lv 64 signal 9 } 
+	{ cands_9_V sc_in sc_lv 64 signal 10 } 
+	{ cands_10_V sc_in sc_lv 64 signal 11 } 
+	{ cands_11_V sc_in sc_lv 64 signal 12 } 
+	{ cands_12_V sc_in sc_lv 64 signal 13 } 
+	{ cands_13_V sc_in sc_lv 64 signal 14 } 
+	{ cands_14_V sc_in sc_lv 64 signal 15 } 
+	{ cands_15_V sc_in sc_lv 64 signal 16 } 
+	{ cands_16_V sc_in sc_lv 64 signal 17 } 
+	{ cands_17_V sc_in sc_lv 64 signal 18 } 
+	{ cands_18_V sc_in sc_lv 64 signal 19 } 
+	{ cands_19_V sc_in sc_lv 64 signal 20 } 
+	{ cands_20_V sc_in sc_lv 64 signal 21 } 
+	{ cands_21_V sc_in sc_lv 64 signal 22 } 
+	{ cands_22_V sc_in sc_lv 64 signal 23 } 
+	{ cands_23_V sc_in sc_lv 64 signal 24 } 
+	{ cands_24_V sc_in sc_lv 64 signal 25 } 
+	{ cands_25_V sc_in sc_lv 64 signal 26 } 
+	{ cands_26_V sc_in sc_lv 64 signal 27 } 
+	{ cands_27_V sc_in sc_lv 64 signal 28 } 
+	{ cands_28_V sc_in sc_lv 64 signal 29 } 
+	{ cands_29_V sc_in sc_lv 64 signal 30 } 
+	{ cands_30_V sc_in sc_lv 64 signal 31 } 
+	{ cands_31_V sc_in sc_lv 64 signal 32 } 
+	{ cands_32_V sc_in sc_lv 64 signal 33 } 
+	{ cands_33_V sc_in sc_lv 64 signal 34 } 
+	{ cands_34_V sc_in sc_lv 64 signal 35 } 
+	{ cands_35_V sc_in sc_lv 64 signal 36 } 
+	{ cands_36_V sc_in sc_lv 64 signal 37 } 
+	{ cands_37_V sc_in sc_lv 64 signal 38 } 
+	{ cands_38_V sc_in sc_lv 64 signal 39 } 
+	{ cands_39_V sc_in sc_lv 64 signal 40 } 
+	{ cands_40_V sc_in sc_lv 64 signal 41 } 
+	{ cands_41_V sc_in sc_lv 64 signal 42 } 
+	{ cands_42_V sc_in sc_lv 64 signal 43 } 
+	{ cands_43_V sc_in sc_lv 64 signal 44 } 
+	{ cands_44_V sc_in sc_lv 64 signal 45 } 
+	{ cands_45_V sc_in sc_lv 64 signal 46 } 
+	{ cands_46_V sc_in sc_lv 64 signal 47 } 
+	{ cands_47_V sc_in sc_lv 64 signal 48 } 
+	{ cands_48_V sc_in sc_lv 64 signal 49 } 
+	{ cands_49_V sc_in sc_lv 64 signal 50 } 
+	{ cands_50_V sc_in sc_lv 64 signal 51 } 
+	{ cands_51_V sc_in sc_lv 64 signal 52 } 
+	{ cands_52_V sc_in sc_lv 64 signal 53 } 
+	{ cands_53_V sc_in sc_lv 64 signal 54 } 
+	{ cands_54_V sc_in sc_lv 64 signal 55 } 
+	{ cands_55_V sc_in sc_lv 64 signal 56 } 
+	{ cands_56_V sc_in sc_lv 64 signal 57 } 
+	{ cands_57_V sc_in sc_lv 64 signal 58 } 
+	{ cands_58_V sc_in sc_lv 64 signal 59 } 
+	{ cands_59_V sc_in sc_lv 64 signal 60 } 
+	{ cands_60_V sc_in sc_lv 64 signal 61 } 
+	{ cands_61_V sc_in sc_lv 64 signal 62 } 
+	{ cands_62_V sc_in sc_lv 64 signal 63 } 
+	{ cands_63_V sc_in sc_lv 64 signal 64 } 
+	{ cands_64_V sc_in sc_lv 64 signal 65 } 
+	{ cands_65_V sc_in sc_lv 64 signal 66 } 
+	{ cands_66_V sc_in sc_lv 64 signal 67 } 
+	{ cands_67_V sc_in sc_lv 64 signal 68 } 
+	{ cands_68_V sc_in sc_lv 64 signal 69 } 
+	{ cands_69_V sc_in sc_lv 64 signal 70 } 
+	{ cands_70_V sc_in sc_lv 64 signal 71 } 
+	{ cands_71_V sc_in sc_lv 64 signal 72 } 
+	{ cands_72_V sc_in sc_lv 64 signal 73 } 
+	{ cands_73_V sc_in sc_lv 64 signal 74 } 
+	{ cands_74_V sc_in sc_lv 64 signal 75 } 
+	{ cands_75_V sc_in sc_lv 64 signal 76 } 
+	{ cands_76_V sc_in sc_lv 64 signal 77 } 
+	{ cands_77_V sc_in sc_lv 64 signal 78 } 
+	{ cands_78_V sc_in sc_lv 64 signal 79 } 
+	{ cands_79_V sc_in sc_lv 64 signal 80 } 
+	{ cands_80_V sc_in sc_lv 64 signal 81 } 
+	{ cands_81_V sc_in sc_lv 64 signal 82 } 
+	{ cands_82_V sc_in sc_lv 64 signal 83 } 
+	{ cands_83_V sc_in sc_lv 64 signal 84 } 
+	{ cands_84_V sc_in sc_lv 64 signal 85 } 
+	{ cands_85_V sc_in sc_lv 64 signal 86 } 
+	{ cands_86_V sc_in sc_lv 64 signal 87 } 
+	{ cands_87_V sc_in sc_lv 64 signal 88 } 
+	{ cands_88_V sc_in sc_lv 64 signal 89 } 
+	{ cands_89_V sc_in sc_lv 64 signal 90 } 
+	{ cands_90_V sc_in sc_lv 64 signal 91 } 
+	{ cands_91_V sc_in sc_lv 64 signal 92 } 
+	{ cands_92_V sc_in sc_lv 64 signal 93 } 
+	{ cands_93_V sc_in sc_lv 64 signal 94 } 
+	{ cands_94_V sc_in sc_lv 64 signal 95 } 
+	{ cands_95_V sc_in sc_lv 64 signal 96 } 
+	{ cands_96_V sc_in sc_lv 64 signal 97 } 
+	{ cands_97_V sc_in sc_lv 64 signal 98 } 
+	{ cands_98_V sc_in sc_lv 64 signal 99 } 
+	{ cands_99_V sc_in sc_lv 64 signal 100 } 
+	{ cands_100_V sc_in sc_lv 64 signal 101 } 
+	{ cands_101_V sc_in sc_lv 64 signal 102 } 
+	{ cands_102_V sc_in sc_lv 64 signal 103 } 
+	{ cands_103_V sc_in sc_lv 64 signal 104 } 
+	{ cands_104_V sc_in sc_lv 64 signal 105 } 
+	{ cands_105_V sc_in sc_lv 64 signal 106 } 
+	{ cands_106_V sc_in sc_lv 64 signal 107 } 
+	{ cands_107_V sc_in sc_lv 64 signal 108 } 
+	{ cands_108_V sc_in sc_lv 64 signal 109 } 
+	{ cands_109_V sc_in sc_lv 64 signal 110 } 
+	{ cands_110_V sc_in sc_lv 64 signal 111 } 
+	{ cands_111_V sc_in sc_lv 64 signal 112 } 
+	{ cands_112_V sc_in sc_lv 64 signal 113 } 
+	{ cands_113_V sc_in sc_lv 64 signal 114 } 
+	{ cands_114_V sc_in sc_lv 64 signal 115 } 
+	{ cands_115_V sc_in sc_lv 64 signal 116 } 
+	{ cands_116_V sc_in sc_lv 64 signal 117 } 
+	{ cands_117_V sc_in sc_lv 64 signal 118 } 
+	{ cands_118_V sc_in sc_lv 64 signal 119 } 
+	{ cands_119_V sc_in sc_lv 64 signal 120 } 
+	{ cands_120_V sc_in sc_lv 64 signal 121 } 
+	{ cands_121_V sc_in sc_lv 64 signal 122 } 
+	{ cands_122_V sc_in sc_lv 64 signal 123 } 
+	{ cands_123_V sc_in sc_lv 64 signal 124 } 
+	{ cands_124_V sc_in sc_lv 64 signal 125 } 
+	{ cands_125_V sc_in sc_lv 64 signal 126 } 
+	{ cands_126_V sc_in sc_lv 64 signal 127 } 
+	{ cands_127_V sc_in sc_lv 64 signal 128 } 
+	{ cands_128_V sc_in sc_lv 64 signal 129 } 
+	{ cands_129_V sc_in sc_lv 64 signal 130 } 
+	{ cands_130_V sc_in sc_lv 64 signal 131 } 
+	{ cands_131_V sc_in sc_lv 64 signal 132 } 
+	{ cands_132_V sc_in sc_lv 64 signal 133 } 
+	{ cands_133_V sc_in sc_lv 64 signal 134 } 
+	{ cands_134_V sc_in sc_lv 64 signal 135 } 
+	{ cands_135_V sc_in sc_lv 64 signal 136 } 
+	{ cands_136_V sc_in sc_lv 64 signal 137 } 
+	{ cands_137_V sc_in sc_lv 64 signal 138 } 
+	{ cands_138_V sc_in sc_lv 64 signal 139 } 
+	{ cands_139_V sc_in sc_lv 64 signal 140 } 
+	{ cands_140_V sc_in sc_lv 64 signal 141 } 
+	{ cands_141_V sc_in sc_lv 64 signal 142 } 
+	{ cands_142_V sc_in sc_lv 64 signal 143 } 
+	{ cands_143_V sc_in sc_lv 64 signal 144 } 
+	{ cands_144_V sc_in sc_lv 64 signal 145 } 
+	{ cands_145_V sc_in sc_lv 64 signal 146 } 
+	{ cands_146_V sc_in sc_lv 64 signal 147 } 
+	{ cands_147_V sc_in sc_lv 64 signal 148 } 
+	{ cands_148_V sc_in sc_lv 64 signal 149 } 
+	{ cands_149_V sc_in sc_lv 64 signal 150 } 
+	{ cands_150_V sc_in sc_lv 64 signal 151 } 
+	{ cands_151_V sc_in sc_lv 64 signal 152 } 
+	{ cands_152_V sc_in sc_lv 64 signal 153 } 
+	{ cands_153_V sc_in sc_lv 64 signal 154 } 
+	{ cands_154_V sc_in sc_lv 64 signal 155 } 
+	{ cands_155_V sc_in sc_lv 64 signal 156 } 
+	{ cands_156_V sc_in sc_lv 64 signal 157 } 
+	{ cands_157_V sc_in sc_lv 64 signal 158 } 
+	{ cands_158_V sc_in sc_lv 64 signal 159 } 
+	{ cands_159_V sc_in sc_lv 64 signal 160 } 
+	{ cands_160_V sc_in sc_lv 64 signal 161 } 
+	{ cands_161_V sc_in sc_lv 64 signal 162 } 
+	{ cands_162_V sc_in sc_lv 64 signal 163 } 
+	{ cands_163_V sc_in sc_lv 64 signal 164 } 
+	{ cands_164_V sc_in sc_lv 64 signal 165 } 
+	{ cands_165_V sc_in sc_lv 64 signal 166 } 
+	{ cands_166_V sc_in sc_lv 64 signal 167 } 
+	{ cands_167_V sc_in sc_lv 64 signal 168 } 
+	{ cands_168_V sc_in sc_lv 64 signal 169 } 
+	{ cands_169_V sc_in sc_lv 64 signal 170 } 
+	{ cands_170_V sc_in sc_lv 64 signal 171 } 
+	{ cands_171_V sc_in sc_lv 64 signal 172 } 
+	{ cands_172_V sc_in sc_lv 64 signal 173 } 
+	{ cands_173_V sc_in sc_lv 64 signal 174 } 
+	{ cands_174_V sc_in sc_lv 64 signal 175 } 
+	{ cands_175_V sc_in sc_lv 64 signal 176 } 
+	{ cands_176_V sc_in sc_lv 64 signal 177 } 
+	{ cands_177_V sc_in sc_lv 64 signal 178 } 
+	{ cands_178_V sc_in sc_lv 64 signal 179 } 
+	{ cands_179_V sc_in sc_lv 64 signal 180 } 
+	{ cands_180_V sc_in sc_lv 64 signal 181 } 
+	{ cands_181_V sc_in sc_lv 64 signal 182 } 
+	{ cands_182_V sc_in sc_lv 64 signal 183 } 
+	{ cands_183_V sc_in sc_lv 64 signal 184 } 
+	{ cands_184_V sc_in sc_lv 64 signal 185 } 
+	{ cands_185_V sc_in sc_lv 64 signal 186 } 
+	{ cands_186_V sc_in sc_lv 64 signal 187 } 
+	{ cands_187_V sc_in sc_lv 64 signal 188 } 
+	{ cands_188_V sc_in sc_lv 64 signal 189 } 
+	{ cands_189_V sc_in sc_lv 64 signal 190 } 
+	{ cands_190_V sc_in sc_lv 64 signal 191 } 
+	{ cands_191_V sc_in sc_lv 64 signal 192 } 
+	{ cands_192_V sc_in sc_lv 64 signal 193 } 
+	{ cands_193_V sc_in sc_lv 64 signal 194 } 
+	{ cands_194_V sc_in sc_lv 64 signal 195 } 
+	{ cands_195_V sc_in sc_lv 64 signal 196 } 
+	{ cands_196_V sc_in sc_lv 64 signal 197 } 
+	{ cands_197_V sc_in sc_lv 64 signal 198 } 
+	{ cands_198_V sc_in sc_lv 64 signal 199 } 
+	{ cands_199_V sc_in sc_lv 64 signal 200 } 
+	{ cands_200_V sc_in sc_lv 64 signal 201 } 
+	{ cands_201_V sc_in sc_lv 64 signal 202 } 
+	{ cands_202_V sc_in sc_lv 64 signal 203 } 
+	{ cands_203_V sc_in sc_lv 64 signal 204 } 
+	{ cands_204_V sc_in sc_lv 64 signal 205 } 
+	{ cands_205_V sc_in sc_lv 64 signal 206 } 
+	{ cands_206_V sc_in sc_lv 64 signal 207 } 
+	{ cands_207_V sc_in sc_lv 64 signal 208 } 
+	{ cands_208_V sc_in sc_lv 64 signal 209 } 
+	{ cands_209_V sc_in sc_lv 64 signal 210 } 
+	{ cands_210_V sc_in sc_lv 64 signal 211 } 
+	{ cands_211_V sc_in sc_lv 64 signal 212 } 
+	{ cands_212_V sc_in sc_lv 64 signal 213 } 
+	{ cands_213_V sc_in sc_lv 64 signal 214 } 
+	{ cands_214_V sc_in sc_lv 64 signal 215 } 
+	{ cands_215_V sc_in sc_lv 64 signal 216 } 
+	{ cands_216_V sc_in sc_lv 64 signal 217 } 
+	{ cands_217_V sc_in sc_lv 64 signal 218 } 
+	{ cands_218_V sc_in sc_lv 64 signal 219 } 
+	{ cands_219_V sc_in sc_lv 64 signal 220 } 
+	{ cands_220_V sc_in sc_lv 64 signal 221 } 
+	{ cands_221_V sc_in sc_lv 64 signal 222 } 
+	{ cands_222_V sc_in sc_lv 64 signal 223 } 
+	{ cands_223_V sc_in sc_lv 64 signal 224 } 
+	{ cands_224_V sc_in sc_lv 64 signal 225 } 
+	{ cands_225_V sc_in sc_lv 64 signal 226 } 
+	{ cands_226_V sc_in sc_lv 64 signal 227 } 
+	{ cands_227_V sc_in sc_lv 64 signal 228 } 
+	{ cands_228_V sc_in sc_lv 64 signal 229 } 
+	{ cands_229_V sc_in sc_lv 64 signal 230 } 
+	{ cands_230_V sc_in sc_lv 64 signal 231 } 
+	{ cands_231_V sc_in sc_lv 64 signal 232 } 
+	{ cands_232_V sc_in sc_lv 64 signal 233 } 
+	{ cands_233_V sc_in sc_lv 64 signal 234 } 
+	{ cands_234_V sc_in sc_lv 64 signal 235 } 
+	{ cands_235_V sc_in sc_lv 64 signal 236 } 
+	{ cands_236_V sc_in sc_lv 64 signal 237 } 
+	{ cands_237_V sc_in sc_lv 64 signal 238 } 
+	{ cands_238_V sc_in sc_lv 64 signal 239 } 
+	{ cands_239_V sc_in sc_lv 64 signal 240 } 
+	{ cands_240_V sc_in sc_lv 64 signal 241 } 
+	{ cands_241_V sc_in sc_lv 64 signal 242 } 
+	{ cands_242_V sc_in sc_lv 64 signal 243 } 
+	{ cands_243_V sc_in sc_lv 64 signal 244 } 
+	{ cands_244_V sc_in sc_lv 64 signal 245 } 
+	{ cands_245_V sc_in sc_lv 64 signal 246 } 
+	{ cands_246_V sc_in sc_lv 64 signal 247 } 
+	{ cands_247_V sc_in sc_lv 64 signal 248 } 
+	{ cands_248_V sc_in sc_lv 64 signal 249 } 
+	{ cands_249_V sc_in sc_lv 64 signal 250 } 
+	{ cands_250_V sc_in sc_lv 64 signal 251 } 
+	{ cands_251_V sc_in sc_lv 64 signal 252 } 
+	{ cands_252_V sc_in sc_lv 64 signal 253 } 
+	{ cands_253_V sc_in sc_lv 64 signal 254 } 
+	{ cands_254_V sc_in sc_lv 64 signal 255 } 
+	{ cands_255_V sc_in sc_lv 64 signal 256 } 
+	{ outcands_0_V sc_out sc_lv 64 signal 257 } 
+	{ outcands_0_V_ap_vld sc_out sc_logic 1 outvld 257 } 
+	{ outcands_1_V sc_out sc_lv 64 signal 258 } 
+	{ outcands_1_V_ap_vld sc_out sc_logic 1 outvld 258 } 
+	{ outcands_2_V sc_out sc_lv 64 signal 259 } 
+	{ outcands_2_V_ap_vld sc_out sc_logic 1 outvld 259 } 
+	{ outcands_3_V sc_out sc_lv 64 signal 260 } 
+	{ outcands_3_V_ap_vld sc_out sc_logic 1 outvld 260 } 
 	{ eventstart sc_in sc_logic 1 signal 261 } 
 	{ lastvalid sc_out sc_logic 1 signal 262 } 
 	{ lastvalid_ap_vld sc_out sc_logic 1 outvld 262 } 
@@ -830,6 +829,7 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
+ 	{ "name": "header_V", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "header_V", "role": "default" }} , 
  	{ "name": "cands_0_V", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "cands_0_V", "role": "default" }} , 
  	{ "name": "cands_1_V", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "cands_1_V", "role": "default" }} , 
  	{ "name": "cands_2_V", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "cands_2_V", "role": "default" }} , 
@@ -1094,8 +1094,6 @@ set NewPortList {[
  	{ "name": "outcands_2_V_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "outcands_2_V", "role": "ap_vld" }} , 
  	{ "name": "outcands_3_V", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "outcands_3_V", "role": "default" }} , 
  	{ "name": "outcands_3_V_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "outcands_3_V", "role": "ap_vld" }} , 
- 	{ "name": "outcands_4_V", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "outcands_4_V", "role": "default" }} , 
- 	{ "name": "outcands_4_V_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "outcands_4_V", "role": "ap_vld" }} , 
  	{ "name": "eventstart", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "eventstart", "role": "default" }} , 
  	{ "name": "lastvalid", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "lastvalid", "role": "default" }} , 
  	{ "name": "lastvalid_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "lastvalid", "role": "ap_vld" }} , 
@@ -1116,6 +1114,7 @@ set RtlHierarchyInfo {[
 		"InDataflowNetwork" : "0",
 		"HasNonBlockingOperation" : "0",
 		"Port" : [
+			{"Name" : "header_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cands_0_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cands_1_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cands_2_V", "Type" : "None", "Direction" : "I"},
@@ -1376,9 +1375,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "outcands_1_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "outcands_2_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "outcands_3_V", "Type" : "Vld", "Direction" : "O"},
-			{"Name" : "outcands_4_V", "Type" : "Vld", "Direction" : "O"},
 			{"Name" : "eventstart", "Type" : "None", "Direction" : "I"},
 			{"Name" : "lastvalid", "Type" : "Vld", "Direction" : "O"},
+			{"Name" : "scands_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "scands_V_5", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "scands_V_6", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "scands_V_7", "Type" : "OVld", "Direction" : "IO"},
@@ -1630,16 +1629,17 @@ set RtlHierarchyInfo {[
 			{"Name" : "scands_V_253", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "scands_V_254", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "scands_V_255", "Type" : "OVld", "Direction" : "IO"},
+			{"Name" : "scands_V_256", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "hold_V_0", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "hold_V_1", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "hold_V_2", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "hold_V_3", "Type" : "OVld", "Direction" : "IO"},
-			{"Name" : "hold_V_4", "Type" : "OVld", "Direction" : "IO"},
 			{"Name" : "holdevtstart", "Type" : "OVld", "Direction" : "IO"}]}]}
 
 
 set ArgLastReadFirstWriteLatency {
 	stream {
+		header_V {Type I LastRead 0 FirstWrite -1}
 		cands_0_V {Type I LastRead 0 FirstWrite -1}
 		cands_1_V {Type I LastRead 0 FirstWrite -1}
 		cands_2_V {Type I LastRead 0 FirstWrite -1}
@@ -1900,9 +1900,9 @@ set ArgLastReadFirstWriteLatency {
 		outcands_1_V {Type O LastRead -1 FirstWrite 1}
 		outcands_2_V {Type O LastRead -1 FirstWrite 1}
 		outcands_3_V {Type O LastRead -1 FirstWrite 1}
-		outcands_4_V {Type O LastRead -1 FirstWrite 1}
 		eventstart {Type I LastRead 0 FirstWrite -1}
 		lastvalid {Type O LastRead -1 FirstWrite 1}
+		scands_V_4 {Type IO LastRead -1 FirstWrite -1}
 		scands_V_5 {Type IO LastRead -1 FirstWrite -1}
 		scands_V_6 {Type IO LastRead -1 FirstWrite -1}
 		scands_V_7 {Type IO LastRead -1 FirstWrite -1}
@@ -2154,11 +2154,11 @@ set ArgLastReadFirstWriteLatency {
 		scands_V_253 {Type IO LastRead -1 FirstWrite -1}
 		scands_V_254 {Type IO LastRead -1 FirstWrite -1}
 		scands_V_255 {Type IO LastRead -1 FirstWrite -1}
+		scands_V_256 {Type IO LastRead -1 FirstWrite -1}
 		hold_V_0 {Type IO LastRead -1 FirstWrite -1}
 		hold_V_1 {Type IO LastRead -1 FirstWrite -1}
 		hold_V_2 {Type IO LastRead -1 FirstWrite -1}
 		hold_V_3 {Type IO LastRead -1 FirstWrite -1}
-		hold_V_4 {Type IO LastRead -1 FirstWrite -1}
 		holdevtstart {Type IO LastRead -1 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
@@ -2173,6 +2173,7 @@ set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
+	header_V { ap_none {  { header_V in_data 0 64 } } }
 	cands_0_V { ap_none {  { cands_0_V in_data 0 64 } } }
 	cands_1_V { ap_none {  { cands_1_V in_data 0 64 } } }
 	cands_2_V { ap_none {  { cands_2_V in_data 0 64 } } }
@@ -2433,7 +2434,6 @@ set Spec2ImplPortList {
 	outcands_1_V { ap_vld {  { outcands_1_V out_data 1 64 }  { outcands_1_V_ap_vld out_vld 1 1 } } }
 	outcands_2_V { ap_vld {  { outcands_2_V out_data 1 64 }  { outcands_2_V_ap_vld out_vld 1 1 } } }
 	outcands_3_V { ap_vld {  { outcands_3_V out_data 1 64 }  { outcands_3_V_ap_vld out_vld 1 1 } } }
-	outcands_4_V { ap_vld {  { outcands_4_V out_data 1 64 }  { outcands_4_V_ap_vld out_vld 1 1 } } }
 	eventstart { ap_none {  { eventstart in_data 0 1 } } }
 	lastvalid { ap_vld {  { lastvalid out_data 1 1 }  { lastvalid_ap_vld out_vld 1 1 } } }
 }

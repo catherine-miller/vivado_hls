@@ -19,10 +19,10 @@ class EventBuffer {
             if (npuppi > 255) {
                 uint surplus = npuppi - 255;
                 npuppi = 255;
-                fread(puppibuf + 8, 8, npuppi, infile);
+                fread(&puppibuf[1], 8, npuppi, infile);
                 fread(ignorebuf, 8, surplus, infile);
             } else {
-                fread(puppibuf + 8, 8, npuppi, infile);
+                fread(&puppibuf[1], 8, npuppi, infile);
             }
             for (uint i = npuppi; i < 255; ++i) { //fill rest of event with zeros
                 puppibuf[i + 1] = 0;

@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testbench'

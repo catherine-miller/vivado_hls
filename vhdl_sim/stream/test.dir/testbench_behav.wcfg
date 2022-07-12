@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="647001fs"></ZoomEndTime>
+      <Cursor1Time time="6950fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="302"></NameColumnWidth>
+      <ValueColumnWidth column_width="269"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject type="logic" fp_name="/testbench/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/eventstart">
+      <obj_property name="ElementShortName">eventstart</obj_property>
+      <obj_property name="ObjectShortName">eventstart</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/lastvalid">
+      <obj_property name="ElementShortName">lastvalid</obj_property>
+      <obj_property name="ObjectShortName">lastvalid</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/testbench/returnval">
+      <obj_property name="ElementShortName">returnval</obj_property>
+      <obj_property name="ObjectShortName">returnval</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/run">
+      <obj_property name="ElementShortName">run[15:0]</obj_property>
+      <obj_property name="ObjectShortName">run[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/bx">
+      <obj_property name="ElementShortName">bx[15:0]</obj_property>
+      <obj_property name="ObjectShortName">bx[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/npuppi">
+      <obj_property name="ElementShortName">npuppi[15:0]</obj_property>
+      <obj_property name="ObjectShortName">npuppi[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/orbit">
+      <obj_property name="ElementShortName">orbit[31:0]</obj_property>
+      <obj_property name="ObjectShortName">orbit[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/words">
+      <obj_property name="ElementShortName">words[255:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">words[255:0][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/words_out">
+      <obj_property name="ElementShortName">words_out[4:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">words_out[4:0][63:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/testbench/NWORDS">
+      <obj_property name="ElementShortName">NWORDS</obj_property>
+      <obj_property name="ObjectShortName">NWORDS</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_0_V">
+      <obj_property name="ElementShortName">cands_0_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_0_V[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_1_V">
+      <obj_property name="ElementShortName">cands_1_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_1_V[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_2_V">
+      <obj_property name="ElementShortName">cands_2_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_2_V[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_3_V">
+      <obj_property name="ElementShortName">cands_3_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_3_V[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_4_V">
+      <obj_property name="ElementShortName">cands_4_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_4_V[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/testbench/algo/cands_5_V">
+      <obj_property name="ElementShortName">cands_5_V[63:0]</obj_property>
+      <obj_property name="ObjectShortName">cands_5_V[63:0]</obj_property>
+   </wvobject>
+</wave_config>

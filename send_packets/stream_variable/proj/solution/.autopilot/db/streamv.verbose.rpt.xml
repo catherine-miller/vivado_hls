@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'streamv'" level="0">
-<item name = "Date">Thu Jun  2 14:30:40 2022
+<item name = "Date">Wed Jul  6 14:15:32 2022
 </item>
 <item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
 <item name = "Project">proj</item>
@@ -47,7 +47,7 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 763, -</column>
+<column name="Expression">-, -, 0, 761, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, -, 0, 17, -</column>
 <column name="Memory">8, -, 0, 0, 0</column>
@@ -84,44 +84,43 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln214_fu_783_p2">+, 0, 0, 3, 2, 1</column>
-<column name="add_ln700_1_fu_683_p2">+, 0, 0, 9, 9, 1</column>
-<column name="add_ln700_2_fu_718_p2">+, 0, 0, 9, 9, 1</column>
-<column name="add_ln700_fu_651_p2">+, 0, 0, 9, 9, 1</column>
-<column name="add_ln701_fu_730_p2">+, 0, 0, 9, 9, 2</column>
-<column name="and_ln791_1_fu_532_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln791_2_fu_560_p2">and, 0, 0, 2, 1, 1</column>
+<column name="add_ln214_fu_777_p2">+, 0, 0, 3, 2, 1</column>
+<column name="add_ln700_1_fu_677_p2">+, 0, 0, 9, 9, 1</column>
+<column name="add_ln700_2_fu_712_p2">+, 0, 0, 9, 9, 1</column>
+<column name="add_ln700_fu_645_p2">+, 0, 0, 9, 9, 1</column>
+<column name="add_ln701_fu_724_p2">+, 0, 0, 9, 9, 2</column>
+<column name="and_ln791_1_fu_555_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln791_2_fu_585_p2">and, 0, 0, 2, 1, 1</column>
 <column name="and_ln791_3_fu_590_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln791_4_fu_595_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln791_5_fu_599_p2">and, 0, 0, 2, 1, 1</column>
-<column name="and_ln791_fu_405_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln791_4_fu_594_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln791_fu_527_p2">and, 0, 0, 2, 1, 1</column>
 <column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
 <column name="icmp_ln791_1_fu_379_p2">icmp, 0, 0, 29, 64, 1</column>
 <column name="icmp_ln791_fu_367_p2">icmp, 0, 0, 29, 64, 1</column>
-<column name="icmp_ln879_1_fu_712_p2">icmp, 0, 0, 8, 2, 2</column>
+<column name="icmp_ln879_1_fu_706_p2">icmp, 0, 0, 8, 2, 2</column>
 <column name="icmp_ln879_2_fu_343_p2">icmp, 0, 0, 29, 64, 1</column>
 <column name="icmp_ln879_3_fu_349_p2">icmp, 0, 0, 29, 64, 1</column>
 <column name="icmp_ln879_4_fu_355_p2">icmp, 0, 0, 29, 64, 1</column>
 <column name="icmp_ln879_fu_337_p2">icmp, 0, 0, 29, 64, 1</column>
-<column name="icmp_ln895_fu_690_p2">icmp, 0, 0, 13, 9, 1</column>
+<column name="icmp_ln895_fu_684_p2">icmp, 0, 0, 13, 9, 1</column>
 <column name="or_ln27_fu_389_p2">or, 0, 0, 2, 1, 1</column>
-<column name="or_ln54_fu_663_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln54_fu_657_p2">or, 0, 0, 2, 1, 1</column>
 <column name="or_ln791_1_fu_373_p2">or, 0, 0, 64, 64, 64</column>
 <column name="or_ln791_fu_361_p2">or, 0, 0, 64, 64, 64</column>
 <column name="brams_V_0_d0">select, 0, 0, 75, 1, 67</column>
 <column name="brams_V_1_d0">select, 0, 0, 75, 1, 67</column>
 <column name="brams_V_2_d0">select, 0, 0, 75, 1, 67</column>
 <column name="brams_V_3_d0">select, 0, 0, 75, 1, 67</column>
-<column name="select_ln791_fu_605_p3">select, 0, 0, 75, 1, 67</column>
+<column name="select_ln791_fu_600_p3">select, 0, 0, 75, 1, 67</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
-<column name="xor_ln54_fu_667_p2">xor, 0, 0, 2, 1, 2</column>
-<column name="xor_ln791_1_fu_555_p2">xor, 0, 0, 2, 1, 2</column>
-<column name="xor_ln791_fu_527_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln54_fu_661_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln791_1_fu_550_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="xor_ln791_fu_522_p2">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_phi_mux_p_0202_phi_fu_330_p4">15, 3, 1, 3</column>
+<column name="ap_phi_mux_p_0197_phi_fu_330_p4">15, 3, 1, 3</column>
 <column name="ap_phi_mux_ptrsep_V_flag_1_phi_fu_287_p4">9, 2, 1, 2</column>
 <column name="ap_phi_mux_ptrsep_V_flag_2_phi_fu_308_p4">15, 3, 1, 3</column>
 <column name="ap_phi_mux_ptrsep_V_new_1_phi_fu_298_p4">9, 2, 9, 18</column>
@@ -153,25 +152,25 @@
 <column name="ap_phi_reg_pp0_iter3_ptrsep_V_flag_0_reg_270">1, 0, 1, 0</column>
 <column name="ap_phi_reg_pp0_iter3_ptrsep_V_flag_1_reg_283">1, 0, 1, 0</column>
 <column name="ap_phi_reg_pp0_iter3_ptrsep_V_new_1_reg_295">9, 0, 9, 0</column>
-<column name="candin_0_V_read_reg_818">64, 0, 64, 0</column>
-<column name="candin_1_V_read_reg_832">64, 0, 64, 0</column>
-<column name="candin_2_V_read_reg_847">64, 0, 64, 0</column>
-<column name="candin_3_V_read_reg_860">64, 0, 64, 0</column>
-<column name="eventstart_read_reg_811">1, 0, 1, 0</column>
-<column name="icmp_ln791_1_reg_880">1, 0, 1, 0</column>
-<column name="icmp_ln791_reg_874">1, 0, 1, 0</column>
-<column name="icmp_ln879_1_reg_923">1, 0, 1, 0</column>
-<column name="icmp_ln879_2_reg_839">1, 0, 1, 0</column>
-<column name="icmp_ln879_3_reg_853">1, 0, 1, 0</column>
-<column name="icmp_ln879_4_reg_866">1, 0, 1, 0</column>
-<column name="icmp_ln879_reg_824">1, 0, 1, 0</column>
-<column name="icmp_ln895_reg_893">1, 0, 1, 0</column>
-<column name="lastvalid_read_reg_800">1, 0, 1, 0</column>
-<column name="or_ln27_reg_885">1, 0, 1, 0</column>
+<column name="candin_0_V_read_reg_813">64, 0, 64, 0</column>
+<column name="candin_1_V_read_reg_826">64, 0, 64, 0</column>
+<column name="candin_2_V_read_reg_841">64, 0, 64, 0</column>
+<column name="candin_3_V_read_reg_854">64, 0, 64, 0</column>
+<column name="eventstart_read_reg_805">1, 0, 1, 0</column>
+<column name="icmp_ln791_1_reg_874">1, 0, 1, 0</column>
+<column name="icmp_ln791_reg_868">1, 0, 1, 0</column>
+<column name="icmp_ln879_1_reg_917">1, 0, 1, 0</column>
+<column name="icmp_ln879_2_reg_833">1, 0, 1, 0</column>
+<column name="icmp_ln879_3_reg_847">1, 0, 1, 0</column>
+<column name="icmp_ln879_4_reg_860">1, 0, 1, 0</column>
+<column name="icmp_ln879_reg_819">1, 0, 1, 0</column>
+<column name="icmp_ln895_reg_887">1, 0, 1, 0</column>
+<column name="lastvalid_read_reg_794">1, 0, 1, 0</column>
+<column name="or_ln27_reg_879">1, 0, 1, 0</column>
 <column name="ptrsep_V">9, 0, 9, 0</column>
 <column name="rdptr_V">9, 0, 9, 0</column>
 <column name="readidx_V">2, 0, 2, 0</column>
-<column name="readidx_V_load_reg_897">2, 0, 2, 0</column>
+<column name="readidx_V_load_reg_891">2, 0, 2, 0</column>
 <column name="t_V_3_reg_260">9, 0, 9, 0</column>
 <column name="write_r">1, 0, 1, 0</column>
 <column name="wrptr_V">9, 0, 9, 0</column>

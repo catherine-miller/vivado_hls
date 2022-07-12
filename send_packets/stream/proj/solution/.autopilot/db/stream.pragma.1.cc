@@ -6366,12 +6366,12 @@ inline bool operator!=(
 
 
 
-bool stream(const ap_uint<64> candin[256], ap_uint<64> candout[5], const bool eventstart, bool &lastvalid);
+bool stream(const ap_uint<64> header, const ap_uint<64> candin[256], ap_uint<64> candout[4], const bool eventstart, bool &lastvalid);
 # 2 "src/stream.cc" 2
 
-bool stream(const ap_uint<64> cands[256], ap_uint<64> outcands[5], const bool eventstart, bool &lastvalid) {_ssdm_SpecArrayDimSize(cands, 256);_ssdm_SpecArrayDimSize(outcands, 5);
- static ap_uint<64> scands[256 +5] = {0};
- static ap_uint<64> hold[5];
+bool stream(const ap_uint<64> header, const ap_uint<64> cands[256], ap_uint<64> outcands[4], const bool eventstart, bool &lastvalid) {_ssdm_SpecArrayDimSize(cands, 256);_ssdm_SpecArrayDimSize(outcands, 4);
+ static ap_uint<64> scands[256 +4 +1] = {0};
+ static ap_uint<64> hold[4];
  static bool nextzeros, holdevtstart = false, retevtstart = false;
  static bool nonempty;
  nonempty = false;
@@ -6387,20 +6387,21 @@ _ssdm_SpecArrayPartition( &hold, 1, "COMPLETE", 0, "");
 
  for (unsigned int i = 0; i < 256; ++i) {
 _ssdm_Unroll(0,0,0, "");
- scands[i] = scands[i + 5];
+ scands[i] = scands[i + 4];
         }
  if (eventstart) {
+  scands[0] = header;
   for (unsigned int i = 0; i < 256; ++i) {
 _ssdm_Unroll(0,0,0, "");
- scands[i] = cands[i];
+ scands[i + 1] = cands[i];
   }
  }
- for (unsigned int i = 0; i < 5; ++i) {
+ for (unsigned int i = 0; i < 4; ++i) {
 _ssdm_Unroll(0,0,0, "");
  outcands[i] = hold[i];
   if (hold[i] != 0) nonempty = true;
  }
- for (unsigned int i = 0; i < 5; ++i) {
+ for (unsigned int i = 0; i < 4; ++i) {
 _ssdm_Unroll(0,0,0, "");
  hold[i] = scands[i];
   if (scands[i] != 0) nextzeros = false;

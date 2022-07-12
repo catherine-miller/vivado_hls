@@ -42,9 +42,9 @@
 			<location>/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/.tcls</location>
 		</link>
 		<link>
-			<name>source/count3.cc</name>
+			<name>source/count.cc</name>
 			<type>1</type>
-			<location>/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count3.cc</location>
+			<location>/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/src/count.cc</location>
 		</link>
 		<link>
 			<name>testbench/testbench.cc</name>

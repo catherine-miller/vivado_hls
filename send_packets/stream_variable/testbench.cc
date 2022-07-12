@@ -4,26 +4,51 @@
 #define CLKPEREVT 54;
 #define NTESTS 1000;
 
-void generateevent(ap_uint<64> v[NPUPPI], unsigned int &npuppi) {
+ap_uint<64> writeheader(const ap_uint<12> bx, const ap_uint<30> orbit, const ap_uint<10> run, const bool write) {
+    ap_uint<64> header;
+    #pragma HLS pipeline II = 1
+    if (write) {
+        header(11,0) = 0; //npuppi 0 for now -- it will be modified later
+        header(23,12) = bx;
+        header(53,24) = orbit;
+        header(63,54) = run;
+        return header;
+    } else return 0;
+}
+void generateevent(ap_uint<64> v[NPUPPI], unsigned int &npuppi, uint64_t &header) {
+	unsigned long long bx, orbit, run;
+	bx = rand() & 0xFFF;
+    orbit = rand() & 0x3FFFFFFF;
+    run = rand() & 0x3FF;
+	header = writeheader(bx, orbit, run, true);
 	npuppi = rand() % 256;
     unsigned int option = rand() % 5;
     if (option == 0 || option == 1) {
         npuppi = npuppi % 30;
     } else if (option == 2) {
-        npuppi = 0;
+        npuppi = npuppi % 40;
     } else if (option == 3) {
         npuppi = 1;
     }
-	if (npuppi > 240) npuppi = 256; //just want to check the max case
-	for (uint i = 0; i < npuppi; ++i) {
-		v[i] = rand() + (rand() << 20) & 0xFFFFFFFFFFFFFFFF;
+	if (npuppi > 200) npuppi = 200; //for now just clipping events
+    //later maybe want to test that "too large" events are clipped properly by the algorithm
+	if (npuppi == 0) npuppi = 1;
+    uint last = npuppi;
+	for (uint i = 0; i < last; ++i) {
+        if (rand() % 30 == 0 && i != 0) { //zeroing out some candidates
+            v[i] = 0;
+            npuppi -= 1;
+        } else {
+		    v[i] = rand() + (rand() << 20) & 0xFFFFFFFFFFFFFFFF;
+            if (v[i] == 0) v[i] = 1;
+        }
 	}
-	for (uint i = npuppi; i < NPUPPI; ++i) {
+	for (uint i = last; i < NPUPPI; ++i) {
 		v[i] = (ap_uint<64>)0;
 	}
 }
-bool streamtoM(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const bool eventstart, bool &lastvalid) {
-	static ap_uint<64> scands[NPUPPI+NOUT] = {0};
+bool streamtoM(const ap_uint<64> header, const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const bool eventstart, bool &lastvalid) {
+	static ap_uint<64> scands[NPUPPI+NOUT+1] = {0};
 	static ap_uint<64> hold[NOUT];
 	static bool nextzeros, holdevtstart = false, retevtstart = false;
 	static bool nonempty;
@@ -38,16 +63,15 @@ bool streamtoM(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], cons
 	#pragma HLS array_partition variable=scands complete
 	#pragma HLS array_partition variable=hold complete
 
-	retevtstart = holdevtstart;
-	holdevtstart = eventstart;
 	for (unsigned int i = 0; i < NPUPPI; ++i) {
         #pragma HLS unroll
 		scands[i] = scands[i + NOUT];
         }
 	if (eventstart) {
+		scands[0] = header;
 		for (unsigned int i = 0; i < NPUPPI; ++i) {
 			#pragma HLS unroll
-			scands[i] = cands[i];
+			scands[i + 1] = cands[i];
 		}
 	}
 	for (unsigned int i = 0; i < NOUT; ++i) {
@@ -60,6 +84,10 @@ bool streamtoM(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], cons
 		hold[i] = scands[i];
 		if (scands[i] != 0) nextzeros = false;
 	}
+	//hold "eventstart" for one clock cycle before returning
+	retevtstart = holdevtstart; 
+	holdevtstart = eventstart;
+
 	if (eventstart == true) nextzeros = true; //if we just read a new event, and we're not returning null Puppi candidates, we're at the last valid bits
 	if (nonempty == true && nextzeros == true) lastvalid = true;
 	return retevtstart;
@@ -96,20 +124,24 @@ int main() {
     static unsigned int written = 0;
     static ap_uint<11> simwptr = 0, simrptr = 0;
     static ap_uint<9> ptrsep = 0;
-    unsigned int npuppi;
-    static bool eventstart, lastvalid;
-    static bool validalgo, firstalgo, lastalgo, validsim;
+    unsigned int npuppi, puppisim[256], npalgo = 0;
+    static ap_uint<8> pidx = 0, prdidx = 0;
+    static bool eventstart, lastvalid, flip = true; //flip: makes sure for every firstalgo there is a lastalgo
+    static bool validalgo, firstalgo = false, lastalgo = false, validsim, npcheck = false;
     unsigned long long totout = 0;
     static bool write = false;
+    static uint64_t header;
     for (unsigned int n = 0; n < 100; ++n) {
         for (unsigned int i = 0; i < 54; ++i) {
             if (i == 0) {
-                generateevent(candsin, npuppi);
+                generateevent(candsin, npuppi, header);
                 totout += npuppi + (NIN - ((npuppi % NIN == 0) ? 0 : npuppi % NIN));
-                eventstart = streamtoM(candsin, candsmiddle, true, lastvalid);
+                eventstart = streamtoM(header, candsin, candsmiddle, true, lastvalid);
+                printf("Event %d: npuppi = %d \n", n, npuppi);
+                puppisim[pidx] = npuppi; pidx++;
             }
             else {
-                eventstart = streamtoM(candsin, candsmiddle, false, lastvalid);
+                eventstart = streamtoM(header, candsin, candsmiddle, false, lastvalid);
             }
             validalgo = streamv(candsmiddle, candoutalgo, eventstart, lastvalid, firstalgo, lastalgo);
             //csim
@@ -132,6 +164,36 @@ int main() {
                 printf("Algo: %llu, sim: %llu \n", (unsigned long long)candoutalgo, (unsigned long long)candoutsim);
                 printf("Test #%u, clock #%u \n", n, i);
                 return 1;
+            } else {
+                printf("Test #%u, clock #%u: candidates matching \n", n, i);
+            }
+            //check that for every firstalgo there is a lastalgo
+            if (firstalgo) printf("received firstalgo \n"); fflush(stdout);
+            if (lastalgo) printf("received lastalgo \n"); fflush(stdout);
+            if (firstalgo xor lastalgo) flip = !flip;
+            if (((firstalgo && flip) || (lastalgo && !flip)) && (firstalgo != lastalgo)) {
+                printf("ERROR: number of firstalgo and lastalgo doesn't match \n");
+                printf("Last received %s \n", (flip ? "firstalgo" : "lastalgo"));
+                printf("Test #%u, clock #%u \n", n, i);
+                printf("firstalgo: %i, lastalgo: %i, flip: %i", firstalgo, lastalgo, flip);
+                return 1;
+            }
+            //count the puppi candidates that come out
+            if (firstalgo) {
+                npcheck = true;
+                npalgo = 0;
+            }
+            if (npcheck) {
+                if (validalgo) npalgo++;
+            }
+            if (lastalgo) {
+                npcheck = false;
+                if (npalgo - 1 != puppisim[prdidx]) {
+                    printf("ERROR: sim npuppi not equal to algo npuppi \n");
+                    printf("sim npuppi: %d, algo npuppi: %d \n", puppisim[prdidx], npalgo - 1);
+                    return 1;
+                }
+                prdidx++;
             }
         }
     }

@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue Jun 21 15:21:47 2022
+# Process ID: 17505
+# Current directory: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim
+# Command line: vivado -proj test.dir/file.xpr
+# Log file: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/vivado.log
+# Journal file: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/test.dir/test.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source testbench.tcl
+run 1000 us
+relaunch_sim
+run 100 us
+relaunch_sim

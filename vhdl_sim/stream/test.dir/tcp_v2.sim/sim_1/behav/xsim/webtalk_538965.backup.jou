@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jun 17 15:19:54 2022
+# Process ID: 538965
+# Current directory: /afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/test.dir/tcp_v2.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/test.dir/tcp_v2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/test.dir/tcp_v2.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/test.dir/tcp_v2.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /afs/cern.ch/work/g/gpetrucc/vivado/sim-examples/test.dir/tcp_v2.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace

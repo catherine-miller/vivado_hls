@@ -6,18 +6,44 @@
       <simLog/>
       <mgLog/>
       <packageLog/>
-      <csimLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:42:30.796+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:42:30.777+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 212, algo npuppi: 211 " projectName="proj" solutionName="solution" date="2022-07-12T12:42:30.751+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:42:05.370+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:42:05.339+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:42:05.316+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:40:46.370+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:40:46.328+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:40:46.287+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:40:07.015+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:40:06.979+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:40:06.948+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:39:35.367+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:39:35.329+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:39:35.297+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:37:53.161+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:37:53.133+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:37:53.115+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:37:21.158+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:37:21.151+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:37:21.139+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-12T12:36:14.365+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-12T12:36:14.357+0200"/>
+        <logs message="ERROR: sim npuppi not equal to algo npuppi &#xA;sim npuppi: 3, algo npuppi: 4 " projectName="proj" solutionName="solution" date="2022-07-12T12:36:14.073+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="proj" solutionName="solution" date="2022-07-12T12:35:03.312+0200"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
     <logs>
       <synLog>
-        <logs message="WARNING: [RTGEN 206-101] Register 'readidx_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.644+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.635+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.627+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.598+0200" type="Warning"/>
-        <logs message="WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.587+0200" type="Warning"/>
-        <logs message="WARNING: [SYN 201-107] Renaming port name 'streamv/write' to 'streamv/write_r' to avoid the conflict with HDL keywords or other object names." projectName="proj" solutionName="solution" date="2022-06-02T14:30:40.028+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'readidx_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.801+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.792+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.776+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'ptrsep_V' is power-on initialization." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.769+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.761+0200" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'streamv/write' to 'streamv/write_r' to avoid the conflict with HDL keywords or other object names." projectName="proj" solutionName="solution" date="2022-07-06T14:15:31.257+0200" type="Warning"/>
       </synLog>
       <simLog/>
       <mgLog/>

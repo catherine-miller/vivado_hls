@@ -3,6 +3,52 @@
   <errorLogs>
     <logs>
       <synLog/>
+      <csimLog>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:37:45.193+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:37:45.169+0200"/>
+        <logs message="ERROR: test npuppi not equal to algo npuppi &#xA;test npuppi = 50, algo npuppi = 3 &#xA;Algo (header) candidate: 60219395 &#xA;Clock #51, test #7 " projectName="proj" solutionName="solution" date="2022-07-07T14:37:45.144+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:37:03.844+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:37:03.821+0200"/>
+        <logs message="ERROR: test npuppi not equal to algo npuppi &#xA;test npuppi = 50, algo npuppi = 3 &#xA;Algo (header) candidate: 60219395 &#xA;Clock #51, test #7 " projectName="proj" solutionName="solution" date="2022-07-07T14:37:03.782+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:35:52.147+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:35:52.131+0200"/>
+        <logs message="ERROR: test npuppi not equal to algo npuppi &#xA;test npuppi = 26, algo npuppi = 3 &#xA;Algo (header) candidate: 18446744072684707843 &#xA;Clock #49, test #13 " projectName="proj" solutionName="solution" date="2022-07-07T14:35:52.091+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:30:38.159+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:30:38.140+0200"/>
+        <logs message="ERROR: test npuppi not equal to algo npuppi &#xA;test npuppi = 17, algo npuppi = 2 &#xA;Algo (header) candidate: 1632845826 &#xA;Clock #40, test #40 " projectName="proj" solutionName="solution" date="2022-07-07T14:30:38.104+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:30:06.667+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:30:06.642+0200"/>
+        <logs message="ERROR: test candidate not equal to algo candidate &#xA;test candidate: 2101126780, algo candidate: 0 &#xA;checkidx: 130, npuppi: 206 &#xA;firstalgo = 0, lastalgo = 0 &#xA;Clock #16, test #11 " projectName="proj" solutionName="solution" date="2022-07-07T14:30:06.493+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:29:42.067+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:29:42.034+0200"/>
+        <logs message="ERROR: test candidate not equal to algo candidate &#xA;test candidate: 2101126780, algo candidate: 0 &#xA;checkidx: 130, npuppi: 206 &#xA;firstalgo = 0, lastalgo = 0 &#xA;Clock #16, test #11 " projectName="proj" solutionName="solution" date="2022-07-07T14:29:42.015+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:29:24.477+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:29:24.430+0200"/>
+        <logs message="ERROR: test candidate not equal to algo candidate &#xA;test candidate: 2101126780, algo candidate: 0 &#xA;checkidx: 130, npuppi: 206 &#xA;firstalgo = 0, lastalgo = 0 &#xA;Clock #16, test #11 " projectName="proj" solutionName="solution" date="2022-07-07T14:29:24.366+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-07T14:28:16.407+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-07T14:28:16.356+0200"/>
+        <logs message="ERROR: test candidate not equal to algo candidate &#xA;test candidate: 1982114665, algo candidate: 0 &#xA;checkidx: 131, npuppi: 209 &#xA;firstalgo = 0, lastalgo = 0 &#xA;Clock #19, test #12 " projectName="proj" solutionName="solution" date="2022-07-07T14:28:16.255+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:53:25.434+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:53:25.412+0200"/>
+        <logs message="ERROR: test candidate not equal to algo candidate &#xA;test candidate: 1982114665, algo candidate: 0 &#xA;checkidx: 131, npuppi: 209 &#xA;firstalgo = 0, lastalgo = 0 &#xA;Clock #19, test #12 " projectName="proj" solutionName="solution" date="2022-07-06T15:53:25.391+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:51:21.228+0200"/>
+        <logs message="@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:51:21.206+0200"/>
+        <logs message="ERROR: test npuppi not equal to algo npuppi &#xA;test npuppi = 12, algo npuppi = 3 &#xA;Algo (header) candidate: 1601253379 &#xA;Clock #50, test #12 " projectName="proj" solutionName="solution" date="2022-07-06T15:51:21.166+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:39:44.439+0200"/>
+        <logs message="firstalgo: 1, lastalgo: 0, flip: 1@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:39:44.420+0200"/>
+        <logs message="ERROR: number of firstalgo and lastalgo doesn't match &#xA;Last received firstalgo &#xA;Test #1, clock #19 " projectName="proj" solutionName="solution" date="2022-07-06T15:39:44.392+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="proj" solutionName="solution" date="2022-07-06T15:38:59.759+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:38:38.367+0200"/>
+        <logs message="firstalgo: 1, lastalgo: 0, flip: 1@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:38:38.316+0200"/>
+        <logs message="ERROR: number of firstalgo and lastalgo doesn't match &#xA;Last received firstalgo &#xA;Test #1, clock #19 " projectName="proj" solutionName="solution" date="2022-07-06T15:38:38.293+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:37:51.143+0200"/>
+        <logs message="firstalgo: 1, lastalgo: 0, flip: 1@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:37:51.085+0200"/>
+        <logs message="ERROR: number of firstalgo and lastalgo doesn't match &#xA;Last received firstalgo &#xA;Test #1, clock #19 " projectName="proj" solutionName="solution" date="2022-07-06T15:37:51.059+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value." projectName="proj" solutionName="solution" date="2022-07-06T15:36:17.386+0200"/>
+        <logs message="firstalgo: 1, lastalgo: 0, flip: 1@E Simulation failed: Function 'main' returns nonzero value '1'." projectName="proj" solutionName="solution" date="2022-07-06T15:36:17.339+0200"/>
+        <logs message="ERROR: number of firstalgo and lastalgo doesn't match &#xA;Last received firstalgo &#xA;Test #1, clock #19 " projectName="proj" solutionName="solution" date="2022-07-06T15:36:17.276+0200"/>
+        <logs message="ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s)." projectName="proj" solutionName="solution" date="2022-07-06T15:25:48.141+0200"/>
+      </csimLog>
     </logs>
   </errorLogs>
   <warningLogs>
@@ -99,6 +145,7 @@
         <logs message="WARNING: [RTGEN 206-101] Register 'npbuffer_V_168' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T17:08:10.709+0200" type="Warning"/>
         <logs message="WARNING: [RTGEN 206-101] Register 'npbuffer_V_167' is power-on initialization." projectName="proj" solutionName="solution" date="2022-06-02T17:08:10.686+0200" type="Warning"/>
       </synLog>
+      <csimLog/>
     </logs>
   </warningLogs>
 </vivadoHLSLog:LogRoot>

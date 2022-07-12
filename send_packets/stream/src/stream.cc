@@ -1,6 +1,6 @@
 #include "stream.h"
 
-bool stream(const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const bool eventstart, bool &lastvalid) {
+bool stream(const ap_uint<64> header, const ap_uint<64> cands[NPUPPI], ap_uint<64> outcands[NOUT], const bool eventstart, bool &lastvalid) {
 	static ap_uint<64> scands[NPUPPI+NOUT+1] = {0};
 	static ap_uint<64> hold[NOUT];
 	static bool nextzeros, holdevtstart = false, retevtstart = false;

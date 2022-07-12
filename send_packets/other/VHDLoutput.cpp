@@ -2,8 +2,9 @@
 #include <cstdint>
 #include <cstdlib>
 #include <cassert>
-#define NOUT 4
+#define NOUT 5
 #define CLKPEREVT 54
+#define NPUPPI NOUT*CLKPEREVT
 
 //simulates output of HLS module "stream"
 //note that there is not exactly the same logic for determining the last valid row
@@ -14,18 +15,18 @@ class EventBuffer {
             printf("Events written: %d \n", eventsread);
         }
         void ReadEvent() {
-            fread(&header, 16, 1, infile);
+            fread(&header, 8, 1, infile);
             npuppi = (header & 0xFFF) + 1; //add 1 b/c we're treating header like candidate
             puppibuf[0] = header;
-            if (npuppi > NOUT * 54) {
-                uint surplus = npuppi - (NOUT * 54);
-                npuppi = NOUT * 54;
-                fread(puppibuf + 8, 8, npuppi - 1, infile);
+            if (npuppi > ((NPUPPI > 256) ? 256 : NPUPPI)) {
+                uint surplus = npuppi - ((NPUPPI > 256) ? 256 : NPUPPI);
+                npuppi = ((NPUPPI > 256) ? 256 : NPUPPI);
+                fread(&puppibuf[1], 8, npuppi - 1, infile);
                 fread(ignorebuf, 8, surplus, infile);
             } else {
-                fread(puppibuf + 8, 8, npuppi - 1, infile);
+                fread(&puppibuf[1], 8, npuppi - 1, infile);
             }
-            for (uint i = npuppi; i < 256; ++i) {
+            for (uint i = npuppi; i < NPUPPI; ++i) {
                 puppibuf[i] = 0; //fill rest of buffer with zeros
             }
             eventsread++;
@@ -41,15 +42,15 @@ class EventBuffer {
             }
         }
         void WriteRow(uint i) {
-            fprintf(outfile, "%1d", eventstart);
-            fprintf(outfile, "%1d", lastvalid);
+            fprintf(outfile, "%1d%s", eventstart, " ");
+            fprintf(outfile, "%1d%s", lastvalid, " ");
             for (uint j = 0; j < NOUT; ++j) {
-                fprintf(outfile, "%016llx%s", puppibuf[4*i + j], " ");
+                fprintf(outfile, "%016llx%s", puppibuf[NOUT*i + j], " ");
             }
             fprintf(outfile, "\n");
         }
     public:
-        uint64_t header, puppibuf[256], ignorebuf[256];
+        uint64_t header, puppibuf[NPUPPI], ignorebuf[256];
         uint16_t npuppi;
         FILE *infile, *outfile;
         uint64_t eventsread = 0;
@@ -68,10 +69,19 @@ int main(int argc, char**argv) {
     outfile = fopen(argv[2], "w+");
     assert(infile != NULL);
     assert(outfile != NULL);
+    //write first row of zeros
+    fprintf(outfile, "%1d%s", 0, " ");
+    fprintf(outfile, "%1d%s", 0, " ");
+    for (uint j = 0; j < NOUT; ++j) {
+        fprintf(outfile, "%016llx%s", 0, " ");
+    }
+    fprintf(outfile, "\n");
+    //printf("wrote first row \n"); fflush(stdout);
     EventBuffer buffer(infile, outfile);
     while (!feof(infile) && buffer.eventsread < 1000) {
         buffer.ReadEvent();
         buffer.WriteEvent();
+        //printf("wrote a row \n"); fflush(stdout);
     }
     fclose(infile);
     fclose(outfile);

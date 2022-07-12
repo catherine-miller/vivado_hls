@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Tue Jun 21 13:33:31 2022
+# Process ID: 5710
+# Current directory: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim
+# Command line: vivado -mode batch -source setup_project.tcl
+# Log file: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/vivado.log
+# Journal file: /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/vivado.jou
+#-----------------------------------------------------------
+source setup_project.tcl
+# create_project test /afs/cern.ch/user/m/millerca/vivado_hls/vhdl_sim/test.dir -part xcku15p-ffva1760-2-e -force
+# set_property ip_repo_paths {} [current_project]
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {create_fileset -constrset constrs_1}
+# if {[string equal [get_filesets -quiet sources_1] ""]} {create_fileset -srcset sources_1}
+# if {[string equal [get_filesets -quiet sim_1] ""]} {create_fileset -simset sim_1}
+# set_property SOURCE_SET sources_1 [get_filesets sim_1]
+# add_files -norecurse -fileset sources_1  stream.vhd
+# add_files -norecurse -fileset sim_1  testbench.vhd
+# set_property FILE_TYPE {VHDL 2008} [get_files {testbench.vhd}]
+# add_files -norecurse -fileset sim_1  input1.txt
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 21 13:33:45 2022...

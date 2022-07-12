@@ -1,5 +1,15 @@
 <InterfaceSummary>
 <RtlPorts>
+<name>header_V</name>
+<CType>
+<TypeName>ap_uint 64</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
 <name>cands_0_V</name>
 <CType>
 <TypeName>ap_uint 64</TypeName>
@@ -2591,16 +2601,6 @@
 </RtlPorts>
 <RtlPorts>
 <name>outcands_3_V</name>
-<CType>
-<TypeName>ap_uint 64</TypeName>
-<TypeWidth>64</TypeWidth>
-<PhysicalWidth>64</PhysicalWidth>
-</CType>
-<CFractionWidth>0</CFractionWidth>
-<InvalidType>0</InvalidType>
-</RtlPorts>
-<RtlPorts>
-<name>outcands_4_V</name>
 <CType>
 <TypeName>ap_uint 64</TypeName>
 <TypeWidth>64</TypeWidth>

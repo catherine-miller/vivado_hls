@@ -1,583 +1,504 @@
 INFO: Applying HLS Y2K22 patch v1.2 for IP revision
 INFO: [HLS 200-10] Running '/data1/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Thu Jun 02 17:07:05 CEST 2022
+INFO: [HLS 200-10] For user 'millerca' on host 'gpetruc-firmware.cern.ch' (Linux_x86_64 version 3.10.0-1160.36.2.el7.x86_64) on Thu Jul 07 14:37:42 CEST 2022
 INFO: [HLS 200-10] On os "CentOS Linux release 7.9.2009 (Core) "
 INFO: [HLS 200-10] In directory '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount'
-Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/csynth.tcl'
+Sourcing Tcl script '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/csim.tcl'
 INFO: [HLS 200-10] Opening project '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj'.
-INFO: [HLS 200-10] Adding design file 'src/count3.cc' to the project
-INFO: [HLS 200-10] Adding test bench file 'testbench.cc' to the project
 INFO: [HLS 200-10] Opening solution '/afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.778ns.
 INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-2L-e'
-INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
-INFO: [HLS 200-10] Analyzing design file 'src/count3.cc' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 681 ; free virtual = 5233
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 681 ; free virtual = 5233
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 674 ; free virtual = 5228
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 670 ; free virtual = 5224
-WARNING: [XFORM 203-104] Completely partitioning array 'buffer.V'  accessed through non-constant indices on dimension 1 (src/count3.cc:26:20), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-INFO: [XFORM 203-101] Partitioning array 'buffer.V'  in dimension 1 completely.
-WARNING: [XFORM 203-104] Completely partitioning array 'npbuffer.V'  accessed through non-constant indices on dimension 1 (src/count3.cc:33:31), which may result in long runtime and suboptimal QoR due to large multiplexers. Please consider wrapping the array access into a function or using a register file core instead.
-INFO: [XFORM 203-101] Partitioning array 'npbuffer.V'  in dimension 1 completely.
-INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/count3.cc:21:13) to (src/count3.cc:26:20) in function 'count'... converting 7 basic blocks.
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i66P.i8' into 'count' (src/count3.cc:37).
-INFO: [XFORM 203-603] Inlining function 'aesl_mux_load.256i12P.i8' into 'count' (src/count3.cc:41).
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 637 ; free virtual = 5192
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1056.160 ; gain = 536.129 ; free physical = 568 ; free virtual = 5124
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'count' ...
-WARNING: [SYN 201-107] Renaming port name 'count/write' to 'count/write_r' to avoid the conflict with HDL keywords or other object names.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'count' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [SCHED 204-61] Pipelining function 'count'.
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 32.33 seconds; current allocated memory: 178.294 MB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 13.02 seconds; current allocated memory: 189.972 MB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'count' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/candin_V' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/candout_V' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/firstin' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/lastin' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/valid' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/firstout' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'count/lastout' to 'ap_vld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'count' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Register 'npuppi_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'write_r' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'wrptr_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npptr_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'rdptr_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_0' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_13' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_15' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_16' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_17' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_18' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_19' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_20' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_21' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_22' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_23' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_24' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_25' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_26' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_27' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_28' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_29' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_30' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_31' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_32' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_33' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_34' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_35' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_36' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_37' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_38' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_39' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_40' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_41' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_42' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_43' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_44' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_45' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_46' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_47' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_48' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_49' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_50' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_51' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_52' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_53' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_54' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_55' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_56' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_57' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_58' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_59' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_60' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_61' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_62' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_63' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_64' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_65' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_66' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_67' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_68' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_69' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_70' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_71' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_72' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_73' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_74' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_75' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_76' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_77' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_78' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_79' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_80' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_81' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_82' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_83' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_84' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_85' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_86' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_87' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_88' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_89' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_90' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_91' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_92' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_93' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_94' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_95' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_96' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_97' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_98' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_99' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_100' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_101' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_102' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_103' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_104' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_105' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_106' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_107' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_108' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_109' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_110' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_111' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_112' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_113' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_114' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_115' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_116' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_117' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_118' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_119' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_120' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_121' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_122' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_123' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_124' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_125' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_126' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_127' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_128' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_129' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_130' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_131' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_132' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_133' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_134' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_135' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_136' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_137' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_138' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_139' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_140' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_141' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_142' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_143' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_144' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_145' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_146' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_147' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_148' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_149' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_150' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_151' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_152' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_153' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_154' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_155' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_156' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_157' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_158' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_159' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_160' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_161' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_162' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_163' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_164' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_165' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_166' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_167' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_168' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_169' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_170' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_171' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_172' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_173' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_174' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_175' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_176' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_177' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_178' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_179' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_180' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_181' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_182' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_183' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_184' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_185' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_186' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_187' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_188' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_189' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_190' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_191' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_192' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_193' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_194' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_195' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_196' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_197' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_198' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_199' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_200' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_201' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_202' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_203' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_204' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_205' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_206' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_207' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_208' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_209' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_210' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_211' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_212' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_213' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_214' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_215' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_216' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_217' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_218' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_219' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_220' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_221' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_222' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_223' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_224' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_225' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_226' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_227' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_228' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_229' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_230' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_231' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_232' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_233' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_234' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_235' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_236' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_237' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_238' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_239' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_240' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_241' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_242' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_243' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_244' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_245' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_246' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_247' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_248' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_249' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_250' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_251' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_252' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_253' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_254' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'buffer_V_255' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'nprdptr_V' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_0' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_1' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_2' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_3' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_4' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_5' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_6' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_7' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_8' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_9' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_10' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_11' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_12' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_13' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_14' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_15' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_16' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_17' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_18' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_19' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_20' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_21' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_22' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_23' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_24' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_25' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_26' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_27' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_28' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_29' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_30' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_31' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_32' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_33' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_34' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_35' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_36' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_37' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_38' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_39' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_40' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_41' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_42' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_43' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_44' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_45' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_46' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_47' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_48' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_49' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_50' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_51' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_52' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_53' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_54' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_55' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_56' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_57' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_58' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_59' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_60' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_61' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_62' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_63' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_64' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_65' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_66' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_67' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_68' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_69' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_70' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_71' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_72' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_73' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_74' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_75' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_76' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_77' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_78' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_79' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_80' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_81' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_82' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_83' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_84' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_85' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_86' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_87' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_88' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_89' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_90' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_91' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_92' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_93' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_94' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_95' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_96' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_97' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_98' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_99' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_100' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_101' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_102' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_103' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_104' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_105' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_106' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_107' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_108' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_109' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_110' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_111' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_112' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_113' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_114' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_115' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_116' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_117' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_118' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_119' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_120' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_121' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_122' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_123' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_124' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_125' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_126' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_127' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_128' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_129' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_130' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_131' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_132' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_133' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_134' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_135' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_136' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_137' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_138' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_139' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_140' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_141' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_142' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_143' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_144' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_145' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_146' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_147' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_148' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_149' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_150' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_151' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_152' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_153' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_154' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_155' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_156' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_157' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_158' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_159' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_160' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_161' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_162' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_163' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_164' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_165' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_166' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_167' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_168' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_169' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_170' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_171' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_172' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_173' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_174' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_175' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_176' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_177' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_178' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_179' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_180' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_181' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_182' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_183' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_184' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_185' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_186' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_187' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_188' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_189' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_190' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_191' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_192' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_193' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_194' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_195' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_196' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_197' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_198' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_199' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_200' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_201' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_202' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_203' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_204' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_205' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_206' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_207' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_208' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_209' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_210' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_211' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_212' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_213' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_214' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_215' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_216' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_217' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_218' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_219' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_220' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_221' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_222' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_223' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_224' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_225' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_226' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_227' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_228' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_229' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_230' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_231' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_232' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_233' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_234' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_235' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_236' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_237' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_238' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_239' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_240' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_241' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_242' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_243' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_244' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_245' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_246' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_247' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_248' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_249' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_250' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_251' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_252' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_253' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_254' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'npbuffer_V_255' is power-on initialization.
-WARNING: [RTGEN 206-101] Register 'eventsready_V' is power-on initialization.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'count'.
-INFO: [HLS 200-111]  Elapsed time: 29.87 seconds; current allocated memory: 199.191 MB.
-INFO: [HLS 200-789] **** Estimated Fmax: 438.98 MHz
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:19 ; elapsed = 00:01:33 . Memory (MB): peak = 1200.164 ; gain = 680.133 ; free physical = 421 ; free virtual = 5043
-INFO: [VHDL 208-304] Generating VHDL RTL for count.
-INFO: [VLOG 209-307] Generating Verilog RTL for count.
-INFO: [HLS 200-112] Total elapsed time: 92.8 seconds; peak allocated memory: 199.191 MB.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make: `csim.exe' is up to date.
+Test 3: npuppi matching; npuppi = 194 
+received firstalgo 
+Test 3, Puppi candidate 1 matching 
+Sim candidate: 18446744073694192823, algo candidate: 18446744073694192823 
+Test 3, Puppi candidate 2 matching 
+Sim candidate: 18446744073665751292, algo candidate: 18446744073665751292 
+Test 3, Puppi candidate 3 matching 
+Sim candidate: 899871030, algo candidate: 899871030 
+Test 3, Puppi candidate 4 matching 
+Sim candidate: 18446744072652571943, algo candidate: 18446744072652571943 
+Test 3, Puppi candidate 5 matching 
+Sim candidate: 499987788, algo candidate: 499987788 
+Test 3, Puppi candidate 6 matching 
+Sim candidate: 948187092, algo candidate: 948187092 
+Test 3, Puppi candidate 7 matching 
+Sim candidate: 18446744072375439601, algo candidate: 18446744072375439601 
+Test 3, Puppi candidate 8 matching 
+Sim candidate: 89496725, algo candidate: 89496725 
+Test 3, Puppi candidate 9 matching 
+Sim candidate: 18446744072296080324, algo candidate: 18446744072296080324 
+Test 3, Puppi candidate 10 matching 
+Sim candidate: 18446744072151243133, algo candidate: 18446744072151243133 
+Test 3, Puppi candidate 11 matching 
+Sim candidate: 18446744072273153634, algo candidate: 18446744072273153634 
+Test 3, Puppi candidate 12 matching 
+Sim candidate: 18446744072073384774, algo candidate: 18446744072073384774 
+Test 3, Puppi candidate 13 matching 
+Sim candidate: 18446744072368252183, algo candidate: 18446744072368252183 
+Test 3, Puppi candidate 14 matching 
+Sim candidate: 18446744071805043877, algo candidate: 18446744071805043877 
+Test 3, Puppi candidate 15 matching 
+Sim candidate: 1890707858, algo candidate: 1890707858 
+Test 3, Puppi candidate 16 matching 
+Sim candidate: 678312348, algo candidate: 678312348 
+Test 3, Puppi candidate 17 matching 
+Sim candidate: 928665779, algo candidate: 928665779 
+Test 3, Puppi candidate 18 matching 
+Sim candidate: 1270721466, algo candidate: 1270721466 
+Test 3, Puppi candidate 19 matching 
+Sim candidate: 1176555746, algo candidate: 1176555746 
+Test 3, Puppi candidate 20 matching 
+Sim candidate: 18446744072625415807, algo candidate: 18446744072625415807 
+Test 3, Puppi candidate 21 matching 
+Sim candidate: 18446744072256789387, algo candidate: 18446744072256789387 
+Test 4, Puppi candidate 22 matching 
+Sim candidate: 18446744073154536669, algo candidate: 18446744073154536669 
+Test 4, Puppi candidate 23 matching 
+Sim candidate: 1976277376, algo candidate: 1976277376 
+Test 4, Puppi candidate 24 matching 
+Sim candidate: 286226303, algo candidate: 286226303 
+Test 4, Puppi candidate 25 matching 
+Sim candidate: 2048238990, algo candidate: 2048238990 
+Test 4, Puppi candidate 26 matching 
+Sim candidate: 1828427368, algo candidate: 1828427368 
+Test 4, Puppi candidate 27 matching 
+Sim candidate: 18446744072940943544, algo candidate: 18446744072940943544 
+Test 4, Puppi candidate 28 matching 
+Sim candidate: 18446744073276503878, algo candidate: 18446744073276503878 
+Test 4, Puppi candidate 29 matching 
+Sim candidate: 18446744072832945611, algo candidate: 18446744072832945611 
+Test 4, Puppi candidate 30 matching 
+Sim candidate: 18446744071805292714, algo candidate: 18446744071805292714 
+Test 4, Puppi candidate 31 matching 
+Sim candidate: 472441515, algo candidate: 472441515 
+Test 4, Puppi candidate 32 matching 
+Sim candidate: 18446744072306132390, algo candidate: 18446744072306132390 
+Test 4, Puppi candidate 33 matching 
+Sim candidate: 1557097694, algo candidate: 1557097694 
+Test 4, Puppi candidate 34 matching 
+Sim candidate: 1083209031, algo candidate: 1083209031 
+Test 4, Puppi candidate 35 matching 
+Sim candidate: 82092609, algo candidate: 82092609 
+Test 4, Puppi candidate 36 matching 
+Sim candidate: 115229679, algo candidate: 115229679 
+Test 4, Puppi candidate 37 matching 
+Sim candidate: 18446744073573724698, algo candidate: 18446744073573724698 
+Test 4, Puppi candidate 38 matching 
+Sim candidate: 139520585, algo candidate: 139520585 
+Test 4, Puppi candidate 39 matching 
+Sim candidate: 1244277311, algo candidate: 1244277311 
+Test 4, Puppi candidate 40 matching 
+Sim candidate: 256821470, algo candidate: 256821470 
+Test 4, Puppi candidate 41 matching 
+Sim candidate: 1302196932, algo candidate: 1302196932 
+Test 4, Puppi candidate 42 matching 
+Sim candidate: 18446744073319990206, algo candidate: 18446744073319990206 
+Test 4, Puppi candidate 43 matching 
+Sim candidate: 131074294, algo candidate: 131074294 
+Test 4, Puppi candidate 44 matching 
+Sim candidate: 18446744072133232973, algo candidate: 18446744072133232973 
+Test 4, Puppi candidate 45 matching 
+Sim candidate: 18446744072696870640, algo candidate: 18446744072696870640 
+Test 4, Puppi candidate 46 matching 
+Sim candidate: 269618718, algo candidate: 269618718 
+Test 4, Puppi candidate 47 matching 
+Sim candidate: 1735926845, algo candidate: 1735926845 
+Test 4, Puppi candidate 48 matching 
+Sim candidate: 860867833, algo candidate: 860867833 
+Test 4, Puppi candidate 49 matching 
+Sim candidate: 882033957, algo candidate: 882033957 
+Test 4, Puppi candidate 50 matching 
+Sim candidate: 18446744073294827228, algo candidate: 18446744073294827228 
+Test 4, Puppi candidate 51 matching 
+Sim candidate: 1944198663, algo candidate: 1944198663 
+Test 4, Puppi candidate 52 matching 
+Sim candidate: 1741989171, algo candidate: 1741989171 
+Test 4, Puppi candidate 53 matching 
+Sim candidate: 1410300825, algo candidate: 1410300825 
+Test 4, Puppi candidate 54 matching 
+Sim candidate: 18446744073063406523, algo candidate: 18446744073063406523 
+Test 4, Puppi candidate 55 matching 
+Sim candidate: 18446744071722889540, algo candidate: 18446744071722889540 
+Test 4, Puppi candidate 56 matching 
+Sim candidate: 1652127142, algo candidate: 1652127142 
+Test 4, Puppi candidate 57 matching 
+Sim candidate: 18446744073259041761, algo candidate: 18446744073259041761 
+Test 4, Puppi candidate 58 matching 
+Sim candidate: 18446744073558675333, algo candidate: 18446744073558675333 
+Test 4, Puppi candidate 59 matching 
+Sim candidate: 18446744072002024554, algo candidate: 18446744072002024554 
+Test 4, Puppi candidate 60 matching 
+Sim candidate: 18446744072644584344, algo candidate: 18446744072644584344 
+Test 4, Puppi candidate 61 matching 
+Sim candidate: 1234678473, algo candidate: 1234678473 
+Test 4, Puppi candidate 62 matching 
+Sim candidate: 18446744072596587766, algo candidate: 18446744072596587766 
+Test 4, Puppi candidate 63 matching 
+Sim candidate: 18446744071781451130, algo candidate: 18446744071781451130 
+Test 4, Puppi candidate 64 matching 
+Sim candidate: 18446744073531779106, algo candidate: 18446744073531779106 
+Test 4, Puppi candidate 65 matching 
+Sim candidate: 18446744073255097392, algo candidate: 18446744073255097392 
+Test 4, Puppi candidate 66 matching 
+Sim candidate: 2066592262, algo candidate: 2066592262 
+Test 4, Puppi candidate 67 matching 
+Sim candidate: 18446744072819657162, algo candidate: 18446744072819657162 
+Test 4, Puppi candidate 68 matching 
+Sim candidate: 18446744072712700505, algo candidate: 18446744072712700505 
+Test 4, Puppi candidate 69 matching 
+Sim candidate: 1396172469, algo candidate: 1396172469 
+Test 4, Puppi candidate 70 matching 
+Sim candidate: 18446744072589568828, algo candidate: 18446744072589568828 
+Test 4, Puppi candidate 71 matching 
+Sim candidate: 18446744071678280367, algo candidate: 18446744071678280367 
+Test 4, Puppi candidate 72 matching 
+Sim candidate: 18446744072434596865, algo candidate: 18446744072434596865 
+Test 4, Puppi candidate 73 matching 
+Sim candidate: 18446744073357826631, algo candidate: 18446744073357826631 
+Test 4, Puppi candidate 74 matching 
+Sim candidate: 1493750631, algo candidate: 1493750631 
+Test 4, Puppi candidate 75 matching 
+Sim candidate: 18446744072704009305, algo candidate: 18446744072704009305 
+Test 5, Puppi candidate 76 matching 
+Sim candidate: 18446744073226107404, algo candidate: 18446744073226107404 
+Test 5, Puppi candidate 77 matching 
+Sim candidate: 1783015605, algo candidate: 1783015605 
+Test 5, Puppi candidate 78 matching 
+Sim candidate: 1052257833, algo candidate: 1052257833 
+Test 5, Puppi candidate 79 matching 
+Sim candidate: 18446744071862096113, algo candidate: 18446744071862096113 
+Test 5, Puppi candidate 80 matching 
+Sim candidate: 18446744072519448783, algo candidate: 18446744072519448783 
+Test 5, Puppi candidate 81 matching 
+Sim candidate: 284085578, algo candidate: 284085578 
+Test 5, Puppi candidate 82 matching 
+Sim candidate: 18446744072898434906, algo candidate: 18446744072898434906 
+Test 5, Puppi candidate 83 matching 
+Sim candidate: 390103566, algo candidate: 390103566 
+Test 5, Puppi candidate 84 matching 
+Sim candidate: 18446744073624149112, algo candidate: 18446744073624149112 
+Test 5, Puppi candidate 85 matching 
+Sim candidate: 18446744072408168392, algo candidate: 18446744072408168392 
+Test 5, Puppi candidate 86 matching 
+Sim candidate: 18446744072757854396, algo candidate: 18446744072757854396 
+Test 5, Puppi candidate 87 matching 
+Sim candidate: 18446744073036310678, algo candidate: 18446744073036310678 
+Test 5, Puppi candidate 88 matching 
+Sim candidate: 18446744072191131911, algo candidate: 18446744072191131911 
+Test 5, Puppi candidate 89 matching 
+Sim candidate: 18446744072204552260, algo candidate: 18446744072204552260 
+Test 5, Puppi candidate 90 matching 
+Sim candidate: 1211797903, algo candidate: 1211797903 
+Test 5, Puppi candidate 91 matching 
+Sim candidate: 405162861, algo candidate: 405162861 
+Test 5, Puppi candidate 92 matching 
+Sim candidate: 2013561793, algo candidate: 2013561793 
+Test 5, Puppi candidate 93 matching 
+Sim candidate: 1279429277, algo candidate: 1279429277 
+Test 5, Puppi candidate 94 matching 
+Sim candidate: 18446744073606210130, algo candidate: 18446744073606210130 
+Test 5, Puppi candidate 95 matching 
+Sim candidate: 18446744073356986422, algo candidate: 18446744073356986422 
+Test 5, Puppi candidate 96 matching 
+Sim candidate: 18446744072989196465, algo candidate: 18446744072989196465 
+Test 5, Puppi candidate 97 matching 
+Sim candidate: 18446744073292596726, algo candidate: 18446744073292596726 
+Test 5, Puppi candidate 98 matching 
+Sim candidate: 18446744073035263124, algo candidate: 18446744073035263124 
+Test 5, Puppi candidate 99 matching 
+Sim candidate: 18446744072518644158, algo candidate: 18446744072518644158 
+Test 5, Puppi candidate 100 matching 
+Sim candidate: 18446744073322541255, algo candidate: 18446744073322541255 
+Test 5, Puppi candidate 101 matching 
+Sim candidate: 18446744071744475328, algo candidate: 18446744071744475328 
+Test 5, Puppi candidate 102 matching 
+Sim candidate: 18446744072180622334, algo candidate: 18446744072180622334 
+Test 5, Puppi candidate 103 matching 
+Sim candidate: 18446744072292724288, algo candidate: 18446744072292724288 
+Test 5, Puppi candidate 104 matching 
+Sim candidate: 18446744072194800693, algo candidate: 18446744072194800693 
+Test 5, Puppi candidate 105 matching 
+Sim candidate: 1222949236, algo candidate: 1222949236 
+Test 5, Puppi candidate 106 matching 
+Sim candidate: 18446744072573199139, algo candidate: 18446744072573199139 
+Test 5, Puppi candidate 107 matching 
+Sim candidate: 18446744071987468640, algo candidate: 18446744071987468640 
+Test 5, Puppi candidate 108 matching 
+Sim candidate: 1669855492, algo candidate: 1669855492 
+Test 5, Puppi candidate 109 matching 
+Sim candidate: 18446744073358661838, algo candidate: 18446744073358661838 
+Test 5, Puppi candidate 110 matching 
+Sim candidate: 1137852300, algo candidate: 1137852300 
+Test 5, Puppi candidate 111 matching 
+Sim candidate: 273069687, algo candidate: 273069687 
+Test 5, Puppi candidate 112 matching 
+Sim candidate: 18446744072937617028, algo candidate: 18446744072937617028 
+Test 5, Puppi candidate 113 matching 
+Sim candidate: 1034557512, algo candidate: 1034557512 
+Test 5, Puppi candidate 114 matching 
+Sim candidate: 18446744073539863665, algo candidate: 18446744073539863665 
+Test 5, Puppi candidate 115 matching 
+Sim candidate: 2089053221, algo candidate: 2089053221 
+Test 5, Puppi candidate 116 matching 
+Sim candidate: 18446744073209443214, algo candidate: 18446744073209443214 
+Test 5, Puppi candidate 117 matching 
+Sim candidate: 18446744071814145723, algo candidate: 18446744071814145723 
+Test 5, Puppi candidate 118 matching 
+Sim candidate: 1781675581, algo candidate: 1781675581 
+Test 5, Puppi candidate 119 matching 
+Sim candidate: 1366064274, algo candidate: 1366064274 
+Test 5, Puppi candidate 120 matching 
+Sim candidate: 18446744071771507585, algo candidate: 18446744071771507585 
+Test 5, Puppi candidate 121 matching 
+Sim candidate: 18446744073673523254, algo candidate: 18446744073673523254 
+Test 5, Puppi candidate 122 matching 
+Sim candidate: 18446744073632758505, algo candidate: 18446744073632758505 
+Test 5, Puppi candidate 123 matching 
+Sim candidate: 2097780104, algo candidate: 2097780104 
+Test 5, Puppi candidate 124 matching 
+Sim candidate: 18446744073656270228, algo candidate: 18446744073656270228 
+Test 5, Puppi candidate 125 matching 
+Sim candidate: 1013141316, algo candidate: 1013141316 
+Test 5, Puppi candidate 126 matching 
+Sim candidate: 18446744072606551899, algo candidate: 18446744072606551899 
+Test 5, Puppi candidate 127 matching 
+Sim candidate: 18446744073065184606, algo candidate: 18446744073065184606 
+Test 5, Puppi candidate 128 matching 
+Sim candidate: 18446744072705442345, algo candidate: 18446744072705442345 
+Test 5, Puppi candidate 129 matching 
+Sim candidate: 18446744072536926456, algo candidate: 18446744072536926456 
+Test 6, Puppi candidate 130 matching 
+Sim candidate: 18446744071796957101, algo candidate: 18446744071796957101 
+Test 6, Puppi candidate 131 matching 
+Sim candidate: 18446744071979056083, algo candidate: 18446744071979056083 
+Test 6, Puppi candidate 132 matching 
+Sim candidate: 1041453572, algo candidate: 1041453572 
+Test 6, Puppi candidate 133 matching 
+Sim candidate: 18446744073562778312, algo candidate: 18446744073562778312 
+Test 6, Puppi candidate 134 matching 
+Sim candidate: 18446744073214916490, algo candidate: 18446744073214916490 
+Test 6, Puppi candidate 135 matching 
+Sim candidate: 942570163, algo candidate: 942570163 
+Test 6, Puppi candidate 136 matching 
+Sim candidate: 18446744073222888801, algo candidate: 18446744073222888801 
+Test 6, Puppi candidate 137 matching 
+Sim candidate: 18446744072497443247, algo candidate: 18446744072497443247 
+Test 6, Puppi candidate 138 matching 
+Sim candidate: 18446744072857982080, algo candidate: 18446744072857982080 
+Test 6, Puppi candidate 139 matching 
+Sim candidate: 1031703608, algo candidate: 1031703608 
+Test 6, Puppi candidate 140 matching 
+Sim candidate: 487175566, algo candidate: 487175566 
+Test 6, Puppi candidate 141 matching 
+Sim candidate: 18446744071743885108, algo candidate: 18446744071743885108 
+Test 6, Puppi candidate 142 matching 
+Sim candidate: 1184620855, algo candidate: 1184620855 
+Test 6, Puppi candidate 143 matching 
+Sim candidate: 1805257416, algo candidate: 1805257416 
+Test 6, Puppi candidate 144 matching 
+Sim candidate: 2076172857, algo candidate: 2076172857 
+Test 6, Puppi candidate 145 matching 
+Sim candidate: 1155246587, algo candidate: 1155246587 
+Test 6, Puppi candidate 146 matching 
+Sim candidate: 18446744073113225439, algo candidate: 18446744073113225439 
+Test 6, Puppi candidate 147 matching 
+Sim candidate: 18446744073607910690, algo candidate: 18446744073607910690 
+Test 6, Puppi candidate 148 matching 
+Sim candidate: 95914076, algo candidate: 95914076 
+Test 6, Puppi candidate 149 matching 
+Sim candidate: 1121821476, algo candidate: 1121821476 
+Test 6, Puppi candidate 150 matching 
+Sim candidate: 970876740, algo candidate: 970876740 
+Test 6, Puppi candidate 151 matching 
+Sim candidate: 1464615666, algo candidate: 1464615666 
+Test 6, Puppi candidate 152 matching 
+Sim candidate: 18446744072386566336, algo candidate: 18446744072386566336 
+Test 6, Puppi candidate 153 matching 
+Sim candidate: 18446744073631358192, algo candidate: 18446744073631358192 
+Test 6, Puppi candidate 154 matching 
+Sim candidate: 18446744072701295577, algo candidate: 18446744072701295577 
+Test 6, Puppi candidate 155 matching 
+Sim candidate: 1216610132, algo candidate: 1216610132 
+Test 6, Puppi candidate 156 matching 
+Sim candidate: 851920036, algo candidate: 851920036 
+Test 6, Puppi candidate 157 matching 
+Sim candidate: 18446744072573695568, algo candidate: 18446744072573695568 
+Test 6, Puppi candidate 158 matching 
+Sim candidate: 936925979, algo candidate: 936925979 
+Test 6, Puppi candidate 159 matching 
+Sim candidate: 70617404, algo candidate: 70617404 
+Test 6, Puppi candidate 160 matching 
+Sim candidate: 1303082202, algo candidate: 1303082202 
+Test 6, Puppi candidate 161 matching 
+Sim candidate: 1029193531, algo candidate: 1029193531 
+Test 6, Puppi candidate 162 matching 
+Sim candidate: 18446744072214780165, algo candidate: 18446744072214780165 
+Test 6, Puppi candidate 163 matching 
+Sim candidate: 1152931996, algo candidate: 1152931996 
+Test 6, Puppi candidate 164 matching 
+Sim candidate: 679138375, algo candidate: 679138375 
+Test 6, Puppi candidate 165 matching 
+Sim candidate: 349905225, algo candidate: 349905225 
+Test 6, Puppi candidate 166 matching 
+Sim candidate: 18446744071606245783, algo candidate: 18446744071606245783 
+Test 6, Puppi candidate 167 matching 
+Sim candidate: 2134229041, algo candidate: 2134229041 
+Test 6, Puppi candidate 168 matching 
+Sim candidate: 18446744073630144733, algo candidate: 18446744073630144733 
+Test 6, Puppi candidate 169 matching 
+Sim candidate: 18446744072404721560, algo candidate: 18446744072404721560 
+Test 6, Puppi candidate 170 matching 
+Sim candidate: 863110730, algo candidate: 863110730 
+Test 6, Puppi candidate 171 matching 
+Sim candidate: 539788830, algo candidate: 539788830 
+Test 6, Puppi candidate 172 matching 
+Sim candidate: 18446744072873323893, algo candidate: 18446744072873323893 
+Test 6, Puppi candidate 173 matching 
+Sim candidate: 18446744073167204555, algo candidate: 18446744073167204555 
+Test 6, Puppi candidate 174 matching 
+Sim candidate: 73334152, algo candidate: 73334152 
+Test 6, Puppi candidate 175 matching 
+Sim candidate: 966313445, algo candidate: 966313445 
+Test 6, Puppi candidate 176 matching 
+Sim candidate: 18446744072317250879, algo candidate: 18446744072317250879 
+Test 6, Puppi candidate 177 matching 
+Sim candidate: 2084220955, algo candidate: 2084220955 
+Test 6, Puppi candidate 178 matching 
+Sim candidate: 18446744072337643901, algo candidate: 18446744072337643901 
+Test 6, Puppi candidate 179 matching 
+Sim candidate: 9037734, algo candidate: 9037734 
+Test 6, Puppi candidate 180 matching 
+Sim candidate: 18446744072779007095, algo candidate: 18446744072779007095 
+Test 6, Puppi candidate 181 matching 
+Sim candidate: 957245776, algo candidate: 957245776 
+Test 6, Puppi candidate 182 matching 
+Sim candidate: 27028779, algo candidate: 27028779 
+Test 6, Puppi candidate 183 matching 
+Sim candidate: 2130841701, algo candidate: 2130841701 
+Test 7, Puppi candidate 184 matching 
+Sim candidate: 853591715, algo candidate: 853591715 
+Test 7, Puppi candidate 185 matching 
+Sim candidate: 1008491199, algo candidate: 1008491199 
+Test 7, Puppi candidate 186 matching 
+Sim candidate: 738840298, algo candidate: 738840298 
+Test 7, Puppi candidate 187 matching 
+Sim candidate: 18446744072847366109, algo candidate: 18446744072847366109 
+Test 7, Puppi candidate 188 matching 
+Sim candidate: 18446744072514280781, algo candidate: 18446744072514280781 
+Test 7, Puppi candidate 189 matching 
+Sim candidate: 3310832, algo candidate: 3310832 
+Test 7, Puppi candidate 190 matching 
+Sim candidate: 272269999, algo candidate: 272269999 
+Test 7, Puppi candidate 191 matching 
+Sim candidate: 255528247, algo candidate: 255528247 
+Test 7, Puppi candidate 192 matching 
+Sim candidate: 817647606, algo candidate: 817647606 
+Test 7, Puppi candidate 193 matching 
+Sim candidate: 288912947, algo candidate: 288912947 
+received lastalgo 
+Test 7: npuppi matching; npuppi = 9 
+received firstalgo 
+Test 7, Puppi candidate 1 matching 
+Sim candidate: 657942217, algo candidate: 657942217 
+Test 7, Puppi candidate 2 matching 
+Sim candidate: 1615653006, algo candidate: 1615653006 
+Test 7, Puppi candidate 3 matching 
+Sim candidate: 18446744072216275466, algo candidate: 18446744072216275466 
+Test 7, Puppi candidate 4 matching 
+Sim candidate: 633641468, algo candidate: 633641468 
+Test 7, Puppi candidate 5 matching 
+Sim candidate: 18446744071840655601, algo candidate: 18446744071840655601 
+Test 7, Puppi candidate 6 matching 
+Sim candidate: 18446744072641183131, algo candidate: 18446744072641183131 
+Test 7, Puppi candidate 7 matching 
+Sim candidate: 18446744072604997018, algo candidate: 18446744072604997018 
+Test 7, Puppi candidate 8 matching 
+Sim candidate: 920040506, algo candidate: 920040506 
+received lastalgo 
+Test 7: npuppi matching; npuppi = 32 
+received firstalgo 
+Test 7, Puppi candidate 1 matching 
+Sim candidate: 18446744073455043585, algo candidate: 18446744073455043585 
+Test 7, Puppi candidate 2 matching 
+Sim candidate: 18446744071675236542, algo candidate: 18446744071675236542 
+Test 7, Puppi candidate 3 matching 
+Sim candidate: 18446744072885164101, algo candidate: 18446744072885164101 
+Test 7, Puppi candidate 4 matching 
+Sim candidate: 8879467, algo candidate: 8879467 
+Test 7, Puppi candidate 5 matching 
+Sim candidate: 18446744072263148747, algo candidate: 18446744072263148747 
+Test 7, Puppi candidate 6 matching 
+Sim candidate: 813131982, algo candidate: 813131982 
+Test 7, Puppi candidate 7 matching 
+Sim candidate: 619549996, algo candidate: 619549996 
+Test 7, Puppi candidate 8 matching 
+Sim candidate: 18446744073607110536, algo candidate: 18446744073607110536 
+Test 7, Puppi candidate 9 matching 
+Sim candidate: 18446744073442380367, algo candidate: 18446744073442380367 
+Test 7, Puppi candidate 10 matching 
+Sim candidate: 18446744072197189604, algo candidate: 18446744072197189604 
+Test 7, Puppi candidate 11 matching 
+Sim candidate: 26897984, algo candidate: 26897984 
+Test 7, Puppi candidate 12 matching 
+Sim candidate: 18446744072590912283, algo candidate: 18446744072590912283 
+Test 7, Puppi candidate 13 matching 
+Sim candidate: 1932215032, algo candidate: 1932215032 
+Test 7, Puppi candidate 14 matching 
+Sim candidate: 918533825, algo candidate: 918533825 
+Test 7, Puppi candidate 15 matching 
+Sim candidate: 18446744072286820481, algo candidate: 18446744072286820481 
+Test 7, Puppi candidate 16 matching 
+Sim candidate: 18446744073540927976, algo candidate: 18446744073540927976 
+Test 7, Puppi candidate 17 matching 
+Sim candidate: 776134512, algo candidate: 776134512 
+Test 7, Puppi candidate 18 matching 
+Sim candidate: 18446744072595452025, algo candidate: 18446744072595452025 
+Test 7, Puppi candidate 19 matching 
+Sim candidate: 347675032, algo candidate: 347675032 
+Test 7, Puppi candidate 20 matching 
+Sim candidate: 411391491, algo candidate: 411391491 
+Test 7, Puppi candidate 21 matching 
+Sim candidate: 18446744073513665161, algo candidate: 18446744073513665161 
+Test 7, Puppi candidate 22 matching 
+Sim candidate: 18446744071822363127, algo candidate: 18446744071822363127 
+Test 7, Puppi candidate 23 matching 
+Sim candidate: 18446744073067892781, algo candidate: 18446744073067892781 
+Test 7, Puppi candidate 24 matching 
+Sim candidate: 18446744073260537580, algo candidate: 18446744073260537580 
+Test 7, Puppi candidate 25 matching 
+Sim candidate: 18446744072253219588, algo candidate: 18446744072253219588 
+Test 7, Puppi candidate 26 matching 
+Sim candidate: 1251118525, algo candidate: 1251118525 
+Test 7, Puppi candidate 27 matching 
+Sim candidate: 18446744073463460943, algo candidate: 18446744073463460943 
+Test 7, Puppi candidate 28 matching 
+Sim candidate: 18446744073350993183, algo candidate: 18446744073350993183 
+Test 7, Puppi candidate 29 matching 
+Sim candidate: 18446744073644480559, algo candidate: 18446744073644480559 
+Test 7, Puppi candidate 30 matching 
+Sim candidate: 284301408, algo candidate: 284301408 
+Test 7, Puppi candidate 31 matching 
+Sim candidate: 206327902, algo candidate: 206327902 
+received lastalgo 
+ERROR: test npuppi not equal to algo npuppi 
+test npuppi = 50, algo npuppi = 3 
+Algo (header) candidate: 60219395 
+Clock #51, test #7 
+@E Simulation failed: Function 'main' returns nonzero value '1'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+4
+    while executing
+"source /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/csim.tcl"
+    invoked from within
+"hls::main /afs/cern.ch/user/m/millerca/vivado_hls/send_packets/puppicount/proj/solution/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

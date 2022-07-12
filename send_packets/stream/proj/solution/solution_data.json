@@ -16,8 +16,16 @@
     
   },
   "Args": {
-    "cands": {
+    "header": {
       "index": "0",
+      "type": {
+        "dataType": "ap_uint",
+        "dataWidth": "64",
+        "interfaceRef": "header_V"
+      }
+    },
+    "cands": {
+      "index": "1",
       "type": {
         "kinds": ["array"],
         "dataType": "ap_uint",
@@ -25,15 +33,15 @@
       }
     },
     "outcands": {
-      "index": "1",
+      "index": "2",
       "type": {
         "kinds": ["array"],
         "dataType": "ap_uint",
-        "arraySizes": ["5"]
+        "arraySizes": ["4"]
       }
     },
     "eventstart": {
-      "index": "2",
+      "index": "3",
       "type": {
         "dataType": "bool",
         "dataWidth": "1",
@@ -41,7 +49,7 @@
       }
     },
     "lastvalid": {
-      "index": "3",
+      "index": "4",
       "type": {
         "dataType": "bool",
         "dataWidth": "1",
@@ -2951,6 +2959,17 @@
       "bundle_name": "eventstart",
       "bundle_role": "default"
     },
+    "header_V": {
+      "type": "data",
+      "dir": "in",
+      "width": "64",
+      "ctype": {"DATA": {
+          "Type": "integer unsigned",
+          "Width": "64"
+        }},
+      "bundle_name": "header_V",
+      "bundle_role": "default"
+    },
     "lastvalid": {
       "type": "data",
       "dir": "out",
@@ -3005,17 +3024,6 @@
         }},
       "bundle_name": "outcands_3_V",
       "bundle_role": "default"
-    },
-    "outcands_4_V": {
-      "type": "data",
-      "dir": "out",
-      "width": "64",
-      "ctype": {"DATA": {
-          "Type": "integer unsigned",
-          "Width": "64"
-        }},
-      "bundle_name": "outcands_4_V",
-      "bundle_role": "default"
     }
   },
   "RtlPorts": {
@@ -3047,6 +3055,10 @@
       "dir": "out",
       "width": "1",
       "isVector": "true"
+    },
+    "header_V": {
+      "dir": "in",
+      "width": "64"
     },
     "cands_0_V": {
       "dir": "in",
@@ -4104,14 +4116,6 @@
       "dir": "out",
       "width": "1"
     },
-    "outcands_4_V": {
-      "dir": "out",
-      "width": "64"
-    },
-    "outcands_4_V_ap_vld": {
-      "dir": "out",
-      "width": "1"
-    },
     "eventstart": {
       "dir": "in",
       "width": "1"
@@ -4149,8 +4153,8 @@
           "Estimate": "1.187"
         },
         "Area": {
-          "FF": "16708",
-          "LUT": "16706",
+          "FF": "32836",
+          "LUT": "6560",
           "BRAM_18K": "0",
           "DSP48E": "0",
           "URAM": "0"
@@ -4167,7 +4171,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2022-05-24 17:30:10 CEST",
+    "Time": "2022-07-05 15:43:34 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }
